@@ -1,0 +1,17 @@
+# Dependency lockfiles
+**/package-lock.json
+**/npm-shrinkwrap.json
+**/yarn.lock
+**/pnpm-lock.yaml
+**/bun.lock
+**/bun.lockb
+
+# Generated build and coverage output
+**/build/
+**/coverage/
+
+# Generated Expo and native platform artifacts
+**/.expo/
+**/.gradle/
+**/Pods/
+**/DerivedData/

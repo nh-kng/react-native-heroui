@@ -4,6 +4,7 @@
   "description": "Native UI primitives for Expo and React Native",
   "main": "build/index.js",
   "types": "build/index.d.ts",
+  "packageManager": "pnpm@10.32.1",
   "files": [
     "android",
     "build",
@@ -22,8 +23,8 @@
     "lint": "eslint src/",
     "test": "node internal/module_scripts/test.js --passWithNoTests --watchman=false",
     "prepare": "node internal/module_scripts/prepare.js",
-    "check": "npm run build && npm run lint && npm test -- --runInBand",
-    "prepublishOnly": "npm run build",
+    "check": "pnpm run build && pnpm run lint && pnpm test --runInBand",
+    "prepublishOnly": "pnpm run build",
     "open:ios": "node internal/module_scripts/open-ios.js",
     "open:android": "node internal/module_scripts/open-android.js"
   },

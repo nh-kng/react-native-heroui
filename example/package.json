@@ -10,7 +10,7 @@
     "ios": "expo run:ios"
   },
   "dependencies": {
-    "@nh-kng/react-native-heroui": "file:..",
+    "@nh-kng/react-native-heroui": "workspace:*",
     "expo-dev-client": "~57.0.20",
     "expo": "~57.0.31",
     "react": "19.2.3",

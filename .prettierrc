@@ -5,4 +5,12 @@
   "bracketSameLine": true,
   "trailingComma": "es5",
   "jsxSingleQuote": false,
+  "overrides": [
+    {
+      "files": "*.md",
+      "options": {
+        "proseWrap": "never"
+      }
+    }
+  ],
 }

@@ -1,33 +1,15 @@
 # @nh-kng/react-native-heroui
 
-An Expo Modules API starter for native UI components in React Native. The package currently exports
-the generated `HeroUIView` sample so the native module wiring is ready for future UI primitives.
+An Expo Modules API package for native UI primitives in React Native. The current release contains the generated `HeroUIView` sample and the native module wiring needed to grow the component set.
 
-## Requirements
-
-- Expo SDK 57 or newer
-- React Native 0.86 or newer
-- A development build, because `HeroUIView` is implemented in Swift and Kotlin
-
-The module supports iOS, tvOS, and Android through Expo autolinking. It does not support web yet.
-
-## Install
-
-After the package is published, install it in an Expo app with:
+Install it in an Expo app with pnpm:
 
 ```sh
-npx expo install @nh-kng/react-native-heroui
+pnpm add @nh-kng/react-native-heroui
+pnpm exec expo run:ios       # or: pnpm exec expo run:android
 ```
 
-Create or rebuild a development client after installing a native module:
-
-```sh
-npx expo run:ios
-# or
-npx expo run:android
-```
-
-Use the component in JavaScript or TypeScript:
+Native modules require a development build. The component can then be used from TypeScript:
 
 ```tsx
 import { HeroUIView } from '@nh-kng/react-native-heroui';
@@ -37,31 +19,8 @@ export function Screen() {
 }
 ```
 
-## Local example
+The repository uses pnpm 10.32.1 and a two-package workspace containing the library and `example/`. Start with `pnpm install` at the repository root, then use the example scripts from `example/` or the filtered commands documented in [the local example guide](example/README.md).
 
-Install the package and example dependencies from the repository root:
+The package targets Expo SDK 57, React Native 0.86, and React 19. The native implementations are configured for iOS, tvOS, and Android. Web resolution exists for bundler compatibility, but `HeroUIView` throws when rendered on web because there is no web implementation yet.
 
-```sh
-npm install
-cd example
-npm install
-npx expo run:ios
-```
-
-Use `npm run android` for Android, or `npm run start:dev-client` after a development build.
-
-## Development
-
-The root package builds TypeScript declarations and JavaScript into `build/`:
-
-```sh
-npm run check
-npm pack --dry-run
-```
-
-The iOS implementation is in `ios/`, the Android implementation is in
-`android/src/main/java/com/nhkng/reactnativeheroui/`, and the typed JavaScript entry point is in
-`src/`. `expo-module.config.json` registers the native module for Expo autolinking.
-
-The package is configured for public scoped publishing, but publishing is intentionally a separate
-release step.
+Read the [documentation index](docs/README.md) for requirements, API reference, platform details, development checks, and release guidance. The package's public export surface is described in the [API reference](docs/api/README.md).
