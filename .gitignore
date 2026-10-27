@@ -4,6 +4,10 @@
 
 # VSCode
 .vscode/
+!/.vscode/
+/.vscode/*
+!/.vscode/settings.json
+!/.vscode/tailwind.css-data.json
 jsconfig.json
 
 # Xcode

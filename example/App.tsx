@@ -16,7 +16,7 @@ import { SafeAreaProvider, SafeAreaView } from 'react-native-safe-area-context';
 import { useState } from 'react';
 import { Platform, ScrollView, StyleSheet, View } from 'react-native';
 
-import './styles';
+import './global.css';
 
 const themes: ColorScheme[] = ['system', 'light', 'dark'];
 

@@ -1,15 +1,14 @@
-@variant light {
+@layer theme {
   :root {
-    --accent: oklch(0.59 0.2 279);
-    --accent-foreground: oklch(0.99 0.01 280);
-    --focus: var(--accent);
-  }
-}
-
-@variant dark {
-  :root {
-    --accent: oklch(0.72 0.16 279);
-    --accent-foreground: oklch(0.18 0.03 280);
-    --focus: var(--accent);
+    @variant light {
+      --accent: oklch(0.59 0.2 279);
+      --accent-foreground: oklch(0.99 0.01 280);
+      --focus: var(--accent);
+    }
+    @variant dark {
+      --accent: oklch(0.72 0.16 279);
+      --accent-foreground: oklch(0.18 0.03 280);
+      --focus: var(--accent);
+    }
   }
 }

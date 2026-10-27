@@ -1,48 +1,32 @@
 # Quick start
 
-Import the stylesheet that matches the platform's CSS pipeline, then compose the adapter components. The stylesheet imports the owned semantic component styles and shared brand tokens.
+Use one global stylesheet for web, iOS, and Android. The package entry imports Tailwind CSS 4, Uniwind, shared semantic component styles, and brand tokens, with platform conditions for native hairlines and browser selectors. Install the peers described in [installation](installation.md) first.
 
-For Uniwind and Tailwind CSS 4 on native, configure Metro to process the app CSS entry with Uniwind, then import the package stylesheet from that entry point. Install Uniwind, Tailwind CSS 4, `tailwind-merge`, `tailwind-variants`, and the package peers first:
+Configure Metro to process the shared app CSS entry with Uniwind on every platform:
 
 ```js
 const { getDefaultConfig } = require('expo/metro-config');
 const { withUniwindConfig } = require('uniwind/metro');
 
 module.exports = withUniwindConfig(getDefaultConfig(__dirname), {
-  cssEntryFile: './global.native.css',
+  cssEntryFile: './global.css',
   dtsFile: './uniwind-types.d.ts',
 });
 ```
 
-Create `global.native.css`:
+Create `global.css`:
 
 ```css
-@import '@nh-kng/react-native-heroui/styles/native.css';
+@import '@nh-kng/react-native-heroui/styles/index.css';
 
 @source './App.tsx';
 ```
 
-Expo Metro web uses PostCSS to expand Tailwind and the shared component stylesheet. Add `@tailwindcss/postcss` and `postcss` to the app's development dependencies and configure PostCSS at the Expo project root:
+Import `./global.css` once from `App.tsx` (or the root layout when using Expo Router). The import and Metro's `cssEntryFile` must identify the same file. Uniwind compiles Tailwind for native and web; this setup does not require a separate Tailwind PostCSS configuration. Add source directives for class-bearing files outside the app's scan root.
 
-```js
-export default {
-  plugins: {
-    '@tailwindcss/postcss': {},
-  },
-};
-```
+The existing `styles/native.css` and `styles/web.css` package exports remain available for separate platform pipelines. The legacy web entry still requires Tailwind processing in its host pipeline.
 
-The repository example includes this setup in `example/postcss.config.mjs`. The native CSS entry is processed by the Uniwind Metro plugin configured in `metro.config.js`.
-
-Create a `global.web.css` stylesheet, import it from the web entry point (the example uses `styles.web.ts`, selected by `import './styles'`), and configure PostCSS at the Expo project root as shown above:
-
-```css
-@import '@nh-kng/react-native-heroui/styles/web.css';
-
-@source './App.tsx';
-```
-
-The web app needs `@tailwindcss/postcss` and `postcss` as development dependencies. For a native app root, put `GestureHandlerRootView` outside `SafeAreaProvider`, then render `HeroUIProvider` inside both. These are upstream React Native infrastructure roots; a web app can render `HeroUIProvider` directly.
+For a native app root, put `GestureHandlerRootView` outside `SafeAreaProvider`, then render `HeroUIProvider` inside both. A web app can render `HeroUIProvider` directly.
 
 Use the same component tree on all platforms:
 
@@ -94,6 +78,29 @@ export function AppRoot() {
 ```
 
 `HeroUIProvider` defaults to `system`. It asks Uniwind to select the native theme and coordinates the web `light` or `dark` root class with system color-scheme changes. It restores the theme selection and theme classes it found before mounting when it unmounts.
+
+## Shared token customization
+
+Add overrides after the package import in the same `global.css`. Put theme variables inside `@layer theme` and `:root` so Uniwind extracts them for native as well as web, and use the same variable names in both theme variants:
+
+```css
+@layer theme {
+  :root {
+    @variant light {
+      --accent: oklch(0.59 0.2 279);
+      --accent-foreground: oklch(0.99 0.01 280);
+      --focus: var(--accent);
+    }
+    @variant dark {
+      --accent: oklch(0.72 0.16 279);
+      --accent-foreground: oklch(0.18 0.03 280);
+      --focus: var(--accent);
+    }
+  }
+}
+```
+
+These values match the package defaults. Change them to customize the shared brand; utilities such as `bg-accent` and component styles resolve the same semantic tokens. Control the selection through `HeroUIProvider`'s `colorScheme` prop on every platform. Static CSS and JavaScript exports verify compilation, not interactive theme switching.
 
 ## Related documentation
 

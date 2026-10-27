@@ -14,11 +14,7 @@ In an Expo app, use `expo install` to select SDK-compatible React, React DOM, an
 pnpm exec expo install react react-dom react-native react-native-gesture-handler react-native-reanimated react-native-safe-area-context react-native-svg react-native-worklets
 ```
 
-The Expo web CSS pipeline also needs Tailwind's PostCSS plugin:
-
-```sh
-pnpm add -D @tailwindcss/postcss@4.3.3 postcss@8.5.31
-```
+Uniwind's Metro integration compiles the shared global CSS for native and web. No separate Tailwind PostCSS plugin is required for this setup; see [quick start](quick-start.md).
 
 The package peer list and SDK 57 example versions are summarized in [requirements](requirements.md).
 

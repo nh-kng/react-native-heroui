@@ -32,9 +32,7 @@
     "uniwind": "1.13.0"
   },
   "devDependencies": {
-    "@tailwindcss/postcss": "4.3.3",
     "@types/react": "~19.2.3",
-    "postcss": "8.5.31",
     "typescript": "^5.9.2"
   }
 }

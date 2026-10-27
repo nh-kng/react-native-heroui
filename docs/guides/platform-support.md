@@ -4,9 +4,9 @@ The package ships JavaScript adapters and CSS for web, iOS, and Android. It does
 
 | Platform | Implementation | Package styling | Static verification |
 | --- | --- | --- | --- |
-| Web | Owned React Aria components | Tailwind CSS 4 and `styles/web.css` | Web TypeScript fixture and Expo JavaScript export. |
-| iOS | Owned React Native components | Uniwind and `styles/native.css` | Native TypeScript fixture and Expo JavaScript export. |
-| Android | Owned React Native components | Uniwind and `styles/native.css` | Native TypeScript fixture and Expo JavaScript export. |
+| Web | Owned React Aria components | Uniwind, Tailwind CSS 4, and `styles/index.css` | Web TypeScript fixture and Expo JavaScript export. |
+| iOS | Owned React Native components | Uniwind, Tailwind CSS 4, and `styles/index.css` | Native TypeScript fixture and Expo JavaScript export. |
+| Android | Owned React Native components | Uniwind, Tailwind CSS 4, and `styles/index.css` | Native TypeScript fixture and Expo JavaScript export. |
 
 Expo SDK 57 and React Native 0.86.3 are the example's pinned baseline. The package does not require a custom development client or package-specific autolinking. Native exports only verify JavaScript bundling; they do not compile Swift/Kotlin, build the host app, or verify rendering and accessibility. Web exports do not verify browser rendering or interaction.
 

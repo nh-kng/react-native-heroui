@@ -15,7 +15,7 @@ The package supports both a root import and component-specific subpaths. Each pa
 | `FieldError` | `@nh-kng/react-native-heroui` | `@nh-kng/react-native-heroui/field-error` |
 | `HeroUIProvider` | `@nh-kng/react-native-heroui` | `@nh-kng/react-native-heroui/hero-ui-provider` |
 
-The native and web style entry points are `@nh-kng/react-native-heroui/styles/native.css` and `@nh-kng/react-native-heroui/styles/web.css`.
+The shared Uniwind style entry is `@nh-kng/react-native-heroui/styles/index.css`; see [quick start](../getting-started/quick-start.md). The existing platform entries remain available as `@nh-kng/react-native-heroui/styles/native.css` and `@nh-kng/react-native-heroui/styles/web.css`.
 
 Every component root and compound part exposes platform-specific `nativeProps` and `webProps` options typed from the corresponding locally owned component. These options are ignored on the inactive platform. Adapter-owned values such as `isLoading`, `isPending`, `isInvalid`, mapped input props, children, class names, and refs cannot be overridden through an escape hatch.
 

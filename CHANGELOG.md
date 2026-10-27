@@ -2,6 +2,9 @@
 
 ## Unreleased
 
+- Fixed brand token declarations so Uniwind extracts the same light and dark accent colors on native and web.
+- Added a shared `styles/index.css` Uniwind entry and migrated the Expo example to one global stylesheet for native and web, retaining the existing theme toggle, semantic tokens, and platform stylesheet exports.
+
 - Excluded `editable` and `readOnly` from `Input.nativeProps` so native escape hatches cannot override the shared disabled state.
 - Replaced installed HeroUI runtime components and stylesheet imports with owned web/native implementations and one Native-derived semantic token and component CSS system; browser focus and selector behavior remains platform-specific.
 - Extracted shared component contracts, added canonical `Button.isLoading` with a deprecated `isPending` alias and consistent native disabled/busy accessibility state, and added `Chip` with shared defaults, colors, sizes, and compound labels.

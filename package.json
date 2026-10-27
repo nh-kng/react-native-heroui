@@ -258,6 +258,7 @@
       "import": "./build/web/components/hero-ui-provider/index.web.js",
       "default": "./build/web/components/hero-ui-provider/index.web.js"
     },
+    "./styles/index.css": "./styles/index.css",
     "./styles/native.css": "./styles/native.css",
     "./styles/web.css": "./styles/web.css",
     "./package.json": "./package.json",
