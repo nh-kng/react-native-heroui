@@ -27,3 +27,13 @@ export const invalidBusyOverride: Native.ButtonProps = {
 export const invalidChipSize: Web.ChipProps = { webProps: { size: 'lg' } };
 // @ts-expect-error Ref targets remain platform-specific.
 export const invalidChipRef: Native.ChipProps = { webProps: { ref: null } };
+export const invalidEditableOverride: Native.InputProps = {
+  isDisabled: true,
+  // @ts-expect-error Native editability is owned by the shared disabled state.
+  nativeProps: { editable: true },
+};
+export const invalidReadOnlyOverride: Native.InputProps = {
+  isDisabled: true,
+  // @ts-expect-error React Native readOnly also overrides the computed editable state.
+  nativeProps: { readOnly: false },
+};

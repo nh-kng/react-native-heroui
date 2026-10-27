@@ -20,7 +20,10 @@ export type InputWebProps = Omit<
   InputOwnedProps | 'onChange' | 'type' | 'inputMode' | 'disabled' | 'aria-invalid' | 'ref'
 >;
 
-export type InputNativeProps = Omit<NativeInputProps, InputOwnedProps | 'ref'>;
+export type InputNativeProps = Omit<
+  NativeInputProps,
+  InputOwnedProps | 'editable' | 'readOnly' | 'ref'
+>;
 
 export interface InputProps {
   className?: string;
