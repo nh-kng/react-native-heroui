@@ -1,31 +1,24 @@
 # Requirements
 
-> Status: Stable
-> Last reviewed: 2026-10-23
+The library is a JavaScript and TypeScript adapter package. A host app must provide the peer packages used by the platform and component APIs it imports.
 
-## Overview
-
-These are the requirements for developing the package and running its native example. The package uses Expo SDK 57 and React Native 0.86.3 in this repository.
-
-## Requirements
-
-| Area | Requirement | Notes |
+| Area | Package range or repository baseline | Use |
 | --- | --- | --- |
-| Node.js | Node 20.19.4+ in the Node 20 line, Node 22.13.0+, Node 24.3.0+, or a later supported release | React Native 0.86.3 declares these engine ranges. |
-| Package manager | pnpm 10.32.1 | Pinned by `package.json`; the workspace has one lockfile. |
-| Expo | SDK 57 (`expo` 57.0.31 in this repository) | The published package peer range starts at SDK 57. |
-| React Native | 0.86.3 in this repository; peer range starts at 0.86 | The native sample uses Expo Modules API integration. |
-| React | 19.2.3 in this repository; peer range starts at 19.2.3 | The package has no runtime React dependency of its own. |
-| Native build | iOS or Android development toolchain | A native development build is required after installing the module. |
+| React | `>=19.0.0` | Shared component runtime. |
+| React Native | `>=0.81.0`; the example pins `0.86.3` | Native adapter runtime. |
+| React DOM | `>=19.0.0` | Web adapter runtime. |
+| HeroUI React | `^3.2.6` | Web component implementation. |
+| HeroUI Native | `^1.0.11` | iOS and Android component implementation. |
+| Tailwind CSS | `^4.0.0` | Web CSS and native utility compilation. |
+| Uniwind | `^1.13.0` | Native utility styles and theme coordination. |
+| Expo example | SDK `57.0.31` | Repository consumer baseline. |
 
-The iOS podspec sets iOS and tvOS deployment targets to 16.4 and Swift to 5.9. Android uses the Expo module Gradle plugin; the host Expo and React Native project supplies the Android SDK settings. No permissions are required by the current sample.
+The root `package.json` lists all required peers, including the upstream libraries' React Aria and native support packages. The example uses the Expo SDK 57 bundled versions for its React Native peers. It has no custom native module, autolinking configuration, or development-client requirement.
 
-## Platform compatibility
-
-The module is registered for Apple and Android autolinking. iOS, tvOS, and Android source files are present, but native rendering has not been runtime-verified as part of the current repository checks. Web files let the package resolve in a web bundle; `HeroUIView` intentionally throws on web because no usable web implementation exists. See [platform support](../guides/platform-support.md) for the verification boundary.
+Use a Node.js and pnpm version compatible with the selected Expo SDK and React Native release. The repository pins pnpm `10.32.1` and keeps a single lockfile.
 
 ## Related documentation
 
 - [Installation](installation.md)
-- [Quick start](quick-start.md)
 - [Compatibility](../development/compatibility.md)
+- [Platform support](../guides/platform-support.md)

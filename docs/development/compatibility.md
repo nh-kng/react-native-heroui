@@ -1,27 +1,20 @@
 # Compatibility
 
-> Status: Stable
-> Last reviewed: 2026-10-23
+The package peers are declared in the root `package.json`. They cover the two upstream component packages and their public runtime/type dependencies because both platform declarations include the typed `nativeProps` and `webProps` escape hatches.
 
-## Overview
+| Dependency group | Declared range | Example pin |
+| --- | --- | --- |
+| React | `>=19.0.0` | `19.2.3` |
+| React DOM | `>=19.0.0` | `19.2.3` |
+| React Native | `>=0.81.0` | `0.86.3` |
+| `@heroui/react` | `^3.2.6` | `3.2.6` |
+| `heroui-native` | `^1.0.11` | `1.0.11` |
+| Tailwind CSS | `^4.0.0` | `4.3.3` |
+| Uniwind | `^1.13.0` | `1.13.0` |
 
-This document records the package's configured compatibility baseline and what the repository checks actually verify.
+The example is pinned to Expo SDK 57.0.31 and the matching packages reported by Expo's bundled native module metadata. Its Expo and React Native versions are a repository baseline, not additional native package code or an Expo module requirement.
 
-## Configured baseline
-
-The package declares peer compatibility with Expo `>=57.0.0`, React `>=19.2.3`, and React Native `>=0.86.0`. Development and example dependencies are pinned to Expo 57.0.31, React 19.2.3, and React Native 0.86.3. The native Apple deployment targets are iOS 16.4 and tvOS 16.4.
-
-## Verified in this repository
-
-The current environment verifies:
-
-- pnpm 10.32.1 installs the two-package workspace from one lockfile.
-- `CI=1 pnpm check` completes; ESLint reports two existing warnings for empty object types.
-- The example TypeScript project resolves the workspace package with `tsc --noEmit`.
-- Expo SDK 57 config resolves with `expo config --json` and reports iOS and Android platforms.
-- `pnpm pack --dry-run` includes the native, source, build, and package-level documentation files.
-
-These checks do not verify a simulator, device, tvOS target, native rendering, accessibility, performance, or a web implementation. Treat those as separate runtime acceptance work.
+The repository typechecks and exports JavaScript for web, iOS, and Android. It does not claim that those checks establish browser runtime support, native compilation, or device accessibility behavior.
 
 ## Related documentation
 

@@ -1,39 +1,20 @@
 # Contributing
 
-> Status: Stable
-> Last reviewed: 2026-10-23
-
-## Overview
-
-Contributions should preserve the package's Expo Modules API boundary and keep public behavior, platform support, and documentation in sync. The repository uses pnpm 10.32.1 through the `packageManager` field in the root manifest.
-
-## Requirements
-
-Use a React Native compatible Node.js release: React Native 0.86.3 accepts Node.js 20.19.4 or newer in the Node 20 line, Node 22.13.0 or newer, Node 24.3.0 or newer, or a later supported release. Install pnpm 10.32.1, or use a Corepack setup that honors the repository pin.
-
-## Development workflow
-
-From the repository root:
+The root package contains the TypeScript adapters and published styles. `example/` is a private Expo SDK 57 workspace consumer. Install dependencies once from the repository root with pnpm 10.32.1.
 
 ```sh
 pnpm install
-pnpm check
-pnpm pack --dry-run
-```
-
-The example app can be type checked and inspected with:
-
-```sh
+pnpm run build
+pnpm run typecheck
+pnpm run typecheck:fixtures
+pnpm run lint
+pnpm test
 pnpm --filter heroui-example exec tsc --noEmit
 pnpm --filter heroui-example exec expo config --json
 ```
 
-Native development requires an iOS or Android toolchain and a development build. See [development setup](docs/development/setup.md), [testing](docs/development/testing.md), and [the example guide](example/README.md).
+The platform consumer fixtures validate root and subpath exports, shared props, platform escape hatches, refs, compound parts, and rejected prop overrides. Mapping tests run under Node and do not render components. Expo exports can check JavaScript module resolution for web, iOS, and Android without starting a server or building native code.
 
-## Documentation and changes
+Keep adapter-owned behavior explicit and type-safe. Preserve the upstream contexts used by compound components, and keep platform-specific imports in the matching platform implementation. Update the API documentation and `CHANGELOG.md` when public behavior changes. Do not claim runtime, accessibility, or native compilation results unless those checks were run.
 
-Update the living documentation and `CHANGELOG.md` when a change affects installation, public API, platform compatibility, or architecture. Keep one authoritative document for each concept and use relative Markdown links. Use `docs/changes/active/` for a substantial proposal and archive it under `docs/changes/archive/` after implementation when its historical context is useful. Record a significant architectural choice as an ADR under `docs/architecture/decisions/`.
-
-## Pull requests
-
-Describe the user-visible behavior, affected platforms, and verification commands. Keep changes focused, preserve unrelated worktree changes, and do not claim native runtime support until it has been tested on the relevant platform.
+See [development setup](docs/development/setup.md), [testing](docs/development/testing.md), and the [example guide](example/README.md) for the supported workflow.

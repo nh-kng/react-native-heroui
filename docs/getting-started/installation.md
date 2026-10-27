@@ -1,40 +1,42 @@
 # Installation
 
-> Status: Stable
-> Last reviewed: 2026-10-23
+Install every declared peer, including both upstream component packages, even when you ship only one platform. Platform exports keep the runtime implementation separate, while the public types include both upstream option sets. The package does not bundle React, React Native, the upstream component libraries, or their styling runtimes.
 
-## Overview
-
-Install the published package into an Expo application with pnpm, then rebuild the native development client so Expo can compile and autolink the module.
-
-## Published package
-
-From the consuming Expo app:
+Add the package, upstream libraries, and shared/web peers:
 
 ```sh
-pnpm add @nh-kng/react-native-heroui
-pnpm exec expo run:ios
-# or
-pnpm exec expo run:android
+pnpm add @nh-kng/react-native-heroui@0.1.0 @heroui/react@3.2.6 @internationalized/date@3.12.4 @react-aria/ssr@3.10.1 @react-aria/utils@3.34.1 heroui-native@1.0.11 react-aria@3.52.1 react-aria-components@1.21.1 tailwind-merge@3.6.0 tailwind-variants@3.3.1 tailwindcss@4.3.3 uniwind@1.13.0
 ```
 
-`expo run:*` generates or updates native projects, installs native dependencies, and builds a development client. Use `pnpm exec expo start --dev-client` after the first build. Expo Go does not contain this custom native module.
+In an Expo app, use `expo install` to select SDK-compatible React, React DOM, and native peers:
 
-## Local workspace
+```sh
+pnpm exec expo install react react-dom react-native react-native-gesture-handler react-native-reanimated react-native-safe-area-context react-native-svg react-native-worklets
+```
 
-From the repository root:
+The Expo web CSS pipeline also needs Tailwind's PostCSS plugin:
+
+```sh
+pnpm add -D @tailwindcss/postcss@4.3.3 postcss@8.5.31
+```
+
+The package peer list and SDK 57 example versions are summarized in [requirements](requirements.md).
+
+The repository example is configured for Expo SDK 57. From the repository root, install once, build the package, then typecheck and inspect the Expo app configuration:
 
 ```sh
 pnpm install
-pnpm --filter heroui-example exec expo run:ios
-# or
-pnpm --filter heroui-example exec expo run:android
+pnpm run build
+pnpm --filter heroui-example exec tsc --noEmit
+pnpm --filter heroui-example exec expo config --json
 ```
 
-The example declares `@nh-kng/react-native-heroui` as `workspace:*`, so the package resolves to the repository root without a second install or a copied package. The workspace uses pnpm's isolated linker; Expo SDK 57's autolinking module resolution and the example Metro watch folder are set up for this layout.
+The example uses the root package through `workspace:*`; do not install again from `example/`.
+
+The package contains only JavaScript and TypeScript adapters. Native apps use the host React Native build as usual and do not need a package-specific native module or development client. See [quick start](quick-start.md) for the required styling and root-provider setup.
 
 ## Related documentation
 
 - [Requirements](requirements.md)
 - [Quick start](quick-start.md)
-- [Troubleshooting](../guides/troubleshooting.md)
+- [Example app](../../example/README.md)

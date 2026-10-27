@@ -1,26 +1,55 @@
 # @nh-kng/react-native-heroui
 
-An Expo Modules API package for native UI primitives in React Native. The current release contains the generated `HeroUIView` sample and the native module wiring needed to grow the component set.
+Platform-resolved React components that adapt HeroUI React on web and HeroUI Native on iOS and Android. The package includes Button, Card, Typography, field components, a theme provider, and separate web/native stylesheets.
 
-Install it in an Expo app with pnpm:
+## Install
+
+Install the package and its peer dependencies for the platforms you target. The web adapter uses `@heroui/react`, React DOM, React Aria, and Tailwind CSS 4. Native adapters use `heroui-native`, React Native, Uniwind, and the native peers required by HeroUI Native.
 
 ```sh
-pnpm add @nh-kng/react-native-heroui
-pnpm exec expo run:ios       # or: pnpm exec expo run:android
+pnpm add @nh-kng/react-native-heroui @heroui/react heroui-native
 ```
 
-Native modules require a development build. The component can then be used from TypeScript:
+Import the platform stylesheet through the corresponding CSS entry point. See [installation](docs/getting-started/installation.md) and [quick start](docs/getting-started/quick-start.md) for the complete peer dependency and Expo setup.
+
+## Example
 
 ```tsx
-import { HeroUIView } from '@nh-kng/react-native-heroui';
+import {
+  Button,
+  HeroUIProvider,
+  Input,
+  TextField,
+  Typography,
+} from '@nh-kng/react-native-heroui';
 
 export function Screen() {
-  return <HeroUIView style={{ height: 200 }} />;
+  return (
+    <HeroUIProvider colorScheme="system">
+      <TextField>
+        <Typography.Heading type="h2">Welcome</Typography.Heading>
+        <Input placeholder="Your name" />
+      </TextField>
+      <Button onPress={(event) => console.log(event)}>
+        <Button.Label>Continue</Button.Label>
+      </Button>
+    </HeroUIProvider>
+  );
 }
 ```
 
-The repository uses pnpm 10.32.1 and a two-package workspace containing the library and `example/`. Start with `pnpm install` at the repository root, then use the example scripts from `example/` or the filtered commands documented in [the local example guide](example/README.md).
+`Button`, `Card`, and `Typography` expose compound parts. `Input`, `TextField`, `Label`, `Description`, and `FieldError` use the upstream field context so labels, descriptions, validation, and error visibility remain associated. Component roots and parts accept typed `nativeProps` and `webProps` escape hatches; adapter-owned props cannot be replaced through those options.
 
-The package targets Expo SDK 57, React Native 0.86, and React 19. The native implementations are configured for iOS, tvOS, and Android. Web resolution exists for bundler compatibility, but `HeroUIView` throws when rendered on web because there is no web implementation yet.
+## Development
 
-Read the [documentation index](docs/README.md) for requirements, API reference, platform details, development checks, and release guidance. The package's public export surface is described in the [API reference](docs/api/README.md).
+The repository is a pnpm workspace with the library at the root and an Expo SDK 57 consumer under `example/`.
+
+```sh
+pnpm install
+pnpm run build
+pnpm run typecheck
+pnpm run lint
+pnpm test
+```
+
+See the [documentation index](docs/README.md) for the API, styling, platform behavior, and verification scope.

@@ -1,46 +1,23 @@
 # Example app
 
-> Status: Stable
-> Last reviewed: 2026-10-23
+This private Expo SDK 57 app consumes the workspace package and presents a shared gallery of the provider, button states, card and typography compounds, controlled and uncontrolled inputs, and field validation.
 
-## Overview
-
-This private Expo SDK 57 app demonstrates the package's current `HeroUIView` native sample. It is a workspace member and consumes the root package through `workspace:*`.
-
-## Requirements
-
-Use the repository's pinned pnpm version and a supported Node.js release. A native iOS or Android toolchain is required for a development build; Expo Go does not contain this custom module.
-
-## Install and run
-
-From the repository root:
+Install from the repository root with `pnpm install`. Then run one of these scripts from the root:
 
 ```sh
-pnpm install
-pnpm --filter heroui-example start:dev-client
-```
-
-Build the native client when needed:
-
-```sh
+pnpm --filter heroui-example start
+pnpm --filter heroui-example web
 pnpm --filter heroui-example ios
-# or
 pnpm --filter heroui-example android
 ```
 
-The equivalent direct commands from this directory are `pnpm start`, `pnpm start:dev-client`, `pnpm ios`, and `pnpm android`.
+`ios` and `android` start Expo for the selected platform; they do not build a development client or native project. The app wraps its tree in the gesture-handler and safe-area roots required by HeroUI Native's provider. The platform style bootstrap loads the matching package CSS entry point and includes the gallery's utility classes. The web export uses `postcss.config.mjs` to compile Tailwind CSS and the upstream HeroUI stylesheet.
 
-## Verification
+Check the consumer and Expo configuration without launching a runtime:
 
 ```sh
 pnpm --filter heroui-example exec tsc --noEmit
 pnpm --filter heroui-example exec expo config --json
 ```
 
-The app's Metro config watches the repository root, and `app.json` enables Expo's autolinking module resolution for the workspace layout. The current `App.tsx` is the sample consumer; native runtime rendering still needs to be checked on the target simulator or device.
-
-## Related documentation
-
-- [Installation](../docs/getting-started/installation.md)
-- [Quick start](../docs/getting-started/quick-start.md)
-- [Platform support](../docs/guides/platform-support.md)
+See [installation](../docs/getting-started/installation.md), [component API](../docs/api/components.md), and [testing](../docs/development/testing.md) for package setup and verification limits.

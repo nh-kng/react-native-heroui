@@ -1,10 +1,6 @@
 {
   "extends": "expo/tsconfig.base",
   "compilerOptions": {
-    "strict": true,
-    "paths": {
-      "@nh-kng/react-native-heroui": ["../src/index"],
-      "@nh-kng/react-native-heroui/*": ["../src/*"]
-    }
+    "strict": true
   }
 }

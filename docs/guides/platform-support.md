@@ -1,33 +1,19 @@
 # Platform support
 
-> Status: Stable
-> Last reviewed: 2026-10-23
+The package ships JavaScript adapters and CSS for web, iOS, and Android. It does not register a native module and does not contain Swift or Kotlin code.
 
-## Overview
-
-The package has one TypeScript surface and native platform adapters registered through Expo Modules. This document separates configured targets from behavior verified by automated repository checks.
-
-## Platform matrix
-
-| Platform | Configured | Current implementation | Verification in this change |
+| Platform | Implementation | Package styling | Static verification |
 | --- | --- | --- | --- |
-| iOS | Yes | Swift `ExpoView` registered as `HeroUI` | Source and package checks only; no simulator build run. |
-| tvOS | Yes in the podspec | Shares the Apple module registration | Deployment target is configured; no tvOS runtime test run. |
-| Android | Yes | Kotlin `ExpoView` registered as `HeroUI` | Source and package checks only; no emulator build run. |
-| Web | Bundler resolution only | `HeroUIView` throws an unavailable-on-web error | TypeScript resolution and Expo config checks pass; no usable web rendering. |
+| Web | HeroUI React public component subpaths | Tailwind CSS 4 and `styles/web.css` | Web TypeScript fixture and Expo JavaScript export. |
+| iOS | HeroUI Native public component subpaths | Uniwind and `styles/native.css` | Native TypeScript fixture and Expo JavaScript export. |
+| Android | HeroUI Native public component subpaths | Uniwind and `styles/native.css` | Native TypeScript fixture and Expo JavaScript export. |
 
-The package's `expo-module.config.json` registers `HeroUIModule` for Apple and Android. Installing the package therefore requires a custom development build on native platforms; Expo Go does not include this module.
+Expo SDK 57 and React Native 0.86.3 are the example's pinned baseline. The package does not require a custom development client or package-specific autolinking. Native exports only verify JavaScript bundling; they do not compile Swift/Kotlin, build the host app, or verify rendering and accessibility. Web exports do not verify browser rendering or interaction.
 
-## Native behavior
-
-The current sample creates a static native view. iOS uses a light blue `UILabel` container; Android uses a matching `LinearLayout` and `TextView`. There are no exposed native events, configuration options, permissions, or accessibility props beyond the standard React Native view style boundary.
-
-## Limitations
-
-The repository checks do not replace a native simulator or device run. Before claiming a platform is production-ready, build the example on that platform and verify autolinking, rendering, layout, and accessibility behavior.
+The web provider coordinates the DOM theme classes with Uniwind and follows the system color-scheme media query when `colorScheme="system"`. Native theme selection is delegated to Uniwind. Field association, visibility, disabled state, and validation behavior remain delegated to the upstream component libraries.
 
 ## Related documentation
 
 - [Requirements](../getting-started/requirements.md)
-- [Native bridge](../architecture/native-bridge.md)
-- [Compatibility](../development/compatibility.md)
+- [Architecture](../architecture/overview.md)
+- [Testing](../development/testing.md)

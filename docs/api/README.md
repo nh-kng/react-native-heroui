@@ -1,26 +1,23 @@
-# API reference
+# API overview
 
-> Status: Stable
-> Last reviewed: 2026-10-23
+The package supports both a root import and component-specific subpaths. Each path uses conditional exports so Metro resolves the native adapter on iOS and Android and the browser adapter on web.
 
-## Overview
+| Export | Root import | Component subpath |
+| --- | --- | --- |
+| `Button` | `@nh-kng/react-native-heroui` | `@nh-kng/react-native-heroui/button` |
+| `Card` | `@nh-kng/react-native-heroui` | `@nh-kng/react-native-heroui/card` |
+| `Typography` | `@nh-kng/react-native-heroui` | `@nh-kng/react-native-heroui/typography` |
+| `Input` | `@nh-kng/react-native-heroui` | `@nh-kng/react-native-heroui/input` |
+| `TextField` | `@nh-kng/react-native-heroui` | `@nh-kng/react-native-heroui/text-field` |
+| `Label` | `@nh-kng/react-native-heroui` | `@nh-kng/react-native-heroui/label` |
+| `Description` | `@nh-kng/react-native-heroui` | `@nh-kng/react-native-heroui/description` |
+| `FieldError` | `@nh-kng/react-native-heroui` | `@nh-kng/react-native-heroui/field-error` |
+| `HeroUIProvider` | `@nh-kng/react-native-heroui` | `@nh-kng/react-native-heroui/hero-ui-provider` |
 
-The public API is intentionally small while the native module is being initialized.
+The native and web style entry points are `@nh-kng/react-native-heroui/styles/native.css` and `@nh-kng/react-native-heroui/styles/web.css`.
 
-## Exports
+Every component root and compound part exposes platform-specific `nativeProps` and `webProps` options typed from the corresponding upstream public component. These options are ignored on the inactive platform. Adapter-owned values such as `isPending`, `isInvalid`, mapped input props, children, class names, and refs cannot be overridden through an escape hatch.
 
-| Export              | Import                        | Purpose                                                                        |
-| ------------------- | ----------------------------- | ------------------------------------------------------------------------------ |
-| `HeroUIView`        | `@nh-kng/react-native-heroui` | Native view component.                                                         |
-| `HeroUIViewProps`   | `@nh-kng/react-native-heroui` | Props accepted by the view.                                                    |
-| `OnTapEventPayload` | `@nh-kng/react-native-heroui` | Empty payload type reserved for a future tap event; no event is emitted today. |
-| default export      | `@nh-kng/react-native-heroui` | Native module handle with no public methods or properties today.               |
-
-- [Components](components.md)
-- [Types](types.md)
-
-There are no public hooks or utility functions in this release.
-
-## Platform compatibility
-
-`HeroUIView` is usable only on native platforms with a development build. The module default export also resolves through a web adapter for bundling, but the view itself is unavailable on web.
+- [Component API](components.md)
+- [Type conventions](types.md)
+- [Platform support](../guides/platform-support.md)

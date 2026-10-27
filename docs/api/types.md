@@ -1,29 +1,21 @@
 # Types
 
-> Status: Stable
-> Last reviewed: 2026-10-23
+The package exports conventional component prop interfaces such as `ButtonProps`, `CardProps`, `InputProps`, `TextFieldProps`, `TypographyProps`, and the compound-part interfaces such as `CardBodyProps` and `TypographyHeadingProps`. Each platform declaration exports the same shared direct props and the matching component ref type.
 
-## `HeroUIViewProps`
+## Shared props
 
-The props accepted by `HeroUIView`:
+Shared props describe the behavior users can rely on across platforms. Examples include `ButtonProps.isPending`, `InputProps.onChangeText`, `InputProps.keyboardType`, `TextFieldProps.isInvalid`, and `TypographyHeadingProps.type`. Variant and size values are the supported intersection of the installed upstream web and native component APIs.
 
-```ts
-type HeroUIViewProps = {
-  style?: StyleProp<ViewStyle>;
-};
-```
+`ButtonPressEvent` is a union of the supported upstream web and native press event types. It preserves the actual host event shape; code that needs a platform-specific event field should narrow the type or use platform-specific files.
 
-`StyleProp` and `ViewStyle` come from `react-native`. The optional `style` is forwarded to the native view.
+## Platform options
 
-## `OnTapEventPayload`
+Use `nativeProps` for native-only upstream props and `webProps` for web-only upstream props. Each option uses public upstream component types and omits props owned or mapped by the adapter, including refs. This keeps platform escape hatches from replacing shared behavior.
 
-```ts
-type OnTapEventPayload = Record<string, never>;
-```
-
-This empty payload type is exported for API continuity, but no tap event or callback is currently declared by the JavaScript or native module.
+Component refs use the actual upstream target for that platform. For example, native `InputComponentRef` is the upstream text-input ref and the web ref targets the upstream HTML input. There is no fabricated common imperative handle.
 
 ## Related documentation
 
-- [Components](components.md)
-- [Platform support](../guides/platform-support.md)
+- [Component API](components.md)
+- [API overview](README.md)
+- [Compatibility](../development/compatibility.md)

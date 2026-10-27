@@ -1,12 +1,4 @@
 # Architecture decisions
 
-> Status: Stable
-> Last reviewed: 2026-10-23
-
-## Overview
-
-This directory records decisions that affect the package boundary or contributor workflow. ADRs are historical context; the living API and platform documents remain authoritative for current behavior.
-
-## Decisions
-
-- [ADR 0001: Expo Modules API and pnpm workspace](0001-expo-modules-and-pnpm-workspace.md)
+- [0001 — Expo Modules API and pnpm workspace](0001-expo-modules-and-pnpm-workspace.md) preserves the original native module and workspace decision; ADR 0002 supersedes the native boundary while retaining the pnpm workspace.
+- [0002 — Platform adapter foundation](0002-platform-adapter-foundation.md) records the current two-upstream, platform-conditioned architecture and its transition from ADR 0001.

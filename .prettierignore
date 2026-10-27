@@ -15,3 +15,6 @@
 **/.gradle/
 **/Pods/
 **/DerivedData/
+
+# Untouched upstream reference repositories
+upstream/

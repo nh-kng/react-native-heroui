@@ -1,11 +1,9 @@
 # Changelog
 
-## Unreleased
+## 0.1.0 — Initial implementation
 
-- Migrated the repository and example app to a pnpm workspace with a single lockfile.
-- Added contributor, API, architecture, platform, and development documentation.
-
-## 0.1.0
-
-- Initialized the standalone Expo native module package for iOS, tvOS, and Android.
-- Added the generated `HeroUIView` native view sample and SDK 57 example app.
+- Kept web `Button.Label` text in normal flow so HeroUI buttons size and align around their labels.
+- Routed the uncontrolled web gallery field's initial value through `TextField.webProps` to match HeroUI React's field state ownership.
+- Initialized the `@nh-kng/react-native-heroui` package as a pnpm workspace library with platform-resolved TypeScript exports.
+- Added adapters for HeroUI React on web and HeroUI Native on iOS and Android, including Button, Card, Typography, field components, and HeroUIProvider.
+- Added separate native and web CSS entry points with shared brand tokens and an Expo SDK 57 gallery example.

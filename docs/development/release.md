@@ -1,36 +1,23 @@
-# Release
+# Release preparation
 
-> Status: Stable
-> Last reviewed: 2026-10-23
+The package publishes generated web and native JavaScript and declarations, platform CSS, changelog, license, and package documentation. `package.json` controls the published files through its `files` list.
 
-## Overview
-
-The root package is configured for public scoped publishing. Releases must include the generated JavaScript and declaration output, a reviewed changelog entry, and verification appropriate to any native or public API change.
-
-## Prepare
-
-From the repository root:
+Before preparing a release, install from the frozen workspace lockfile and run the checks relevant to the change:
 
 ```sh
 pnpm install --frozen-lockfile
-CI=1 pnpm check
+pnpm run build
+pnpm run typecheck
+pnpm run typecheck:fixtures
+pnpm run lint
+pnpm test
 pnpm pack --dry-run
 ```
 
-Review the tarball contents, `CHANGELOG.md`, platform documentation, and version fields in `package.json` and `android/build.gradle`. The `prepare` script rebuilds `build/` during install and `prepublishOnly` runs the build before publishing.
-
-## Publish
-
-After the version and changelog are reviewed, publish through the repository's normal authenticated release process:
-
-```sh
-pnpm publish
-```
-
-Publishing is intentionally separate from local checks. Native consumers need a fresh development build after installing a release that changes native code or Expo module registration.
+Review the generated files and dry-run package contents, confirm public API documentation and `CHANGELOG.md` match the implementation, and update the package version only as part of an explicitly requested release. Publishing is outside local verification.
 
 ## Related documentation
 
 - [Testing](testing.md)
 - [Compatibility](compatibility.md)
-- [Platform support](../guides/platform-support.md)
+- [API overview](../api/README.md)

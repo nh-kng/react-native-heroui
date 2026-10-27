@@ -1,7 +1,9 @@
 # ADR 0001: Expo Modules API and pnpm workspace
 
-> Status: Accepted
+> Status: Partially superseded by [ADR 0002](0002-platform-adapter-foundation.md); pnpm workspace decision retained
 > Last reviewed: 2026-10-23
+
+This record preserves the original Expo native module decision. [ADR 0002 — Platform adapter foundation](0002-platform-adapter-foundation.md) replaces the Expo Modules API boundary and its native registration setup with JavaScript and TypeScript adapters. The pnpm workspace, single lockfile, isolated linker, and `workspace:*` example dependency remain in use; the historical Expo autolinking and explicit Metro watch-folder configuration described below no longer apply.
 
 ## Context
 
