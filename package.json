@@ -1,7 +1,7 @@
 {
   "name": "@nh-kng/react-native-heroui",
   "version": "0.1.0",
-  "description": "Cross-platform HeroUI components for Expo and React Native",
+  "description": "Source-owned cross-platform HeroUI components for Expo and React Native",
   "main": "./build/web/index.web.js",
   "types": "./build/web/index.web.d.ts",
   "packageManager": "pnpm@10.32.1",
@@ -20,7 +20,8 @@
     "LICENSE",
     "README.md",
     "package.json",
-    "docs/upstream"
+    "docs/upstream",
+    "docs/changes/archive"
   ],
   "scripts": {
     "build": "pnpm run clean && tsc -p tsconfig.web.json && tsc -p tsconfig.native.json",
@@ -30,11 +31,12 @@
     "watch": "node scripts/watch.mjs",
     "lint": "eslint src/",
     "test": "node --test tests/*.test.mjs",
-    "check": "pnpm run verify:upstream && pnpm run typecheck && pnpm run typecheck:baselines && pnpm run lint && pnpm run build && pnpm run typecheck:fixtures && pnpm run build:baselines && pnpm test",
+    "check": "pnpm run verify:upstream && pnpm run verify:owned && pnpm run typecheck && pnpm run typecheck:baselines && pnpm run lint && pnpm run build && pnpm run typecheck:fixtures && pnpm run build:baselines && pnpm test",
     "prepublishOnly": "pnpm run build",
     "build:baselines": "node scripts/build-baselines.mjs",
     "typecheck:baselines": "tsc -p tsconfig.baselines.web.json --noEmit && tsc -p tsconfig.baselines.native.json --noEmit",
-    "verify:upstream": "node scripts/verify-upstream.mjs"
+    "verify:upstream": "node scripts/verify-upstream.mjs",
+    "verify:owned": "node scripts/verify-owned.mjs"
   },
   "keywords": [
     "react-native",
@@ -82,11 +84,9 @@
     "uniwind": "1.13.0"
   },
   "peerDependencies": {
-    "@heroui/react": "^3.2.6",
     "@internationalized/date": "^3.12.4",
     "@react-aria/ssr": "^3.10.1",
     "@react-aria/utils": "^3.34.1",
-    "heroui-native": "^1.0.11",
     "react": ">=19.0.0",
     "react-aria": "^3.52.1",
     "react-aria-components": "^1.21.1",
@@ -100,7 +100,10 @@
     "tailwind-merge": "^3.4.0",
     "tailwind-variants": "^3.2.2",
     "tailwindcss": "^4.0.0",
-    "uniwind": "^1.13.0"
+    "uniwind": "^1.13.0",
+    "@gorhom/bottom-sheet": "^5.2.9",
+    "expo-blur": ">=14.0.0",
+    "react-native-screens": ">=4"
   },
   "type": "module",
   "module": "./build/web/index.web.js",
@@ -257,9 +260,35 @@
     },
     "./styles/native.css": "./styles/native.css",
     "./styles/web.css": "./styles/web.css",
-    "./package.json": "./package.json"
+    "./package.json": "./package.json",
+    "./chip": {
+      "react-native": {
+        "types": "./build/native/components/chip/index.native.d.ts",
+        "import": "./build/native/components/chip/index.native.js",
+        "default": "./build/native/components/chip/index.native.js"
+      },
+      "browser": {
+        "types": "./build/web/components/chip/index.web.d.ts",
+        "import": "./build/web/components/chip/index.web.js",
+        "default": "./build/web/components/chip/index.web.js"
+      },
+      "types": "./build/web/components/chip/index.web.d.ts",
+      "import": "./build/web/components/chip/index.web.js",
+      "default": "./build/web/components/chip/index.web.js"
+    }
   },
   "sideEffects": [
     "styles/*.css"
-  ]
+  ],
+  "peerDependenciesMeta": {
+    "@gorhom/bottom-sheet": {
+      "optional": true
+    },
+    "expo-blur": {
+      "optional": true
+    },
+    "react-native-screens": {
+      "optional": true
+    }
+  }
 }

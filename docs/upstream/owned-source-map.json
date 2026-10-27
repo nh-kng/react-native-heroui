@@ -1,0 +1,2072 @@
+{
+  "schemaVersion": 1,
+  "stage": 2,
+  "baselineCheckpoint": "31dfac3",
+  "repositories": [
+    {
+      "id": "heroui-react",
+      "repository": "https://github.com/heroui-inc/heroui.git",
+      "baselineCommit": "e385ac202b2cdb94b1bf6fa76d32c31c8259cc5e",
+      "lastReviewedCommit": "e385ac202b2cdb94b1bf6fa76d32c31c8259cc5e",
+      "lastIncorporatedCommit": "e385ac202b2cdb94b1bf6fa76d32c31c8259cc5e",
+      "version": "3.2.6",
+      "knownUnappliedChanges": [],
+      "license": "MIT",
+      "licenseNotice": "docs/upstream/licenses/heroui-react.txt"
+    },
+    {
+      "id": "heroui-native",
+      "repository": "https://github.com/heroui-inc/heroui-native.git",
+      "baselineCommit": "1980fbbbd6e8112cf9363614abec683379e89da3",
+      "lastReviewedCommit": "1980fbbbd6e8112cf9363614abec683379e89da3",
+      "lastIncorporatedCommit": "1980fbbbd6e8112cf9363614abec683379e89da3",
+      "version": "1.0.11",
+      "knownUnappliedChanges": [],
+      "license": "Apache-2.0",
+      "licenseNotice": "docs/upstream/licenses/heroui-native.txt"
+    }
+  ],
+  "files": [
+    {
+      "baseline": "baselines/heroui-native/LICENSE",
+      "local": "docs/upstream/licenses/heroui-native.txt"
+    },
+    {
+      "baseline": "baselines/heroui-react/LICENSE",
+      "local": "docs/upstream/licenses/heroui-react.txt"
+    },
+    {
+      "baseline": "baselines/heroui-native/src/components/button/button.styles.ts",
+      "local": "src/components/button/button.styles.ts"
+    },
+    {
+      "baseline": "baselines/heroui-native/src/components/chip/chip.styles.ts",
+      "local": "src/components/chip/chip.styles.ts"
+    },
+    {
+      "baseline": "baselines/heroui-native/src/components/bottom-sheet/bottom-sheet.animation.ts",
+      "local": "src/primitives/native/components/bottom-sheet/bottom-sheet.animation.ts"
+    },
+    {
+      "baseline": "baselines/heroui-native/src/components/bottom-sheet/bottom-sheet.constants.ts",
+      "local": "src/primitives/native/components/bottom-sheet/bottom-sheet.constants.ts"
+    },
+    {
+      "baseline": "baselines/heroui-native/src/components/bottom-sheet/bottom-sheet.styles.ts",
+      "local": "src/primitives/native/components/bottom-sheet/bottom-sheet.styles.ts"
+    },
+    {
+      "baseline": "baselines/heroui-native/src/components/bottom-sheet/bottom-sheet.types.ts",
+      "local": "src/primitives/native/components/bottom-sheet/bottom-sheet.types.ts"
+    },
+    {
+      "baseline": "baselines/heroui-native/src/components/button/button.constants.ts",
+      "local": "src/primitives/native/components/button/button.constants.ts"
+    },
+    {
+      "baseline": "baselines/heroui-native/src/components/button/button.styles.ts",
+      "local": "src/primitives/native/components/button/button.styles.ts"
+    },
+    {
+      "baseline": "baselines/heroui-native/src/components/button/button.tsx",
+      "local": "src/primitives/native/components/button/button.tsx"
+    },
+    {
+      "baseline": "baselines/heroui-native/src/components/button/button.types.ts",
+      "local": "src/primitives/native/components/button/button.types.ts"
+    },
+    {
+      "baseline": "baselines/heroui-native/src/components/button/button.utils.ts",
+      "local": "src/primitives/native/components/button/button.utils.ts"
+    },
+    {
+      "baseline": "baselines/heroui-native/src/components/button/index.ts",
+      "local": "src/primitives/native/components/button/index.ts"
+    },
+    {
+      "baseline": "baselines/heroui-native/src/components/card/card.constants.ts",
+      "local": "src/primitives/native/components/card/card.constants.ts"
+    },
+    {
+      "baseline": "baselines/heroui-native/src/components/card/card.styles.ts",
+      "local": "src/primitives/native/components/card/card.styles.ts"
+    },
+    {
+      "baseline": "baselines/heroui-native/src/components/card/card.tsx",
+      "local": "src/primitives/native/components/card/card.tsx"
+    },
+    {
+      "baseline": "baselines/heroui-native/src/components/card/card.types.ts",
+      "local": "src/primitives/native/components/card/card.types.ts"
+    },
+    {
+      "baseline": "baselines/heroui-native/src/components/card/index.ts",
+      "local": "src/primitives/native/components/card/index.ts"
+    },
+    {
+      "baseline": "baselines/heroui-native/src/components/chip/chip.animation.ts",
+      "local": "src/primitives/native/components/chip/chip.animation.ts"
+    },
+    {
+      "baseline": "baselines/heroui-native/src/components/chip/chip.constants.ts",
+      "local": "src/primitives/native/components/chip/chip.constants.ts"
+    },
+    {
+      "baseline": "baselines/heroui-native/src/components/chip/chip.styles.ts",
+      "local": "src/primitives/native/components/chip/chip.styles.ts"
+    },
+    {
+      "baseline": "baselines/heroui-native/src/components/chip/chip.tsx",
+      "local": "src/primitives/native/components/chip/chip.tsx"
+    },
+    {
+      "baseline": "baselines/heroui-native/src/components/chip/chip.types.ts",
+      "local": "src/primitives/native/components/chip/chip.types.ts"
+    },
+    {
+      "baseline": "baselines/heroui-native/src/components/chip/index.ts",
+      "local": "src/primitives/native/components/chip/index.ts"
+    },
+    {
+      "baseline": "baselines/heroui-native/src/components/close-button/close-button.types.ts",
+      "local": "src/primitives/native/components/close-button/close-button.types.ts"
+    },
+    {
+      "baseline": "baselines/heroui-native/src/components/control-field/control-field.context.ts",
+      "local": "src/primitives/native/components/control-field/control-field.context.ts"
+    },
+    {
+      "baseline": "baselines/heroui-native/src/components/control-field/control-field.types.ts",
+      "local": "src/primitives/native/components/control-field/control-field.types.ts"
+    },
+    {
+      "baseline": "baselines/heroui-native/src/components/description/description.animation.ts",
+      "local": "src/primitives/native/components/description/description.animation.ts"
+    },
+    {
+      "baseline": "baselines/heroui-native/src/components/description/description.constants.ts",
+      "local": "src/primitives/native/components/description/description.constants.ts"
+    },
+    {
+      "baseline": "baselines/heroui-native/src/components/description/description.styles.ts",
+      "local": "src/primitives/native/components/description/description.styles.ts"
+    },
+    {
+      "baseline": "baselines/heroui-native/src/components/description/description.tsx",
+      "local": "src/primitives/native/components/description/description.tsx"
+    },
+    {
+      "baseline": "baselines/heroui-native/src/components/description/description.types.ts",
+      "local": "src/primitives/native/components/description/description.types.ts"
+    },
+    {
+      "baseline": "baselines/heroui-native/src/components/description/index.ts",
+      "local": "src/primitives/native/components/description/index.ts"
+    },
+    {
+      "baseline": "baselines/heroui-native/src/components/field-error/field-error.animation.ts",
+      "local": "src/primitives/native/components/field-error/field-error.animation.ts"
+    },
+    {
+      "baseline": "baselines/heroui-native/src/components/field-error/field-error.constants.ts",
+      "local": "src/primitives/native/components/field-error/field-error.constants.ts"
+    },
+    {
+      "baseline": "baselines/heroui-native/src/components/field-error/field-error.styles.ts",
+      "local": "src/primitives/native/components/field-error/field-error.styles.ts"
+    },
+    {
+      "baseline": "baselines/heroui-native/src/components/field-error/field-error.tsx",
+      "local": "src/primitives/native/components/field-error/field-error.tsx"
+    },
+    {
+      "baseline": "baselines/heroui-native/src/components/field-error/field-error.types.ts",
+      "local": "src/primitives/native/components/field-error/field-error.types.ts"
+    },
+    {
+      "baseline": "baselines/heroui-native/src/components/field-error/index.ts",
+      "local": "src/primitives/native/components/field-error/index.ts"
+    },
+    {
+      "baseline": "baselines/heroui-native/src/components/glass-view/glass-view.constants.ts",
+      "local": "src/primitives/native/components/glass-view/glass-view.constants.ts"
+    },
+    {
+      "baseline": "baselines/heroui-native/src/components/glass-view/glass-view.styles.ts",
+      "local": "src/primitives/native/components/glass-view/glass-view.styles.ts"
+    },
+    {
+      "baseline": "baselines/heroui-native/src/components/glass-view/glass-view.tsx",
+      "local": "src/primitives/native/components/glass-view/glass-view.tsx"
+    },
+    {
+      "baseline": "baselines/heroui-native/src/components/glass-view/glass-view.types.ts",
+      "local": "src/primitives/native/components/glass-view/glass-view.types.ts"
+    },
+    {
+      "baseline": "baselines/heroui-native/src/components/glass-view/glass-view.utils.ts",
+      "local": "src/primitives/native/components/glass-view/glass-view.utils.ts"
+    },
+    {
+      "baseline": "baselines/heroui-native/src/components/glass-view/index.ts",
+      "local": "src/primitives/native/components/glass-view/index.ts"
+    },
+    {
+      "baseline": "baselines/heroui-native/src/components/input/index.ts",
+      "local": "src/primitives/native/components/input/index.ts"
+    },
+    {
+      "baseline": "baselines/heroui-native/src/components/input/input.constants.ts",
+      "local": "src/primitives/native/components/input/input.constants.ts"
+    },
+    {
+      "baseline": "baselines/heroui-native/src/components/input/input.styles.ts",
+      "local": "src/primitives/native/components/input/input.styles.ts"
+    },
+    {
+      "baseline": "baselines/heroui-native/src/components/input/input.tsx",
+      "local": "src/primitives/native/components/input/input.tsx"
+    },
+    {
+      "baseline": "baselines/heroui-native/src/components/input/input.types.ts",
+      "local": "src/primitives/native/components/input/input.types.ts"
+    },
+    {
+      "baseline": "baselines/heroui-native/src/components/label/index.ts",
+      "local": "src/primitives/native/components/label/index.ts"
+    },
+    {
+      "baseline": "baselines/heroui-native/src/components/label/label.animation.ts",
+      "local": "src/primitives/native/components/label/label.animation.ts"
+    },
+    {
+      "baseline": "baselines/heroui-native/src/components/label/label.constants.ts",
+      "local": "src/primitives/native/components/label/label.constants.ts"
+    },
+    {
+      "baseline": "baselines/heroui-native/src/components/label/label.styles.ts",
+      "local": "src/primitives/native/components/label/label.styles.ts"
+    },
+    {
+      "baseline": "baselines/heroui-native/src/components/label/label.tsx",
+      "local": "src/primitives/native/components/label/label.tsx"
+    },
+    {
+      "baseline": "baselines/heroui-native/src/components/label/label.types.ts",
+      "local": "src/primitives/native/components/label/label.types.ts"
+    },
+    {
+      "baseline": "baselines/heroui-native/src/components/pressable-feedback/index.ts",
+      "local": "src/primitives/native/components/pressable-feedback/index.ts"
+    },
+    {
+      "baseline": "baselines/heroui-native/src/components/pressable-feedback/pressable-feedback.animation.ts",
+      "local": "src/primitives/native/components/pressable-feedback/pressable-feedback.animation.ts"
+    },
+    {
+      "baseline": "baselines/heroui-native/src/components/pressable-feedback/pressable-feedback.constants.ts",
+      "local": "src/primitives/native/components/pressable-feedback/pressable-feedback.constants.ts"
+    },
+    {
+      "baseline": "baselines/heroui-native/src/components/pressable-feedback/pressable-feedback.styles.ts",
+      "local": "src/primitives/native/components/pressable-feedback/pressable-feedback.styles.ts"
+    },
+    {
+      "baseline": "baselines/heroui-native/src/components/pressable-feedback/pressable-feedback.tsx",
+      "local": "src/primitives/native/components/pressable-feedback/pressable-feedback.tsx"
+    },
+    {
+      "baseline": "baselines/heroui-native/src/components/pressable-feedback/pressable-feedback.types.ts",
+      "local": "src/primitives/native/components/pressable-feedback/pressable-feedback.types.ts"
+    },
+    {
+      "baseline": "baselines/heroui-native/src/components/radio-group/radio-group.context.ts",
+      "local": "src/primitives/native/components/radio-group/radio-group.context.ts"
+    },
+    {
+      "baseline": "baselines/heroui-native/src/components/radio-group/radio-group.types.ts",
+      "local": "src/primitives/native/components/radio-group/radio-group.types.ts"
+    },
+    {
+      "baseline": "baselines/heroui-native/src/components/surface/index.ts",
+      "local": "src/primitives/native/components/surface/index.ts"
+    },
+    {
+      "baseline": "baselines/heroui-native/src/components/surface/surface.animation.ts",
+      "local": "src/primitives/native/components/surface/surface.animation.ts"
+    },
+    {
+      "baseline": "baselines/heroui-native/src/components/surface/surface.constants.ts",
+      "local": "src/primitives/native/components/surface/surface.constants.ts"
+    },
+    {
+      "baseline": "baselines/heroui-native/src/components/surface/surface.context.ts",
+      "local": "src/primitives/native/components/surface/surface.context.ts"
+    },
+    {
+      "baseline": "baselines/heroui-native/src/components/surface/surface.styles.ts",
+      "local": "src/primitives/native/components/surface/surface.styles.ts"
+    },
+    {
+      "baseline": "baselines/heroui-native/src/components/surface/surface.tsx",
+      "local": "src/primitives/native/components/surface/surface.tsx"
+    },
+    {
+      "baseline": "baselines/heroui-native/src/components/surface/surface.types.ts",
+      "local": "src/primitives/native/components/surface/surface.types.ts"
+    },
+    {
+      "baseline": "baselines/heroui-native/src/components/text-field/index.ts",
+      "local": "src/primitives/native/components/text-field/index.ts"
+    },
+    {
+      "baseline": "baselines/heroui-native/src/components/text-field/text-field.animation.ts",
+      "local": "src/primitives/native/components/text-field/text-field.animation.ts"
+    },
+    {
+      "baseline": "baselines/heroui-native/src/components/text-field/text-field.constants.ts",
+      "local": "src/primitives/native/components/text-field/text-field.constants.ts"
+    },
+    {
+      "baseline": "baselines/heroui-native/src/components/text-field/text-field.styles.ts",
+      "local": "src/primitives/native/components/text-field/text-field.styles.ts"
+    },
+    {
+      "baseline": "baselines/heroui-native/src/components/text-field/text-field.tsx",
+      "local": "src/primitives/native/components/text-field/text-field.tsx"
+    },
+    {
+      "baseline": "baselines/heroui-native/src/components/text-field/text-field.types.ts",
+      "local": "src/primitives/native/components/text-field/text-field.types.ts"
+    },
+    {
+      "baseline": "baselines/heroui-native/src/components/text/index.ts",
+      "local": "src/primitives/native/components/text/index.ts"
+    },
+    {
+      "baseline": "baselines/heroui-native/src/components/text/text.constants.ts",
+      "local": "src/primitives/native/components/text/text.constants.ts"
+    },
+    {
+      "baseline": "baselines/heroui-native/src/components/text/text.styles.ts",
+      "local": "src/primitives/native/components/text/text.styles.ts"
+    },
+    {
+      "baseline": "baselines/heroui-native/src/components/text/text.tsx",
+      "local": "src/primitives/native/components/text/text.tsx"
+    },
+    {
+      "baseline": "baselines/heroui-native/src/components/text/text.types.ts",
+      "local": "src/primitives/native/components/text/text.types.ts"
+    },
+    {
+      "baseline": "baselines/heroui-native/src/components/theme-background/index.ts",
+      "local": "src/primitives/native/components/theme-background/index.ts"
+    },
+    {
+      "baseline": "baselines/heroui-native/src/components/theme-background/theme-background.constants.ts",
+      "local": "src/primitives/native/components/theme-background/theme-background.constants.ts"
+    },
+    {
+      "baseline": "baselines/heroui-native/src/components/theme-background/theme-background.tsx",
+      "local": "src/primitives/native/components/theme-background/theme-background.tsx"
+    },
+    {
+      "baseline": "baselines/heroui-native/src/components/theme-background/theme-background.types.ts",
+      "local": "src/primitives/native/components/theme-background/theme-background.types.ts"
+    },
+    {
+      "baseline": "baselines/heroui-native/src/components/toast/toast.animation.ts",
+      "local": "src/primitives/native/components/toast/toast.animation.ts"
+    },
+    {
+      "baseline": "baselines/heroui-native/src/components/toast/toast.base-types.ts",
+      "local": "src/primitives/native/components/toast/toast.base-types.ts"
+    },
+    {
+      "baseline": "baselines/heroui-native/src/components/toast/toast.constants.ts",
+      "local": "src/primitives/native/components/toast/toast.constants.ts"
+    },
+    {
+      "baseline": "baselines/heroui-native/src/components/toast/toast.hooks.ts",
+      "local": "src/primitives/native/components/toast/toast.hooks.ts"
+    },
+    {
+      "baseline": "baselines/heroui-native/src/components/toast/toast.styles.ts",
+      "local": "src/primitives/native/components/toast/toast.styles.ts"
+    },
+    {
+      "baseline": "baselines/heroui-native/src/components/toast/toast.tsx",
+      "local": "src/primitives/native/components/toast/toast.tsx"
+    },
+    {
+      "baseline": "baselines/heroui-native/src/components/toast/toast.types.ts",
+      "local": "src/primitives/native/components/toast/toast.types.ts"
+    },
+    {
+      "baseline": "baselines/heroui-native/src/helpers/external/hooks/index.ts",
+      "local": "src/primitives/native/helpers/external/hooks/index.ts"
+    },
+    {
+      "baseline": "baselines/heroui-native/src/helpers/external/hooks/use-bottom-sheet-aware-handlers.ts",
+      "local": "src/primitives/native/helpers/external/hooks/use-bottom-sheet-aware-handlers.ts"
+    },
+    {
+      "baseline": "baselines/heroui-native/src/helpers/external/hooks/use-is-on-surface.ts",
+      "local": "src/primitives/native/helpers/external/hooks/use-is-on-surface.ts"
+    },
+    {
+      "baseline": "baselines/heroui-native/src/helpers/external/hooks/use-theme-color.ts",
+      "local": "src/primitives/native/helpers/external/hooks/use-theme-color.ts"
+    },
+    {
+      "baseline": "baselines/heroui-native/src/helpers/external/utils/cn.ts",
+      "local": "src/primitives/native/helpers/external/utils/cn.ts"
+    },
+    {
+      "baseline": "baselines/heroui-native/src/helpers/external/utils/color-kit/index.ts",
+      "local": "src/primitives/native/helpers/external/utils/color-kit/index.ts"
+    },
+    {
+      "baseline": "baselines/heroui-native/src/helpers/external/utils/color-kit/types.ts",
+      "local": "src/primitives/native/helpers/external/utils/color-kit/types.ts"
+    },
+    {
+      "baseline": "baselines/heroui-native/src/helpers/external/utils/index.ts",
+      "local": "src/primitives/native/helpers/external/utils/index.ts"
+    },
+    {
+      "baseline": "baselines/heroui-native/src/helpers/internal/components/animated-check-icon.tsx",
+      "local": "src/primitives/native/helpers/internal/components/animated-check-icon.tsx"
+    },
+    {
+      "baseline": "baselines/heroui-native/src/helpers/internal/components/bottom-sheet-content-container.tsx",
+      "local": "src/primitives/native/helpers/internal/components/bottom-sheet-content-container.tsx"
+    },
+    {
+      "baseline": "baselines/heroui-native/src/helpers/internal/components/bottom-sheet-content.tsx",
+      "local": "src/primitives/native/helpers/internal/components/bottom-sheet-content.tsx"
+    },
+    {
+      "baseline": "baselines/heroui-native/src/helpers/internal/components/check-icon.tsx",
+      "local": "src/primitives/native/helpers/internal/components/check-icon.tsx"
+    },
+    {
+      "baseline": "baselines/heroui-native/src/helpers/internal/components/chevron-down-icon.tsx",
+      "local": "src/primitives/native/helpers/internal/components/chevron-down-icon.tsx"
+    },
+    {
+      "baseline": "baselines/heroui-native/src/helpers/internal/components/chevron-right-icon.tsx",
+      "local": "src/primitives/native/helpers/internal/components/chevron-right-icon.tsx"
+    },
+    {
+      "baseline": "baselines/heroui-native/src/helpers/internal/components/close-icon.tsx",
+      "local": "src/primitives/native/helpers/internal/components/close-icon.tsx"
+    },
+    {
+      "baseline": "baselines/heroui-native/src/helpers/internal/components/full-window-overlay.tsx",
+      "local": "src/primitives/native/helpers/internal/components/full-window-overlay.tsx"
+    },
+    {
+      "baseline": "baselines/heroui-native/src/helpers/internal/components/hero-text-input.tsx",
+      "local": "src/primitives/native/helpers/internal/components/hero-text-input.tsx"
+    },
+    {
+      "baseline": "baselines/heroui-native/src/helpers/internal/components/hero-text.tsx",
+      "local": "src/primitives/native/helpers/internal/components/hero-text.tsx"
+    },
+    {
+      "baseline": "baselines/heroui-native/src/helpers/internal/components/index.ts",
+      "local": "src/primitives/native/helpers/internal/components/index.ts"
+    },
+    {
+      "baseline": "baselines/heroui-native/src/helpers/internal/components/popup-overlay-blur-view.tsx",
+      "local": "src/primitives/native/helpers/internal/components/popup-overlay-blur-view.tsx"
+    },
+    {
+      "baseline": "baselines/heroui-native/src/helpers/internal/components/portal-gesture-root.tsx",
+      "local": "src/primitives/native/helpers/internal/components/portal-gesture-root.tsx"
+    },
+    {
+      "baseline": "baselines/heroui-native/src/helpers/internal/components/theme-background.tsx",
+      "local": "src/primitives/native/helpers/internal/components/theme-background.tsx"
+    },
+    {
+      "baseline": "baselines/heroui-native/src/helpers/internal/contexts/animation-settings-context.ts",
+      "local": "src/primitives/native/helpers/internal/contexts/animation-settings-context.ts"
+    },
+    {
+      "baseline": "baselines/heroui-native/src/helpers/internal/contexts/bottom-sheet-is-dragging-context.ts",
+      "local": "src/primitives/native/helpers/internal/contexts/bottom-sheet-is-dragging-context.ts"
+    },
+    {
+      "baseline": "baselines/heroui-native/src/helpers/internal/contexts/form-field-context.ts",
+      "local": "src/primitives/native/helpers/internal/contexts/form-field-context.ts"
+    },
+    {
+      "baseline": "baselines/heroui-native/src/helpers/internal/contexts/index.ts",
+      "local": "src/primitives/native/helpers/internal/contexts/index.ts"
+    },
+    {
+      "baseline": "baselines/heroui-native/src/helpers/internal/contexts/layout-direction-context.ts",
+      "local": "src/primitives/native/helpers/internal/contexts/layout-direction-context.ts"
+    },
+    {
+      "baseline": "baselines/heroui-native/src/helpers/internal/hooks/index.ts",
+      "local": "src/primitives/native/helpers/internal/hooks/index.ts"
+    },
+    {
+      "baseline": "baselines/heroui-native/src/helpers/internal/hooks/use-augmented-ref.ts",
+      "local": "src/primitives/native/helpers/internal/hooks/use-augmented-ref.ts"
+    },
+    {
+      "baseline": "baselines/heroui-native/src/helpers/internal/hooks/use-bottom-sheet-gesture-handlers.ts",
+      "local": "src/primitives/native/helpers/internal/hooks/use-bottom-sheet-gesture-handlers.ts"
+    },
+    {
+      "baseline": "baselines/heroui-native/src/helpers/internal/hooks/use-combined-animation-disabled-state.ts",
+      "local": "src/primitives/native/helpers/internal/hooks/use-combined-animation-disabled-state.ts"
+    },
+    {
+      "baseline": "baselines/heroui-native/src/helpers/internal/hooks/use-controllable-state.ts",
+      "local": "src/primitives/native/helpers/internal/hooks/use-controllable-state.ts"
+    },
+    {
+      "baseline": "baselines/heroui-native/src/helpers/internal/hooks/use-dev-info.ts",
+      "local": "src/primitives/native/helpers/internal/hooks/use-dev-info.ts"
+    },
+    {
+      "baseline": "baselines/heroui-native/src/helpers/internal/hooks/use-is-rtl.ts",
+      "local": "src/primitives/native/helpers/internal/hooks/use-is-rtl.ts"
+    },
+    {
+      "baseline": "baselines/heroui-native/src/helpers/internal/hooks/use-library-theme.ts",
+      "local": "src/primitives/native/helpers/internal/hooks/use-library-theme.ts"
+    },
+    {
+      "baseline": "baselines/heroui-native/src/helpers/internal/hooks/use-popup-bottom-sheet-content-animation.ts",
+      "local": "src/primitives/native/helpers/internal/hooks/use-popup-bottom-sheet-content-animation.ts"
+    },
+    {
+      "baseline": "baselines/heroui-native/src/helpers/internal/hooks/use-popup-dialog-content-animation.ts",
+      "local": "src/primitives/native/helpers/internal/hooks/use-popup-dialog-content-animation.ts"
+    },
+    {
+      "baseline": "baselines/heroui-native/src/helpers/internal/hooks/use-popup-overlay-animation.ts",
+      "local": "src/primitives/native/helpers/internal/hooks/use-popup-overlay-animation.ts"
+    },
+    {
+      "baseline": "baselines/heroui-native/src/helpers/internal/hooks/use-popup-overlay-variant.ts",
+      "local": "src/primitives/native/helpers/internal/hooks/use-popup-overlay-variant.ts"
+    },
+    {
+      "baseline": "baselines/heroui-native/src/helpers/internal/hooks/use-popup-popover-content-animation.ts",
+      "local": "src/primitives/native/helpers/internal/hooks/use-popup-popover-content-animation.ts"
+    },
+    {
+      "baseline": "baselines/heroui-native/src/helpers/internal/hooks/use-popup-root-animation.ts",
+      "local": "src/primitives/native/helpers/internal/hooks/use-popup-root-animation.ts"
+    },
+    {
+      "baseline": "baselines/heroui-native/src/helpers/internal/hooks/use-relative-position.ts",
+      "local": "src/primitives/native/helpers/internal/hooks/use-relative-position.ts"
+    },
+    {
+      "baseline": "baselines/heroui-native/src/helpers/internal/hooks/use-resolved-style-property.ts",
+      "local": "src/primitives/native/helpers/internal/hooks/use-resolved-style-property.ts"
+    },
+    {
+      "baseline": "baselines/heroui-native/src/helpers/internal/types/animation.ts",
+      "local": "src/primitives/native/helpers/internal/types/animation.ts"
+    },
+    {
+      "baseline": "baselines/heroui-native/src/helpers/internal/types/bottom-sheet.ts",
+      "local": "src/primitives/native/helpers/internal/types/bottom-sheet.ts"
+    },
+    {
+      "baseline": "baselines/heroui-native/src/helpers/internal/types/index.ts",
+      "local": "src/primitives/native/helpers/internal/types/index.ts"
+    },
+    {
+      "baseline": "baselines/heroui-native/src/helpers/internal/types/misc.ts",
+      "local": "src/primitives/native/helpers/internal/types/misc.ts"
+    },
+    {
+      "baseline": "baselines/heroui-native/src/helpers/internal/types/overlay.ts",
+      "local": "src/primitives/native/helpers/internal/types/overlay.ts"
+    },
+    {
+      "baseline": "baselines/heroui-native/src/helpers/internal/types/primitives.ts",
+      "local": "src/primitives/native/helpers/internal/types/primitives.ts"
+    },
+    {
+      "baseline": "baselines/heroui-native/src/helpers/internal/types/theme.ts",
+      "local": "src/primitives/native/helpers/internal/types/theme.ts"
+    },
+    {
+      "baseline": "baselines/heroui-native/src/helpers/internal/utils/animation.ts",
+      "local": "src/primitives/native/helpers/internal/utils/animation.ts"
+    },
+    {
+      "baseline": "baselines/heroui-native/src/helpers/internal/utils/children-to-string.ts",
+      "local": "src/primitives/native/helpers/internal/utils/children-to-string.ts"
+    },
+    {
+      "baseline": "baselines/heroui-native/src/helpers/internal/utils/combine-styles.ts",
+      "local": "src/primitives/native/helpers/internal/utils/combine-styles.ts"
+    },
+    {
+      "baseline": "baselines/heroui-native/src/helpers/internal/utils/create-context.ts",
+      "local": "src/primitives/native/helpers/internal/utils/create-context.ts"
+    },
+    {
+      "baseline": "baselines/heroui-native/src/optional/expo-blur.ts",
+      "local": "src/primitives/native/optional/expo-blur.ts"
+    },
+    {
+      "baseline": "baselines/heroui-native/src/optional/gorhom-bottom-sheet.ts",
+      "local": "src/primitives/native/optional/gorhom-bottom-sheet.ts"
+    },
+    {
+      "baseline": "baselines/heroui-native/src/optional/react-native-screens.ts",
+      "local": "src/primitives/native/optional/react-native-screens.ts"
+    },
+    {
+      "baseline": "baselines/heroui-native/src/primitives/bottom-sheet/bottom-sheet.types.ts",
+      "local": "src/primitives/native/primitives/bottom-sheet/bottom-sheet.types.ts"
+    },
+    {
+      "baseline": "baselines/heroui-native/src/primitives/label/index.ts",
+      "local": "src/primitives/native/primitives/label/index.ts"
+    },
+    {
+      "baseline": "baselines/heroui-native/src/primitives/label/label.tsx",
+      "local": "src/primitives/native/primitives/label/label.tsx"
+    },
+    {
+      "baseline": "baselines/heroui-native/src/primitives/label/label.types.ts",
+      "local": "src/primitives/native/primitives/label/label.types.ts"
+    },
+    {
+      "baseline": "baselines/heroui-native/src/primitives/portal/index.ts",
+      "local": "src/primitives/native/primitives/portal/index.ts"
+    },
+    {
+      "baseline": "baselines/heroui-native/src/primitives/portal/portal.tsx",
+      "local": "src/primitives/native/primitives/portal/portal.tsx"
+    },
+    {
+      "baseline": "baselines/heroui-native/src/primitives/radio-group/index.ts",
+      "local": "src/primitives/native/primitives/radio-group/index.ts"
+    },
+    {
+      "baseline": "baselines/heroui-native/src/primitives/radio-group/radio-group.tsx",
+      "local": "src/primitives/native/primitives/radio-group/radio-group.tsx"
+    },
+    {
+      "baseline": "baselines/heroui-native/src/primitives/radio-group/radio-group.types.ts",
+      "local": "src/primitives/native/primitives/radio-group/radio-group.types.ts"
+    },
+    {
+      "baseline": "baselines/heroui-native/src/primitives/slot/index.ts",
+      "local": "src/primitives/native/primitives/slot/index.ts"
+    },
+    {
+      "baseline": "baselines/heroui-native/src/primitives/slot/slot.tsx",
+      "local": "src/primitives/native/primitives/slot/slot.tsx"
+    },
+    {
+      "baseline": "baselines/heroui-native/src/primitives/slot/types.ts",
+      "local": "src/primitives/native/primitives/slot/types.ts"
+    },
+    {
+      "baseline": "baselines/heroui-native/src/primitives/slot/utils.ts",
+      "local": "src/primitives/native/primitives/slot/utils.ts"
+    },
+    {
+      "baseline": "baselines/heroui-native/src/primitives/toast/index.ts",
+      "local": "src/primitives/native/primitives/toast/index.ts"
+    },
+    {
+      "baseline": "baselines/heroui-native/src/primitives/toast/toast.tsx",
+      "local": "src/primitives/native/primitives/toast/toast.tsx"
+    },
+    {
+      "baseline": "baselines/heroui-native/src/primitives/toast/toast.types.ts",
+      "local": "src/primitives/native/primitives/toast/toast.types.ts"
+    },
+    {
+      "baseline": "baselines/heroui-native/src/providers/animation-settings/index.ts",
+      "local": "src/primitives/native/providers/animation-settings/index.ts"
+    },
+    {
+      "baseline": "baselines/heroui-native/src/providers/animation-settings/provider.tsx",
+      "local": "src/primitives/native/providers/animation-settings/provider.tsx"
+    },
+    {
+      "baseline": "baselines/heroui-native/src/providers/animation-settings/types.ts",
+      "local": "src/primitives/native/providers/animation-settings/types.ts"
+    },
+    {
+      "baseline": "baselines/heroui-native/src/providers/hero-ui-native/index.ts",
+      "local": "src/primitives/native/providers/hero-ui-native/index.ts"
+    },
+    {
+      "baseline": "baselines/heroui-native/src/providers/hero-ui-native/provider.tsx",
+      "local": "src/primitives/native/providers/hero-ui-native/provider.tsx"
+    },
+    {
+      "baseline": "baselines/heroui-native/src/providers/hero-ui-native/types.ts",
+      "local": "src/primitives/native/providers/hero-ui-native/types.ts"
+    },
+    {
+      "baseline": "baselines/heroui-native/src/providers/text-component/index.ts",
+      "local": "src/primitives/native/providers/text-component/index.ts"
+    },
+    {
+      "baseline": "baselines/heroui-native/src/providers/text-component/provider.tsx",
+      "local": "src/primitives/native/providers/text-component/provider.tsx"
+    },
+    {
+      "baseline": "baselines/heroui-native/src/providers/text-component/types.ts",
+      "local": "src/primitives/native/providers/text-component/types.ts"
+    },
+    {
+      "baseline": "baselines/heroui-native/src/providers/text-input-component/index.ts",
+      "local": "src/primitives/native/providers/text-input-component/index.ts"
+    },
+    {
+      "baseline": "baselines/heroui-native/src/providers/text-input-component/provider.tsx",
+      "local": "src/primitives/native/providers/text-input-component/provider.tsx"
+    },
+    {
+      "baseline": "baselines/heroui-native/src/providers/text-input-component/types.ts",
+      "local": "src/primitives/native/providers/text-input-component/types.ts"
+    },
+    {
+      "baseline": "baselines/heroui-native/src/providers/toast/insets-container.tsx",
+      "local": "src/primitives/native/providers/toast/insets-container.tsx"
+    },
+    {
+      "baseline": "baselines/heroui-native/src/providers/toast/provider.tsx",
+      "local": "src/primitives/native/providers/toast/provider.tsx"
+    },
+    {
+      "baseline": "baselines/heroui-native/src/providers/toast/reducer.ts",
+      "local": "src/primitives/native/providers/toast/reducer.ts"
+    },
+    {
+      "baseline": "baselines/heroui-native/src/providers/toast/toast-config.context.ts",
+      "local": "src/primitives/native/providers/toast/toast-config.context.ts"
+    },
+    {
+      "baseline": "baselines/heroui-native/src/providers/toast/toast-item-renderer.tsx",
+      "local": "src/primitives/native/providers/toast/toast-item-renderer.tsx"
+    },
+    {
+      "baseline": "baselines/heroui-native/src/providers/toast/types.ts",
+      "local": "src/primitives/native/providers/toast/types.ts"
+    },
+    {
+      "baseline": "baselines/heroui-react/packages/react/src/components/button-group/button-group.tsx",
+      "local": "src/primitives/web/components/button-group/button-group.tsx"
+    },
+    {
+      "baseline": "baselines/heroui-react/packages/react/src/components/button-group/index.ts",
+      "local": "src/primitives/web/components/button-group/index.ts"
+    },
+    {
+      "baseline": "baselines/heroui-react/packages/react/src/components/button/button.tsx",
+      "local": "src/primitives/web/components/button/button.tsx"
+    },
+    {
+      "baseline": "baselines/heroui-react/packages/react/src/components/button/index.ts",
+      "local": "src/primitives/web/components/button/index.ts"
+    },
+    {
+      "baseline": "baselines/heroui-react/packages/react/src/components/card/card.tsx",
+      "local": "src/primitives/web/components/card/card.tsx"
+    },
+    {
+      "baseline": "baselines/heroui-react/packages/react/src/components/card/index.ts",
+      "local": "src/primitives/web/components/card/index.ts"
+    },
+    {
+      "baseline": "baselines/heroui-react/packages/react/src/components/chip/chip.tsx",
+      "local": "src/primitives/web/components/chip/chip.tsx"
+    },
+    {
+      "baseline": "baselines/heroui-react/packages/react/src/components/chip/index.ts",
+      "local": "src/primitives/web/components/chip/index.ts"
+    },
+    {
+      "baseline": "baselines/heroui-react/packages/react/src/components/combo-box/combo-box.tsx",
+      "local": "src/primitives/web/components/combo-box/combo-box.tsx"
+    },
+    {
+      "baseline": "baselines/heroui-react/packages/react/src/components/combo-box/index.ts",
+      "local": "src/primitives/web/components/combo-box/index.ts"
+    },
+    {
+      "baseline": "baselines/heroui-react/packages/react/src/components/description/description.tsx",
+      "local": "src/primitives/web/components/description/description.tsx"
+    },
+    {
+      "baseline": "baselines/heroui-react/packages/react/src/components/description/index.ts",
+      "local": "src/primitives/web/components/description/index.ts"
+    },
+    {
+      "baseline": "baselines/heroui-react/packages/react/src/components/field-error/field-error.tsx",
+      "local": "src/primitives/web/components/field-error/field-error.tsx"
+    },
+    {
+      "baseline": "baselines/heroui-react/packages/react/src/components/field-error/index.ts",
+      "local": "src/primitives/web/components/field-error/index.ts"
+    },
+    {
+      "baseline": "baselines/heroui-react/packages/react/src/components/icons.tsx",
+      "local": "src/primitives/web/components/icons.tsx"
+    },
+    {
+      "baseline": "baselines/heroui-react/packages/react/src/components/input/index.ts",
+      "local": "src/primitives/web/components/input/index.ts"
+    },
+    {
+      "baseline": "baselines/heroui-react/packages/react/src/components/input/input.tsx",
+      "local": "src/primitives/web/components/input/input.tsx"
+    },
+    {
+      "baseline": "baselines/heroui-react/packages/react/src/components/label/index.ts",
+      "local": "src/primitives/web/components/label/index.ts"
+    },
+    {
+      "baseline": "baselines/heroui-react/packages/react/src/components/label/label.tsx",
+      "local": "src/primitives/web/components/label/label.tsx"
+    },
+    {
+      "baseline": "baselines/heroui-react/packages/react/src/components/surface/index.ts",
+      "local": "src/primitives/web/components/surface/index.ts"
+    },
+    {
+      "baseline": "baselines/heroui-react/packages/react/src/components/surface/surface.tsx",
+      "local": "src/primitives/web/components/surface/surface.tsx"
+    },
+    {
+      "baseline": "baselines/heroui-react/packages/react/src/components/textfield/index.ts",
+      "local": "src/primitives/web/components/textfield/index.ts"
+    },
+    {
+      "baseline": "baselines/heroui-react/packages/react/src/components/textfield/textfield.tsx",
+      "local": "src/primitives/web/components/textfield/textfield.tsx"
+    },
+    {
+      "baseline": "baselines/heroui-react/packages/react/src/components/typography/index.ts",
+      "local": "src/primitives/web/components/typography/index.ts"
+    },
+    {
+      "baseline": "baselines/heroui-react/packages/react/src/components/typography/typography.tsx",
+      "local": "src/primitives/web/components/typography/typography.tsx"
+    },
+    {
+      "baseline": "baselines/heroui-react/packages/react/src/utils/assertion.ts",
+      "local": "src/primitives/web/utils/assertion.ts"
+    },
+    {
+      "baseline": "baselines/heroui-react/packages/react/src/utils/collection-prop-injection.tsx",
+      "local": "src/primitives/web/utils/collection-prop-injection.tsx"
+    },
+    {
+      "baseline": "baselines/heroui-react/packages/react/src/utils/compose.ts",
+      "local": "src/primitives/web/utils/compose.ts"
+    },
+    {
+      "baseline": "baselines/heroui-react/packages/react/src/utils/dom.tsx",
+      "local": "src/primitives/web/utils/dom.tsx"
+    },
+    {
+      "baseline": "baselines/heroui-react/packages/react/src/utils/field-slots-gate.tsx",
+      "local": "src/primitives/web/utils/field-slots-gate.tsx"
+    },
+    {
+      "baseline": "baselines/heroui-react/packages/react/src/utils/logger.ts",
+      "local": "src/primitives/web/utils/logger.ts"
+    },
+    {
+      "baseline": "baselines/heroui-react/packages/react/src/utils/use-has-text-slot.ts",
+      "local": "src/primitives/web/utils/use-has-text-slot.ts"
+    },
+    {
+      "baseline": "baselines/heroui-react/packages/styles/src/components/accordion/accordion.styles.ts",
+      "local": "src/styles/web/components/accordion/accordion.styles.ts"
+    },
+    {
+      "baseline": "baselines/heroui-react/packages/styles/src/components/accordion/index.ts",
+      "local": "src/styles/web/components/accordion/index.ts"
+    },
+    {
+      "baseline": "baselines/heroui-react/packages/styles/src/components/alert-dialog/alert-dialog.styles.ts",
+      "local": "src/styles/web/components/alert-dialog/alert-dialog.styles.ts"
+    },
+    {
+      "baseline": "baselines/heroui-react/packages/styles/src/components/alert-dialog/index.ts",
+      "local": "src/styles/web/components/alert-dialog/index.ts"
+    },
+    {
+      "baseline": "baselines/heroui-react/packages/styles/src/components/alert/alert.styles.ts",
+      "local": "src/styles/web/components/alert/alert.styles.ts"
+    },
+    {
+      "baseline": "baselines/heroui-react/packages/styles/src/components/alert/index.ts",
+      "local": "src/styles/web/components/alert/index.ts"
+    },
+    {
+      "baseline": "baselines/heroui-react/packages/styles/src/components/autocomplete/autocomplete.styles.ts",
+      "local": "src/styles/web/components/autocomplete/autocomplete.styles.ts"
+    },
+    {
+      "baseline": "baselines/heroui-react/packages/styles/src/components/autocomplete/index.ts",
+      "local": "src/styles/web/components/autocomplete/index.ts"
+    },
+    {
+      "baseline": "baselines/heroui-react/packages/styles/src/components/avatar-group/avatar-group.styles.ts",
+      "local": "src/styles/web/components/avatar-group/avatar-group.styles.ts"
+    },
+    {
+      "baseline": "baselines/heroui-react/packages/styles/src/components/avatar-group/index.ts",
+      "local": "src/styles/web/components/avatar-group/index.ts"
+    },
+    {
+      "baseline": "baselines/heroui-react/packages/styles/src/components/avatar/avatar.styles.ts",
+      "local": "src/styles/web/components/avatar/avatar.styles.ts"
+    },
+    {
+      "baseline": "baselines/heroui-react/packages/styles/src/components/avatar/index.ts",
+      "local": "src/styles/web/components/avatar/index.ts"
+    },
+    {
+      "baseline": "baselines/heroui-react/packages/styles/src/components/badge/badge.styles.ts",
+      "local": "src/styles/web/components/badge/badge.styles.ts"
+    },
+    {
+      "baseline": "baselines/heroui-react/packages/styles/src/components/badge/index.ts",
+      "local": "src/styles/web/components/badge/index.ts"
+    },
+    {
+      "baseline": "baselines/heroui-react/packages/styles/src/components/breadcrumbs/breadcrumbs.styles.ts",
+      "local": "src/styles/web/components/breadcrumbs/breadcrumbs.styles.ts"
+    },
+    {
+      "baseline": "baselines/heroui-react/packages/styles/src/components/breadcrumbs/index.ts",
+      "local": "src/styles/web/components/breadcrumbs/index.ts"
+    },
+    {
+      "baseline": "baselines/heroui-react/packages/styles/src/components/button-group/button-group.styles.ts",
+      "local": "src/styles/web/components/button-group/button-group.styles.ts"
+    },
+    {
+      "baseline": "baselines/heroui-react/packages/styles/src/components/button-group/index.ts",
+      "local": "src/styles/web/components/button-group/index.ts"
+    },
+    {
+      "baseline": "baselines/heroui-react/packages/styles/src/components/button/button.styles.ts",
+      "local": "src/styles/web/components/button/button.styles.ts"
+    },
+    {
+      "baseline": "baselines/heroui-react/packages/styles/src/components/button/index.ts",
+      "local": "src/styles/web/components/button/index.ts"
+    },
+    {
+      "baseline": "baselines/heroui-react/packages/styles/src/components/calendar-year-picker/calendar-year-picker.styles.ts",
+      "local": "src/styles/web/components/calendar-year-picker/calendar-year-picker.styles.ts"
+    },
+    {
+      "baseline": "baselines/heroui-react/packages/styles/src/components/calendar-year-picker/index.ts",
+      "local": "src/styles/web/components/calendar-year-picker/index.ts"
+    },
+    {
+      "baseline": "baselines/heroui-react/packages/styles/src/components/calendar/calendar.styles.ts",
+      "local": "src/styles/web/components/calendar/calendar.styles.ts"
+    },
+    {
+      "baseline": "baselines/heroui-react/packages/styles/src/components/calendar/index.ts",
+      "local": "src/styles/web/components/calendar/index.ts"
+    },
+    {
+      "baseline": "baselines/heroui-react/packages/styles/src/components/card/card.styles.ts",
+      "local": "src/styles/web/components/card/card.styles.ts"
+    },
+    {
+      "baseline": "baselines/heroui-react/packages/styles/src/components/card/index.ts",
+      "local": "src/styles/web/components/card/index.ts"
+    },
+    {
+      "baseline": "baselines/heroui-react/packages/styles/src/components/checkbox-group/checkbox-group.styles.ts",
+      "local": "src/styles/web/components/checkbox-group/checkbox-group.styles.ts"
+    },
+    {
+      "baseline": "baselines/heroui-react/packages/styles/src/components/checkbox-group/index.ts",
+      "local": "src/styles/web/components/checkbox-group/index.ts"
+    },
+    {
+      "baseline": "baselines/heroui-react/packages/styles/src/components/checkbox/checkbox.styles.ts",
+      "local": "src/styles/web/components/checkbox/checkbox.styles.ts"
+    },
+    {
+      "baseline": "baselines/heroui-react/packages/styles/src/components/checkbox/index.ts",
+      "local": "src/styles/web/components/checkbox/index.ts"
+    },
+    {
+      "baseline": "baselines/heroui-react/packages/styles/src/components/chip/chip.styles.ts",
+      "local": "src/styles/web/components/chip/chip.styles.ts"
+    },
+    {
+      "baseline": "baselines/heroui-react/packages/styles/src/components/chip/index.ts",
+      "local": "src/styles/web/components/chip/index.ts"
+    },
+    {
+      "baseline": "baselines/heroui-react/packages/styles/src/components/close-button/close-button.styles.ts",
+      "local": "src/styles/web/components/close-button/close-button.styles.ts"
+    },
+    {
+      "baseline": "baselines/heroui-react/packages/styles/src/components/close-button/index.ts",
+      "local": "src/styles/web/components/close-button/index.ts"
+    },
+    {
+      "baseline": "baselines/heroui-react/packages/styles/src/components/color-area/color-area.styles.ts",
+      "local": "src/styles/web/components/color-area/color-area.styles.ts"
+    },
+    {
+      "baseline": "baselines/heroui-react/packages/styles/src/components/color-area/index.ts",
+      "local": "src/styles/web/components/color-area/index.ts"
+    },
+    {
+      "baseline": "baselines/heroui-react/packages/styles/src/components/color-field/color-field.styles.ts",
+      "local": "src/styles/web/components/color-field/color-field.styles.ts"
+    },
+    {
+      "baseline": "baselines/heroui-react/packages/styles/src/components/color-field/index.ts",
+      "local": "src/styles/web/components/color-field/index.ts"
+    },
+    {
+      "baseline": "baselines/heroui-react/packages/styles/src/components/color-input-group/color-input-group.styles.ts",
+      "local": "src/styles/web/components/color-input-group/color-input-group.styles.ts"
+    },
+    {
+      "baseline": "baselines/heroui-react/packages/styles/src/components/color-input-group/index.ts",
+      "local": "src/styles/web/components/color-input-group/index.ts"
+    },
+    {
+      "baseline": "baselines/heroui-react/packages/styles/src/components/color-picker/color-picker.styles.ts",
+      "local": "src/styles/web/components/color-picker/color-picker.styles.ts"
+    },
+    {
+      "baseline": "baselines/heroui-react/packages/styles/src/components/color-picker/index.ts",
+      "local": "src/styles/web/components/color-picker/index.ts"
+    },
+    {
+      "baseline": "baselines/heroui-react/packages/styles/src/components/color-slider/color-slider.styles.ts",
+      "local": "src/styles/web/components/color-slider/color-slider.styles.ts"
+    },
+    {
+      "baseline": "baselines/heroui-react/packages/styles/src/components/color-slider/index.ts",
+      "local": "src/styles/web/components/color-slider/index.ts"
+    },
+    {
+      "baseline": "baselines/heroui-react/packages/styles/src/components/color-swatch-picker/color-swatch-picker.styles.ts",
+      "local": "src/styles/web/components/color-swatch-picker/color-swatch-picker.styles.ts"
+    },
+    {
+      "baseline": "baselines/heroui-react/packages/styles/src/components/color-swatch-picker/index.ts",
+      "local": "src/styles/web/components/color-swatch-picker/index.ts"
+    },
+    {
+      "baseline": "baselines/heroui-react/packages/styles/src/components/color-swatch/color-swatch.styles.ts",
+      "local": "src/styles/web/components/color-swatch/color-swatch.styles.ts"
+    },
+    {
+      "baseline": "baselines/heroui-react/packages/styles/src/components/color-swatch/index.ts",
+      "local": "src/styles/web/components/color-swatch/index.ts"
+    },
+    {
+      "baseline": "baselines/heroui-react/packages/styles/src/components/combo-box/combo-box.styles.ts",
+      "local": "src/styles/web/components/combo-box/combo-box.styles.ts"
+    },
+    {
+      "baseline": "baselines/heroui-react/packages/styles/src/components/combo-box/index.ts",
+      "local": "src/styles/web/components/combo-box/index.ts"
+    },
+    {
+      "baseline": "baselines/heroui-react/packages/styles/src/components/date-field/date-field.styles.ts",
+      "local": "src/styles/web/components/date-field/date-field.styles.ts"
+    },
+    {
+      "baseline": "baselines/heroui-react/packages/styles/src/components/date-field/index.ts",
+      "local": "src/styles/web/components/date-field/index.ts"
+    },
+    {
+      "baseline": "baselines/heroui-react/packages/styles/src/components/date-input-group/date-input-group.styles.ts",
+      "local": "src/styles/web/components/date-input-group/date-input-group.styles.ts"
+    },
+    {
+      "baseline": "baselines/heroui-react/packages/styles/src/components/date-input-group/index.ts",
+      "local": "src/styles/web/components/date-input-group/index.ts"
+    },
+    {
+      "baseline": "baselines/heroui-react/packages/styles/src/components/date-picker/date-picker.styles.ts",
+      "local": "src/styles/web/components/date-picker/date-picker.styles.ts"
+    },
+    {
+      "baseline": "baselines/heroui-react/packages/styles/src/components/date-picker/index.ts",
+      "local": "src/styles/web/components/date-picker/index.ts"
+    },
+    {
+      "baseline": "baselines/heroui-react/packages/styles/src/components/date-range-picker/date-range-picker.styles.ts",
+      "local": "src/styles/web/components/date-range-picker/date-range-picker.styles.ts"
+    },
+    {
+      "baseline": "baselines/heroui-react/packages/styles/src/components/date-range-picker/index.ts",
+      "local": "src/styles/web/components/date-range-picker/index.ts"
+    },
+    {
+      "baseline": "baselines/heroui-react/packages/styles/src/components/description/description.styles.ts",
+      "local": "src/styles/web/components/description/description.styles.ts"
+    },
+    {
+      "baseline": "baselines/heroui-react/packages/styles/src/components/description/index.ts",
+      "local": "src/styles/web/components/description/index.ts"
+    },
+    {
+      "baseline": "baselines/heroui-react/packages/styles/src/components/disclosure-group/disclosure-group.styles.ts",
+      "local": "src/styles/web/components/disclosure-group/disclosure-group.styles.ts"
+    },
+    {
+      "baseline": "baselines/heroui-react/packages/styles/src/components/disclosure-group/index.ts",
+      "local": "src/styles/web/components/disclosure-group/index.ts"
+    },
+    {
+      "baseline": "baselines/heroui-react/packages/styles/src/components/disclosure/disclosure.styles.ts",
+      "local": "src/styles/web/components/disclosure/disclosure.styles.ts"
+    },
+    {
+      "baseline": "baselines/heroui-react/packages/styles/src/components/disclosure/index.ts",
+      "local": "src/styles/web/components/disclosure/index.ts"
+    },
+    {
+      "baseline": "baselines/heroui-react/packages/styles/src/components/drawer/drawer.styles.ts",
+      "local": "src/styles/web/components/drawer/drawer.styles.ts"
+    },
+    {
+      "baseline": "baselines/heroui-react/packages/styles/src/components/drawer/index.ts",
+      "local": "src/styles/web/components/drawer/index.ts"
+    },
+    {
+      "baseline": "baselines/heroui-react/packages/styles/src/components/dropdown/dropdown.styles.ts",
+      "local": "src/styles/web/components/dropdown/dropdown.styles.ts"
+    },
+    {
+      "baseline": "baselines/heroui-react/packages/styles/src/components/dropdown/index.ts",
+      "local": "src/styles/web/components/dropdown/index.ts"
+    },
+    {
+      "baseline": "baselines/heroui-react/packages/styles/src/components/empty-state/empty-state.styles.ts",
+      "local": "src/styles/web/components/empty-state/empty-state.styles.ts"
+    },
+    {
+      "baseline": "baselines/heroui-react/packages/styles/src/components/empty-state/index.ts",
+      "local": "src/styles/web/components/empty-state/index.ts"
+    },
+    {
+      "baseline": "baselines/heroui-react/packages/styles/src/components/error-message/error-message.styles.ts",
+      "local": "src/styles/web/components/error-message/error-message.styles.ts"
+    },
+    {
+      "baseline": "baselines/heroui-react/packages/styles/src/components/error-message/index.ts",
+      "local": "src/styles/web/components/error-message/index.ts"
+    },
+    {
+      "baseline": "baselines/heroui-react/packages/styles/src/components/field-error/field-error.styles.ts",
+      "local": "src/styles/web/components/field-error/field-error.styles.ts"
+    },
+    {
+      "baseline": "baselines/heroui-react/packages/styles/src/components/field-error/index.ts",
+      "local": "src/styles/web/components/field-error/index.ts"
+    },
+    {
+      "baseline": "baselines/heroui-react/packages/styles/src/components/fieldset/fieldset.styles.ts",
+      "local": "src/styles/web/components/fieldset/fieldset.styles.ts"
+    },
+    {
+      "baseline": "baselines/heroui-react/packages/styles/src/components/fieldset/index.ts",
+      "local": "src/styles/web/components/fieldset/index.ts"
+    },
+    {
+      "baseline": "baselines/heroui-react/packages/styles/src/components/header/header.styles.ts",
+      "local": "src/styles/web/components/header/header.styles.ts"
+    },
+    {
+      "baseline": "baselines/heroui-react/packages/styles/src/components/header/index.ts",
+      "local": "src/styles/web/components/header/index.ts"
+    },
+    {
+      "baseline": "baselines/heroui-react/packages/styles/src/components/index.ts",
+      "local": "src/styles/web/components/index.ts"
+    },
+    {
+      "baseline": "baselines/heroui-react/packages/styles/src/components/input-group/index.ts",
+      "local": "src/styles/web/components/input-group/index.ts"
+    },
+    {
+      "baseline": "baselines/heroui-react/packages/styles/src/components/input-group/input-group.styles.ts",
+      "local": "src/styles/web/components/input-group/input-group.styles.ts"
+    },
+    {
+      "baseline": "baselines/heroui-react/packages/styles/src/components/input-otp/index.ts",
+      "local": "src/styles/web/components/input-otp/index.ts"
+    },
+    {
+      "baseline": "baselines/heroui-react/packages/styles/src/components/input-otp/input-otp.styles.ts",
+      "local": "src/styles/web/components/input-otp/input-otp.styles.ts"
+    },
+    {
+      "baseline": "baselines/heroui-react/packages/styles/src/components/input/index.ts",
+      "local": "src/styles/web/components/input/index.ts"
+    },
+    {
+      "baseline": "baselines/heroui-react/packages/styles/src/components/input/input.styles.ts",
+      "local": "src/styles/web/components/input/input.styles.ts"
+    },
+    {
+      "baseline": "baselines/heroui-react/packages/styles/src/components/kbd/index.ts",
+      "local": "src/styles/web/components/kbd/index.ts"
+    },
+    {
+      "baseline": "baselines/heroui-react/packages/styles/src/components/kbd/kbd.styles.ts",
+      "local": "src/styles/web/components/kbd/kbd.styles.ts"
+    },
+    {
+      "baseline": "baselines/heroui-react/packages/styles/src/components/label/index.ts",
+      "local": "src/styles/web/components/label/index.ts"
+    },
+    {
+      "baseline": "baselines/heroui-react/packages/styles/src/components/label/label.styles.ts",
+      "local": "src/styles/web/components/label/label.styles.ts"
+    },
+    {
+      "baseline": "baselines/heroui-react/packages/styles/src/components/link/index.ts",
+      "local": "src/styles/web/components/link/index.ts"
+    },
+    {
+      "baseline": "baselines/heroui-react/packages/styles/src/components/link/link.styles.ts",
+      "local": "src/styles/web/components/link/link.styles.ts"
+    },
+    {
+      "baseline": "baselines/heroui-react/packages/styles/src/components/list-box-item/index.ts",
+      "local": "src/styles/web/components/list-box-item/index.ts"
+    },
+    {
+      "baseline": "baselines/heroui-react/packages/styles/src/components/list-box-item/list-box-item.styles.ts",
+      "local": "src/styles/web/components/list-box-item/list-box-item.styles.ts"
+    },
+    {
+      "baseline": "baselines/heroui-react/packages/styles/src/components/list-box-section/index.ts",
+      "local": "src/styles/web/components/list-box-section/index.ts"
+    },
+    {
+      "baseline": "baselines/heroui-react/packages/styles/src/components/list-box-section/list-box-section.styles.ts",
+      "local": "src/styles/web/components/list-box-section/list-box-section.styles.ts"
+    },
+    {
+      "baseline": "baselines/heroui-react/packages/styles/src/components/list-box/index.ts",
+      "local": "src/styles/web/components/list-box/index.ts"
+    },
+    {
+      "baseline": "baselines/heroui-react/packages/styles/src/components/list-box/list-box.styles.ts",
+      "local": "src/styles/web/components/list-box/list-box.styles.ts"
+    },
+    {
+      "baseline": "baselines/heroui-react/packages/styles/src/components/menu-item/index.ts",
+      "local": "src/styles/web/components/menu-item/index.ts"
+    },
+    {
+      "baseline": "baselines/heroui-react/packages/styles/src/components/menu-item/menu-item.styles.ts",
+      "local": "src/styles/web/components/menu-item/menu-item.styles.ts"
+    },
+    {
+      "baseline": "baselines/heroui-react/packages/styles/src/components/menu-section/index.ts",
+      "local": "src/styles/web/components/menu-section/index.ts"
+    },
+    {
+      "baseline": "baselines/heroui-react/packages/styles/src/components/menu-section/menu-section.styles.ts",
+      "local": "src/styles/web/components/menu-section/menu-section.styles.ts"
+    },
+    {
+      "baseline": "baselines/heroui-react/packages/styles/src/components/menu/index.ts",
+      "local": "src/styles/web/components/menu/index.ts"
+    },
+    {
+      "baseline": "baselines/heroui-react/packages/styles/src/components/menu/menu.styles.ts",
+      "local": "src/styles/web/components/menu/menu.styles.ts"
+    },
+    {
+      "baseline": "baselines/heroui-react/packages/styles/src/components/meter/index.ts",
+      "local": "src/styles/web/components/meter/index.ts"
+    },
+    {
+      "baseline": "baselines/heroui-react/packages/styles/src/components/meter/meter.styles.ts",
+      "local": "src/styles/web/components/meter/meter.styles.ts"
+    },
+    {
+      "baseline": "baselines/heroui-react/packages/styles/src/components/modal/index.ts",
+      "local": "src/styles/web/components/modal/index.ts"
+    },
+    {
+      "baseline": "baselines/heroui-react/packages/styles/src/components/modal/modal.styles.ts",
+      "local": "src/styles/web/components/modal/modal.styles.ts"
+    },
+    {
+      "baseline": "baselines/heroui-react/packages/styles/src/components/number-field/index.ts",
+      "local": "src/styles/web/components/number-field/index.ts"
+    },
+    {
+      "baseline": "baselines/heroui-react/packages/styles/src/components/number-field/number-field.styles.ts",
+      "local": "src/styles/web/components/number-field/number-field.styles.ts"
+    },
+    {
+      "baseline": "baselines/heroui-react/packages/styles/src/components/pagination/index.ts",
+      "local": "src/styles/web/components/pagination/index.ts"
+    },
+    {
+      "baseline": "baselines/heroui-react/packages/styles/src/components/pagination/pagination.styles.ts",
+      "local": "src/styles/web/components/pagination/pagination.styles.ts"
+    },
+    {
+      "baseline": "baselines/heroui-react/packages/styles/src/components/popover/index.ts",
+      "local": "src/styles/web/components/popover/index.ts"
+    },
+    {
+      "baseline": "baselines/heroui-react/packages/styles/src/components/popover/popover.styles.ts",
+      "local": "src/styles/web/components/popover/popover.styles.ts"
+    },
+    {
+      "baseline": "baselines/heroui-react/packages/styles/src/components/progress-bar/index.ts",
+      "local": "src/styles/web/components/progress-bar/index.ts"
+    },
+    {
+      "baseline": "baselines/heroui-react/packages/styles/src/components/progress-bar/progress-bar.styles.ts",
+      "local": "src/styles/web/components/progress-bar/progress-bar.styles.ts"
+    },
+    {
+      "baseline": "baselines/heroui-react/packages/styles/src/components/progress-circle/index.ts",
+      "local": "src/styles/web/components/progress-circle/index.ts"
+    },
+    {
+      "baseline": "baselines/heroui-react/packages/styles/src/components/progress-circle/progress-circle.styles.ts",
+      "local": "src/styles/web/components/progress-circle/progress-circle.styles.ts"
+    },
+    {
+      "baseline": "baselines/heroui-react/packages/styles/src/components/radio-group/index.ts",
+      "local": "src/styles/web/components/radio-group/index.ts"
+    },
+    {
+      "baseline": "baselines/heroui-react/packages/styles/src/components/radio-group/radio-group.styles.ts",
+      "local": "src/styles/web/components/radio-group/radio-group.styles.ts"
+    },
+    {
+      "baseline": "baselines/heroui-react/packages/styles/src/components/radio/index.ts",
+      "local": "src/styles/web/components/radio/index.ts"
+    },
+    {
+      "baseline": "baselines/heroui-react/packages/styles/src/components/radio/radio.styles.ts",
+      "local": "src/styles/web/components/radio/radio.styles.ts"
+    },
+    {
+      "baseline": "baselines/heroui-react/packages/styles/src/components/range-calendar/index.ts",
+      "local": "src/styles/web/components/range-calendar/index.ts"
+    },
+    {
+      "baseline": "baselines/heroui-react/packages/styles/src/components/range-calendar/range-calendar.styles.ts",
+      "local": "src/styles/web/components/range-calendar/range-calendar.styles.ts"
+    },
+    {
+      "baseline": "baselines/heroui-react/packages/styles/src/components/scroll-shadow/index.ts",
+      "local": "src/styles/web/components/scroll-shadow/index.ts"
+    },
+    {
+      "baseline": "baselines/heroui-react/packages/styles/src/components/scroll-shadow/scroll-shadow.styles.ts",
+      "local": "src/styles/web/components/scroll-shadow/scroll-shadow.styles.ts"
+    },
+    {
+      "baseline": "baselines/heroui-react/packages/styles/src/components/search-field/index.ts",
+      "local": "src/styles/web/components/search-field/index.ts"
+    },
+    {
+      "baseline": "baselines/heroui-react/packages/styles/src/components/search-field/search-field.styles.ts",
+      "local": "src/styles/web/components/search-field/search-field.styles.ts"
+    },
+    {
+      "baseline": "baselines/heroui-react/packages/styles/src/components/select/index.ts",
+      "local": "src/styles/web/components/select/index.ts"
+    },
+    {
+      "baseline": "baselines/heroui-react/packages/styles/src/components/select/select.styles.ts",
+      "local": "src/styles/web/components/select/select.styles.ts"
+    },
+    {
+      "baseline": "baselines/heroui-react/packages/styles/src/components/separator/index.ts",
+      "local": "src/styles/web/components/separator/index.ts"
+    },
+    {
+      "baseline": "baselines/heroui-react/packages/styles/src/components/separator/separator.styles.ts",
+      "local": "src/styles/web/components/separator/separator.styles.ts"
+    },
+    {
+      "baseline": "baselines/heroui-react/packages/styles/src/components/skeleton/index.ts",
+      "local": "src/styles/web/components/skeleton/index.ts"
+    },
+    {
+      "baseline": "baselines/heroui-react/packages/styles/src/components/skeleton/skeleton.styles.ts",
+      "local": "src/styles/web/components/skeleton/skeleton.styles.ts"
+    },
+    {
+      "baseline": "baselines/heroui-react/packages/styles/src/components/slider/index.ts",
+      "local": "src/styles/web/components/slider/index.ts"
+    },
+    {
+      "baseline": "baselines/heroui-react/packages/styles/src/components/slider/slider.styles.ts",
+      "local": "src/styles/web/components/slider/slider.styles.ts"
+    },
+    {
+      "baseline": "baselines/heroui-react/packages/styles/src/components/spinner/index.ts",
+      "local": "src/styles/web/components/spinner/index.ts"
+    },
+    {
+      "baseline": "baselines/heroui-react/packages/styles/src/components/spinner/spinner.styles.ts",
+      "local": "src/styles/web/components/spinner/spinner.styles.ts"
+    },
+    {
+      "baseline": "baselines/heroui-react/packages/styles/src/components/surface/index.ts",
+      "local": "src/styles/web/components/surface/index.ts"
+    },
+    {
+      "baseline": "baselines/heroui-react/packages/styles/src/components/surface/surface.styles.ts",
+      "local": "src/styles/web/components/surface/surface.styles.ts"
+    },
+    {
+      "baseline": "baselines/heroui-react/packages/styles/src/components/switch-group/index.ts",
+      "local": "src/styles/web/components/switch-group/index.ts"
+    },
+    {
+      "baseline": "baselines/heroui-react/packages/styles/src/components/switch-group/switch-group.styles.ts",
+      "local": "src/styles/web/components/switch-group/switch-group.styles.ts"
+    },
+    {
+      "baseline": "baselines/heroui-react/packages/styles/src/components/switch/index.ts",
+      "local": "src/styles/web/components/switch/index.ts"
+    },
+    {
+      "baseline": "baselines/heroui-react/packages/styles/src/components/switch/switch.styles.ts",
+      "local": "src/styles/web/components/switch/switch.styles.ts"
+    },
+    {
+      "baseline": "baselines/heroui-react/packages/styles/src/components/table/index.ts",
+      "local": "src/styles/web/components/table/index.ts"
+    },
+    {
+      "baseline": "baselines/heroui-react/packages/styles/src/components/table/table.styles.ts",
+      "local": "src/styles/web/components/table/table.styles.ts"
+    },
+    {
+      "baseline": "baselines/heroui-react/packages/styles/src/components/tabs/index.ts",
+      "local": "src/styles/web/components/tabs/index.ts"
+    },
+    {
+      "baseline": "baselines/heroui-react/packages/styles/src/components/tabs/tabs.styles.ts",
+      "local": "src/styles/web/components/tabs/tabs.styles.ts"
+    },
+    {
+      "baseline": "baselines/heroui-react/packages/styles/src/components/tag-group/index.ts",
+      "local": "src/styles/web/components/tag-group/index.ts"
+    },
+    {
+      "baseline": "baselines/heroui-react/packages/styles/src/components/tag-group/tag-group.styles.ts",
+      "local": "src/styles/web/components/tag-group/tag-group.styles.ts"
+    },
+    {
+      "baseline": "baselines/heroui-react/packages/styles/src/components/tag/index.ts",
+      "local": "src/styles/web/components/tag/index.ts"
+    },
+    {
+      "baseline": "baselines/heroui-react/packages/styles/src/components/tag/tag.styles.ts",
+      "local": "src/styles/web/components/tag/tag.styles.ts"
+    },
+    {
+      "baseline": "baselines/heroui-react/packages/styles/src/components/textarea/index.ts",
+      "local": "src/styles/web/components/textarea/index.ts"
+    },
+    {
+      "baseline": "baselines/heroui-react/packages/styles/src/components/textarea/textarea.styles.ts",
+      "local": "src/styles/web/components/textarea/textarea.styles.ts"
+    },
+    {
+      "baseline": "baselines/heroui-react/packages/styles/src/components/textfield/index.ts",
+      "local": "src/styles/web/components/textfield/index.ts"
+    },
+    {
+      "baseline": "baselines/heroui-react/packages/styles/src/components/textfield/textfield.styles.ts",
+      "local": "src/styles/web/components/textfield/textfield.styles.ts"
+    },
+    {
+      "baseline": "baselines/heroui-react/packages/styles/src/components/time-field/index.ts",
+      "local": "src/styles/web/components/time-field/index.ts"
+    },
+    {
+      "baseline": "baselines/heroui-react/packages/styles/src/components/time-field/time-field.styles.ts",
+      "local": "src/styles/web/components/time-field/time-field.styles.ts"
+    },
+    {
+      "baseline": "baselines/heroui-react/packages/styles/src/components/toast/index.ts",
+      "local": "src/styles/web/components/toast/index.ts"
+    },
+    {
+      "baseline": "baselines/heroui-react/packages/styles/src/components/toast/toast.styles.ts",
+      "local": "src/styles/web/components/toast/toast.styles.ts"
+    },
+    {
+      "baseline": "baselines/heroui-react/packages/styles/src/components/toggle-button-group/index.ts",
+      "local": "src/styles/web/components/toggle-button-group/index.ts"
+    },
+    {
+      "baseline": "baselines/heroui-react/packages/styles/src/components/toggle-button-group/toggle-button-group.styles.ts",
+      "local": "src/styles/web/components/toggle-button-group/toggle-button-group.styles.ts"
+    },
+    {
+      "baseline": "baselines/heroui-react/packages/styles/src/components/toggle-button/index.ts",
+      "local": "src/styles/web/components/toggle-button/index.ts"
+    },
+    {
+      "baseline": "baselines/heroui-react/packages/styles/src/components/toggle-button/toggle-button.styles.ts",
+      "local": "src/styles/web/components/toggle-button/toggle-button.styles.ts"
+    },
+    {
+      "baseline": "baselines/heroui-react/packages/styles/src/components/toolbar/index.ts",
+      "local": "src/styles/web/components/toolbar/index.ts"
+    },
+    {
+      "baseline": "baselines/heroui-react/packages/styles/src/components/toolbar/toolbar.styles.ts",
+      "local": "src/styles/web/components/toolbar/toolbar.styles.ts"
+    },
+    {
+      "baseline": "baselines/heroui-react/packages/styles/src/components/tooltip/index.ts",
+      "local": "src/styles/web/components/tooltip/index.ts"
+    },
+    {
+      "baseline": "baselines/heroui-react/packages/styles/src/components/tooltip/tooltip.styles.ts",
+      "local": "src/styles/web/components/tooltip/tooltip.styles.ts"
+    },
+    {
+      "baseline": "baselines/heroui-react/packages/styles/src/components/typography/index.ts",
+      "local": "src/styles/web/components/typography/index.ts"
+    },
+    {
+      "baseline": "baselines/heroui-react/packages/styles/src/components/typography/typography.styles.ts",
+      "local": "src/styles/web/components/typography/typography.styles.ts"
+    },
+    {
+      "baseline": "baselines/heroui-react/packages/styles/src/index.ts",
+      "local": "src/styles/web/index.ts"
+    },
+    {
+      "baseline": "baselines/heroui-react/packages/styles/src/utils/index.ts",
+      "local": "src/styles/web/utils/index.ts"
+    },
+    {
+      "baseline": "baselines/heroui-native/src/styles/utilities.css",
+      "local": "styles/native-only.css"
+    },
+    {
+      "baseline": "baselines/heroui-native/src/styles/base.css",
+      "local": "styles/shared/base.css"
+    },
+    {
+      "baseline": "baselines/heroui-native/src/styles/components/accordion.css",
+      "local": "styles/shared/components/accordion.css"
+    },
+    {
+      "baseline": "baselines/heroui-native/src/styles/components/alert.css",
+      "local": "styles/shared/components/alert.css"
+    },
+    {
+      "baseline": "baselines/heroui-native/src/styles/components/avatar.css",
+      "local": "styles/shared/components/avatar.css"
+    },
+    {
+      "baseline": "baselines/heroui-native/src/styles/components/bottom-sheet.css",
+      "local": "styles/shared/components/bottom-sheet.css"
+    },
+    {
+      "baseline": "baselines/heroui-native/src/styles/components/button.css",
+      "local": "styles/shared/components/button.css"
+    },
+    {
+      "baseline": "baselines/heroui-native/src/styles/components/card.css",
+      "local": "styles/shared/components/card.css"
+    },
+    {
+      "baseline": "baselines/heroui-native/src/styles/components/checkbox.css",
+      "local": "styles/shared/components/checkbox.css"
+    },
+    {
+      "baseline": "baselines/heroui-native/src/styles/components/chip.css",
+      "local": "styles/shared/components/chip.css"
+    },
+    {
+      "baseline": "baselines/heroui-native/src/styles/components/close-button.css",
+      "local": "styles/shared/components/close-button.css"
+    },
+    {
+      "baseline": "baselines/heroui-native/src/styles/components/control-field.css",
+      "local": "styles/shared/components/control-field.css"
+    },
+    {
+      "baseline": "baselines/heroui-native/src/styles/components/description.css",
+      "local": "styles/shared/components/description.css"
+    },
+    {
+      "baseline": "baselines/heroui-native/src/styles/components/dialog.css",
+      "local": "styles/shared/components/dialog.css"
+    },
+    {
+      "baseline": "baselines/heroui-native/src/styles/components/field-error.css",
+      "local": "styles/shared/components/field-error.css"
+    },
+    {
+      "baseline": "baselines/heroui-native/src/styles/components/glass-view.css",
+      "local": "styles/shared/components/glass-view.css"
+    },
+    {
+      "baseline": "baselines/heroui-native/src/styles/components/index.css",
+      "local": "styles/shared/components/index.css"
+    },
+    {
+      "baseline": "baselines/heroui-native/src/styles/components/input-group.css",
+      "local": "styles/shared/components/input-group.css"
+    },
+    {
+      "baseline": "baselines/heroui-native/src/styles/components/input-otp.css",
+      "local": "styles/shared/components/input-otp.css"
+    },
+    {
+      "baseline": "baselines/heroui-native/src/styles/components/input.css",
+      "local": "styles/shared/components/input.css"
+    },
+    {
+      "baseline": "baselines/heroui-native/src/styles/components/label.css",
+      "local": "styles/shared/components/label.css"
+    },
+    {
+      "baseline": "baselines/heroui-native/src/styles/components/link-button.css",
+      "local": "styles/shared/components/link-button.css"
+    },
+    {
+      "baseline": "baselines/heroui-native/src/styles/components/list-group.css",
+      "local": "styles/shared/components/list-group.css"
+    },
+    {
+      "baseline": "baselines/heroui-native/src/styles/components/menu.css",
+      "local": "styles/shared/components/menu.css"
+    },
+    {
+      "baseline": "baselines/heroui-native/src/styles/components/popover.css",
+      "local": "styles/shared/components/popover.css"
+    },
+    {
+      "baseline": "baselines/heroui-native/src/styles/components/pressable-feedback.css",
+      "local": "styles/shared/components/pressable-feedback.css"
+    },
+    {
+      "baseline": "baselines/heroui-native/src/styles/components/radio-group.css",
+      "local": "styles/shared/components/radio-group.css"
+    },
+    {
+      "baseline": "baselines/heroui-native/src/styles/components/radio.css",
+      "local": "styles/shared/components/radio.css"
+    },
+    {
+      "baseline": "baselines/heroui-native/src/styles/components/search-field.css",
+      "local": "styles/shared/components/search-field.css"
+    },
+    {
+      "baseline": "baselines/heroui-native/src/styles/components/select.css",
+      "local": "styles/shared/components/select.css"
+    },
+    {
+      "baseline": "baselines/heroui-native/src/styles/components/separator.css",
+      "local": "styles/shared/components/separator.css"
+    },
+    {
+      "baseline": "baselines/heroui-native/src/styles/components/skeleton.css",
+      "local": "styles/shared/components/skeleton.css"
+    },
+    {
+      "baseline": "baselines/heroui-native/src/styles/components/slider.css",
+      "local": "styles/shared/components/slider.css"
+    },
+    {
+      "baseline": "baselines/heroui-native/src/styles/components/spinner.css",
+      "local": "styles/shared/components/spinner.css"
+    },
+    {
+      "baseline": "baselines/heroui-native/src/styles/components/sub-menu.css",
+      "local": "styles/shared/components/sub-menu.css"
+    },
+    {
+      "baseline": "baselines/heroui-native/src/styles/components/surface.css",
+      "local": "styles/shared/components/surface.css"
+    },
+    {
+      "baseline": "baselines/heroui-native/src/styles/components/switch.css",
+      "local": "styles/shared/components/switch.css"
+    },
+    {
+      "baseline": "baselines/heroui-native/src/styles/components/tabs.css",
+      "local": "styles/shared/components/tabs.css"
+    },
+    {
+      "baseline": "baselines/heroui-native/src/styles/components/tag-group.css",
+      "local": "styles/shared/components/tag-group.css"
+    },
+    {
+      "baseline": "baselines/heroui-native/src/styles/components/text-area.css",
+      "local": "styles/shared/components/text-area.css"
+    },
+    {
+      "baseline": "baselines/heroui-native/src/styles/components/text-field.css",
+      "local": "styles/shared/components/text-field.css"
+    },
+    {
+      "baseline": "baselines/heroui-native/src/styles/components/text.css",
+      "local": "styles/shared/components/text.css"
+    },
+    {
+      "baseline": "baselines/heroui-native/src/styles/components/toast.css",
+      "local": "styles/shared/components/toast.css"
+    },
+    {
+      "baseline": "baselines/heroui-native/src/styles/index.css",
+      "local": "styles/shared/index.css"
+    },
+    {
+      "baseline": "baselines/heroui-native/src/styles/theme-vibrant.css",
+      "local": "styles/shared/theme-vibrant.css"
+    },
+    {
+      "baseline": "baselines/heroui-native/src/styles/theme.css",
+      "local": "styles/shared/theme.css"
+    },
+    {
+      "baseline": "baselines/heroui-native/src/styles/utilities.css",
+      "local": "styles/shared/utilities.css"
+    },
+    {
+      "baseline": "baselines/heroui-native/src/styles/variables.css",
+      "local": "styles/shared/variables.css"
+    }
+  ],
+  "components": [
+    {
+      "name": "button",
+      "status": "unified",
+      "publicPaths": [
+        "src/components/button/button-state.ts",
+        "src/components/button/button.native.tsx",
+        "src/components/button/button.styles.ts",
+        "src/components/button/button.types.ts",
+        "src/components/button/button.web.tsx",
+        "src/components/button/index.native.ts",
+        "src/components/button/index.web.ts"
+      ],
+      "sources": [
+        {
+          "repository": "heroui-react",
+          "origin": "packages/react/src/components/button"
+        },
+        {
+          "repository": "heroui-native",
+          "origin": "src/components/button"
+        }
+      ],
+      "apiTransformations": [
+        "Canonical isLoading with deprecated isPending alias; loading disables actions and exposes busy state."
+      ],
+      "behaviorDeviations": [
+        "Native accessibility disabled and busy flags always reflect the shared computed state, including disabled without loading."
+      ],
+      "stylingDeviations": [
+        "Native-origin CSS is the authoritative semantic theme and component style system; browser selectors live in web-only.css."
+      ],
+      "knownUnappliedChanges": []
+    },
+    {
+      "name": "card",
+      "status": "unified",
+      "publicPaths": [
+        "src/components/card/card.native.tsx",
+        "src/components/card/card.types.ts",
+        "src/components/card/card.web.tsx",
+        "src/components/card/index.native.ts",
+        "src/components/card/index.web.ts"
+      ],
+      "sources": [
+        {
+          "repository": "heroui-react",
+          "origin": "packages/react/src/components/card"
+        },
+        {
+          "repository": "heroui-native",
+          "origin": "src/components/card"
+        }
+      ],
+      "apiTransformations": [
+        "Card.Body maps to owned web Card.Content."
+      ],
+      "behaviorDeviations": [],
+      "stylingDeviations": [
+        "Native-origin CSS is the authoritative semantic theme and component style system; browser selectors live in web-only.css."
+      ],
+      "knownUnappliedChanges": []
+    },
+    {
+      "name": "chip",
+      "status": "unified",
+      "publicPaths": [
+        "src/components/chip/chip.native.tsx",
+        "src/components/chip/chip.styles.ts",
+        "src/components/chip/chip.types.ts",
+        "src/components/chip/chip.web.tsx",
+        "src/components/chip/index.native.ts",
+        "src/components/chip/index.web.ts"
+      ],
+      "sources": [
+        {
+          "repository": "heroui-react",
+          "origin": "packages/react/src/components/chip"
+        },
+        {
+          "repository": "heroui-native",
+          "origin": "src/components/chip"
+        }
+      ],
+      "apiTransformations": [
+        "Shared md/primary/accent defaults; shared Root and Label; press and background remain native extensions."
+      ],
+      "behaviorDeviations": [],
+      "stylingDeviations": [
+        "Native-origin CSS is the authoritative semantic theme and component style system; browser selectors live in web-only.css."
+      ],
+      "knownUnappliedChanges": []
+    },
+    {
+      "name": "description",
+      "status": "unified",
+      "publicPaths": [
+        "src/components/description/description.native.tsx",
+        "src/components/description/description.types.ts",
+        "src/components/description/description.web.tsx",
+        "src/components/description/index.native.ts",
+        "src/components/description/index.web.ts"
+      ],
+      "sources": [
+        {
+          "repository": "heroui-react",
+          "origin": "packages/react/src/components/description"
+        },
+        {
+          "repository": "heroui-native",
+          "origin": "src/components/description"
+        }
+      ],
+      "apiTransformations": [
+        "Shared direct props live in a single types module; platform refs and extension props remain distinct."
+      ],
+      "behaviorDeviations": [],
+      "stylingDeviations": [
+        "Native-origin CSS is the authoritative semantic theme and component style system; browser selectors live in web-only.css."
+      ],
+      "knownUnappliedChanges": []
+    },
+    {
+      "name": "field-error",
+      "status": "unified",
+      "publicPaths": [
+        "src/components/field-error/field-error.native.tsx",
+        "src/components/field-error/field-error.types.ts",
+        "src/components/field-error/field-error.web.tsx",
+        "src/components/field-error/index.native.ts",
+        "src/components/field-error/index.web.ts"
+      ],
+      "sources": [
+        {
+          "repository": "heroui-react",
+          "origin": "packages/react/src/components/field-error"
+        },
+        {
+          "repository": "heroui-native",
+          "origin": "src/components/field-error"
+        }
+      ],
+      "apiTransformations": [
+        "Shared direct props live in a single types module; platform refs and extension props remain distinct."
+      ],
+      "behaviorDeviations": [],
+      "stylingDeviations": [
+        "Native-origin CSS is the authoritative semantic theme and component style system; browser selectors live in web-only.css."
+      ],
+      "knownUnappliedChanges": []
+    },
+    {
+      "name": "hero-ui-provider",
+      "status": "unified",
+      "publicPaths": [
+        "src/components/hero-ui-provider/hero-ui-provider.native.tsx",
+        "src/components/hero-ui-provider/hero-ui-provider.types.ts",
+        "src/components/hero-ui-provider/hero-ui-provider.web.tsx",
+        "src/components/hero-ui-provider/index.native.ts",
+        "src/components/hero-ui-provider/index.web.ts"
+      ],
+      "sources": [
+        {
+          "repository": "heroui-native",
+          "origin": "src/providers/hero-ui-native"
+        }
+      ],
+      "apiTransformations": [
+        "Shared direct props live in a single types module; platform refs and extension props remain distinct."
+      ],
+      "behaviorDeviations": [
+        "Existing theme effect retained; owned Native provider retains optional integrations."
+      ],
+      "stylingDeviations": [
+        "Native-origin CSS is the authoritative semantic theme and component style system; browser selectors live in web-only.css."
+      ],
+      "knownUnappliedChanges": []
+    },
+    {
+      "name": "input",
+      "status": "unified",
+      "publicPaths": [
+        "src/components/input/index.native.ts",
+        "src/components/input/index.web.ts",
+        "src/components/input/input-mapping.ts",
+        "src/components/input/input.native.tsx",
+        "src/components/input/input.types.ts",
+        "src/components/input/input.web.tsx"
+      ],
+      "sources": [
+        {
+          "repository": "heroui-react",
+          "origin": "packages/react/src/components/input"
+        },
+        {
+          "repository": "heroui-native",
+          "origin": "src/components/input"
+        }
+      ],
+      "apiTransformations": [
+        "onChangeText maps to the web string value; keyboardType maps to inputMode."
+      ],
+      "behaviorDeviations": [],
+      "stylingDeviations": [
+        "Native-origin CSS is the authoritative semantic theme and component style system; browser selectors live in web-only.css."
+      ],
+      "knownUnappliedChanges": []
+    },
+    {
+      "name": "label",
+      "status": "unified",
+      "publicPaths": [
+        "src/components/label/index.native.ts",
+        "src/components/label/index.web.ts",
+        "src/components/label/label.native.tsx",
+        "src/components/label/label.types.ts",
+        "src/components/label/label.web.tsx"
+      ],
+      "sources": [
+        {
+          "repository": "heroui-react",
+          "origin": "packages/react/src/components/label"
+        },
+        {
+          "repository": "heroui-native",
+          "origin": "src/components/label"
+        }
+      ],
+      "apiTransformations": [
+        "Shared direct props live in a single types module; platform refs and extension props remain distinct."
+      ],
+      "behaviorDeviations": [],
+      "stylingDeviations": [
+        "Native-origin CSS is the authoritative semantic theme and component style system; browser selectors live in web-only.css."
+      ],
+      "knownUnappliedChanges": []
+    },
+    {
+      "name": "text-field",
+      "status": "unified",
+      "publicPaths": [
+        "src/components/text-field/index.native.ts",
+        "src/components/text-field/index.web.ts",
+        "src/components/text-field/text-field.native.tsx",
+        "src/components/text-field/text-field.types.ts",
+        "src/components/text-field/text-field.web.tsx"
+      ],
+      "sources": [
+        {
+          "repository": "heroui-react",
+          "origin": "packages/react/src/components/textfield"
+        },
+        {
+          "repository": "heroui-native",
+          "origin": "src/components/text-field"
+        }
+      ],
+      "apiTransformations": [
+        "Shared direct props live in a single types module; platform refs and extension props remain distinct."
+      ],
+      "behaviorDeviations": [],
+      "stylingDeviations": [
+        "Native-origin CSS is the authoritative semantic theme and component style system; browser selectors live in web-only.css."
+      ],
+      "knownUnappliedChanges": []
+    },
+    {
+      "name": "typography",
+      "status": "unified",
+      "publicPaths": [
+        "src/components/typography/index.native.ts",
+        "src/components/typography/index.web.ts",
+        "src/components/typography/typography-mapping.ts",
+        "src/components/typography/typography.native.tsx",
+        "src/components/typography/typography.types.ts",
+        "src/components/typography/typography.web.tsx"
+      ],
+      "sources": [
+        {
+          "repository": "heroui-react",
+          "origin": "packages/react/src/components/typography"
+        },
+        {
+          "repository": "heroui-native",
+          "origin": "src/text"
+        }
+      ],
+      "apiTransformations": [
+        "Heading and paragraph types map to semantic web elements."
+      ],
+      "behaviorDeviations": [],
+      "stylingDeviations": [
+        "Native-origin CSS is the authoritative semantic theme and component style system; browser selectors live in web-only.css."
+      ],
+      "knownUnappliedChanges": []
+    }
+  ]
+}

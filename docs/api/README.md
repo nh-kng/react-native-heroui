@@ -5,6 +5,7 @@ The package supports both a root import and component-specific subpaths. Each pa
 | Export | Root import | Component subpath |
 | --- | --- | --- |
 | `Button` | `@nh-kng/react-native-heroui` | `@nh-kng/react-native-heroui/button` |
+| `Chip` | `@nh-kng/react-native-heroui` | `@nh-kng/react-native-heroui/chip` |
 | `Card` | `@nh-kng/react-native-heroui` | `@nh-kng/react-native-heroui/card` |
 | `Typography` | `@nh-kng/react-native-heroui` | `@nh-kng/react-native-heroui/typography` |
 | `Input` | `@nh-kng/react-native-heroui` | `@nh-kng/react-native-heroui/input` |
@@ -16,7 +17,7 @@ The package supports both a root import and component-specific subpaths. Each pa
 
 The native and web style entry points are `@nh-kng/react-native-heroui/styles/native.css` and `@nh-kng/react-native-heroui/styles/web.css`.
 
-Every component root and compound part exposes platform-specific `nativeProps` and `webProps` options typed from the corresponding upstream public component. These options are ignored on the inactive platform. Adapter-owned values such as `isPending`, `isInvalid`, mapped input props, children, class names, and refs cannot be overridden through an escape hatch.
+Every component root and compound part exposes platform-specific `nativeProps` and `webProps` options typed from the corresponding locally owned component. These options are ignored on the inactive platform. Adapter-owned values such as `isLoading`, `isPending`, `isInvalid`, mapped input props, children, class names, and refs cannot be overridden through an escape hatch.
 
 - [Component API](components.md)
 - [Type conventions](types.md)

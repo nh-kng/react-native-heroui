@@ -1,6 +1,6 @@
 # Documentation
 
-This index covers package setup, the public adapters, styling, platform behavior, and repository checks.
+This index covers package setup, the owned public components, styling, platform behavior, and repository checks.
 
 ## Getting started
 
@@ -18,7 +18,8 @@ This index covers package setup, the public adapters, styling, platform behavior
 ## Architecture and development
 
 - [Architecture](architecture/overview.md) — adapter boundaries, package exports, and CSS flow.
-- [Architecture decisions](architecture/decisions/README.md) — the original Expo module and workspace decision and the current platform adapter foundation.
+- [Architecture decisions](architecture/decisions/README.md) — the original Expo module and workspace decision and the source ownership and shared styling decisions.
+- [Stage 2 migration](changes/archive/stage-2-public-surface.md) — owned public surface, canonical contracts, styling changes, and verification limits.
 - [Upstream baselines](upstream/README.md) — owned source imports, pinned revisions, licenses, inventory, builds, and controlled synchronization.
 - [Development setup](development/setup.md) — workspace commands and repository layout.
 - [Testing](development/testing.md) — static checks and prohibited runtime checks.

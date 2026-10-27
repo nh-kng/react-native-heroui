@@ -16,3 +16,5 @@ export { TextField } from './components/text-field/index.native.js';
 export type { TextFieldNativeProps, TextFieldProps, TextFieldRef, TextFieldWebProps } from './components/text-field/index.native.js';
 export { Typography } from './components/typography/index.native.js';
 export type { HeadingType, ParagraphType, TypographyCodeProps, TypographyHeadingProps, TypographyNativeProps, TypographyParagraphProps, TypographyProps, TypographyWebProps } from './components/typography/index.native.js';
+export { Chip } from './components/chip/index.native.js';
+export type { ChipProps, ChipLabelProps, ChipNativeProps, ChipWebProps, ChipRef } from './components/chip/index.native.js';

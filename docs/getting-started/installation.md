@@ -1,11 +1,11 @@
 # Installation
 
-Install every declared peer, including both upstream component packages, even when you ship only one platform. Platform exports keep the runtime implementation separate, while the public types include both upstream option sets. The package does not bundle React, React Native, the upstream component libraries, or their styling runtimes.
+Install the declared required peers, even when you ship only one platform. HeroUI component packages are not required. Platform exports keep the runtime implementation separate, while the public types include both owned platform option sets. The package does not bundle React, React Native, or styling runtimes.
 
-Add the package, upstream libraries, and shared/web peers:
+Add the package, shared/web peers:
 
 ```sh
-pnpm add @nh-kng/react-native-heroui@0.1.0 @heroui/react@3.2.6 @internationalized/date@3.12.4 @react-aria/ssr@3.10.1 @react-aria/utils@3.34.1 heroui-native@1.0.11 react-aria@3.52.1 react-aria-components@1.21.1 tailwind-merge@3.6.0 tailwind-variants@3.3.1 tailwindcss@4.3.3 uniwind@1.13.0
+pnpm add @nh-kng/react-native-heroui@0.1.0 @internationalized/date@3.12.4 @react-aria/ssr@3.10.1 @react-aria/utils@3.34.1 react-aria@3.52.1 react-aria-components@1.21.1 tailwind-merge@3.6.0 tailwind-variants@3.3.1 tailwindcss@4.3.3 uniwind@1.13.0
 ```
 
 In an Expo app, use `expo install` to select SDK-compatible React, React DOM, and native peers:

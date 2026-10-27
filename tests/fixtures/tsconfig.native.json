@@ -1,6 +1,8 @@
 {
   "compilerOptions": {
-    "customConditions": ["react-native"],
+    "customConditions": [
+      "react-native"
+    ],
     "jsx": "react-jsx",
     "module": "ESNext",
     "moduleResolution": "Bundler",
@@ -10,5 +12,8 @@
     "target": "ES2022",
     "types": []
   },
-  "include": ["./native.tsx"]
+  "include": [
+    "./native.tsx",
+    "./shared-contracts.ts"
+  ]
 }

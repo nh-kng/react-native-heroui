@@ -1,0 +1,31 @@
+@layer components {
+  [data-slot="chip"] { display: inline-flex; vertical-align: middle; }
+  [data-slot="button"] {
+    display: inline-flex;
+    position: relative;
+    cursor: pointer;
+    white-space: nowrap;
+    transition: background-color 150ms, opacity 150ms;
+  }
+  [data-slot="button"][data-disabled] {
+    @apply element-disabled;
+  }
+  [data-slot="button"][data-focus-visible],
+  [data-slot="input"][data-focus-visible] {
+    outline: 2px solid var(--focus);
+    outline-offset: 2px;
+  }
+  [data-slot="input"] { outline: none; }
+  [data-slot="input"][aria-invalid="true"] { border-color: var(--danger); border-width: 1px; }
+  [data-slot="input"]:disabled { @apply element-disabled; }
+  [data-slot="input"]::placeholder { color: var(--field-placeholder); }
+  [data-slot="textfield"][data-invalid] [data-slot="label"],
+  [data-slot="label"][data-invalid] { color: var(--danger); }
+  [data-slot="textfield"][data-disabled] [data-slot="label"],
+  [data-slot="label"][data-disabled] { @apply element-disabled; }
+  [data-slot="textfield"][data-required] [data-slot="label"]::after,
+  [data-slot="label"].label--required::after { content: " *"; color: var(--danger); }
+  [data-slot="typography"].text__root--align-start { text-align: start; }
+  [data-slot="typography"].text__root--align-end { text-align: end; }
+  [data-slot="typography"][data-type="code"] { font-family: ui-monospace, monospace; }
+}

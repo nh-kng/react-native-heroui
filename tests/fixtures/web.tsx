@@ -2,6 +2,7 @@ import { useRef } from 'react';
 import {
   Button,
   Card,
+  Chip,
   Description,
   FieldError,
   HeroUIProvider,
@@ -18,13 +19,14 @@ export function WebConsumerFixture() {
   return (
     <HeroUIProvider colorScheme="system">
       <Button
-        isPending
+        isLoading
         fullWidth
         onPress={(event) => void event}
         webProps={{ slot: 'save-action' }}
       >
         <Button.Label webProps={{ title: 'Save' }}>Save</Button.Label>
       </Button>
+      <Chip color="success" size="sm" variant="soft"><Chip.Label>Ready</Chip.Label></Chip>
       <Card variant="secondary">
         <Card.Header>
           <Card.Title>Account</Card.Title>

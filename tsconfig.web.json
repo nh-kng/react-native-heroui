@@ -2,7 +2,15 @@
   "extends": "./tsconfig.base.json",
   "compilerOptions": {
     "outDir": "./build/web",
-    "customConditions": ["browser"]
+    "customConditions": [
+      "browser"
+    ],
+    "types": [
+      "uniwind/types",
+      "node"
+    ]
   },
-  "files": ["./src/index.web.ts"]
+  "files": [
+    "./src/index.web.ts"
+  ]
 }

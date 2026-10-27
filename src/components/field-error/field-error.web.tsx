@@ -1,25 +1,19 @@
-import { FieldError as WebFieldError, type FieldErrorRootProps as WebFieldErrorProps } from '@heroui/react/field-error';
-import type { FieldErrorRootProps as NativeFieldErrorProps } from 'heroui-native/field-error';
-import type { ComponentRef, ReactNode } from 'react';
+import type { ComponentRef } from 'react';
 import { forwardRef } from 'react';
 
-type OwnedProps = 'children' | 'className' | 'ref';
-
-export type FieldErrorWebProps = Omit<WebFieldErrorProps, OwnedProps>;
-export type FieldErrorNativeProps = Omit<NativeFieldErrorProps, OwnedProps>;
-
-export interface FieldErrorProps {
-  children?: ReactNode;
-  className?: string;
-  nativeProps?: FieldErrorNativeProps;
-  webProps?: FieldErrorWebProps;
-}
+import type { FieldErrorProps } from './field-error.types.js';
+import { FieldError as WebFieldError } from '../../primitives/web/components/field-error/index.js';
+export type {
+  FieldErrorNativeProps,
+  FieldErrorProps,
+  FieldErrorWebProps,
+} from './field-error.types.js';
 
 export type FieldErrorRef = ComponentRef<typeof WebFieldError.Root>;
 
 const FieldErrorRoot = forwardRef<FieldErrorRef, FieldErrorProps>(function FieldErrorRoot(
   { children, className, nativeProps: _nativeProps, webProps },
-  ref,
+  ref
 ) {
   return (
     <WebFieldError.Root {...webProps} ref={ref} className={className}>
@@ -32,4 +26,6 @@ FieldErrorRoot.displayName = 'FieldError';
 
 type FieldErrorComponent = typeof FieldErrorRoot & { Root: typeof FieldErrorRoot };
 
-export const FieldError: FieldErrorComponent = Object.assign(FieldErrorRoot, { Root: FieldErrorRoot });
+export const FieldError: FieldErrorComponent = Object.assign(FieldErrorRoot, {
+  Root: FieldErrorRoot,
+});

@@ -7,13 +7,13 @@ The library is a JavaScript and TypeScript adapter package. A host app must prov
 | React | `>=19.0.0` | Shared component runtime. |
 | React Native | `>=0.81.0`; the example pins `0.86.3` | Native adapter runtime. |
 | React DOM | `>=19.0.0` | Web adapter runtime. |
-| HeroUI React | `^3.2.6` | Web component implementation. |
-| HeroUI Native | `^1.0.11` | iOS and Android component implementation. |
 | Tailwind CSS | `^4.0.0` | Web CSS and native utility compilation. |
 | Uniwind | `^1.13.0` | Native utility styles and theme coordination. |
 | Expo example | SDK `57.0.31` | Repository consumer baseline. |
 
-The root `package.json` lists all required peers, including the upstream libraries' React Aria and native support packages. The example uses the Expo SDK 57 bundled versions for its React Native peers. It has no custom native module, autolinking configuration, or development-client requirement.
+The root `package.json` lists all required peers, including React Aria and native support packages. The example uses the Expo SDK 57 bundled versions for its React Native peers. It has no custom native module, autolinking configuration, or development-client requirement.
+
+The optional `@gorhom/bottom-sheet`, `expo-blur`, and `react-native-screens` peers retain the baseline's optional native integrations. See `package.json` for their ranges.
 
 Use a Node.js and pnpm version compatible with the selected Expo SDK and React Native release. The repository pins pnpm `10.32.1` and keeps a single lockfile.
 

@@ -1,6 +1,6 @@
 # Owned upstream baselines
 
-Stage 1 preserves both complete component libraries as locally owned source under `baselines/`, alongside pinned, read-only Git submodules under `upstream/`. The published package still uses its existing public adapters and installed HeroUI peers. Switching consumers to owned implementations and unifying contracts or styling belongs to Stage 2.
+Stage 1 preserves both complete component libraries as locally owned source under `baselines/`, alongside pinned, read-only Git submodules under `upstream/`. Stage 2 public exports now use local implementations under `src/primitives/`, shared contracts under `src/components/`, and shared semantic styles. HeroUI component packages are development baselines rather than runtime peers. The immutable Stage 1 copies remain separate from public source edits.
 
 ## Initialize and verify
 
@@ -20,6 +20,8 @@ The initial import is reproducible with `node scripts/import-upstream.mjs` after
 
 ## Records
 
+- [Owned implementation map](owned-source-map.json) — current copied source destinations and public API, behavior, and styling transformations.
+- [Stage 2 migration](../changes/archive/stage-2-public-surface.md) — migrated public components and remaining baseline-only inventory.
 - [React baseline](react.md) — revision, source layout, dependencies, and stylesheet resolution.
 - [Native baseline](native.md) — revision, support code, optional dependencies, and build limits.
 - [Source inventory](source-map.md) — component coverage, support files, exclusions, and machine-readable provenance.

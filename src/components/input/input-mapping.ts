@@ -1,8 +1,11 @@
 import type { KeyboardTypeOptions } from 'react-native';
 
-export type WebInputMode = 'decimal' | 'email' | 'none' | 'numeric' | 'search' | 'tel' | 'text' | 'url';
+export type WebInputMode =
+  'decimal' | 'email' | 'none' | 'numeric' | 'search' | 'tel' | 'text' | 'url';
 
-export function keyboardTypeToInputMode(keyboardType?: KeyboardTypeOptions): WebInputMode | undefined {
+export function keyboardTypeToInputMode(
+  keyboardType?: KeyboardTypeOptions
+): WebInputMode | undefined {
   switch (keyboardType) {
     case 'decimal-pad':
       return 'decimal';

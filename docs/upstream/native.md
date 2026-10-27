@@ -8,7 +8,7 @@ The entire `src/` tree is copied, including components, primitives, providers, h
 
 React, React Native, gesture-handler, Reanimated, worklets, safe-area-context, SVG, tailwind-variants, tailwind-merge, Uniwind, and Tailwind stay external dependencies. Node declarations supply `Error.captureStackTrace` and `NodeJS.Timeout` types used by the preserved source.
 
-The full library uses `@gorhom/bottom-sheet` in both types and implementation. It is installed as a development dependency for baseline compilation; the original runtime loading and optional-peer declarations remain unchanged. Optional `expo-blur` and `react-native-screens` integrations use guarded runtime loading and are not required for this static build. No optional native packages are added to the example or to the published adapter's peer contract.
+The full library uses `@gorhom/bottom-sheet` in both types and implementation. It is installed as a development dependency for baseline compilation; the original runtime loading and optional-peer declarations remain unchanged. Optional `expo-blur` and `react-native-screens` integrations use guarded runtime loading and are not required for this static build. The published owned implementation retains these optional peer declarations; see the root package manifest.
 
 ## Build and limits
 
@@ -16,4 +16,4 @@ The full library uses `@gorhom/bottom-sheet` in both types and implementation. I
 
 The baseline build emits JavaScript and declarations and copies the complete stylesheet tree. A standalone smoke stylesheet includes Tailwind, Uniwind, and owned Native styles. Worklet directives remain in the emitted source; this build does not replace the consuming application's Babel/worklets or Metro configuration.
 
-No native module, autolinking, podspec, or native build helper is introduced. JavaScript emission and CSS compilation do not establish native bundling, interaction, accessibility, animation, or native compilation compatibility. The current adapters and example continue using the installed `heroui-native` dependency.
+No native module, autolinking, podspec, or native build helper is introduced. JavaScript emission and CSS compilation do not establish native bundling, interaction, accessibility, animation, or native compilation compatibility. The current public components and example now use locally owned sources rather than the installed `heroui-native` package.

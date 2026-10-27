@@ -1,28 +1,18 @@
-import type { LabelRootProps as WebLabelProps } from '@heroui/react/label';
-import { Label as NativeLabel, type LabelProps as NativeLabelProps } from 'heroui-native/label';
-import type { ComponentRef, ForwardRefExoticComponent, ReactNode, RefAttributes } from 'react';
+import type { ComponentRef, ForwardRefExoticComponent, RefAttributes } from 'react';
 import { forwardRef } from 'react';
 
-type OwnedProps = 'children' | 'className' | 'isDisabled' | 'isInvalid' | 'isRequired' | 'ref';
-
-export type LabelNativeProps = Omit<NativeLabelProps, OwnedProps>;
-export type LabelWebProps = Omit<WebLabelProps, OwnedProps>;
-
-export interface LabelProps {
-  children?: ReactNode;
-  className?: string;
-  isDisabled?: boolean;
-  isInvalid?: boolean;
-  isRequired?: boolean;
-  nativeProps?: LabelNativeProps;
-  webProps?: LabelWebProps;
-}
+import type { LabelProps } from './label.types.js';
+import { Label as NativeLabel } from '../../primitives/native/components/label/index.js';
+export type { LabelNativeProps, LabelProps, LabelWebProps } from './label.types.js';
 
 export type LabelRef = ComponentRef<typeof NativeLabel>;
 
-const LabelRoot: ForwardRefExoticComponent<LabelProps & RefAttributes<LabelRef>> = forwardRef<LabelRef, LabelProps>(function LabelRoot(
+const LabelRoot: ForwardRefExoticComponent<LabelProps & RefAttributes<LabelRef>> = forwardRef<
+  LabelRef,
+  LabelProps
+>(function LabelRoot(
   { children, className, isDisabled, isInvalid, isRequired, nativeProps, webProps: _webProps },
-  ref,
+  ref
 ) {
   return (
     <NativeLabel
@@ -31,8 +21,7 @@ const LabelRoot: ForwardRefExoticComponent<LabelProps & RefAttributes<LabelRef>>
       className={className}
       isDisabled={isDisabled}
       isInvalid={isInvalid}
-      isRequired={isRequired}
-    >
+      isRequired={isRequired}>
       {children}
     </NativeLabel>
   );

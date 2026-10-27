@@ -1,6 +1,7 @@
 import {
   Button,
   Card,
+  Chip,
   Description,
   FieldError,
   HeroUIProvider,
@@ -84,7 +85,7 @@ function Gallery({ colorScheme, onColorSchemeChange }: GalleryProps) {
               <Button size="sm" isDisabled>
                 <Button.Label>Disabled</Button.Label>
               </Button>
-              <Button isPending={isPending}>
+              <Button isLoading={isPending}>
                 <Button.Label>Pending example</Button.Label>
               </Button>
               <Button variant="secondary" onPress={() => setIsPending((pending) => !pending)}>
@@ -110,6 +111,7 @@ function Gallery({ colorScheme, onColorSchemeChange }: GalleryProps) {
                 props.
               </Typography.Paragraph>
               <Typography.Code>Typography.Code</Typography.Code>
+              <Chip color="success" variant="soft"><Chip.Label>Shared styles</Chip.Label></Chip>
             </Card.Body>
             <Card.Footer>
               <Button size="sm" className="w-full">
@@ -125,6 +127,7 @@ function Gallery({ colorScheme, onColorSchemeChange }: GalleryProps) {
               Paragraph sizes and semantic heading types keep the same names in the adapter API.
             </Typography.Paragraph>
             <Typography.Code>Typography.Code</Typography.Code>
+              <Chip color="success" variant="soft"><Chip.Label>Shared styles</Chip.Label></Chip>
           </View>
 
           <View className="gap-3">

@@ -1,39 +1,33 @@
-import type { Card as WebCard , CardRootProps as WebCardRootProps } from '@heroui/react/card';
-import { Card as NativeCard, type CardRootProps as NativeCardRootProps } from 'heroui-native/card';
-import type { ComponentProps, ComponentRef, ForwardRefExoticComponent, ReactNode, RefAttributes } from 'react';
+import type { ComponentRef, ForwardRefExoticComponent, RefAttributes } from 'react';
 import { forwardRef } from 'react';
 
-type RootOwnedProps = 'children' | 'className' | 'variant';
-type PartOwnedProps = 'children' | 'className' | 'ref';
-type NativeHeaderUpstreamProps = ComponentProps<typeof NativeCard.Header>;
-type NativeBodyUpstreamProps = ComponentProps<typeof NativeCard.Body>;
-type NativeFooterUpstreamProps = ComponentProps<typeof NativeCard.Footer>;
-type NativeTitleUpstreamProps = ComponentProps<typeof NativeCard.Title>;
-type NativeDescriptionUpstreamProps = ComponentProps<typeof NativeCard.Description>;
-type WebHeaderUpstreamProps = ComponentProps<typeof WebCard.Header>;
-type WebContentUpstreamProps = ComponentProps<typeof WebCard.Content>;
-type WebFooterUpstreamProps = ComponentProps<typeof WebCard.Footer>;
-type WebTitleUpstreamProps = ComponentProps<typeof WebCard.Title>;
-type WebDescriptionUpstreamProps = ComponentProps<typeof WebCard.Description>;
-
-export type CardVariant = NonNullable<NativeCardRootProps['variant']> & NonNullable<WebCardRootProps['variant']>;
-export type CardNativeProps = Omit<NativeCardRootProps, RootOwnedProps | 'ref'>;
-export type CardWebProps = Omit<WebCardRootProps, RootOwnedProps | 'ref'>;
-
-export interface CardProps {
-  children?: ReactNode;
-  className?: string;
-  nativeProps?: CardNativeProps;
-  variant?: CardVariant;
-  webProps?: CardWebProps;
-}
+import type {
+  CardBodyProps,
+  CardDescriptionProps,
+  CardFooterProps,
+  CardHeaderProps,
+  CardProps,
+  CardTitleProps,
+} from './card.types.js';
+import { Card as NativeCard } from '../../primitives/native/components/card/index.js';
+export type {
+  CardBodyProps,
+  CardDescriptionProps,
+  CardFooterProps,
+  CardHeaderProps,
+  CardNativeProps,
+  CardProps,
+  CardTitleProps,
+  CardVariant,
+  CardWebProps,
+} from './card.types.js';
 
 type CardRef = ComponentRef<typeof NativeCard>;
 
-const CardRoot: ForwardRefExoticComponent<CardProps & RefAttributes<CardRef>> = forwardRef<CardRef, CardProps>(function CardRoot(
-  { children, className, nativeProps, variant, webProps: _webProps },
-  ref,
-) {
+const CardRoot: ForwardRefExoticComponent<CardProps & RefAttributes<CardRef>> = forwardRef<
+  CardRef,
+  CardProps
+>(function CardRoot({ children, className, nativeProps, variant, webProps: _webProps }, ref) {
   return (
     <NativeCard {...nativeProps} ref={ref} className={className} variant={variant}>
       {children}
@@ -41,16 +35,11 @@ const CardRoot: ForwardRefExoticComponent<CardProps & RefAttributes<CardRef>> = 
   );
 });
 
-export interface CardHeaderProps {
-  children?: ReactNode;
-  className?: string;
-  nativeProps?: Omit<NativeHeaderUpstreamProps, PartOwnedProps>;
-  webProps?: Omit<WebHeaderUpstreamProps, PartOwnedProps>;
-}
-
-const CardHeader: ForwardRefExoticComponent<CardHeaderProps & RefAttributes<ComponentRef<typeof NativeCard.Header>>> = forwardRef<ComponentRef<typeof NativeCard.Header>, CardHeaderProps>(function CardHeader(
+const CardHeader: ForwardRefExoticComponent<
+  CardHeaderProps & RefAttributes<ComponentRef<typeof NativeCard.Header>>
+> = forwardRef<ComponentRef<typeof NativeCard.Header>, CardHeaderProps>(function CardHeader(
   { children, className, nativeProps, webProps: _webProps },
-  ref,
+  ref
 ) {
   return (
     <NativeCard.Header {...nativeProps} ref={ref} className={className}>
@@ -59,16 +48,11 @@ const CardHeader: ForwardRefExoticComponent<CardHeaderProps & RefAttributes<Comp
   );
 });
 
-export interface CardBodyProps {
-  children?: ReactNode;
-  className?: string;
-  nativeProps?: Omit<NativeBodyUpstreamProps, PartOwnedProps>;
-  webProps?: Omit<WebContentUpstreamProps, PartOwnedProps>;
-}
-
-const CardBody: ForwardRefExoticComponent<CardBodyProps & RefAttributes<ComponentRef<typeof NativeCard.Body>>> = forwardRef<ComponentRef<typeof NativeCard.Body>, CardBodyProps>(function CardBody(
+const CardBody: ForwardRefExoticComponent<
+  CardBodyProps & RefAttributes<ComponentRef<typeof NativeCard.Body>>
+> = forwardRef<ComponentRef<typeof NativeCard.Body>, CardBodyProps>(function CardBody(
   { children, className, nativeProps, webProps: _webProps },
-  ref,
+  ref
 ) {
   return (
     <NativeCard.Body {...nativeProps} ref={ref} className={className}>
@@ -77,16 +61,11 @@ const CardBody: ForwardRefExoticComponent<CardBodyProps & RefAttributes<Componen
   );
 });
 
-export interface CardFooterProps {
-  children?: ReactNode;
-  className?: string;
-  nativeProps?: Omit<NativeFooterUpstreamProps, PartOwnedProps>;
-  webProps?: Omit<WebFooterUpstreamProps, PartOwnedProps>;
-}
-
-const CardFooter: ForwardRefExoticComponent<CardFooterProps & RefAttributes<ComponentRef<typeof NativeCard.Footer>>> = forwardRef<ComponentRef<typeof NativeCard.Footer>, CardFooterProps>(function CardFooter(
+const CardFooter: ForwardRefExoticComponent<
+  CardFooterProps & RefAttributes<ComponentRef<typeof NativeCard.Footer>>
+> = forwardRef<ComponentRef<typeof NativeCard.Footer>, CardFooterProps>(function CardFooter(
   { children, className, nativeProps, webProps: _webProps },
-  ref,
+  ref
 ) {
   return (
     <NativeCard.Footer {...nativeProps} ref={ref} className={className}>
@@ -95,16 +74,11 @@ const CardFooter: ForwardRefExoticComponent<CardFooterProps & RefAttributes<Comp
   );
 });
 
-export interface CardTitleProps {
-  children?: ReactNode;
-  className?: string;
-  nativeProps?: Omit<NativeTitleUpstreamProps, PartOwnedProps>;
-  webProps?: Omit<WebTitleUpstreamProps, PartOwnedProps>;
-}
-
-const CardTitle: ForwardRefExoticComponent<CardTitleProps & RefAttributes<ComponentRef<typeof NativeCard.Title>>> = forwardRef<ComponentRef<typeof NativeCard.Title>, CardTitleProps>(function CardTitle(
+const CardTitle: ForwardRefExoticComponent<
+  CardTitleProps & RefAttributes<ComponentRef<typeof NativeCard.Title>>
+> = forwardRef<ComponentRef<typeof NativeCard.Title>, CardTitleProps>(function CardTitle(
   { children, className, nativeProps, webProps: _webProps },
-  ref,
+  ref
 ) {
   return (
     <NativeCard.Title {...nativeProps} ref={ref} className={className}>
@@ -113,21 +87,16 @@ const CardTitle: ForwardRefExoticComponent<CardTitleProps & RefAttributes<Compon
   );
 });
 
-export interface CardDescriptionProps {
-  children?: ReactNode;
-  className?: string;
-  nativeProps?: Omit<NativeDescriptionUpstreamProps, PartOwnedProps>;
-  webProps?: Omit<WebDescriptionUpstreamProps, PartOwnedProps>;
-}
-
-const CardDescription: ForwardRefExoticComponent<CardDescriptionProps & RefAttributes<ComponentRef<typeof NativeCard.Description>>> = forwardRef<ComponentRef<typeof NativeCard.Description>, CardDescriptionProps>(
+const CardDescription: ForwardRefExoticComponent<
+  CardDescriptionProps & RefAttributes<ComponentRef<typeof NativeCard.Description>>
+> = forwardRef<ComponentRef<typeof NativeCard.Description>, CardDescriptionProps>(
   function CardDescription({ children, className, nativeProps, webProps: _webProps }, ref) {
     return (
       <NativeCard.Description {...nativeProps} ref={ref} className={className}>
         {children}
       </NativeCard.Description>
     );
-  },
+  }
 );
 
 CardRoot.displayName = 'Card';

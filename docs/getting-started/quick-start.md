@@ -1,8 +1,8 @@
 # Quick start
 
-Import the stylesheet that matches the platform's CSS pipeline, then compose the adapter components. The stylesheet imports upstream defaults and the shared package brand tokens.
+Import the stylesheet that matches the platform's CSS pipeline, then compose the adapter components. The stylesheet imports the owned semantic component styles and shared brand tokens.
 
-For Uniwind and Tailwind CSS 4 on native, configure Metro to process the app CSS entry with Uniwind, then import the package stylesheet from that entry point. Install Uniwind, Tailwind CSS 4, `tailwind-merge`, `tailwind-variants`, `heroui-native`, and the package peers first:
+For Uniwind and Tailwind CSS 4 on native, configure Metro to process the app CSS entry with Uniwind, then import the package stylesheet from that entry point. Install Uniwind, Tailwind CSS 4, `tailwind-merge`, `tailwind-variants`, and the package peers first:
 
 ```js
 const { getDefaultConfig } = require('expo/metro-config');
@@ -22,7 +22,7 @@ Create `global.native.css`:
 @source './App.tsx';
 ```
 
-Expo Metro web uses PostCSS to expand Tailwind and the upstream HeroUI stylesheet. Add `@tailwindcss/postcss` and `postcss` to the app's development dependencies and configure PostCSS at the Expo project root:
+Expo Metro web uses PostCSS to expand Tailwind and the shared component stylesheet. Add `@tailwindcss/postcss` and `postcss` to the app's development dependencies and configure PostCSS at the Expo project root:
 
 ```js
 export default {

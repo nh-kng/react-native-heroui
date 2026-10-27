@@ -10,13 +10,11 @@
     "ios": "expo start --ios"
   },
   "dependencies": {
-    "@heroui/react": "3.2.6",
     "@internationalized/date": "3.12.4",
     "@nh-kng/react-native-heroui": "workspace:*",
     "@react-aria/ssr": "3.10.1",
     "@react-aria/utils": "3.34.1",
     "expo": "57.0.31",
-    "heroui-native": "1.0.11",
     "react": "19.2.3",
     "react-aria": "3.52.1",
     "react-aria-components": "1.21.1",

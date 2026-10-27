@@ -9,13 +9,14 @@ pnpm run build
 pnpm run typecheck
 pnpm run typecheck:fixtures
 pnpm run verify:upstream
+pnpm run verify:owned
 pnpm run typecheck:baselines
 pnpm run build:baselines
 pnpm run lint
 pnpm test
 ```
 
-The fixtures use separate `react-native` and `browser` export conditions. They check shared props, root and subpath exports, platform-specific options, compound parts, ref targets, and rejected adapter-owned overrides. The Node tests cover keyboard type and Typography mappings, baseline provenance integrity, and rejection of installed upstream resolution without rendering React components. Run `build:baselines` after `build`, which cleans all generated output. `pnpm run check` includes both builds and all package static checks; see the [baseline validation record](../upstream/validation.md) for verification limits.
+The fixtures use separate `react-native` and `browser` export conditions. They check shared props, root and subpath exports, platform-specific options, compound parts, ref targets, and rejected adapter-owned overrides. The Node tests cover loading state, shared Button/Chip variant semantics, complete owned provenance and import resolution, keyboard type and Typography mappings, baseline provenance integrity, and rejection of installed upstream resolution without rendering React components. Run `build:baselines` after `build`, which cleans all generated output. `pnpm run check` includes both builds and all package static checks; see the [baseline validation record](../upstream/validation.md) for verification limits.
 
 ## Example and package checks
 

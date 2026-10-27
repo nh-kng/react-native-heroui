@@ -1,6 +1,8 @@
 {
   "compilerOptions": {
-    "customConditions": ["browser"],
+    "customConditions": [
+      "browser"
+    ],
     "jsx": "react-jsx",
     "module": "ESNext",
     "moduleResolution": "Bundler",
@@ -10,5 +12,8 @@
     "target": "ES2022",
     "types": []
   },
-  "include": ["./web.tsx"]
+  "include": [
+    "./web.tsx",
+    "./shared-contracts.ts"
+  ]
 }

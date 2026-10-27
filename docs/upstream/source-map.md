@@ -1,6 +1,6 @@
 # Source inventory
 
-The [machine-readable source map](source-map.json) is authoritative for every copied upstream file. Its repository records provide the baseline commit, version, license, last reviewed and incorporated revisions, selection rules, explicit exclusions, component records, and local deviations. Each file records its original and owned paths, upstream Git blob identity, and SHA-256 checksum. Component records additionally list provenance paths, API transformations, behavior and styling deviations, and known unapplied changes; these change lists are empty in Stage 1.
+The [machine-readable source map](source-map.json) is authoritative for every unchanged Stage 1 baseline file. The [owned implementation map](owned-source-map.json) separately tracks Stage 2 destinations and transformations. Its repository records provide the baseline commit, version, license, last reviewed and incorporated revisions, selection rules, explicit exclusions, component records, and local deviations. Each file records its original and owned paths, upstream Git blob identity, and SHA-256 checksum. Component records additionally list provenance paths, API transformations, behavior and styling deviations, and known unapplied changes; these change lists are empty in Stage 1.
 
 ## Component coverage
 

@@ -1,3 +1,4 @@
+export type { HeadingType, ParagraphType } from './typography-mapping.js';
 export { Typography } from './typography.web.js';
 export type {
   TypographyCodeProps,
@@ -7,4 +8,3 @@ export type {
   TypographyProps,
   TypographyWebProps,
 } from './typography.web.js';
-export type { HeadingType, ParagraphType } from './typography-mapping.js';

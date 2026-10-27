@@ -2,6 +2,7 @@ import { useRef } from 'react';
 import {
   Button,
   Card,
+  Chip,
   HeroUIProvider,
   Input,
   Label,
@@ -22,7 +23,7 @@ export function NativeConsumerFixture() {
       <ButtonSubpath
         ref={buttonRef}
         fullWidth
-        isPending
+        isLoading
         onPress={(event) => {
           const retainedEvent: ButtonPressEvent = event;
           void retainedEvent;
@@ -31,6 +32,7 @@ export function NativeConsumerFixture() {
       >
         <Button.Label nativeProps={{ allowFontScaling: false }}>Save</Button.Label>
       </ButtonSubpath>
+      <Chip color="success" size="sm" variant="soft"><Chip.Label>Ready</Chip.Label></Chip>
       <Card variant="secondary">
         <Card.Header>
           <Card.Title>Profile</Card.Title>

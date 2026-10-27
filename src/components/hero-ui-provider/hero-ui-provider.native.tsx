@@ -1,17 +1,15 @@
-import { HeroUINativeProvider, type HeroUINativeProviderProps } from 'heroui-native/provider';
-import type { ReactNode } from 'react';
 import { useEffect } from 'react';
 import { Uniwind } from 'uniwind';
 
-export type ColorScheme = 'system' | 'light' | 'dark';
+import type { HeroUIProviderProps } from './hero-ui-provider.types.js';
+import { HeroUINativeProvider } from '../../primitives/native/providers/hero-ui-native/index.js';
+export type { ColorScheme, HeroUIProviderProps } from './hero-ui-provider.types.js';
 
-export interface HeroUIProviderProps {
-  children: ReactNode;
-  colorScheme?: ColorScheme;
-  nativeProps?: Omit<HeroUINativeProviderProps, 'children' | 'ref'>;
-}
-
-export function HeroUIProvider({ children, colorScheme = 'system', nativeProps }: HeroUIProviderProps) {
+export function HeroUIProvider({
+  children,
+  colorScheme = 'system',
+  nativeProps,
+}: HeroUIProviderProps) {
   useEffect(() => {
     const previousTheme = Uniwind.currentTheme;
     const hadAdaptiveThemes = Uniwind.hasAdaptiveThemes;

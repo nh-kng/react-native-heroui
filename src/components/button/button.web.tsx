@@ -1,53 +1,20 @@
-import {
-  Button as WebButton,
-  type ButtonRootProps as WebButtonRootProps,
-} from '@heroui/react/button';
-import type {
-  Button as NativeButton,
-  ButtonRootProps as NativeButtonRootProps,
-} from 'heroui-native/button';
-import type { ComponentRef, ReactNode } from 'react';
-import { forwardRef } from 'react';
+import type { ComponentRef } from 'react';
+import { createContext, forwardRef, useContext } from 'react';
 
-type ButtonOwnedProps =
-  | 'children'
-  | 'className'
-  | 'fullWidth'
-  | 'isDisabled'
-  | 'isIconOnly'
-  | 'isPending'
-  | 'onPress'
-  | 'ref'
-  | 'size'
-  | 'variant';
+import { resolveButtonState } from './button-state.js';
+import { buttonClassNames } from './button.styles.js';
+import type { ButtonBackgroundProps, ButtonLabelProps, ButtonProps } from './button.types.js';
+import { Button as WebButton } from '../../primitives/web/components/button/index.js';
+export type {
+  ButtonBackgroundProps,
+  ButtonLabelProps,
+  ButtonNativeProps,
+  ButtonPressEvent,
+  ButtonProps,
+  ButtonWebProps,
+} from './button.types.js';
 
-type EventOf<T> = T extends (event: infer Event, ...args: never[]) => unknown ? Event : never;
-type DistributiveOmit<T, K extends PropertyKey> = T extends unknown ? Omit<T, K> : never;
-
-export type ButtonPressEvent =
-  | EventOf<NativeButtonRootProps['onPress']>
-  | EventOf<WebButtonRootProps['onPress']>;
-
-export type ButtonWebProps = DistributiveOmit<WebButtonRootProps, ButtonOwnedProps>;
-export type ButtonNativeProps = DistributiveOmit<
-  NativeButtonRootProps,
-  ButtonOwnedProps | 'accessibilityState'
->;
-
-export interface ButtonProps {
-  children?: ReactNode;
-  className?: string;
-  fullWidth?: boolean;
-  isDisabled?: boolean;
-  isIconOnly?: boolean;
-  isPending?: boolean;
-  nativeProps?: ButtonNativeProps;
-  onPress?: (event: ButtonPressEvent) => void;
-  size?: NonNullable<WebButtonRootProps['size']> & NonNullable<NativeButtonRootProps['size']>;
-  variant?: NonNullable<WebButtonRootProps['variant']> &
-    NonNullable<NativeButtonRootProps['variant']>;
-  webProps?: ButtonWebProps;
-}
+const ButtonSizeContext = createContext<NonNullable<ButtonProps['size']>>('md');
 
 export type ButtonRef = ComponentRef<typeof WebButton.Root>;
 
@@ -58,6 +25,7 @@ const ButtonRoot = forwardRef<ButtonRef, ButtonProps>(function ButtonRoot(
     fullWidth,
     isDisabled = false,
     isIconOnly,
+    isLoading = false,
     isPending = false,
     nativeProps: _nativeProps,
     onPress,
@@ -67,35 +35,31 @@ const ButtonRoot = forwardRef<ButtonRef, ButtonProps>(function ButtonRoot(
   },
   ref
 ) {
-  const disabled = isDisabled || isPending;
+  const { isDisabled: disabled, isLoading: loading } = resolveButtonState(
+    isDisabled,
+    isLoading,
+    isPending
+  );
 
   return (
-    <WebButton.Root
-      {...webProps}
-      ref={ref}
-      aria-busy={isPending || undefined}
-      className={[className, 'relative'].filter(Boolean).join(' ')}
-      fullWidth={fullWidth}
-      isDisabled={disabled}
-      isIconOnly={isIconOnly}
-      isPending={isPending}
-      onPress={onPress}
-      size={size}
-      variant={variant}>
-      {children}
-    </WebButton.Root>
+    <ButtonSizeContext value={size ?? 'md'}>
+      <WebButton.Root
+        {...webProps}
+        ref={ref}
+        aria-busy={loading || undefined}
+        className={[className, 'relative'].filter(Boolean).join(' ')}
+        fullWidth={fullWidth}
+        isDisabled={disabled}
+        isIconOnly={isIconOnly}
+        isPending={loading}
+        onPress={onPress}
+        size={size}
+        variant={variant}>
+        {children}
+      </WebButton.Root>
+    </ButtonSizeContext>
   );
 });
-
-export interface ButtonLabelProps {
-  children?: ReactNode;
-  className?: string;
-  nativeProps?: Omit<
-    React.ComponentProps<typeof NativeButton.Label>,
-    'children' | 'className' | 'ref'
-  >;
-  webProps?: Omit<React.ComponentPropsWithRef<'span'>, 'children' | 'className' | 'ref'>;
-}
 
 type ButtonLabelRef = React.ComponentRef<'span'>;
 
@@ -113,22 +77,17 @@ const ButtonLabel = forwardRef<ButtonLabelRef, ButtonLabelProps>(function Button
   );
 });
 
-export interface ButtonBackgroundProps {
-  children?: ReactNode;
-  className?: string;
-  nativeProps?: Omit<
-    React.ComponentProps<typeof NativeButton.Background>,
-    'children' | 'className' | 'ref'
-  >;
-  webProps?: Omit<React.ComponentPropsWithRef<'span'>, 'children' | 'className' | 'ref'>;
-}
-
 type ButtonBackgroundRef = React.ComponentRef<'span'>;
 
 const ButtonBackground = forwardRef<ButtonBackgroundRef, ButtonBackgroundProps>(
   function ButtonBackground({ children, className, nativeProps: _nativeProps, webProps }, ref) {
+    const size = useContext(ButtonSizeContext);
     return (
-      <span {...webProps} ref={ref} className={className}>
+      <span
+        {...webProps}
+        ref={ref}
+        aria-hidden
+        className={buttonClassNames.background({ size, className })}>
         {children}
       </span>
     );

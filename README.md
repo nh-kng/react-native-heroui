@@ -1,13 +1,13 @@
 # @nh-kng/react-native-heroui
 
-Platform-resolved React components that adapt HeroUI React on web and HeroUI Native on iOS and Android. The package includes Button, Card, Typography, field components, a theme provider, and separate web/native stylesheets.
+Source-owned React components based on pinned HeroUI React and Native implementations. The package includes Button, Card, Chip, Typography, field components, a theme provider, shared contracts, and one semantic styling system for web, iOS, and Android.
 
 ## Install
 
-Install the package and its peer dependencies for the platforms you target. The web adapter uses `@heroui/react`, React DOM, React Aria, and Tailwind CSS 4. Native adapters use `heroui-native`, React Native, Uniwind, and the native peers required by HeroUI Native.
+Install the package and its peer dependencies for the platforms you target. Web implementations use React DOM and React Aria. Native implementations use React Native, Uniwind, and native gesture and animation peers. HeroUI component packages are no longer runtime dependencies.
 
 ```sh
-pnpm add @nh-kng/react-native-heroui @heroui/react heroui-native
+pnpm add @nh-kng/react-native-heroui
 ```
 
 Import the platform stylesheet through the corresponding CSS entry point. See [installation](docs/getting-started/installation.md) and [quick start](docs/getting-started/quick-start.md) for the complete peer dependency and Expo setup.
@@ -38,7 +38,7 @@ export function Screen() {
 }
 ```
 
-`Button`, `Card`, and `Typography` expose compound parts. `Input`, `TextField`, `Label`, `Description`, and `FieldError` use the upstream field context so labels, descriptions, validation, and error visibility remain associated. Component roots and parts accept typed `nativeProps` and `webProps` escape hatches; adapter-owned props cannot be replaced through those options.
+`Button`, `Card`, `Chip`, and `Typography` expose compound parts. `Input`, `TextField`, `Label`, `Description`, and `FieldError` retain the locally owned field context so labels, descriptions, validation, and error visibility remain associated. Component roots and parts accept typed `nativeProps` and `webProps` escape hatches; adapter-owned props cannot be replaced through those options.
 
 ## Development
 

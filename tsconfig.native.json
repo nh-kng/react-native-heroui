@@ -2,7 +2,15 @@
   "extends": "./tsconfig.base.json",
   "compilerOptions": {
     "outDir": "./build/native",
-    "customConditions": ["react-native"]
+    "customConditions": [
+      "react-native"
+    ],
+    "types": [
+      "uniwind/types",
+      "node"
+    ]
   },
-  "files": ["./src/index.native.ts"]
+  "files": [
+    "./src/index.native.ts"
+  ]
 }

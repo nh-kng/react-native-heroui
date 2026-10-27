@@ -17,3 +17,7 @@ Third-party implementations stay external: React, React DOM, React Aria Componen
 The separate build transforms emitted JSX with TypeScript's automatic JSX runtime, then adjusts emitted JavaScript and declaration import specifiers to local ESM paths. Both typechecking and emitted files resolve `@heroui/styles` to the owned styles implementation. Copied source files remain byte-identical to upstream; build configuration and emitted-artifact adjustments are repository-owned tooling.
 
 The generated React CSS entry points to the copied styles CSS. Tailwind compiles a standalone stylesheet smoke artifact from that entry. This establishes CSS import resolution and compilation, not visual or browser behavior parity. The current published `styles/web.css` entry continues to use the existing installed upstream package.
+
+## Public implementation
+
+Stage 2 copies the published implementation graph into `src/primitives/web/`, maps style imports to local modules, and uses the shared Native-derived semantic stylesheet rather than this baseline's original CSS. See the [owned source map](owned-source-map.json) and [retained license notices](licenses/README.md).

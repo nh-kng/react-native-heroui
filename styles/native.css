@@ -1,6 +1,7 @@
 @import "tailwindcss";
 @import "uniwind";
-@import "heroui-native/styles";
+@import "./shared/index.css";
 @import "./brand-tokens.css";
+@import "./native-only.css";
 
 @source "../build";

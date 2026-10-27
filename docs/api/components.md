@@ -1,6 +1,6 @@
 # Components
 
-The adapters keep shared direct props consistent while delegating rendering, component state, and compound contexts to the installed upstream packages.
+Shared contracts wrap locally owned implementations. The original field contexts, React Aria behavior, and native interaction support remain in those implementations.
 
 ## `HeroUIProvider`
 
@@ -8,12 +8,14 @@ The adapters keep shared direct props consistent while delegating rendering, com
 
 ## `Button`
 
-`Button` accepts shared `variant`, `size`, `isDisabled`, `isPending`, `isIconOnly`, `fullWidth`, `className`, `children`, and `onPress` props. `onPress` receives the host event union. `isPending` blocks activation and marks the button busy; the adapter does not add a spinner. Variants and sizes are limited to values supported by both installed upstream implementations.
+`Button` accepts shared `variant`, `size`, `isDisabled`, `isLoading`, `isIconOnly`, `fullWidth`, `className`, `children`, and `onPress` props. `onPress` receives the host event union. `isLoading` blocks activation and marks the button busy; the adapter does not add a spinner. Variants and sizes are limited to values supported by both pinned source baselines.
 
-Use `Button.Label` for native text content; on web it renders an inline span in normal flow so its text contributes to button sizing and alignment without adding a block wrapper. `Button.Background` is available for a decorative background layer and is positioned behind the button contents on both platforms. `Button.Root` aliases the root component. Roots and parts accept typed platform options and forward their upstream refs.
+`isPending` remains a deprecated compatibility alias; either loading prop enables loading. Sizes are `sm`, `md`, and `lg`. Variants are `primary`, `secondary`, `tertiary`, `ghost`, `danger`, `outline`, and `danger-soft`; the last two preserve existing functionality.
+
+Use `Button.Label` for native text content; on web it renders an inline span in normal flow and inherits the shared root size and color so its text contributes to button sizing and alignment without adding a block wrapper. `Button.Background` is available for a decorative background layer and is positioned behind the button contents on both platforms. `Button.Root` aliases the root component. Roots and parts accept typed platform options and forward their upstream refs.
 
 ```tsx
-<Button isPending onPress={save}>
+<Button isLoading onPress={save}>
   <Button.Label>Save</Button.Label>
 </Button>
 ```
@@ -21,6 +23,14 @@ Use `Button.Label` for native text content; on web it renders an inline span in 
 ## `Card`
 
 `Card` exposes `Root`, `Header`, `Body`, `Footer`, `Title`, and `Description` parts. `Card.Body` maps to HeroUI React's `Card.Content` on web and `Card.Body` on native. Other parts preserve the corresponding upstream compound structure and refs.
+
+## `Chip`
+
+`Chip` exposes `Root` and `Label`, with automatic label wrapping for string children. Both platforms default to `size="md"`, `variant="primary"`, and `color="accent"`. Sizes are `sm`, `md`, and `lg`; variants are `primary`, `secondary`, `tertiary`, and `soft`; colors are `accent`, `default`, `success`, `warning`, and `danger`. Native press, animation, and background options stay in `nativeProps`; the browser root is a noninteractive span. Refs target the platform's own root or label.
+
+```tsx
+<Chip color="success" variant="soft"><Chip.Label>Ready</Chip.Label></Chip>
+```
 
 ## `Typography`
 

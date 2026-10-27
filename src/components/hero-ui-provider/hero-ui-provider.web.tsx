@@ -1,15 +1,8 @@
-import type { HeroUINativeProviderProps } from 'heroui-native/provider';
-import type { ReactNode } from 'react';
 import { useEffect } from 'react';
 import { Uniwind } from 'uniwind';
 
-export type ColorScheme = 'system' | 'light' | 'dark';
-
-export interface HeroUIProviderProps {
-  children: ReactNode;
-  colorScheme?: ColorScheme;
-  nativeProps?: Omit<HeroUINativeProviderProps, 'children' | 'ref'>;
-}
+import type { HeroUIProviderProps } from './hero-ui-provider.types.js';
+export type { ColorScheme, HeroUIProviderProps } from './hero-ui-provider.types.js';
 
 export function HeroUIProvider({ children, colorScheme = 'system' }: HeroUIProviderProps) {
   useEffect(() => {
@@ -21,7 +14,8 @@ export function HeroUIProvider({ children, colorScheme = 'system' }: HeroUIProvi
     const hadAdaptiveThemes = Uniwind.hasAdaptiveThemes;
 
     const updateTheme = () => {
-      const theme = colorScheme === 'system' ? (mediaQuery.matches ? 'dark' : 'light') : colorScheme;
+      const theme =
+        colorScheme === 'system' ? (mediaQuery.matches ? 'dark' : 'light') : colorScheme;
       Uniwind.setTheme(colorScheme);
       root.classList.toggle('light', theme === 'light');
       root.classList.toggle('dark', theme === 'dark');

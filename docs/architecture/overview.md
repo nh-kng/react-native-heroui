@@ -1,40 +1,36 @@
 # Architecture
 
-The package is a JavaScript adapter layer between a shared component API and two public upstream implementations. Conditional package exports select HeroUI Native on iOS and Android and HeroUI React in browser builds.
+The package owns the HeroUI implementations that back its public components. Conditional exports choose `.web.tsx` or `.native.tsx` facades over local primitives; runtime imports never resolve to the HeroUI component packages.
 
 ```mermaid
 flowchart LR
-  App[Host application] --> Export[Package conditional exports]
-  Export --> Native[Native adapters]
-  Export --> Web[Web adapters]
-  Native --> HN[heroui-native public subpaths]
-  Web --> HR[@heroui/react public subpaths]
-  App --> NativeCSS[styles/native.css]
-  App --> WebCSS[styles/web.css]
-  NativeCSS --> Tokens[Shared brand tokens]
-  WebCSS --> Tokens
+  App[Host application] --> Exports[Conditional package exports]
+  Exports --> Contracts[Shared TypeScript contracts]
+  Exports --> Web[Owned web implementations]
+  Exports --> Native[Owned native implementations]
+  Web --> Aria[React Aria]
+  Native --> RN[React Native and animation peers]
+  App --> Styles[Platform CSS entry]
+  Styles --> Shared[Shared semantic tokens and component CSS]
 ```
 
 ## Source and output
 
-- `src/components/` contains one adapter folder per public component, with `.native.tsx` and `.web.tsx` implementations and platform declaration entries.
-- `src/index.native.ts` and `src/index.web.ts` define root exports. `package.json` exposes matching root and component subpaths through `react-native`, `browser`, and TypeScript conditions.
-- `tsconfig.native.json` and `tsconfig.web.json` compile directly with TypeScript into `build/native` and `build/web`; generated files are not source controlled.
-- `styles/native.css` imports Tailwind CSS, Uniwind, HeroUI Native styles, and the shared package brand tokens. `styles/web.css` imports HeroUI React styles and the same brand tokens; Expo Metro web compiles that entry with Tailwind's PostCSS plugin.
-- `example/` exercises the published package surface as a workspace consumer. Its Metro Uniwind setup is limited to app-specific stylesheet processing.
-- `upstream/` contains pinned official Git submodules; `baselines/` contains unchanged owned copies with independent builds and provenance. These repository-only sources prepare for Stage 2 and do not participate in current public exports. See [owned upstream baselines](../upstream/README.md) and [ADR 0003](decisions/0003-owned-source-baselines.md).
+- `src/components/` owns public contracts in `*.types.ts`, platform facades, compound parts, and provenance. Button and Chip share variant selection in `*.styles.ts`.
+- `src/primitives/web/` and `src/primitives/native/` own copied behavioral implementations and their transitive support modules. Relative imports resolve within the package; broad helper imports are narrowed where safe to avoid pulling unused optional integrations into the graph.
+- `src/styles/web/` adapts browser slot shapes to the shared semantic classes. `styles/shared/` is the sole semantic token and component CSS authority, derived from the Native baseline. `styles/brand-tokens.css` applies the shared brand override.
+- `styles/native.css` includes Tailwind, Uniwind, shared styles, and native hairline utilities. `styles/web.css` includes Tailwind, shared styles, and browser focus, disabled, required-marker, direction, and layout selectors in `web-only.css`.
+- Both TypeScript builds include local declarations for the opposite platform's extension props. Refs stay platform-specific. Generated output under `build/` is never edited by hand.
+- `upstream/` remains pinned and read-only. `baselines/` remains an unchanged Stage 1 reference with independent builds. Neither is used as a runtime package dependency.
 
-## Adapter boundaries
+## Contracts and behavior
 
-Direct props represent shared behavior. Platform-specific upstream props are passed via `nativeProps` or `webProps`; adapter-owned props and refs are excluded so the options cannot replace mapped behavior. Web and native declarations are independently generated from their platform entry points.
+Shared direct props live in a single module for each public component. Platform options omit shared props and refs. Field roots and parts retain their locally copied React Aria and Native contexts; native animation, press feedback, text settings, portals, and provider behavior remain in the owned implementation graph.
 
-Compound card and field components render through their upstream roots and parts, preserving upstream context and validation associations. The adapter only maps deliberate API differences, such as `Card.Body` to HeroUI React `Card.Content`, `keyboardType` to web `inputMode`, and semantic Typography types to the corresponding upstream names.
-
-The package contains no Expo native module, native source, autolinking registration, or private imports from upstream repositories.
+The package adds no native module, autolinking, Swift, or Kotlin. Static checks establish source resolution and typing; they do not establish rendering, accessibility, native compilation, or functional parity. See the [migration record](../changes/archive/stage-2-public-surface.md) for scope, deviations, and remaining verification.
 
 ## Related documentation
 
 - [Architecture decisions](decisions/README.md)
-- [API overview](../api/README.md)
-- [Styles and setup](../getting-started/quick-start.md)
-- [Development setup](../development/setup.md)
+- [Components](../api/components.md)
+- [Source ownership and upgrades](../upstream/upgrade-guide.md)

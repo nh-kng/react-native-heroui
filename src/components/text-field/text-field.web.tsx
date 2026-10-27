@@ -1,28 +1,19 @@
-import { TextField as WebTextField, type TextFieldRootProps as WebTextFieldRootProps } from '@heroui/react/textfield';
-import type { TextFieldRootProps as NativeTextFieldRootProps } from 'heroui-native/text-field';
-import type { ComponentRef, ReactNode } from 'react';
+import type { ComponentRef } from 'react';
 import { forwardRef } from 'react';
 
-type OwnedProps = 'children' | 'className' | 'isDisabled' | 'isInvalid' | 'isRequired' | 'ref';
-
-export type TextFieldWebProps = Omit<WebTextFieldRootProps, OwnedProps>;
-export type TextFieldNativeProps = Omit<NativeTextFieldRootProps, OwnedProps>;
-
-export interface TextFieldProps {
-  children?: ReactNode;
-  className?: string;
-  isDisabled?: boolean;
-  isInvalid?: boolean;
-  isRequired?: boolean;
-  nativeProps?: TextFieldNativeProps;
-  webProps?: TextFieldWebProps;
-}
+import type { TextFieldProps } from './text-field.types.js';
+import { TextField as WebTextField } from '../../primitives/web/components/textfield/index.js';
+export type {
+  TextFieldNativeProps,
+  TextFieldProps,
+  TextFieldWebProps,
+} from './text-field.types.js';
 
 export type TextFieldRef = ComponentRef<typeof WebTextField.Root>;
 
 const TextFieldRoot = forwardRef<TextFieldRef, TextFieldProps>(function TextFieldRoot(
   { children, className, isDisabled, isInvalid, isRequired, nativeProps: _nativeProps, webProps },
-  ref,
+  ref
 ) {
   return (
     <WebTextField.Root
@@ -31,8 +22,7 @@ const TextFieldRoot = forwardRef<TextFieldRef, TextFieldProps>(function TextFiel
       className={className}
       isDisabled={isDisabled}
       isInvalid={isInvalid}
-      isRequired={isRequired}
-    >
+      isRequired={isRequired}>
       {children}
     </WebTextField.Root>
   );

@@ -1,32 +1,19 @@
-import type { InputRootProps as WebInputRootProps } from '@heroui/react/input';
-import { Input as NativeInput, type InputProps as NativeInputProps, type InputRef } from 'heroui-native/input';
 import type { ForwardRefExoticComponent, RefAttributes } from 'react';
 import { forwardRef } from 'react';
-import type { KeyboardTypeOptions } from 'react-native';
 
-type InputOwnedProps = 'className' | 'defaultValue' | 'isDisabled' | 'isInvalid' | 'onChangeText' | 'placeholder' | 'secureTextEntry' | 'value' | 'keyboardType' | 'variant';
-
-export type InputNativeProps = Omit<NativeInputProps, InputOwnedProps | 'keyboardType' | 'ref'>;
-export type InputWebProps = Omit<WebInputRootProps, InputOwnedProps | 'onChange' | 'type' | 'inputMode' | 'disabled' | 'aria-invalid' | 'ref'>;
-
-export interface InputProps {
-  className?: string;
-  defaultValue?: string;
-  isDisabled?: boolean;
-  isInvalid?: boolean;
-  keyboardType?: KeyboardTypeOptions;
-  nativeProps?: InputNativeProps;
-  onChangeText?: (text: string) => void;
-  placeholder?: string;
-  secureTextEntry?: boolean;
-  value?: string;
-  variant?: NonNullable<NativeInputProps['variant']> & NonNullable<WebInputRootProps['variant']>;
-  webProps?: InputWebProps;
-}
+import type { InputProps } from './input.types.js';
+import {
+  Input as NativeInput,
+  type InputRef,
+} from '../../primitives/native/components/input/index.js';
+export type { InputNativeProps, InputProps, InputWebProps } from './input.types.js';
 
 export type InputComponentRef = InputRef;
 
-const InputRoot: ForwardRefExoticComponent<InputProps & RefAttributes<InputRef>> = forwardRef<InputRef, InputProps>(function InputRoot(
+const InputRoot: ForwardRefExoticComponent<InputProps & RefAttributes<InputRef>> = forwardRef<
+  InputRef,
+  InputProps
+>(function InputRoot(
   {
     className,
     defaultValue,
@@ -41,7 +28,7 @@ const InputRoot: ForwardRefExoticComponent<InputProps & RefAttributes<InputRef>>
     variant,
     webProps: _webProps,
   },
-  ref,
+  ref
 ) {
   return (
     <NativeInput
@@ -66,4 +53,3 @@ type InputComponent = typeof InputRoot & { Root: typeof InputRoot };
 export const Input: InputComponent = Object.assign(InputRoot, {
   Root: InputRoot,
 });
-
