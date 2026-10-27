@@ -22,6 +22,7 @@ flowchart LR
 - `tsconfig.native.json` and `tsconfig.web.json` compile directly with TypeScript into `build/native` and `build/web`; generated files are not source controlled.
 - `styles/native.css` imports Tailwind CSS, Uniwind, HeroUI Native styles, and the shared package brand tokens. `styles/web.css` imports HeroUI React styles and the same brand tokens; Expo Metro web compiles that entry with Tailwind's PostCSS plugin.
 - `example/` exercises the published package surface as a workspace consumer. Its Metro Uniwind setup is limited to app-specific stylesheet processing.
+- `upstream/` contains pinned official Git submodules; `baselines/` contains unchanged owned copies with independent builds and provenance. These repository-only sources prepare for Stage 2 and do not participate in current public exports. See [owned upstream baselines](../upstream/README.md) and [ADR 0003](decisions/0003-owned-source-baselines.md).
 
 ## Adapter boundaries
 

@@ -1,5 +1,9 @@
 # Changelog
 
+## Unreleased
+
+- Added pinned HeroUI React 3.2.6 and HeroUI Native 1.0.11 submodules and unchanged owned source baselines with complete file provenance, licenses, component inventory, independent static builds, and stylesheet compilation checks. Public adapters, exports, styles, and example APIs retain their existing behavior pending Stage 2.
+
 ## 0.1.0 — Initial implementation
 
 - Kept web `Button.Label` text in normal flow so HeroUI buttons size and align around their labels.

@@ -19,6 +19,7 @@ This index covers package setup, the public adapters, styling, platform behavior
 
 - [Architecture](architecture/overview.md) — adapter boundaries, package exports, and CSS flow.
 - [Architecture decisions](architecture/decisions/README.md) — the original Expo module and workspace decision and the current platform adapter foundation.
+- [Upstream baselines](upstream/README.md) — owned source imports, pinned revisions, licenses, inventory, builds, and controlled synchronization.
 - [Development setup](development/setup.md) — workspace commands and repository layout.
 - [Testing](development/testing.md) — static checks and prohibited runtime checks.
 - [Compatibility](development/compatibility.md) — declared peers and the example's pinned versions.

@@ -1,0 +1,22 @@
+{
+  "extends": "./tsconfig.base.json",
+  "compilerOptions": {
+    "rootDir": "./baselines/heroui-react/packages",
+    "outDir": "./build/baselines/heroui-react/packages",
+    "noEmitOnError": true,
+    "jsx": "preserve",
+    "target": "ESNext",
+    "lib": ["DOM", "DOM.Iterable", "ESNext"],
+    "verbatimModuleSyntax": true,
+    "noUncheckedIndexedAccess": true,
+    "noImplicitOverride": true,
+    "noPropertyAccessFromIndexSignature": true,
+    "paths": {
+      "@heroui/styles": ["./baselines/heroui-react/packages/styles/src/index.ts"],
+      "@heroui/styles/*": ["./baselines/heroui-react/packages/styles/src/*"],
+      "@/*": ["./baselines/heroui-react/packages/react/src/*"]
+    }
+  },
+  "include": ["baselines/heroui-react/packages/react/src", "baselines/heroui-react/packages/styles/src"],
+  "exclude": ["**/*.stories.*", "**/__tests__/**", "**/*.test.*"]
+}

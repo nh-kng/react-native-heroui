@@ -31,6 +31,7 @@ The Expo example scripts are `start`, `web`, `ios`, and `android`. The iOS and A
 - `styles/` — publishable platform CSS and shared brand tokens.
 - `tests/` — platform consumer fixtures and non-rendering mapping tests.
 - `example/` — Expo consumer, gallery, and platform stylesheet bootstraps.
+- `upstream/` and `baselines/` — pinned upstream submodules and independently built owned source copies; see [upstream setup](../upstream/README.md).
 - `docs/` — API, setup, platform, architecture, and verification documentation.
 
 ## Related documentation

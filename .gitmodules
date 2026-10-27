@@ -1,0 +1,6 @@
+[submodule "upstream/heroui-native"]
+	path = upstream/heroui-native
+	url = https://github.com/heroui-inc/heroui-native.git
+[submodule "upstream/heroui-react"]
+	path = upstream/heroui-react
+	url = https://github.com/heroui-inc/heroui.git

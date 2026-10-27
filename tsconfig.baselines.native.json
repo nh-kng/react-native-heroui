@@ -1,0 +1,20 @@
+{
+  "extends": "./tsconfig.base.json",
+  "compilerOptions": {
+    "rootDir": "./baselines/heroui-native/src",
+    "outDir": "./build/baselines/heroui-native/src",
+    "noEmitOnError": true,
+    "target": "ESNext",
+    "lib": ["ESNext"],
+    "verbatimModuleSyntax": true,
+    "noUncheckedIndexedAccess": true,
+    "noUnusedParameters": true,
+    "customConditions": ["react-native"],
+    "paths": {
+      "heroui-native": ["./baselines/heroui-native/src/index.tsx"],
+      "heroui-native/*": ["./baselines/heroui-native/src/*"]
+    }
+  },
+  "include": ["baselines/heroui-native/src", "baselines/heroui-native/uniwind-env.d.ts"],
+  "exclude": ["**/__tests__/**", "**/*.test.*"]
+}
