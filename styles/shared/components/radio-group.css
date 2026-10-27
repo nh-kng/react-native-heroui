@@ -1,0 +1,17 @@
+/*
+ * Derived from heroui-native/src/styles/components/radio-group.css at 1980fbbbd6e8112cf9363614abec683379e89da3.
+ * Modified locally for owned imports, contracts, or shared styling.
+ * Upstream license notice: docs/upstream/licenses/heroui-native.txt.
+ */
+@layer components {
+  .radio-group__root {
+    gap: calc(var(--spacing) * 3);
+  }
+
+  .radio-group__item {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    gap: calc(var(--spacing) * 3);
+  }
+}

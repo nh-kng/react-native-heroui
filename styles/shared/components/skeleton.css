@@ -1,0 +1,11 @@
+/*
+ * Derived from heroui-native/src/styles/components/skeleton.css at 1980fbbbd6e8112cf9363614abec683379e89da3.
+ * Modified locally for owned imports, contracts, or shared styling.
+ * Upstream license notice: docs/upstream/licenses/heroui-native.txt.
+ */
+@layer components {
+  .skeleton__root {
+    background-color: color-mix(in oklab, var(--color-muted) 30%, transparent);
+    overflow: hidden;
+  }
+}

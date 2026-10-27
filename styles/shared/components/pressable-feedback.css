@@ -1,0 +1,32 @@
+/*
+ * Derived from heroui-native/src/styles/components/pressable-feedback.css at 1980fbbbd6e8112cf9363614abec683379e89da3.
+ * Modified locally for owned imports, contracts, or shared styling.
+ * Upstream license notice: docs/upstream/licenses/heroui-native.txt.
+ */
+@layer components {
+  .pressable-feedback__root {
+    overflow: hidden;
+  }
+
+  .pressable-feedback__highlight {
+    position: absolute;
+    inset: 0;
+  }
+
+  .pressable-feedback__ripple-container {
+    position: absolute;
+    inset: 0;
+  }
+
+  /**
+   * The ripple origin stays physical (top/left) because its position is driven
+   * by animated translateX/translateY computed from the touch point, which React
+   * Native reports in physical coordinates regardless of layout direction.
+   */
+  .pressable-feedback__ripple {
+    position: absolute;
+    top: 0;
+    left: 0;
+    border-radius: 9999px;
+  }
+}

@@ -1,0 +1,14 @@
+/*
+ * Derived from heroui-native/src/styles/base.css at 1980fbbbd6e8112cf9363614abec683379e89da3.
+ * Modified locally for owned imports, contracts, or shared styling.
+ * Upstream license notice: docs/upstream/licenses/heroui-native.txt.
+ */
+@layer base {
+  /*
+   * Default font for internal HeroText. Lives in the base layer so component
+   * styles (e.g. `@apply font-medium`) and user utilities both override it.
+   */
+  .hero-text {
+    @apply font-normal;
+  }
+}

@@ -1,0 +1,12 @@
+/*
+ * Derived from heroui-native/src/styles/theme-vibrant.css at 1980fbbbd6e8112cf9363614abec683379e89da3.
+ * Modified locally for owned imports, contracts, or shared styling.
+ * Upstream license notice: docs/upstream/licenses/heroui-native.txt.
+ */
+@theme inline static {
+  /* Vibrant Soft Foregrounds - keeps brand color saturation high with a small foreground tint */
+  --color-accent-soft-foreground: color-mix(in oklab, var(--accent) 92%, var(--foreground) 8%);
+  --color-danger-soft-foreground: color-mix(in oklab, var(--danger) 92%, var(--foreground) 8%);
+  --color-warning-soft-foreground: color-mix(in oklab, var(--warning) 92%, var(--foreground) 8%);
+  --color-success-soft-foreground: color-mix(in oklab, var(--success) 92%, var(--foreground) 8%);
+}

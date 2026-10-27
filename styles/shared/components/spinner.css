@@ -1,0 +1,35 @@
+/*
+ * Derived from heroui-native/src/styles/components/spinner.css at 1980fbbbd6e8112cf9363614abec683379e89da3.
+ * Modified locally for owned imports, contracts, or shared styling.
+ * Upstream license notice: docs/upstream/licenses/heroui-native.txt.
+ */
+@layer components {
+  .spinner__root {
+    align-items: center;
+    justify-content: center;
+  }
+
+  /* Root - size */
+
+  .spinner__root--size-sm {
+    width: calc(var(--spacing) * 4);
+    height: calc(var(--spacing) * 4);
+  }
+
+  .spinner__root--size-md {
+    width: calc(var(--spacing) * 6);
+    height: calc(var(--spacing) * 6);
+  }
+
+  .spinner__root--size-lg {
+    width: calc(var(--spacing) * 8);
+    height: calc(var(--spacing) * 8);
+  }
+
+  .spinner__indicator {
+    width: 100%;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+  }
+}
