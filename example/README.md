@@ -1,6 +1,8 @@
 # Example app
 
-This private Expo SDK 57 app consumes the workspace package and presents a shared gallery of the provider, button states, card and typography compounds, controlled and uncontrolled inputs, and field validation.
+This private Expo SDK 57 app consumes the workspace package and presents live examples of all ten public UI components. Select a component in the sidebar, or open Menu on layouts narrower than 900px to use the navigation drawer. Theme controls select system, light, or dark appearance. Switching components resets the examples and scroll position; the selected theme persists during the session. The gallery contains representative previews without API documentation or source-code panels.
+
+Sidebar and drawer items use the package's PressableFeedback with a Highlight overlay and retain the selected item's surface background. The PressableFeedback gallery page demonstrates the root scale, ripple, child scale, disabled state, and animation controls.
 
 Install from the repository root with `pnpm install`. Then run one of these scripts from the root:
 

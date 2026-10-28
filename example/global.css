@@ -1,3 +1,4 @@
 @import "@nh-kng/react-native-heroui/styles/index.css";
 
 @source "./App.tsx";
+@source "./gallery";

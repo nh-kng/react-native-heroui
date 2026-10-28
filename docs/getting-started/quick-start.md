@@ -1,6 +1,6 @@
 # Quick start
 
-Use one global stylesheet for web, iOS, and Android. The package entry imports Tailwind CSS 4, Uniwind, shared semantic component styles, and brand tokens, with platform conditions for native hairlines and browser selectors. Install the peers described in [installation](installation.md) first.
+Use one global stylesheet for web, iOS, and Android. The package entry imports Tailwind CSS 4, Uniwind, shared semantic component styles, and HeroUI default tokens, with platform conditions for native hairlines and browser selectors. Install the peers described in [installation](installation.md) first.
 
 Configure Metro to process the shared app CSS entry with Uniwind on every platform:
 
@@ -100,7 +100,7 @@ Add overrides after the package import in the same `global.css`. Put theme varia
 }
 ```
 
-These values match the package defaults. Change them to customize the shared brand; utilities such as `bg-accent` and component styles resolve the same semantic tokens. Control the selection through `HeroUIProvider`'s `colorScheme` prop on every platform. Static CSS and JavaScript exports verify compilation, not interactive theme switching.
+This example opts into a purple brand palette; the package uses HeroUI's default blue accent unless you add overrides. Change the values to customize your brand; utilities such as `bg-accent` and component styles resolve the same semantic tokens. Control the selection through `HeroUIProvider`'s `colorScheme` prop on every platform. Static CSS and JavaScript exports verify compilation, not interactive theme switching.
 
 ## Related documentation
 

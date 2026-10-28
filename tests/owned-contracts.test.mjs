@@ -4,9 +4,17 @@ import { resolveButtonState } from '../build/web/components/button/button-state.
 import { buttonClassNames } from '../build/web/components/button/button.styles.js';
 import { chipClassNames } from '../build/web/components/chip/chip.styles.js';
 import { verifyOwned } from '../scripts/verify-owned.mjs';
+import { PressableFeedback } from '@nh-kng/react-native-heroui/pressable-feedback';
+import { PressableFeedback as FeedbackSubpath } from '../build/web/components/pressable-feedback/index.web.js';
+
+test('feedback package subpath exposes the compound API without rendering', () => {
+  assert.equal(PressableFeedback, FeedbackSubpath);
+  assert.equal(PressableFeedback.Root, PressableFeedback);
+  for (const part of ['Scale', 'Highlight', 'Ripple']) assert.ok(PressableFeedback[part]);
+});
 
 test('owned implementation has complete provenance and no upstream runtime imports', () => {
-  assert.equal(verifyOwned().components, 10);
+  assert.equal(verifyOwned().components, 11);
 });
 
 test('loading always blocks actions and the compatibility alias has the same semantics', () => {

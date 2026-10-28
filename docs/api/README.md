@@ -5,6 +5,7 @@ The package supports both a root import and component-specific subpaths. Each pa
 | Export | Root import | Component subpath |
 | --- | --- | --- |
 | `Button` | `@nh-kng/react-native-heroui` | `@nh-kng/react-native-heroui/button` |
+| `PressableFeedback` | `@nh-kng/react-native-heroui` | `@nh-kng/react-native-heroui/pressable-feedback` |
 | `Chip` | `@nh-kng/react-native-heroui` | `@nh-kng/react-native-heroui/chip` |
 | `Card` | `@nh-kng/react-native-heroui` | `@nh-kng/react-native-heroui/card` |
 | `Typography` | `@nh-kng/react-native-heroui` | `@nh-kng/react-native-heroui/typography` |

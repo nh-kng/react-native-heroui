@@ -2,6 +2,15 @@
 
 ## Unreleased
 
+- Fixed `PressableFeedback.Highlight` flashing on web hover exit by matching ghost Button's transparent-to-default background transition for hover and press.
+
+- Added web hover feedback to `PressableFeedback.Highlight` using the ghost Button hover color, with hover-capable pointer and disabled guards; Scale and Ripple remain press-only.
+
+- Added public cross-platform `PressableFeedback` with Root, Scale, Highlight, and Ripple parts, typed platform props and refs, disabled and animation controls, and a component subpath. Gallery navigation now uses it directly and includes feedback examples. Web uses React Aria button semantics and a centered ripple; native retains HeroUI's touch-origin ripple.
+
+- Restored HeroUI's default accent palette across all stylesheet entries and restored web Button hover/press feedback with disabled-state guards and reduced-motion support.
+
+- Reorganized the Expo example into a responsive gallery for all nine public UI components, with a persistent sidebar, a narrow-screen navigation drawer, live previews, and shared theme controls.
 - Fixed brand token declarations so Uniwind extracts the same light and dark accent colors on native and web.
 - Added a shared `styles/index.css` Uniwind entry and migrated the Expo example to one global stylesheet for native and web, retaining the existing theme toggle, semantic tokens, and platform stylesheet exports.
 

@@ -2,7 +2,6 @@
 @custom-variant light (&:where(:root:not(.dark), .light, .light *));
 @custom-variant dark (&:where(.dark, .dark *));
 @import "./shared/index.css";
-@import "./brand-tokens.css";
 @import "./web-only.css";
 
 @source "../build";

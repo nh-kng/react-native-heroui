@@ -276,6 +276,21 @@
       "types": "./build/web/components/chip/index.web.d.ts",
       "import": "./build/web/components/chip/index.web.js",
       "default": "./build/web/components/chip/index.web.js"
+    },
+    "./pressable-feedback": {
+      "react-native": {
+        "types": "./build/native/components/pressable-feedback/index.native.d.ts",
+        "import": "./build/native/components/pressable-feedback/index.native.js",
+        "default": "./build/native/components/pressable-feedback/index.native.js"
+      },
+      "browser": {
+        "types": "./build/web/components/pressable-feedback/index.web.d.ts",
+        "import": "./build/web/components/pressable-feedback/index.web.js",
+        "default": "./build/web/components/pressable-feedback/index.web.js"
+      },
+      "types": "./build/web/components/pressable-feedback/index.web.d.ts",
+      "import": "./build/web/components/pressable-feedback/index.web.js",
+      "default": "./build/web/components/pressable-feedback/index.web.js"
     }
   },
   "sideEffects": [

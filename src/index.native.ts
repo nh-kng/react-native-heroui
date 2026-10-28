@@ -1,4 +1,6 @@
 export { Button } from './components/button/index.native.js';
+export { PressableFeedback } from './components/pressable-feedback/index.native.js';
+export type { PressableFeedbackProps, PressableFeedbackRef, PressableFeedbackPressEvent, PressableFeedbackNativeProps, PressableFeedbackWebProps, PressableFeedbackScaleProps, PressableFeedbackHighlightProps, PressableFeedbackRippleProps } from './components/pressable-feedback/index.native.js';
 export type { ButtonBackgroundProps, ButtonLabelProps, ButtonNativeProps, ButtonPressEvent, ButtonProps, ButtonRef, ButtonWebProps } from './components/button/index.native.js';
 export { Card } from './components/card/index.native.js';
 export type { CardBodyProps, CardDescriptionProps, CardFooterProps, CardHeaderProps, CardNativeProps, CardProps, CardTitleProps, CardVariant, CardWebProps } from './components/card/index.native.js';

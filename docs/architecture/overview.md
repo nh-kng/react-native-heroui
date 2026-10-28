@@ -18,7 +18,7 @@ flowchart LR
 
 - `src/components/` owns public contracts in `*.types.ts`, platform facades, compound parts, and provenance. Button and Chip share variant selection in `*.styles.ts`.
 - `src/primitives/web/` and `src/primitives/native/` own copied behavioral implementations and their transitive support modules. Relative imports resolve within the package; broad helper imports are narrowed where safe to avoid pulling unused optional integrations into the graph.
-- `src/styles/web/` adapts browser slot shapes to the shared semantic classes. `styles/shared/` is the sole semantic token and component CSS authority, derived from the Native baseline. `styles/brand-tokens.css` applies the shared brand override.
+- `src/styles/web/` adapts browser slot shapes to the shared semantic classes. `styles/shared/` is the sole semantic token and component CSS authority, derived from the Native baseline. The package uses HeroUI's default semantic palette; apps can override tokens in their global stylesheet.
 - `styles/index.css` is the shared Uniwind entry for every platform. It imports the shared styles and tokens once, gates native hairlines with the `native` media condition, and gates browser selectors with Uniwind's web supports condition.
 - `styles/native.css` includes Tailwind, Uniwind, shared styles, and native hairline utilities. `styles/web.css` includes Tailwind, shared styles, and browser focus, disabled, required-marker, direction, and layout selectors in `web-only.css`.
 - Both TypeScript builds include local declarations for the opposite platform's extension props. Refs stay platform-specific. Generated output under `build/` is never edited by hand.

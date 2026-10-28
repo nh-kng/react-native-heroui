@@ -1,4 +1,6 @@
 export { Button } from './components/button/index.web.js';
+export { PressableFeedback } from './components/pressable-feedback/index.web.js';
+export type { PressableFeedbackProps, PressableFeedbackRef, PressableFeedbackPressEvent, PressableFeedbackNativeProps, PressableFeedbackWebProps, PressableFeedbackScaleProps, PressableFeedbackHighlightProps, PressableFeedbackRippleProps } from './components/pressable-feedback/index.web.js';
 export type { ButtonBackgroundProps, ButtonLabelProps, ButtonNativeProps, ButtonPressEvent, ButtonProps, ButtonRef, ButtonWebProps } from './components/button/index.web.js';
 export { Card } from './components/card/index.web.js';
 export type { CardBodyProps, CardDescriptionProps, CardFooterProps, CardHeaderProps, CardNativeProps, CardProps, CardTitleProps, CardVariant, CardWebProps } from './components/card/index.web.js';

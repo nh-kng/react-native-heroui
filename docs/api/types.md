@@ -1,6 +1,6 @@
 # Types
 
-The package exports conventional component prop interfaces such as `ButtonProps`, `CardProps`, `InputProps`, `TextFieldProps`, `TypographyProps`, and the compound-part interfaces such as `CardBodyProps` and `TypographyHeadingProps`. Each platform declaration exports the same shared direct props and the matching component ref type.
+The package exports conventional component prop interfaces such as `PressableFeedbackProps`, `ButtonProps`, `CardProps`, `InputProps`, `TextFieldProps`, `TypographyProps`, and the compound-part interfaces such as `CardBodyProps` and `TypographyHeadingProps`. Each platform declaration exports the same shared direct props and the matching component ref type.
 
 Each component has one shared `*.types.ts` module used by both platform builds; only implementation refs differ. The fixtures assert equality of all public root prop contracts across emitted declarations.
 

@@ -6,20 +6,48 @@ import {
   HeroUIProvider,
   Input,
   Label,
+  PressableFeedback,
   TextField,
   Typography,
   type ButtonRef,
   type ButtonPressEvent,
   type InputComponentRef,
+  type PressableFeedbackRef,
+  type PressableFeedbackPressEvent,
 } from '@nh-kng/react-native-heroui';
 import { Button as ButtonSubpath } from '@nh-kng/react-native-heroui/button';
+import { PressableFeedback as FeedbackSubpath } from '@nh-kng/react-native-heroui/pressable-feedback';
 
 const buttonRef = useRef<ButtonRef>(null);
 const inputRef = useRef<InputComponentRef>(null);
 
 export function NativeConsumerFixture() {
   return (
-    <HeroUIProvider colorScheme="dark" nativeProps={{ config: { textProps: { allowFontScaling: false } } }}>
+    <HeroUIProvider
+      colorScheme="dark"
+      nativeProps={{ config: { textProps: { allowFontScaling: false } } }}>
+      <FeedbackSubpath
+        ref={useRef<PressableFeedbackRef>(null)}
+        animation={false}
+        onPress={(event) => {
+          const retained: PressableFeedbackPressEvent = event;
+          void retained;
+        }}
+        nativeProps={{
+          accessibilityLabel: 'Open project',
+          'aria-selected': true,
+          delayLongPress: 400,
+        }}>
+        <PressableFeedback.Highlight />
+        <PressableFeedback.Ripple nativeProps={{ classNames: { ripple: 'bg-accent' } }} />
+        <PressableFeedback.Scale>
+          <Typography.Paragraph>Open project</Typography.Paragraph>
+        </PressableFeedback.Scale>
+      </FeedbackSubpath>
+      {/* @ts-expect-error Native disabled aliases cannot override the shared state. */}
+      <PressableFeedback nativeProps={{ 'aria-disabled': false }} />
+      {/* @ts-expect-error Native refs are not DOM refs. */}
+      <PressableFeedback ref={useRef<HTMLButtonElement>(null)} />
       <ButtonSubpath
         ref={buttonRef}
         fullWidth
@@ -28,11 +56,12 @@ export function NativeConsumerFixture() {
           const retainedEvent: ButtonPressEvent = event;
           void retainedEvent;
         }}
-        nativeProps={{ delayLongPress: 400 }}
-      >
+        nativeProps={{ delayLongPress: 400 }}>
         <Button.Label nativeProps={{ allowFontScaling: false }}>Save</Button.Label>
       </ButtonSubpath>
-      <Chip color="success" size="sm" variant="soft"><Chip.Label>Ready</Chip.Label></Chip>
+      <Chip color="success" size="sm" variant="soft">
+        <Chip.Label>Ready</Chip.Label>
+      </Chip>
       <Card variant="secondary">
         <Card.Header>
           <Card.Title>Profile</Card.Title>

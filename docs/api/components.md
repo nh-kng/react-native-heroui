@@ -10,6 +10,8 @@ Shared contracts wrap locally owned implementations. The original field contexts
 
 `Button` accepts shared `variant`, `size`, `isDisabled`, `isLoading`, `isIconOnly`, `fullWidth`, `className`, `children`, and `onPress` props. `onPress` receives the host event union. `isLoading` blocks activation and marks the button busy; the adapter does not add a spinner. Variants and sizes are limited to values supported by both pinned source baselines.
 
+On web, enabled buttons use variant-specific hover and pressed colors with size-specific press scaling. Reduced-motion preferences disable transitions and press scaling. These browser rules complement the shared styles; native feedback stays in the native implementation.
+
 `isPending` remains a deprecated compatibility alias; either loading prop enables loading. Sizes are `sm`, `md`, and `lg`. Variants are `primary`, `secondary`, `tertiary`, `ghost`, `danger`, `outline`, and `danger-soft`; the last two preserve existing functionality.
 
 Use `Button.Label` for native text content; on web it renders an inline span in normal flow and inherits the shared root size and color so its text contributes to button sizing and alignment without adding a block wrapper. `Button.Background` is available for a decorative background layer and is positioned behind the button contents on both platforms. `Button.Root` aliases the root component. Roots and parts accept typed platform options and forward their upstream refs.
@@ -18,6 +20,25 @@ Use `Button.Label` for native text content; on web it renders an inline span in 
 <Button isLoading onPress={save}>
   <Button.Label>Save</Button.Label>
 </Button>
+```
+
+## `PressableFeedback`
+
+`PressableFeedback` provides an unstyled pressable root with built-in scale feedback and optional `Scale`, `Highlight`, and `Ripple` parts. `Root` aliases the component. Shared props are `children`, `className`, `isDisabled`, `onPress`, and `animation`. The root defaults to button semantics on native and renders a React Aria HTML button with `type="button"` on web, including keyboard activation and focus-visible styles. Use text or noninteractive content inside it; do not nest buttons, links, or form controls. Native text belongs in a text component such as `Typography.Paragraph`.
+
+Leave `animation` undefined or `true` for the built-in scale, set it to `false` or `"disabled"` to disable only the root scale, or use `"disable-all"` to disable root and compound feedback together. `Scale`, `Highlight`, and `Ripple` accept `animation={false}` or `animation="disabled"` to disable their own effect. Use `animation={false}` on the root when scaling only a child with `Scale`. Highlight and Ripple are decorative overlays without children; place them before the visible content. The root clips overlays to its shape. No padding, surface, or border radius is supplied by the adapter; apply these through `className`.
+
+Native delegates to the owned HeroUI implementation, including its width-adjusted scale and touch-origin ripple. Web uses a fixed `0.985` scale, a ghost Button color highlight, and a centered radial ripple; the geometry and timing are not identical to native. Enabled roots with a `Highlight` part transition its background between transparent and `--color-default` on press and, for hover-capable pointers, hover. The 100ms ease-out background transition matches ghost Button for both entry and exit, with constant overlay opacity so leaving hover cannot expose a foreground-colored flash. The root's underlying custom background is preserved. Hover activates only Highlight; Scale and Ripple remain press-only. Disabling Highlight or using root `animation="disable-all"` suppresses its hover and press feedback. Browser reduced-motion preferences suppress scaling, ripple expansion, and transitions while retaining immediate highlight feedback. Native animation preferences come from the existing provider and Reanimated implementation; the adapter adds no native hover behavior. These behaviors have static type and stylesheet coverage; runtime interaction, rendering, and accessibility have not been verified.
+
+Roots and parts forward their platform refs: the web root is an `HTMLButtonElement`, web parts are `HTMLSpanElement`s, and native refs come from the owned native components. `onPress` receives `PressableFeedbackPressEvent`, the platform event union. Typed `nativeProps` and `webProps` hold platform-specific options such as accessibility labels, long-press handlers, and DOM attributes. Adapter-owned props and refs are excluded. Native `asChild` and granular animation configuration objects are outside this shared API; animation controls use the shared boolean and disabled values.
+
+```tsx
+import { PressableFeedback, Typography } from '@nh-kng/react-native-heroui';
+
+<PressableFeedback className="rounded-xl bg-surface px-4 py-3" onPress={openProject}>
+  <PressableFeedback.Highlight />
+  <Typography.Paragraph>Open project</Typography.Paragraph>
+</PressableFeedback>
 ```
 
 ## `Card`
@@ -48,6 +69,7 @@ For an uncontrolled web field, pass its initial value through `TextField.webProp
 
 ## Related documentation
 
+- [Known web press warning](../guides/platform-support.md#known-web-warning)
 - [Type conventions](types.md)
 - [Quick start](../getting-started/quick-start.md)
 - [Platform support](../guides/platform-support.md)

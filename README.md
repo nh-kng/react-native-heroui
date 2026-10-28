@@ -1,6 +1,6 @@
 # @nh-kng/react-native-heroui
 
-Source-owned React components based on pinned HeroUI React and Native implementations. The package includes Button, Card, Chip, Typography, field components, a theme provider, shared contracts, and one semantic styling system for web, iOS, and Android.
+Source-owned React components based on pinned HeroUI React and Native implementations. The package includes Button, Card, Chip, PressableFeedback, Typography, field components, a theme provider, shared contracts, and one semantic styling system for web, iOS, and Android.
 
 ## Install
 
@@ -38,7 +38,7 @@ export function Screen() {
 }
 ```
 
-`Button`, `Card`, `Chip`, and `Typography` expose compound parts. `Input`, `TextField`, `Label`, `Description`, and `FieldError` retain the locally owned field context so labels, descriptions, validation, and error visibility remain associated. Component roots and parts accept typed `nativeProps` and `webProps` escape hatches; adapter-owned props cannot be replaced through those options.
+`Button`, `Card`, `Chip`, `PressableFeedback`, and `Typography` expose compound parts. `Input`, `TextField`, `Label`, `Description`, and `FieldError` retain the locally owned field context so labels, descriptions, validation, and error visibility remain associated. Component roots and parts accept typed `nativeProps` and `webProps` escape hatches; adapter-owned props cannot be replaced through those options.
 
 ## Development
 

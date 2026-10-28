@@ -1,11 +1,130 @@
 @layer components {
+  .pressable-feedback__web-root {
+    position: relative;
+    isolation: isolate;
+    display: inline-flex;
+    flex-direction: column;
+    align-items: stretch;
+    padding: 0;
+    border: 0;
+    background: transparent;
+    color: inherit;
+    font: inherit;
+    text-align: inherit;
+    cursor: pointer;
+    transform-origin: center;
+    transition: transform 300ms ease-out;
+
+    &[data-disabled] { cursor: default; }
+    &[data-focus-visible] {
+      outline: 2px solid var(--focus);
+      outline-offset: 2px;
+    }
+    @media (prefers-reduced-motion: no-preference) {
+      &[data-scale="true"][data-pressed="true"]:not([data-disabled]) {
+        transform: scale(0.985);
+      }
+    }
+  }
+  .pressable-feedback__web-scale {
+    display: block;
+    transform-origin: center;
+    transition: transform 300ms ease-out;
+    @media (prefers-reduced-motion: no-preference) {
+      &[data-active="true"] { transform: scale(0.985); }
+    }
+  }
+  .pressable-feedback__web-highlight,
+  .pressable-feedback__web-ripple {
+    pointer-events: none;
+    z-index: -1;
+    border-radius: inherit;
+  }
+  .pressable-feedback__web-highlight {
+    background-color: transparent;
+    opacity: 1;
+    transition: background-color 100ms ease-out;
+    &[data-active="true"] { background-color: var(--color-default); }
+  }
+  .pressable-feedback__web-ripple {
+    opacity: 0;
+    transition: opacity 200ms ease-out;
+    &[data-active="true"] { opacity: 0.1; }
+  }
+  @media (hover: hover) {
+    .pressable-feedback__web-root:not(:disabled):not([aria-disabled="true"]):not([data-disabled]) .pressable-feedback__web-highlight[data-hovered="true"] {
+      background-color: var(--color-default);
+    }
+  }
+  .pressable-feedback__web-ripple {
+    background: radial-gradient(circle at center, var(--foreground) 30%, transparent 70%);
+    @media (prefers-reduced-motion: no-preference) {
+      &[data-active="true"] { animation: pressable-feedback-ripple 500ms ease-out; }
+    }
+  }
+  @media (prefers-reduced-motion: reduce) {
+    .pressable-feedback__web-root,
+    .pressable-feedback__web-scale,
+    .pressable-feedback__web-highlight,
+    .pressable-feedback__web-ripple { transition: none; }
+  }
+  @keyframes pressable-feedback-ripple {
+    from { transform: scale(0); }
+    to { transform: scale(1); }
+  }
   [data-slot="chip"] { display: inline-flex; vertical-align: middle; }
   [data-slot="button"] {
     display: inline-flex;
     position: relative;
     cursor: pointer;
     white-space: nowrap;
-    transition: background-color 150ms, opacity 150ms;
+    transform-origin: center;
+    --button-bg-hover: var(--color-default-hover);
+    --button-pressed-scale: 0.97;
+    transition: transform 250ms ease, background-color 100ms ease-out, box-shadow 100ms ease-out, opacity 150ms;
+
+    &:not(:disabled):not([aria-disabled="true"]):not([data-disabled]) {
+      @media (hover: hover) {
+        &:hover,
+        &[data-hovered="true"] {
+          background-color: var(--button-bg-hover);
+        }
+      }
+
+      &:active,
+      &[data-pressed="true"] {
+        background-color: var(--button-bg-hover);
+
+        @media (prefers-reduced-motion: no-preference) {
+          transform: scale(var(--button-pressed-scale));
+        }
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      transition: none;
+    }
+  }
+  [data-slot="button"].button__root--size-sm {
+    --button-pressed-scale: 0.98;
+  }
+  [data-slot="button"].button__root--size-lg {
+    --button-pressed-scale: 0.96;
+  }
+  [data-slot="button"].button__root--variant-primary {
+    --button-bg-hover: var(--color-accent-hover);
+  }
+  [data-slot="button"].button__root--variant-ghost {
+    --button-bg-hover: var(--color-default);
+  }
+  [data-slot="button"].button__root--variant-outline {
+    --button-bg-hover: color-mix(in srgb, var(--default) 60%, transparent);
+  }
+  [data-slot="button"].button__root--variant-danger {
+    --button-bg-hover: var(--color-danger-hover);
+  }
+  [data-slot="button"].button__root--variant-danger-soft {
+    --button-bg-hover: var(--color-danger-soft-hover);
   }
   [data-slot="button"][data-disabled] {
     @apply element-disabled;

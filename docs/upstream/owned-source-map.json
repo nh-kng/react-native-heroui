@@ -2067,6 +2067,33 @@
         "Native-origin CSS is the authoritative semantic theme and component style system; browser selectors live in web-only.css."
       ],
       "knownUnappliedChanges": []
+    },
+    {
+      "name": "pressable-feedback",
+      "status": "unified",
+      "publicPaths": [
+        "src/components/pressable-feedback/index.native.ts",
+        "src/components/pressable-feedback/index.web.ts",
+        "src/components/pressable-feedback/pressable-feedback.native.tsx",
+        "src/components/pressable-feedback/pressable-feedback.types.ts",
+        "src/components/pressable-feedback/pressable-feedback.web.tsx"
+      ],
+      "sources": [
+        {
+          "repository": "heroui-native",
+          "origin": "src/components/pressable-feedback"
+        }
+      ],
+      "apiTransformations": [
+        "Shared root and Scale, Highlight, and Ripple parts; boolean and disabled animation controls; typed platform extensions and platform-specific refs."
+      ],
+      "behaviorDeviations": [
+        "Web uses React Aria Button with a centered CSS ripple; native retains the touch-origin ripple. Native asChild and granular animation configuration are not shared."
+      ],
+      "stylingDeviations": [
+        "Browser interaction selectors live in styles/web-only.css; native retains the owned animation implementation."
+      ],
+      "knownUnappliedChanges": []
     }
   ]
 }
