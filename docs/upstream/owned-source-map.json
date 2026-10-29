@@ -4151,6 +4151,30 @@
         "Web accent toast indicators use accent-soft-foreground to match their titles, filling the pinned React stylesheet's missing accent indicator rule."
       ],
       "knownUnappliedChanges": []
+    },
+    {
+      "name": "loading-text",
+      "status": "authored",
+      "publicPaths": [
+        "src/components/loading-text/index.native.ts",
+        "src/components/loading-text/index.web.ts",
+        "src/components/loading-text/loading-text.native.tsx",
+        "src/components/loading-text/loading-text.web.tsx",
+        "src/components/loading-text/loading-text.types.ts",
+        "src/components/loading-text/loading-text-state.ts",
+        "styles/loading-text.css"
+      ],
+      "sources": [],
+      "apiTransformations": [
+        "Original single-line text, variant, and size contract with typed platform options and actual root refs."
+      ],
+      "behaviorDeviations": [
+        "A glyph-only shimmer and pulse inspired by Skeleton; no upstream LoadingText implementation is copied."
+      ],
+      "stylingDeviations": [
+        "Native uses a static React Native text mask and moving SVG highlight; web uses a clipped CSS text gradient."
+      ],
+      "knownUnappliedChanges": []
     }
   ]
 }

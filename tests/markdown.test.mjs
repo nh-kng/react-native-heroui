@@ -97,22 +97,23 @@ test('native parsing preserves nested lists, numeric starts, tables and safe tex
   assert.ok(nodes.some(({ type, content }) => type === 'text' && content.includes(' tail')));
 });
 
-test('native preserves literal HTML/task markers, has no footnote semantics and rejects relative images', () => {
+test('native preserves literal HTML, parses task states, has no footnote semantics and rejects relative images', () => {
   const nodes = flatten(parseMarkdownNative('<b>literal</b>\n\n- [x] task\n\na[^x]\n\n[^x]: note\n\n![alt](/relative.png)'));
   assert.ok(nodes.some(({ content }) => content.includes('<b>literal</b>')));
-  assert.ok(nodes.some(({ content }) => content.includes('[x] task')));
+  assert.equal(nodes.find(({ type }) => type === 'list_item').attributes['data-task-checked'], 'true');
+  assert.ok(nodes.some(({ content }) => content === 'task'));
   assert.ok(!nodes.some(({ type }) => type.includes('footnote')));
   assert.ok(nodes.some(({ type, content }) => type === 'text' && content.includes('^x')));
   assert.equal(nodes.find(({ type }) => type === 'image').attributes.src, '');
   assert.equal(nodes.find(({ type }) => type === 'image').attributes.alt, 'alt');
 });
 
-test('math and code stay distinct; custom delimiters and currency remain literal', () => {
+test('math and code stay distinct; parenthesis delimiters parse and currency remains literal', () => {
   const source = '$$x$$\n\n$$\ny^2\n$$\n\nPrice $5, $x$, \\(z\\) and `$$literal$$`\n\n```math\n$$code$$\n```';
   const contexts = webContexts(source);
-  assert.deepEqual(contexts.filter((context) => 'mode' in context).map(({ source, mode }) => [source, mode]), [['x', 'inline'], ['y^2', 'display']]);
+  assert.deepEqual(contexts.filter((context) => 'mode' in context).map(({ source, mode }) => [source, mode]), [['x', 'inline'], ['y^2', 'display'], ['z', 'inline']]);
   const native = flatten(parseMarkdownNative(source));
-  assert.deepEqual(native.filter(({ type }) => type.startsWith('math_')).map(({ type, content }) => [type, content]), [['math_inline', 'x'], ['math_block', 'y^2']]);
+  assert.deepEqual(native.filter(({ type }) => type.startsWith('math_')).map(({ type, content }) => [type, content]), [['math_inline', 'x'], ['math_block', 'y^2'], ['math_inline', 'z']]);
   assert.ok(native.some(({ type, content }) => type === 'code_inline' && content === '$$literal$$'));
   for (const input of ['$$ a  b $$', '$$  $$']) {
     const web = webContexts(input)[0].source;
@@ -179,7 +180,7 @@ test('Markdown provenance rejects missing baselines, altered bytes and missing o
   assert.throws(() => verifyMarkdown(map), /Incomplete Markdown inventory/);
   const owned = readMarkdownOwnedMap();
   owned.files.pop();
-  assert.throws(() => verifyMarkdownOwned(owned), /Unmapped Markdown owned file/);
+  assert.throws(() => verifyMarkdownOwned(owned), /Unmapped Markdown (?:owned file|stylesheet)/);
   const untraceable = readMarkdownOwnedMap();
   const derived = untraceable.files.find(({ sources }) => sources.length);
   derived.sources = ['baselines/fabricated/source.ts'];

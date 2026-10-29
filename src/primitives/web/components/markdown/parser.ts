@@ -8,6 +8,7 @@ import { visit } from 'unist-util-visit';
 import { VFile } from 'vfile';
 
 import type { MarkdownMetadata } from './markdown.types.js';
+import remarkDelimiters, { normalizeBracketMath } from './plugins/delimiters.js';
 import remarkGfm from './plugins/gfm.js';
 import remarkMath from './plugins/math.js';
 import rehypeRaw from './plugins/raw.js';
@@ -19,6 +20,7 @@ export function createMarkdownProcessor(allowRawHtml = false) {
     .use(remarkParse)
     .use(remarkGfm)
     .use(remarkMath, { singleDollarTextMath: false })
+    .use(remarkDelimiters)
     .use(remarkRehype, { allowDangerousHtml: true });
   if (allowRawHtml) processor.use(rehypeRaw).use(rehypeSanitize);
   return processor.freeze();
@@ -31,6 +33,7 @@ export function parseMarkdownWeb(
 ) {
   const file = new VFile(source);
   const mdast = processor.parse(file);
+  normalizeBracketMath(mdast, source);
   const metadata = new Map<number, MarkdownMetadata>();
   function annotate(parent: MdastRoot | RootContent, path: string) {
     if (parent.type === 'code' || parent.type === 'math' || parent.type === 'inlineMath') {

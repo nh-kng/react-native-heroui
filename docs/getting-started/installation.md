@@ -11,8 +11,10 @@ pnpm add @nh-kng/react-native-heroui@0.1.0 @internationalized/date@3.12.4 @react
 In an Expo app, use `expo install` to select SDK-compatible React, React DOM, and native peers:
 
 ```sh
-pnpm exec expo install react react-dom react-native react-native-gesture-handler react-native-reanimated react-native-safe-area-context react-native-svg react-native-worklets
+pnpm exec expo install react react-dom react-native react-native-gesture-handler react-native-reanimated react-native-safe-area-context react-native-svg react-native-worklets @react-native-masked-view/masked-view
 ```
+
+LoadingText uses the required MaskedView peer on native; the SDK 57 example pins `0.3.2`. After adding a native dependency, rebuild an existing native host so its binary includes the package. The adapter itself adds no native module code.
 
 Uniwind's Metro integration compiles the shared global CSS for native and web. No separate Tailwind PostCSS plugin is required for this setup; see [quick start](quick-start.md).
 

@@ -16,6 +16,7 @@
     "./native.tsx",
     "./shared-contracts.ts",
     "./added.native.tsx",
-    "./markdown.native.tsx"
+    "./markdown.native.tsx",
+    "./loading-text.native.tsx"
   ]
 }

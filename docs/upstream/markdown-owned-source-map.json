@@ -105,7 +105,8 @@
         "baselines/react-markdown/lib/index.js"
       ],
       "transformations": [
-        "Strict TypeScript conversion with local .js imports; narrowed synchronous API and package integration."
+        "Strict TypeScript conversion with local .js imports; narrowed synchronous API and package integration.",
+        "Phase 2 replaces basic presentation with package typography, explicit token-based slots, and rich-content composition; structural layout remains separate from semantic styling."
       ]
     },
     {
@@ -186,7 +187,8 @@
         "baselines/react-native-markdown-display/src/lib/util/openUrl.js"
       ],
       "transformations": [
-        "Strict TypeScript conversion with local .js imports; narrowed synchronous API and package integration. Rewritten typed traversal preserves text/block constraints, inherited text styles, ordered starts, safe links and source whitespace; replaces legacy image service and rule escape hatches."
+        "Strict TypeScript conversion with local .js imports; narrowed synchronous API and package integration. Rewritten typed traversal preserves text/block constraints, inherited text styles, ordered starts, safe links and source whitespace; replaces legacy image service and rule escape hatches.",
+        "Phase 2 replaces basic presentation with package typography, explicit token-based slots, and rich-content composition; structural layout remains separate from semantic styling."
       ]
     },
     {
@@ -234,7 +236,8 @@
         "baselines/react-native-markdown-display/src/lib/styles.js"
       ],
       "transformations": [
-        "Converted upstream default styles to a typed record; HeroUI theme styling is deferred to Phase 2."
+        "Converted upstream default styles to a typed record; HeroUI theme styling is deferred to Phase 2.",
+        "Phase 2 replaces basic presentation with package typography, explicit token-based slots, and rich-content composition; structural layout remains separate from semantic styling."
       ]
     },
     {
@@ -353,6 +356,62 @@
       "sources": [],
       "transformations": [
         "Locally authored synchronous renderer selection, incomplete-block deferral, explicit undefined fallback and intentional null output."
+      ]
+    },
+    {
+      "local": "src/components/markdown/markdown-presentation.ts",
+      "kind": "authored",
+      "sources": [],
+      "transformations": [
+        "Locally authored Phase 2 integration for typed presentation, safe parser extensions, clipboard services, or measured native layout; no application source is copied."
+      ]
+    },
+    {
+      "local": "src/components/markdown/markdown-copy.ts",
+      "kind": "authored",
+      "sources": [],
+      "transformations": [
+        "Locally authored Phase 2 integration for typed presentation, safe parser extensions, clipboard services, or measured native layout; no application source is copied."
+      ]
+    },
+    {
+      "local": "src/primitives/web/components/markdown/plugins/delimiters.ts",
+      "kind": "authored",
+      "sources": [],
+      "transformations": [
+        "Locally authored Phase 2 integration for typed presentation, safe parser extensions, clipboard services, or measured native layout; no application source is copied."
+      ]
+    },
+    {
+      "local": "src/primitives/native/components/markdown/lib/table.tsx",
+      "kind": "authored",
+      "sources": [],
+      "transformations": [
+        "Locally authored Phase 2 integration for typed presentation, safe parser extensions, clipboard services, or measured native layout; no application source is copied."
+      ]
+    },
+    {
+      "local": "src/primitives/native/components/markdown/lib/tasks.ts",
+      "kind": "authored",
+      "sources": [],
+      "transformations": [
+        "Locally authored Phase 2 integration for typed presentation, safe parser extensions, clipboard services, or measured native layout; no application source is copied."
+      ]
+    },
+    {
+      "local": "src/primitives/native/components/markdown/lib/table-layout.ts",
+      "kind": "authored",
+      "sources": [],
+      "transformations": [
+        "Locally authored Phase 2 integration for typed presentation, safe parser extensions, clipboard services, or measured native layout; no application source is copied."
+      ]
+    },
+    {
+      "local": "styles/shared/components/markdown.css",
+      "kind": "authored",
+      "sources": [],
+      "transformations": [
+        "Locally authored Phase 2 integration for typed presentation, safe parser extensions, clipboard services, or measured native layout; no application source is copied."
       ]
     }
   ],

@@ -20,7 +20,7 @@ The initial import is reproducible with `node scripts/import-upstream.mjs` after
 
 ## Records
 
-- [Owned implementation map](owned-source-map.json) — current copied source destinations and public API, behavior, and styling transformations.
+- [Owned implementation map](owned-source-map.json) — current copied source destinations, explicitly authored component records with no upstream sources, and public API, behavior, and styling transformations. Authored components retain an `UPSTREAM.md` record that identifies their original implementation rather than a copied baseline.
 - [Stage 2 migration](../changes/archive/stage-2-public-surface.md) — migrated public components and remaining baseline-only inventory.
 - [React baseline](react.md) — revision, source layout, dependencies, and stylesheet resolution.
 - [Native baseline](native.md) — revision, support code, optional dependencies, and build limits.

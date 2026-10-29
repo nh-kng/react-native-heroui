@@ -7,7 +7,7 @@ import { nativeToastOptions, webToastOptions } from '../build/web/components/toa
 import { createWebToastManager } from '../build/web/components/toast/toast-manager.web.js';
 import { ToastQueue } from '../build/web/primitives/web/components/toast/index.js';
 
-const families = ['Accordion','Alert','Avatar','Checkbox','CloseButton','InputGroup','InputOTP','Popover','RadioGroup','ScrollShadow','SearchField','Select','Separator','Skeleton','Slider','Spinner','Surface','Switch','Tabs','TagGroup','TextArea','Toast'];
+const families = ['Accordion','Alert','Avatar','Checkbox','CloseButton','InputGroup','InputOTP','Popover','RadioGroup','ScrollShadow','SearchField','Select','Separator','LoadingText','Skeleton','Slider','Spinner','Surface','Switch','Tabs','TagGroup','TextArea','Toast'];
 
 test('new families resolve through conditional subpaths without rendering', async () => {
   for (const name of families) {

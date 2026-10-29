@@ -10,6 +10,7 @@ The package peers are declared in the root `package.json`. They cover the owned 
 | Tailwind CSS | `^4.0.0` | `4.3.3` |
 | TypeScript (example development) | `~6.0.3` | `6.0.3` |
 | Radix Avatar (web) | `^1.2.6` | `1.2.6` |
+| MaskedView | `^0.3.2` | `0.3.2` |
 | Uniwind | `^1.13.0` | `1.13.0` |
 
 HeroUI React 3.2.6 and Native 1.0.11 remain development-only source baselines; consumer rendering does not import either installed component package.

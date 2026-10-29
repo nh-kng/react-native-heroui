@@ -42,6 +42,8 @@ export function markdownContext(
 export function isClosedMarkdownBlock(raw: string, kind: 'code' | 'math'): boolean {
   const lines = raw.trimEnd().split('\n').map((line) => line.replace(/^(\s*>\s*)+/, ''));
   if (kind === 'math') {
+    const bracket = /^\s*(?:(?:[-+*]|\d+[.)])\s+)?\\\[/.test(lines[0] ?? '');
+    if (bracket) return /\\\]\s*$/.test(lines.at(-1) ?? '');
     const opening = /^\s*(?:(?:[-+*]|\d+[.)])\s+)?(\${2,})/.exec(lines[0] ?? '');
     if (!opening) return true;
     const marker = opening[1];

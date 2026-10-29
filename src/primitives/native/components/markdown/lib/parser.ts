@@ -4,6 +4,7 @@ import { isClosedMarkdownBlock, isNativeMarkdownUrl, markdownRevision, safeMarkd
 import type { ASTNode, MarkdownToken } from '../markdown.types.js';
 import { mathPlugin } from './math.js';
 import { nativeMarkdownTextRules } from './render-rules.js';
+import { taskPlugin } from './tasks.js';
 import { cleanupTokens } from './util/cleanupTokens.js';
 import getTokenTypeByToken from './util/getTokenTypeByToken.js';
 import groupTextTokens from './util/groupTextTokens.js';
@@ -13,6 +14,7 @@ export function createNativeMarkdownParser() {
   const parser = new MarkdownIt({ html: false, typographer: false, linkify: false });
   parser.validateLink = (url) => safeMarkdownUrl(url) !== '';
   parser.use(mathPlugin);
+  parser.use(taskPlugin);
   return parser;
 }
 
@@ -45,7 +47,11 @@ export function tokensToAST(tokens: MarkdownToken[] | null): ASTNode[] {
 }
 
 export function parseMarkdownNative(source: string, isStreaming = false, parser = createNativeMarkdownParser()): ASTNode[] {
-  const tokens = omitListItemParagraph(groupTextTokens(cleanupTokens(parser.parse(source, {}))));
+  const parsed = parser.parse(source, {});
+  for (const token of parsed) {
+    if (token.type === 'paragraph_open' && token.hidden) token.attrSet('data-tight', 'true');
+  }
+  const tokens = omitListItemParagraph(groupTextTokens(cleanupTokens(parsed)));
   const tree = tokensToAST(tokens);
   const lines = source.split('\n');
   function identify(nodes: ASTNode[], path: string) {

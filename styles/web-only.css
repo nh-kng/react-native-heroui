@@ -1,4 +1,6 @@
 @import "./react/index.css";
+@import "./loading-text.css";
+@import "./shared/components/markdown.css";
 
 @layer base {
   :root { color-scheme: light; }
@@ -115,4 +117,44 @@
     .pressable-feedback__web-ripple-surface { transition: none; }
   }
   [data-slot="chip"] { display: inline-flex; vertical-align: middle; }
+}
+
+@layer components {
+  .markdown__root {
+    color: var(--color-foreground);
+    font-size: var(--text-base);
+    line-height: 1.75;
+    overflow-wrap: anywhere;
+  }
+  .markdown__code-header { display: flex; gap: calc(var(--spacing) * 2); }
+  .markdown__code-text { margin: 0; overflow-x: auto; white-space: pre; overflow-wrap: normal; }
+  .markdown__code-text,
+  .markdown__inline-code,
+  .markdown__math { font-family: var(--font-mono, monospace); }
+  pre.markdown__math { overflow-x: auto; white-space: pre; padding: calc(var(--spacing) * 3); background-color: var(--color-surface); border-radius: var(--radius-md); }
+  .markdown__quote { border-inline-start-style: solid; }
+  .markdown__code-block,
+  .markdown__code-header,
+  .markdown__table,
+  .markdown__table-header,
+  .markdown__table-cell { border-style: solid; }
+  ul.markdown__list, ol.markdown__list { list-style-type: none; }
+  .markdown__list-item { position: relative; padding-inline-start: calc(var(--spacing) * 6); }
+  .markdown__list-marker { position: absolute; inset-inline-start: 0; top: 0; }
+  .markdown__list .markdown__list { margin-block: calc(var(--spacing) * 1); }
+  .markdown__list-item:has(> .markdown__task-control),
+  .markdown__list-item:has(> .markdown__paragraph > .markdown__task-control) { list-style-type: none; padding-inline-start: 0; }
+  .markdown__task-control { display: inline-block; width: calc(var(--spacing) * 4); height: calc(var(--spacing) * 4); margin-top: 0; vertical-align: -.125em; }
+  .markdown__task-marker { appearance: none; display: block; margin: 0; padding: 0; border-style: solid; border-width: var(--border-width-field); opacity: 1; }
+  .markdown__task-marker:checked { border-color: transparent; background-color: var(--color-accent); }
+  .markdown__task-check { display: none; border-style: solid; border-top-width: 0; border-left-width: 0; pointer-events: none; }
+  .markdown__task-marker:checked + .markdown__task-check { display: block; }
+  .markdown__list-item::marker { color: var(--color-muted); }
+  .markdown__table-scroll { max-width: 100%; overflow-x: auto; }
+  .markdown__table { width: 100%; border-collapse: collapse; }
+  .markdown__table-header { font-weight: 600; }
+  .markdown__table-header,
+  .markdown__table-cell { text-align: start; vertical-align: top; }
+  img.markdown__image { height: auto; }
+  .markdown__copy-status { position: absolute; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%); }
 }

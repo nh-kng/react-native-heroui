@@ -3,24 +3,61 @@ import { Image, Text, View } from 'react-native';
 
 import { isNativeMarkdownUrl } from '../../../../../components/markdown/markdown-policy.js';
 
-export function MarkdownImage({ source, alt }: { source: string; alt: string }) {
+export function MarkdownImage({
+  source,
+  alt,
+  className,
+}: {
+  source: string;
+  alt: string;
+  className?: string;
+}) {
   const [size, setSize] = useState<{ source: string; ratio: number }>();
   const [failed, setFailed] = useState<string>();
+  const [loaded, setLoaded] = useState<string>();
   useEffect(() => {
     let active = true;
     if (isNativeMarkdownUrl(source, true)) {
-      Image.getSize(source, (width, height) => {
-        if (active && width > 0 && height > 0) setSize({ source, ratio: width / height });
-      }, () => { if (active) setFailed(source); });
+      Image.getSize(
+        source,
+        (width, height) => {
+          if (active && width > 0 && height > 0) setSize({ source, ratio: width / height });
+        },
+        () => {
+          if (active) setFailed(source);
+        }
+      );
     }
-    return () => { active = false; };
+    return () => {
+      active = false;
+    };
   }, [source]);
-  if (!isNativeMarkdownUrl(source, true) || failed === source) return <Text>{alt}</Text>;
+  if (!isNativeMarkdownUrl(source, true) || failed === source)
+    return (
+      <Text
+        className={className}
+        accessible={!!alt}
+        accessibilityRole="image"
+        accessibilityLabel={alt}>
+        {alt}
+      </Text>
+    );
   return (
-    <View style={{ width: '100%', maxWidth: '100%' }}>
-      <Image source={{ uri: source }} accessibilityLabel={alt} accessible={!!alt}
-        resizeMode="contain" style={{ width: '100%', aspectRatio: size?.source === source ? size.ratio : 1 }}
-        onError={() => setFailed(source)} />
+    <View className={className}>
+      {loaded !== source && (
+        <Text className="markdown__image-status" accessibilityLiveRegion="polite">
+          Loading image{alt ? `: ${alt}` : ''}
+        </Text>
+      )}
+      <Image
+        source={{ uri: source }}
+        accessibilityLabel={alt}
+        accessible={!!alt}
+        resizeMode="contain"
+        style={{ width: '100%', aspectRatio: size?.source === source ? size.ratio : 1 }}
+        onLoad={() => setLoaded(source)}
+        onError={() => setFailed(source)}
+      />
     </View>
   );
 }

@@ -2,7 +2,11 @@
 
 ## Unreleased
 
-- Added Phase 1 of the source-owned Markdown component with web/native root and subpath exports, typed synchronous renderer hooks, double-dollar math parsing, safe link cancellation, sanitized web HTML opt-in, streaming metadata, modernized native parser/image support, and independently pinned source provenance. HeroUI presentation remains Phase 2; native task lists and footnotes remain documented gaps.
+- Enlarged Markdown list bullets and refined read-only task markers with HeroUI field surfaces, rounded corners, and accent checkmarks on web and native.
+
+- Added LoadingText with shared text, variant, and size props, directional glyph shimmer, pulse and static modes, reduced-motion support, root/subpath exports, typed platform props and refs, documentation, and package-authored gallery examples. Native requires the new `@react-native-masked-view/masked-view` peer (`^0.3.2`); the example pins `0.3.2`.
+
+- Added source-owned Markdown for web and native with typed renderers, math, streaming, safe links, optional sanitized web HTML, theming, code copying, improved native rendering, gallery examples, and migration guidance. Native footnotes and bare-URL autolinking remain unsupported.
 
 - Fixed web PressableFeedback overlay positioning and clipping previously gated behind native stylesheet imports. Added distinct configurable hover and pressed overlays, independent Ripple hover feedback, and a pointer-origin ripple with size-aware expansion, independent opacity animations, overlapping rapid taps, minimum press visibility, graceful release and cancellation fades, and reduced-motion support. Native behavior and the compound React API are unchanged.
 

@@ -29,6 +29,7 @@ The package supports both a root import and component-specific subpaths. Each pa
 | `SearchField` | `@nh-kng/react-native-heroui` | `@nh-kng/react-native-heroui/search-field` |
 | `Select` | `@nh-kng/react-native-heroui` | `@nh-kng/react-native-heroui/select` |
 | `Separator` | `@nh-kng/react-native-heroui` | `@nh-kng/react-native-heroui/separator` |
+| `LoadingText` | `@nh-kng/react-native-heroui` | `@nh-kng/react-native-heroui/loading-text` |
 | `Skeleton` | `@nh-kng/react-native-heroui` | `@nh-kng/react-native-heroui/skeleton` |
 | `Slider` | `@nh-kng/react-native-heroui` | `@nh-kng/react-native-heroui/slider` |
 | `Spinner` | `@nh-kng/react-native-heroui` | `@nh-kng/react-native-heroui/spinner` |
@@ -46,6 +47,6 @@ The shared Uniwind style entry is `@nh-kng/react-native-heroui/styles/index.css`
 Every rendered component root and compound part exposes platform-specific `nativeProps` and `webProps` options typed from the corresponding locally owned component. These options are ignored on the inactive platform. Adapter-owned values such as `isLoading`, `isPending`, `isInvalid`, mapped input props, children, class names, and refs cannot be overridden through an escape hatch.
 
 - [Component API](components.md)
-- [Markdown](markdown.md) — Phase 1 source integration and extension hooks.
+- [Markdown](markdown.md) — themed typography, rich content, slots, copying, and extension hooks.
 - [Type conventions](types.md)
 - [Platform support](../guides/platform-support.md)

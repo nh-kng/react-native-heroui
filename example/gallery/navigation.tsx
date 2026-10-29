@@ -21,6 +21,8 @@ export const components = [
   'InputGroup',
   'InputOTP',
   'Label',
+  'LoadingText',
+  'Markdown',
   'Popover',
   'PressableFeedback',
   'RadioGroup',

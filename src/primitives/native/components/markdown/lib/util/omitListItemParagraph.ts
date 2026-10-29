@@ -11,7 +11,7 @@ export default function omitListItemParagraph(tokens: MarkdownToken[]): Markdown
     // check for a list_item token followed by paragraph token (to remove)
     if (token.type === 'list_item' && token.nesting === 1 && depth === null) {
       const next = index + 1 in tokens ? tokens[index + 1] : null;
-      if (next && next.type === 'paragraph' && next.nesting === 1) {
+      if (next && next.type === 'paragraph' && next.nesting === 1 && next.attrs?.some(([name, value]) => name === 'data-tight' && value === 'true')) {
         depth = 0;
         return true;
       }

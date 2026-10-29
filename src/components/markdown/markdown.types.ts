@@ -18,6 +18,45 @@ export interface MarkdownMathContext extends MarkdownBlockContext {
   mode: 'inline' | 'display';
 }
 
+export type MarkdownSlot =
+  | 'root'
+  | 'heading'
+  | 'paragraph'
+  | 'inlineCode'
+  | 'codeBlock'
+  | 'codeHeader'
+  | 'codeText'
+  | 'copyButton'
+  | 'link'
+  | 'quote'
+  | 'list'
+  | 'listItem'
+  | 'listMarker'
+  | 'taskMarker'
+  | 'table'
+  | 'tableRow'
+  | 'tableHeader'
+  | 'tableCell'
+  | 'image'
+  | 'separator'
+  | 'math'
+  | 'mermaid';
+export type MarkdownClassNames = Partial<Record<MarkdownSlot, string>>;
+
+export interface MarkdownTheme {
+  foreground: string;
+  muted: string;
+  surface: string;
+  border: string;
+  accent: string;
+  link: string;
+}
+
+export interface MarkdownPresentation {
+  className: string;
+  theme: MarkdownTheme;
+}
+
 export type MarkdownWebProps = Omit<
   HTMLAttributes<HTMLDivElement>,
   'children' | 'className' | 'dangerouslySetInnerHTML' | 'ref'
@@ -28,11 +67,24 @@ export type MarkdownNativeProps = Omit<ViewProps, 'children' | 'className' | 're
 export interface MarkdownProps {
   children: string;
   className?: string;
+  classNames?: MarkdownClassNames;
   isStreaming?: boolean;
   onLinkPress?: (url: string) => boolean | void;
-  renderCodeBlock?: (context: MarkdownCodeBlockContext) => MarkdownRenderResult;
-  renderMath?: (context: MarkdownMathContext) => MarkdownRenderResult;
-  renderMermaid?: (context: MarkdownCodeBlockContext) => MarkdownRenderResult;
+  onCopyCode?: (context: MarkdownCodeBlockContext) => void | Promise<void>;
+  onCopySuccess?: (context: MarkdownCodeBlockContext) => void;
+  onCopyError?: (error: unknown, context: MarkdownCodeBlockContext) => void;
+  renderCodeBlock?: (
+    context: MarkdownCodeBlockContext,
+    presentation: MarkdownPresentation
+  ) => MarkdownRenderResult;
+  renderMath?: (
+    context: MarkdownMathContext,
+    presentation: MarkdownPresentation
+  ) => MarkdownRenderResult;
+  renderMermaid?: (
+    context: MarkdownCodeBlockContext,
+    presentation: MarkdownPresentation
+  ) => MarkdownRenderResult;
   webProps?: MarkdownWebProps;
   nativeProps?: MarkdownNativeProps;
 }

@@ -24,6 +24,7 @@ export * from './components/surface/index.web.js';
 export * from './components/separator/index.web.js';
 export * from './components/spinner/index.web.js';
 export * from './components/skeleton/index.web.js';
+export * from './components/loading-text/index.web.js';
 export * from './components/alert/index.web.js';
 export * from './components/avatar/index.web.js';
 export * from './components/close-button/index.web.js';

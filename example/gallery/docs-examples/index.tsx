@@ -72,7 +72,7 @@ const renderers = {
   Typography: TypographyDemo,
 } satisfies Record<DocsComponentName, ComponentType<DemoProps>>;
 
-export function DocsExamples({ name }: { name: Exclude<ComponentName, 'PressableFeedback'> }) {
+export function DocsExamples({ name }: { name: Exclude<ComponentName, 'PressableFeedback' | 'Markdown' | 'LoadingText'> }) {
   const page = docsExamples[name];
   const Demo = renderers[name];
   const available = page.examples.filter((example) => !limitations[example.id]);

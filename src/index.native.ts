@@ -24,6 +24,7 @@ export * from './components/surface/index.native.js';
 export * from './components/separator/index.native.js';
 export * from './components/spinner/index.native.js';
 export * from './components/skeleton/index.native.js';
+export * from './components/loading-text/index.native.js';
 export * from './components/alert/index.native.js';
 export * from './components/avatar/index.native.js';
 export * from './components/close-button/index.native.js';

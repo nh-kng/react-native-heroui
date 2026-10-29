@@ -20,9 +20,11 @@ Web TagGroup recognizes the public RemoveButton compound part, including inside 
 
 ## Shared component coverage
 
-The public surface covers the 31 families listed in the [component API](../api/components.md), plus PressableFeedback and HeroUIProvider. Implementations are copied from the pinned React 3.2.6 and Native 1.0.11 baselines; installed HeroUI packages remain development dependencies. Same-name coverage describes API availability, not identical rendering, accessibility, or animation geometry.
+The public surface covers the 31 families listed in the [component API](../api/components.md), plus PressableFeedback, LoadingText, Markdown, and HeroUIProvider. LoadingText is authored in this package; the HeroUI-based implementations are copied from the pinned React 3.2.6 and Native 1.0.11 baselines; installed HeroUI packages remain development dependencies. Same-name coverage describes API availability, not identical rendering, accessibility, or animation geometry.
 
 The expanded surface is checked through package builds, native/web TypeScript consumers, example checks under both export conditions, stylesheet compilation, non-rendering unit tests, and Expo config inspection. Focused Chromium checks in light and dark themes cover CloseButton, SearchField, InputGroup, TextArea, TagGroup, and Toast, including field adornment geometry, search clearing, tag removal, and theme colors. Other browser engines, full accessibility audits, native rendering, and native compilation remain unverified.
+
+LoadingText uses CSS text clipping on web and the required MaskedView peer with Reanimated and SVG on native. See its [API reference](../api/components.md#loadingtext) for reduced motion, accessibility, installation, and verification limits.
 
 Web Avatar uses the declared `@radix-ui/react-avatar` peer. Native ScrollShadow uses the existing react-native-svg peer for its default gradient. Bottom-sheet presentation remains a native-only option requiring the existing optional `@gorhom/bottom-sheet` peer; Popover and Select default to popovers. Native optional screens and blur behavior remains upstream-owned.
 

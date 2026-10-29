@@ -11,8 +11,8 @@ This index covers package setup, the owned public components, styling, platform 
 ## API and platform behavior
 
 - [API overview](api/README.md) — root and component subpath exports.
-- [Components](api/components.md) — props, compound parts, field composition, and refs.
-- [Markdown](api/markdown.md) — Phase 1 parser integration, hooks, feature matrix, and platform limitations.
+- [Components](api/components.md) — props, compound parts, field composition, LoadingText, and refs.
+- [Markdown](api/markdown.md) — themed defaults, slots, copying, renderer hooks, and platform limitations.
 - [Types](api/types.md) — shared props and platform escape hatches.
 - [Platform support](guides/platform-support.md) — renderers, styles, and verification limits.
 

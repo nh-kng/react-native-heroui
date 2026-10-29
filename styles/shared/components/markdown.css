@@ -1,0 +1,148 @@
+@layer components {
+  .markdown__root {
+    min-width: 0;
+  }
+  .markdown__body,
+  .markdown__paragraph {
+    color: var(--color-foreground);
+  }
+  .markdown__heading {
+    margin-top: calc(var(--spacing) * 5);
+    margin-bottom: calc(var(--spacing) * 2);
+  }
+  .markdown__paragraph {
+    margin-bottom: calc(var(--spacing) * 3);
+  }
+  .markdown__inline-code {
+    color: var(--color-foreground);
+    background-color: var(--color-default);
+    border-radius: var(--radius-sm);
+    padding-inline: calc(var(--spacing) * 1);
+    font-size: var(--text-sm);
+  }
+  .markdown__code-block {
+    margin-block: calc(var(--spacing) * 3);
+    background-color: var(--color-surface);
+    border-width: 1px;
+    border-color: var(--color-border);
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+  }
+  .markdown__code-header {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding-inline: calc(var(--spacing) * 3);
+    padding-block: calc(var(--spacing) * 2);
+    color: var(--color-muted);
+    border-bottom-width: 1px;
+    border-color: var(--color-border);
+  }
+  .markdown__code-text {
+    color: var(--color-foreground);
+    font-size: var(--text-sm);
+    line-height: calc(var(--spacing) * 6);
+    padding: calc(var(--spacing) * 3);
+  }
+  .markdown__link {
+    color: var(--color-link);
+    text-decoration-line: underline;
+  }
+  .markdown__quote {
+    border-inline-start-width: 3px;
+    border-color: var(--color-border);
+    background-color: var(--color-surface);
+    padding-inline: calc(var(--spacing) * 3);
+    padding-block: calc(var(--spacing) * 2);
+    margin-block: calc(var(--spacing) * 3);
+    border-radius: var(--radius-sm);
+  }
+  .markdown__list {
+    margin-block: calc(var(--spacing) * 2);
+    padding-inline-start: calc(var(--spacing) * 4);
+  }
+  .markdown__list-item {
+    margin-block: calc(var(--spacing) * 1);
+  }
+  .markdown__list-marker {
+    color: var(--color-muted);
+    font-size: var(--text-base);
+    line-height: calc(var(--spacing) * 7);
+    min-width: calc(var(--spacing) * 6);
+    padding-inline-end: calc(var(--spacing) * 2);
+  }
+  .markdown__list-marker--bullet {
+    color: var(--color-foreground);
+    font-size: var(--text-2xl);
+  }
+  .markdown__task-control {
+    position: relative;
+    flex-shrink: 0;
+    margin-top: calc(var(--spacing) * 1.5);
+    margin-inline-end: calc(var(--spacing) * 2);
+  }
+  .markdown__task-marker {
+    width: calc(var(--spacing) * 4);
+    height: calc(var(--spacing) * 4);
+    border-radius: var(--radius-md);
+    border-width: var(--border-width-field-width);
+    border-color: var(--color-field-border);
+    background-color: var(--color-field);
+    box-shadow: var(--shadow-field);
+  }
+  .markdown__task-marker--checked {
+    border-color: transparent;
+    background-color: var(--color-accent);
+  }
+  .markdown__task-check {
+    position: absolute;
+    top: 3px;
+    left: 6px;
+    width: 4px;
+    height: 8px;
+    border-bottom-width: 1.5px;
+    border-right-width: 1.5px;
+    border-color: var(--color-accent-foreground);
+    transform: rotate(45deg);
+  }
+  .markdown__table {
+    margin-block: calc(var(--spacing) * 3);
+    border-width: 1px;
+    border-color: var(--color-border);
+    border-radius: var(--radius-md);
+    overflow: hidden;
+  }
+  .markdown__table-header {
+    background-color: var(--color-surface);
+  }
+  .markdown__table-header,
+  .markdown__table-cell {
+    padding-inline: calc(var(--spacing) * 3);
+    padding-block: calc(var(--spacing) * 2);
+    border-bottom-width: 1px;
+    border-color: var(--color-border);
+  }
+  .markdown__image {
+    color: var(--color-foreground);
+    max-width: 100%;
+    border-radius: var(--radius-md);
+    margin-block: calc(var(--spacing) * 2);
+  }
+  .markdown__image-status {
+    color: var(--color-muted);
+    font-size: var(--text-sm);
+  }
+  .markdown__separator {
+    margin-block: calc(var(--spacing) * 4);
+  }
+  .markdown__math,
+  .markdown__mermaid {
+    color: var(--color-foreground);
+  }
+  .markdown__math--display {
+    background-color: var(--color-surface);
+    border-radius: var(--radius-md);
+    margin-block: calc(var(--spacing) * 3);
+    padding: calc(var(--spacing) * 3);
+  }
+}

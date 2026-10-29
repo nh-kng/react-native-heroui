@@ -6,6 +6,7 @@ type Equal<A, B> =
   (<T>() => T extends A ? 1 : 2) extends <T>() => T extends B ? 1 : 2 ? true : false;
 type Assert<T extends true> = T;
 export type SharedContracts = [
+  Assert<Equal<Web.LoadingTextProps, Native.LoadingTextProps>>,
   Assert<Equal<Web.MarkdownProps, Native.MarkdownProps>>,
   Assert<Equal<Web.PressableFeedbackProps, Native.PressableFeedbackProps>>,
   Assert<Equal<Web.PressableFeedbackScaleProps, Native.PressableFeedbackScaleProps>>,

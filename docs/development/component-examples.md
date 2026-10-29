@@ -1,6 +1,6 @@
 # Component examples
 
-The Expo gallery follows the Usage, Examples, and Customization previews linked from [HeroUI React components](https://heroui.com/en/docs/react/components). The catalog accounts for 272 previews across 31 public component pages: 228 adapted previews and 44 explicit public API gaps. These are adaptations to the current adapter, not a claim of complete upstream API or visual parity. PressableFeedback has its own adapter examples because it has no React documentation page; HeroUIProvider configures the app rather than appearing as a standalone component demo.
+The Expo gallery follows the Usage, Examples, and Customization previews linked from [HeroUI React components](https://heroui.com/en/docs/react/components). The catalog accounts for 272 previews across 31 public component pages: 228 adapted previews and 44 explicit public API gaps. These are adaptations to the current adapter, not a claim of complete upstream API or visual parity. Markdown has separate package-owned examples for default rich content, Appearance changes, slots, streaming/copy services, and optional renderer simulations; it does not contribute upstream preview IDs. LoadingText has separate package-authored examples for loading labels, animation variants, sizes, and editable text; it does not contribute upstream preview IDs. PressableFeedback has its own adapter examples because it has no React documentation page; HeroUIProvider configures the app rather than appearing as a standalone component demo.
 
 ## Coverage
 

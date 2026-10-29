@@ -9,6 +9,7 @@ The library is a JavaScript and TypeScript adapter package. A host app must prov
 | React DOM | `>=19.0.0` | Web adapter runtime. |
 | Tailwind CSS | `^4.0.0` | Web CSS and native utility compilation. |
 | Uniwind | `^1.13.0` | Native utility styles and theme coordination. |
+| MaskedView | `^0.3.2`; the example pins `0.3.2` | Required peer for native LoadingText glyph masking. |
 | Expo example | SDK `57.0.31` | Repository consumer baseline. |
 
 The root `package.json` lists all required peers, including React Aria and native support packages. The example uses the Expo SDK 57 bundled versions for its React Native peers. It has no custom native module, autolinking configuration, or development-client requirement.

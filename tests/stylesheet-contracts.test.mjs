@@ -176,3 +176,14 @@ test('web browser controls and package scrollbars follow the active theme', () =
   assert.match(css, /:root\.light\s*\{\s*color-scheme: light/);
   assert.match(css, /\.heroui-scrollbar,\s*\.scroll-shadow\s*\{[^}]*scrollbar-width: thin;[^}]*scrollbar-color: var\(--color-muted\) transparent/);
 });
+
+test('Markdown defaults compile into the web stylesheet with scoped slots and semantic tokens', () => {
+  for (const slot of ['root', 'heading', 'paragraph', 'inline-code', 'code-block', 'code-header', 'code-text', 'link', 'quote', 'list', 'list-item', 'list-marker', 'task-marker', 'table', 'table-header', 'table-cell', 'image', 'separator', 'math']) assert.ok(css.includes(`.markdown__${slot}`), slot);
+  assert.match(css, /\.markdown__code-text\s*\{[^}]*overflow-x: auto/);
+  assert.match(css, /\.markdown__quote\s*\{[^}]*border-inline-start-width: 3px/);
+  assert.match(css, /\.markdown__table-scroll\s*\{[^}]*overflow-x: auto/);
+  assert.match(css, /\.markdown__link\s*\{[^}]*color: var\(--color-link\)/);
+  const shared = readFileSync(path.join(root, 'styles/shared/components/index.css'), 'utf8');
+  assert.ok(shared.includes("@import './markdown.css'"));
+  assert.ok(!css.includes('.md-content'), 'No application stylesheet injection is retained');
+});

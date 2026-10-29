@@ -18,7 +18,7 @@ export function verifyMarkdownOwned(map = readMarkdownOwnedMap()) {
   for (const file of map.files) {
     assert.ok(!mapped.has(file.local), `Duplicate Markdown owned mapping: ${file.local}`);
     assert.ok(existsSync(path.join(root, file.local)), `Missing Markdown owned file: ${file.local}`);
-    assert.ok(/^src\/(?:components\/markdown|primitives\/(?:web|native)\/components\/markdown)\//.test(file.local));
+    assert.ok(/^src\/(?:components\/markdown|primitives\/(?:web|native)\/components\/markdown)\//.test(file.local) || file.local === 'styles/shared/components/markdown.css');
     assert.ok(['copied', 'converted', 'derived', 'authored'].includes(file.kind));
     assert.ok(file.transformations.length && file.transformations.every((value) => typeof value === 'string' && value.length));
     assert.equal(file.kind === 'authored', file.sources.length === 0, `Invalid origin kind: ${file.local}`);
@@ -29,6 +29,7 @@ export function verifyMarkdownOwned(map = readMarkdownOwnedMap()) {
     }
     mapped.add(file.local);
   }
+  assert.ok(mapped.has('styles/shared/components/markdown.css'), 'Unmapped Markdown stylesheet');
   for (const directory of ['src/components/markdown', 'src/primitives/web/components/markdown', 'src/primitives/native/components/markdown']) {
     for (const file of walk(directory).filter((file) => /\.tsx?$/.test(file))) assert.ok(mapped.has(file), `Unmapped Markdown owned file: ${file}`);
   }

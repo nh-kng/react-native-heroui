@@ -1,6 +1,6 @@
-# Markdown (Phase 1)
+# Markdown
 
-`Markdown` is a source-owned, platform-resolved renderer. Phase 1 provides parsing, public contracts, structural native rendering, and extension hooks. HeroUI typography, theme tokens, appearance variants, slot styling, code copy controls, and gallery examples are deferred to Phase 2. Native retains the imported renderer's basic default styles, including fixed colors; web uses semantic HTML and browser defaults. This is not yet the finished themed presentation.
+`Markdown` is a source-owned, platform-resolved renderer with package-owned HeroUI typography, spacing, and surfaces. It consumes a Markdown string and follows the normal package theme without an application styling wrapper.
 
 ## Usage
 
@@ -12,72 +12,116 @@ export function Article({ source }: { source: string }) {
 }
 ```
 
-The root import also exports `Markdown` and all its types. Follow the normal [stylesheet setup](../getting-started/quick-start.md); no new Markdown stylesheet is required in Phase 1. No application provider, message model, role palette, theme hook, or toast service is imported.
+The root import also exports `Markdown` and its types. Follow the normal [stylesheet setup](../getting-started/quick-start.md); Markdown rules load through the existing shared, native, and web entries. No message model, role palette, toast service, diagram engine, syntax highlighter, clipboard module, or WebView is installed.
 
 ## Contract
 
 | Prop | Behavior |
 | --- | --- |
 | `children: string` | Required source; replace the string as content arrives. |
-| `className?: string` | Container class only; not a recursive typography API. |
-| `isStreaming?: boolean` | Defaults to `false`; when true, unfinished fences/display math use source fallbacks until closed. |
-| `onLinkPress?: (url: string) => boolean \| void` | Runs after URL validation. Returning `false` cancels default navigation on either platform. |
-| `renderCodeBlock?` | Synchronous replacement for fenced or indented code. |
-| `renderMath?` | Synchronous replacement for parsed math, with `mode: 'inline' \| 'display'`. Inline output must be safe inside native `Text` and web inline text. |
-| `renderMermaid?` | Synchronous replacement for a fence whose language is `mermaid`, compared without case sensitivity. |
+| `className?: string` | Container class only. |
+| `classNames?: MarkdownClassNames` | Typed classes for owned element slots. |
+| `isStreaming?: boolean` | Defaults to `false`; unfinished fences/display math remain readable without invoking expensive replacement hooks. |
+| `onLinkPress?: (url: string) => boolean \| void` | Runs after URL validation; returning `false` cancels default navigation on either platform. |
+| `onCopyCode?` | Host clipboard service receiving the code-block context; may return `void` or `Promise<void>`. Overrides browser copying. |
+| `onCopySuccess?` | Receives the context after the clipboard service completes. |
+| `onCopyError?` | Receives `(error: unknown, context)` when copying fails. |
+| `renderCodeBlock?`, `renderMath?`, `renderMermaid?` | Synchronous replacement hooks receiving `(context, presentation)`. |
 | `webProps?` | Typed `div` attributes/styles plus `allowRawHtml?: boolean`, default `false`. |
 | `nativeProps?` | Typed React Native `View` attributes/styles. |
 
-Platform props are ignored on the inactive platform. Children, container class names, refs, renderer maps, parser instances, plugins, and unsanitized HTML replacement are excluded from escape hatches. No component ref is exposed. Use root styles intentionally; they do not replace every element's presentation.
+Platform props are ignored on the inactive platform. Children, root class names, refs, renderer maps, parser instances, plugins, and unsanitized HTML replacement are excluded from escape hatches. No component ref or size/tone variants are exposed.
 
-`MarkdownBlockContext` contains `source`, `id`, `revision`, and `isComplete`. `MarkdownCodeBlockContext` adds `language: string | undefined`; `MarkdownMathContext` adds `mode`. Code source retains interior whitespace and excludes the parser's synthetic final newline; it does not contain fence markers. `MarkdownRenderResult` excludes promises. Return `undefined` to use the source fallback, or `null` to deliberately omit output. Mermaid falls back to `renderCodeBlock`, then source. Math falls back to source. No KaTeX, Mermaid, WebView, syntax highlighter, clipboard service, or native module is installed.
+### Customization and precedence
+
+`MarkdownSlot` contains `root`, `heading`, `paragraph`, `inlineCode`, `codeBlock`, `codeHeader`, `codeText`, `copyButton`, `link`, `quote`, `list`, `listItem`, `listMarker`, `taskMarker`, `table`, `tableRow`, `tableHeader`, `tableCell`, `image`, `separator`, `math`, and `mermaid`. `classNames` is a partial map from these names to strings. Defaults use existing foreground, muted, surface, border, accent, link, radius, and typography tokens. There is no second Markdown palette.
+
+Package slot classes precede explicit slot classes, merged with the package's Tailwind class convention. Root `className` follows `classNames.root`; platform root styles override root styling. Root overrides do not recursively restyle all child slots. Custom renderer output owns its internal presentation; use the supplied presentation class intentionally. Table header and cell slots style cell containers; native text weight is supplied by Typography. Inline slots must preserve text flow.
 
 ```tsx
 <Markdown
-  isStreaming
+  classNames={{ heading: 'text-accent', quote: 'bg-accent-soft border-accent' }}
   onLinkPress={(url) => !url.startsWith('https://blocked.example/')}
-  renderCodeBlock={({ source, language }) =>
-    language === 'custom' ? <MyCode source={source} /> : undefined
-  }
-  webProps={{ id: 'article', allowRawHtml: false }}
+  webProps={{ id: 'article' }}
   nativeProps={{ testID: 'article', style: { padding: 8 } }}
 >
   {source}
 </Markdown>
 ```
 
-`MyCode` is a consumer-owned component. Custom renderers own their presentation, accessibility, and engine lifecycle. Incomplete streaming blocks do not invoke expensive renderer hooks; their parser metadata records `isComplete: false`. With `isStreaming: false`, parsed blocks are treated as complete even when the final closing fence is absent.
+### Copying
+
+Default fenced and indented code blocks show a language caption and scroll horizontally. Copy writes `context.source` exactly, including interior whitespace and excluding fence markers and the parser's synthetic final newline. Incomplete streaming blocks cannot be copied.
+
+Web shows Copy when `navigator.clipboard.writeText` or a host callback is available. Native shows Copy only when `onCopyCode` is supplied. Connect your host clipboard service without adding a native module to this package:
+
+```tsx
+<Markdown
+  onCopyCode={({ source }) => clipboard.writeText(source)}
+  onCopySuccess={() => setNotice('Copied')}
+  onCopyError={() => setNotice('Unable to copy')}
+>
+  {source}
+</Markdown>
+```
+
+`clipboard` and `setNotice` are consumer-owned services. A rejected clipboard operation triggers the error callback and a retry label; success changes the button label to Copied. Replacing a code block with a custom renderer also replaces its default copy control.
+
+### Optional renderer hooks
+
+`MarkdownBlockContext` contains `source`, `id`, `revision`, and `isComplete`. `MarkdownCodeBlockContext` adds `language: string | undefined`; `MarkdownMathContext` adds `mode: 'inline' | 'display'`. Existing callbacks taking only the first argument remain valid. `MarkdownRenderResult` excludes promises.
+
+The second argument, `MarkdownPresentation`, contains `className` and `theme`. `MarkdownTheme` provides `foreground`, `muted`, `surface`, `border`, `accent`, and `link`. Web values are CSS references such as `var(--color-foreground)`; native values are resolved Uniwind colors. Engines requiring concrete browser colors must resolve the CSS references in their own integration. Native theme changes update resolved colors; web CSS references follow the cascade. Engines own browser color resolution and subscriptions. Theme presentation is separate from structural block identity.
+
+Return `undefined` for the package fallback or `null` to omit output. Mermaid first tries `renderMermaid`, then `renderCodeBlock`, then the default code surface. Math falls back to readable monospace source. Inline math output must be safe within native `Text` and web inline text. Hooks own engine lifecycle and accessibility; do not trigger services during render.
 
 ## Features and platform differences
 
 | Feature | Web | Native |
 | --- | --- | --- |
-| Headings, paragraphs, emphasis, strike-through, quotes, separators | Semantic HTML | Owned view/text rules with basic upstream styles |
-| Nested lists and ordered starts | Supported | Supported |
-| Task lists | GFM read-only checkboxes | Literal task markers; no task-list plugin |
-| Footnotes and autolink literals | GFM | No footnote semantics; ordinary reference-link rules apply. Bare URLs remain text; explicit links/autolinks work |
-| Tables | Semantic HTML | Basic upstream flex layout; measured widths and scrolling enhancements deferred |
-| Images | HTTP(S) and relative references | HTTP(S), bounded container width, intrinsic aspect ratio, alt-text fallback on unsupported URL/error |
-| Inline/fenced/indented code | Supported | Supported |
-| Math | Double-dollar inline and display syntax | Double-dollar single-line inline and delimiter-only multiline display syntax |
+| Headings and paragraphs | Semantic Typography headings/paragraphs | Typography presets, header roles, inherited inline text |
+| Emphasis, strike-through, inline code, links | Semantic inline elements | Nested text and accessible inline links |
+| Quotes and separators | Semantic blockquote and Separator | Token-based containers and Separator |
+| Nested lists, ordered starts, tight/loose spacing | Semantic lists with owned visual markers | Separate markers and content containers |
+| Task lists | Disabled GFM checkboxes | Read-only checked/unchecked markers with accessibility state |
+| Footnotes and bare-URL autolinking | GFM | No footnote semantics; bare URLs remain text; explicit links/autolinks work |
+| Tables | Semantic table with horizontal overflow | Measured columns, distinguished header, horizontal scrolling |
+| Images | HTTP(S)/relative references, intrinsic dimensions, lazy loading and alt fallback | HTTP(S), bounded width, intrinsic aspect ratio, loading label and alt fallback |
+| Inline/fenced/indented code | Owned monospace presentation and optional Copy | Same presentation; copying needs a host callback |
+| Math | Double-dollar syntax, `\(...\)` inline, standalone `\[...\]` display | Same syntax; display delimiters may occupy their own lines |
 | Mermaid | Fenced source or configured hook | Fenced source or configured hook |
 | Raw HTML | Literal by default; sanitized opt-in | Literal; no HTML interpretation |
-| Streaming input | String updates, structural IDs, completion metadata | String updates, structural keys, separate content revisions |
+| Streaming | String updates, structural IDs, completion metadata | Structural keys and separate measurement invalidation |
 
-Custom single-dollar, bracket/backslash math delimiters, multiline inline-math parity, specialized math layout, and application table measurement are deferred. Currency text and math-like content inside code are not typeset. Math parsing does not imply typesetting. Raw HTML images do not gain the native image helper's behavior on web.
+Single-dollar math remains disabled so currency stays literal. Escaped delimiters and content inside inline/fenced code stay literal. Inline parenthesis math does not cross lines. Unclosed custom expressions remain readable; web may retain their literal delimiters until parsing completes. Math parsing does not imply typesetting. KaTeX and Mermaid engines remain consumer-supplied.
+
+Unordered lists use enlarged foreground bullets at every nesting level. Read-only task markers use HeroUI field backgrounds, rounded corners, and field shadows, with an accent fill and contrasting checkmark for completed tasks. Their checked state comes from the Markdown source; they do not toggle on press.
+
+Native columns measure text-source previews without mounting duplicate custom engines or images, using a 64-unit minimum and 480-unit natural-width cap; spare container width is distributed across columns. Measurement state resets for content, width, font scale, relevant theme font metrics, and slot changes. Native image loading and measured layout are not established by static checks. Intentionally customized or engine-rendered table content requires runtime layout review.
 
 ## URLs and HTML
 
-Links allow HTTP(S), mailto, and relative references. Images allow HTTP(S), with relative images supported only on web. Data, file, JavaScript, control-character, and backslash URL forms are rejected. Native invokes the callback for valid relative links but only delegates absolute supported URLs to `Linking.openURL`; the host can handle relative navigation and return `false`. Native navigation failures are contained; no toast service is assumed. Web retains normal same-document/browser navigation and modifier-key behavior.
+Links allow HTTP(S), mailto, and relative references. Images allow HTTP(S), with relative images supported only on web. Data, file, JavaScript, control-character, and backslash URL forms are rejected. Native calls the callback for valid relative links but delegates only absolute supported URLs to `Linking.openURL`; the host can handle relative navigation and return `false`. Native navigation failures are contained. Web retains normal browser navigation and modifier-key behavior.
 
-Set `webProps.allowRawHtml` to opt into raw parsing followed by the owned fixed sanitizer schema. Script/event/style attributes and unsafe URLs are removed. Only needed language/math and standard GFM classes are allowed. IDs are prefixed to prevent DOM clobbering; fragment links and footnote associations are adjusted to sanitized targets. Consumers cannot replace this pipeline or inject `dangerouslySetInnerHTML`.
+`webProps.allowRawHtml` opts into raw parsing followed by the fixed sanitizer schema. Script/event/style attributes and unsafe URLs are removed; only required language/math and standard GFM classes survive. IDs are prefixed against DOM clobbering; fragment links and footnote associations follow the sanitized targets. Consumers cannot replace this pipeline or inject `dangerouslySetInnerHTML`.
 
-The application reference enabled raw HTML by default and ignored the web link callback's return value. This package deliberately changes both behaviors. Enabling raw HTML does not enable arbitrary application HTML/CSS compatibility.
+## Streaming and verification limits
 
-## Streaming identity and verification limits
+IDs use node-type ordinals within structural parent paths. Duplicate fences remain distinct; appending blocks leaves preceding IDs stable; edits at the same structural position retain identity while changing content revisions. Inserting/removing preceding same-type siblings can reassign IDs. Arbitrary insertion stability is not promised. Revisions are invalidation hints, not cryptographic identifiers or React keys.
 
-IDs use node-type ordinals within structural parent paths, distinguishing duplicate fences without content-based or random keys. Appending blocks leaves preceding block IDs stable. Editing a block at the same structural position retains identity while changing its content revision. Inserting or removing preceding same-type siblings can reassign IDs; arbitrary insertion stability is not promised. A content revision is an invalidation hint, not a cryptographic identifier. Native AST/table revisions are distinct from React keys; measured table caches are deferred.
+Incomplete streaming blocks defer replacement hooks. With `isStreaming: false`, parsed blocks are treated as complete even without a final closing fence. Tables and source fallbacks continue updating as text grows.
 
-Both platform builds, consumer fixtures, parser/rule contracts, URL/sanitizer behavior, and provenance are checked statically or through non-rendering JavaScript. These checks do not verify rendered accessibility, image loading/layout, clipboard behavior, native compilation, mount preservation at runtime, diagram fidelity, or streaming frame performance. No browser, device, simulator, or emulator verification is claimed.
+Static builds, typing, parser/rule contracts, clipboard service boundaries, URL/sanitizer policy, measurement calculations, stylesheet contracts, and provenance are checked without mounting a renderer. These checks do not verify rendered accessibility, image loading, actual clipboard availability, native compilation, diagram fidelity, mount preservation, or streaming frame performance. Browser/device/simulator testing is not claimed.
 
-For source pins, dependency modernization and upgrade procedures, see [Markdown provenance](../upstream/markdown.md).
+## Application migration checklist
+
+1. Replace the application Markdown import with the package root or `/markdown` export; continue passing plain Markdown strings from the composer.
+2. Load the normal package stylesheet; remove injected `.md-content` CSS, per-role style maps, and theme wrappers. Use theme tokens or explicit slots for intentional differences.
+3. Return `false` from `onLinkPress` when the host handles or rejects navigation. Cancellation now works on web as well as native.
+4. Wire the native host clipboard through `onCopyCode`; move toast/notice behavior into success/error callbacks.
+5. Supply existing Math/Mermaid engines through typed hooks, adapt presentation colors for each engine, and keep inline output text-safe. Remove engine and app service imports from the core renderer.
+6. Explicitly enable sanitized web raw HTML only where needed. The reference application's raw HTML default and arbitrary styling are not retained.
+7. Review the documented native footnote/autolink limitations and custom math syntax; single-dollar math remains literal.
+8. Run host runtime accessibility, clipboard, table/image layout, RTL, and streaming checks separately before claiming application parity.
+
+For source pins and upgrade procedures, see [Markdown provenance](../upstream/markdown.md).

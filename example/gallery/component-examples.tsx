@@ -1,3 +1,5 @@
+import { LoadingTextExamples } from './examples/loading-text';
+import { MarkdownExamples } from './examples/markdown';
 import { DocsExamples } from './docs-examples';
 import { SurfaceExamples } from './examples/surface';
 import { SeparatorExamples } from './examples/separator';
@@ -387,6 +389,8 @@ function TypographyExamples() {
 }
 
 const examples: Record<ComponentName, ComponentType> = {
+  LoadingText: LoadingTextExamples,
+  Markdown: MarkdownExamples,
   Surface: SurfaceExamples,
   Separator: SeparatorExamples,
   Spinner: SpinnerExamples,
@@ -424,5 +428,5 @@ const examples: Record<ComponentName, ComponentType> = {
 
 export function ComponentExamples({ name }: { name: ComponentName }) {
   const Examples = examples[name];
-  return name === 'PressableFeedback' ? <Examples /> : <DocsExamples name={name} />;
+  return name === 'PressableFeedback' || name === 'Markdown' || name === 'LoadingText' ? <Examples /> : <DocsExamples name={name} />;
 }
