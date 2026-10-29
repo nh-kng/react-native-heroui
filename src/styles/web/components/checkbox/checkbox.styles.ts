@@ -11,9 +11,9 @@ export const checkboxVariants = tv({
     variant: "primary",
   },
   slots: {
-    base: "checkbox-field",
+    base: "checkbox",
     content: "checkbox__content",
-    control: "checkbox__root checkbox__root--variant-primary",
+    control: "checkbox__control",
     indicator: "checkbox__indicator",
   },
   variants: {

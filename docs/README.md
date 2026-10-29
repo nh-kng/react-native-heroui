@@ -24,5 +24,6 @@ This index covers package setup, the owned public components, styling, platform 
 - [Development setup](development/setup.md) — workspace commands and repository layout.
 - [Testing](development/testing.md) — static checks and prohibited runtime checks.
 - [Component examples](development/component-examples.md) — HeroUI documentation previews, gallery coverage, and public API gaps.
+- [Web styling audit](development/web-styling-audit.md) — component-by-component gaps against the pinned HeroUI React styles and priorities for restoring them.
 - [Compatibility](development/compatibility.md) — declared peers and the example's pinned versions.
 - [Release](development/release.md) — package-content review and release preparation.

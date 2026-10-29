@@ -6,4 +6,4 @@ Shared direct props and compound parts normalize the pinned public APIs; typed p
 
 Controlled empty selections use an internal owned Select controlled-state flag; omitted values retain uncontrolled defaults.
 
-Native semantic CSS remains authoritative; web slot mappings and browser-only layout selectors adapt DOM structure. Rendering, interaction and accessibility remain unverified.
+Each platform retains its pinned upstream component CSS; web slot generators retain the original React classes. Rendering, interaction and accessibility remain unverified.

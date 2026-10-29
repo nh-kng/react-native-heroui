@@ -1,0 +1,5 @@
+/* Owned HeroUI React 3.2.6 browser rules; see UPSTREAM.md. */
+@import "./base/base.css" layer(base);
+@import "./base/scrollbar.css" layer(base);
+@import "./components/index.css" layer(components);
+@import "./themes/default/variables.css";

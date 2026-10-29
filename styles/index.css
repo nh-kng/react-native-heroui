@@ -1,6 +1,14 @@
 @import "tailwindcss";
 @import "uniwind";
-@import "./shared/index.css";
+@import "tw-animate-css";
+@import "./react/themes/shared/theme.css";
+@import "./react/utilities/index.css";
+@import "./react/motion.css";
+@import "./shared/variables.css";
+@import "./shared/base.css";
+@import "./shared/utilities.css";
+@import "./shared/theme.css";
+@import "./shared/components/index.css" native;
 @import "./native-only.css" native;
 @import "./web-only.css" supports(selector(div > div));
 

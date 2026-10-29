@@ -7,7 +7,7 @@ import type {VariantProps} from "tailwind-variants";
 import {tv} from "tailwind-variants";
 
 export const spinnerVariants = tv({
-  base: "spinner__root",
+  base: "spinner",
   defaultVariants: {
     color: "accent",
     size: "md",
@@ -21,9 +21,9 @@ export const spinnerVariants = tv({
       warning: "spinner--warning",
     },
     size: {
-      lg: "spinner__root--size-lg",
-      md: "spinner__root--size-md",
-      sm: "spinner__root--size-sm",
+      lg: "spinner--lg",
+      md: "spinner--md",
+      sm: "spinner--sm",
       xl: "spinner--xl",
     },
   },

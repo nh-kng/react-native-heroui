@@ -4,4 +4,4 @@ Derived from HeroUI React 3.2.6 at e385ac202b2cdb94b1bf6fa76d32c31c8259cc5e and 
 
 Shared direct props and compound parts normalize the pinned public APIs; typed platform extensions exclude adapter-owned props and refs.
 
-Native semantic CSS remains authoritative; web slot mappings and browser-only layout selectors adapt DOM structure. Rendering, interaction and accessibility remain unverified.
+Each platform retains its pinned upstream component CSS; web slot generators retain the original React classes. Rendering, interaction and accessibility remain unverified.

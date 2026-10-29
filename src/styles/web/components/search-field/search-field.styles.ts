@@ -12,7 +12,7 @@ export const searchFieldVariants = tv({
     variant: "primary",
   },
   slots: {
-    base: "search-field__root",
+    base: "search-field",
     clearButton: "search-field__clear-button",
     group: "search-field__group",
     input: "search-field__input",

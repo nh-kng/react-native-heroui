@@ -27,7 +27,7 @@ export function verifyOwned() {
       `Untraceable origin: ${file.baseline}`
     );
   }
-  for (const file of [...walk('src/primitives'), ...walk('src/styles'), ...walk('styles/shared')])
+  for (const file of [...walk('src/primitives'), ...walk('src/styles'), ...walk('styles/shared'), ...walk('styles/react').filter((file) => file.endsWith('.css'))])
     assert.ok(mapped.has(file), `Unmapped owned file: ${file}`);
   for (const file of walk('src').filter((file) => /\.tsx?$/.test(file))) {
     const source = readFileSync(path.join(root, file), 'utf8');

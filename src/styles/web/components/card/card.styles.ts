@@ -11,26 +11,26 @@ const cardVariants = tv({
     variant: "default",
   },
   slots: {
-    base: "surface__root flex flex-col gap-3",
-    content: "flex-1",
+    base: "card",
+    content: "card__content",
     description: "card__description",
-    footer: "flex flex-row items-center gap-2",
-    header: "card__header flex flex-col gap-1",
-    title: "card__label",
+    footer: "card__footer",
+    header: "card__header",
+    title: "card__title",
   },
   variants: {
     variant: {
       default: {
-        base: "surface__root--variant-default",
+        base: "card--default",
       },
       secondary: {
-        base: "surface__root--variant-secondary",
+        base: "card--secondary",
       },
       tertiary: {
-        base: "surface__root--variant-tertiary",
+        base: "card--tertiary",
       },
       transparent: {
-        base: "surface__root--variant-transparent",
+        base: "card--transparent",
       },
     },
   },

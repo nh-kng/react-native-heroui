@@ -1,0 +1,7 @@
+# HeroUI React browser styles
+
+Copied from HeroUI React 3.2.6 at e385ac202b2cdb94b1bf6fa76d32c31c8259cc5e. The complete CSS tree under `packages/styles/{base,components,themes,utilities,variants}` is retained byte-for-byte and tracked in the [owned implementation map](../../docs/upstream/owned-source-map.json). License: [MIT](../../docs/upstream/licenses/heroui-react.txt).
+
+The local `index.css` imports the upstream browser rules. The public stylesheet entries load Tailwind definitions, animation utilities, and theme mappings at the top level because Tailwind prohibits nested `@utility` declarations. The shared Expo entry gates browser rules with Uniwind's web supports condition and Native component CSS with the native media condition. Shared color mappings prefer React theme variables when present and retain the original Native expressions as fallbacks, so browser utilities use the React palette while Native utility values are preserved.
+
+The local `motion.css` retains the upstream motion variants while excluding its dark variant so Expo/Uniwind and the standalone web entry retain their existing class-based theme selection. Web slot generators use the pinned upstream class names and utilities. Adapter-only PressableFeedback and Button.Background styles live in [web-only.css](../web-only.css). CSS compilation verifies inclusion of state selectors, transitions, keyframes, and reduced-motion rules; browser appearance and animation timing require runtime verification.

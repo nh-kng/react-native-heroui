@@ -1,6 +1,6 @@
 import assert from 'node:assert/strict';
 import { execFileSync } from 'node:child_process';
-import { mkdtempSync, readFileSync, rmSync } from 'node:fs';
+import { mkdtempSync, readFileSync, readdirSync, rmSync } from 'node:fs';
 import { tmpdir } from 'node:os';
 import path from 'node:path';
 import { after, before, test } from 'node:test';
@@ -25,33 +25,38 @@ after(() => {
 
 test('the compiled stylesheet uses the default blue accent without purple brand overrides', () => {
   const accents = [...css.matchAll(/--accent:\s*([^;]+);/g)].map((match) => match[1]);
-  assert.ok(accents.length >= 2);
+  assert.ok(accents.length >= 1);
   for (const accent of accents) {
     assert.match(accent, /^oklch\((?:0\.6204|62\.04%)\s+0?\.195\s+253\.83\)$/);
   }
 });
 
-test('compiled button feedback supports pointer and React Aria states with disabled guards', () => {
-  const enabled = '[data-slot="button"]:not(:disabled):not([aria-disabled="true"]):not([data-disabled])';
-  for (const state of [':hover', '[data-hovered="true"]', ':active', '[data-pressed="true"]']) {
-    assert.ok(css.includes(`${enabled}${state}`), state);
+test('web variant generators retain the pinned React classes and utilities', () => {
+  const map = JSON.parse(readFileSync(path.join(root, 'docs/upstream/owned-source-map.json'), 'utf8'));
+  for (const entry of map.files.filter(({local}) => local.startsWith('src/styles/web/components/') && local.endsWith('.styles.ts'))) {
+    const body = readFileSync(path.join(root, entry.local), 'utf8').replace(/^\/\*[\s\S]*?\*\//, '').replace(/\s/g, '');
+    const upstream = readFileSync(path.join(root, entry.baseline), 'utf8').replace(/\s/g, '');
+    assert.equal(body, upstream, entry.local);
   }
-  assert.match(css, /background-color: var\(--button-bg-hover\)/);
-  assert.match(css, /@media \(prefers-reduced-motion: no-preference\)\s*\{[^{}]*\{\s*transform: scale\(var\(--button-pressed-scale\)\)/);
-  assert.match(css, /@media \(prefers-reduced-motion: reduce\)\s*\{\s*\[data-slot="button"\]\s*\{\s*transition: none/);
 });
 
-test('compiled button variants and sizes retain their distinct feedback', () => {
-  for (const [variant, color] of [
-    ['primary', '--color-accent-hover'],
-    ['danger', '--color-danger-hover'],
-    ['danger-soft', '--color-danger-soft-hover'],
-  ]) {
-    assert.ok(css.includes(`[data-slot="button"].button__root--variant-${variant} {\n    --button-bg-hover: var(${color});`), variant);
-  }
-  for (const [size, scale] of [['sm', '.98'], ['lg', '.96']]) {
-    assert.ok(css.includes(`[data-slot="button"].button__root--size-${size} {\n    --button-pressed-scale: ${scale};`), size);
-  }
+test('published React CSS includes every pinned component and support stylesheet unchanged', () => {
+  const map = JSON.parse(readFileSync(path.join(root, 'docs/upstream/owned-source-map.json'), 'utf8'));
+  const entries = map.files.filter(({local}) => local.startsWith('styles/react/') && !['styles/react/motion.css', 'styles/react/index.css'].includes(local));
+  const files = (directory) => readdirSync(directory, {withFileTypes:true}).flatMap((entry) => entry.isDirectory() ? files(path.join(directory, entry.name)) : [path.join(directory, entry.name)]);
+  const baseline = path.join(root, 'baselines/heroui-react/packages/styles');
+  const expected = ['base', 'components', 'themes', 'utilities', 'variants'].flatMap((directory) => files(path.join(baseline, directory))).filter((file) => file.endsWith('.css')).map((file) => path.relative(root, file));
+  assert.deepEqual(entries.map(({baseline}) => baseline).sort(), expected.sort());
+  for (const entry of entries) assert.equal(readFileSync(path.join(root, entry.local), 'utf8'), readFileSync(path.join(root, entry.baseline), 'utf8'), entry.local);
+});
+
+test('compiled button feedback includes upstream sizing, variants, state and motion rules', () => {
+  for (const selector of ['.button', '.button--sm', '.button--lg', '.button--danger', '.button--danger-soft', '.button--icon-only', '.button--full-width']) assert.ok(css.includes(selector), selector);
+  assert.ok(css.includes('[data-pressed="true"]'));
+  assert.ok(css.includes('[data-hovered="true"]'));
+  for (const scale of ['.97', '.98', '.96']) assert.ok(css.includes('transform: scale(' + scale + ')'));
+  assert.ok(css.includes('[data-reduce-motion="true"]'));
+  assert.ok(css.includes('(prefers-reduced-motion: reduce)'));
 });
 
 test('feedback CSS keeps scaling and ripple expansion behind reduced-motion preferences', () => {
@@ -91,30 +96,48 @@ test('highlight enters and exits through the ghost Button background transition 
   assert.ok(!rule[1].includes('transition: opacity'), 'Hover exit does not fade an opaque foreground layer');
 });
 
-test('shared component web slots retain semantic classes and control state selectors', () => {
-  for (const selector of ['.surface__root--variant-secondary', '.avatar__root--size-sm', '.alert__root', '.input-otp__slot', '.slider__thumb-knob']) assert.ok(css.includes(selector), selector);
-  for (const selector of ['.checkbox-field[data-selected] .checkbox__indicator', '.switch-field[data-selected] .switch__thumb', '.tabs__trigger .tabs__indicator', '.select__content .list-box-item[data-disabled]']) assert.ok(css.includes(selector), selector);
-  assert.match(css, /\.toast-region\s*\{[^}]*position: fixed/);
-  assert.match(css, /\.toast__root\[data-expanded\]\[data-placement="bottom"\]/);
+test('web component selectors match the upstream slots rather than native approximations', () => {
+  for (const selector of ['.surface--secondary', '.avatar--sm', '.alert', '.input-otp__slot', '.slider__thumb', '.checkbox__control', '.switch__control', '.tabs__tab', '.select__popover', '.toast__title']) assert.ok(css.includes(selector), selector);
+  for (const selector of ['.switch-field', '.checkbox-field', '.tabs__trigger', '.toast__root', '.slider__thumb-knob']) assert.ok(!css.includes(selector), selector);
 });
 
-test('web fields style emitted textarea classes and keep adornments in normal flow', () => {
-  assert.match(css, /\.textarea\s*\{[^}]*background: var\(--color-field\);[^}]*color: var\(--color-field-foreground\)/);
-  assert.match(css, /\.input-group__prefix,\s*\.input-group__suffix\s*\{(?=[^}]*position: static)(?=[^}]*display: flex)/);
-  assert.match(css, /\.search-field__search-icon\s*\{[^}]*position: static/);
-  assert.ok(css.includes('.search-field__root[data-empty="true"] .search-field__clear-button'));
-  assert.ok(css.includes('.textarea[aria-invalid="true"]'));
-  assert.ok(css.includes('.textarea:disabled'));
+test('compiled motion retains accordion expansion, tabs movement, overlay entry and exit, and distinct skeleton animations', () => {
+  assert.match(css, /height (?:\.2s|200ms) var\(--ease-out-quad\)/);
+  assert.ok(css.includes('height: var(--disclosure-panel-height)'));
+  assert.ok(css.includes('transition-property: translate, width, height'));
+  for (const selector of ['.popover[data-entering="true"]', '.popover[data-exiting="true"]', '.select__popover[data-entering="true"]', '.select__popover[data-exiting="true"]']) assert.ok(css.includes(selector), selector);
+  for (const keyframes of ['enter', 'exit', 'skeleton', 'caret-blink', 'spin']) assert.ok(css.includes('@keyframes ' + keyframes), keyframes);
+  assert.match(css, /animation: (?:2s linear infinite skeleton|skeleton 2s linear infinite)/);
+  assert.ok(css.includes('animation: var(--animate-pulse)'));
+  assert.ok(!css.includes('heroui-shared-pulse'));
+  assert.ok(css.includes('margin .3s var(--ease-out-fluid)'));
+  assert.ok(css.includes('transform var(--toast-translate-duration) var(--toast-ease)'));
 });
 
-test('web close buttons and default toast text have explicit theme colors', () => {
-  assert.match(css, /\.close-button--default\s*\{[^}]*background: var\(--color-default\);[^}]*color: var\(--color-muted\)/);
-  assert.match(css, /\.close-button__root\s*\{[^}]*width: 24px;[^}]*height: 24px/);
-  assert.match(css, /\.toast__label\s*\{\s*color: var\(--color-overlay-foreground\)/);
-  assert.match(css, /\.toast__root\s*\{[^}]*color: var\(--color-overlay-foreground\)/);
+test('both web and shared Expo entries compile the React rules, with native components gated', () => {
+  const output = path.join(directory, 'shared.css');
+  execFileSync(path.join(root, 'node_modules/.bin/tailwindcss'), ['-i', path.join(root, 'styles/index.css'), '-o', output, '--optimize', '--silent'], {cwd:root});
+  const shared = readFileSync(output, 'utf8');
+  assert.ok(shared.includes('@supports selector(div > div)'));
+  assert.ok(shared.includes('@media native'));
+  for (const marker of ['.switch__control', '.tabs__tab', '.popover[data-entering="true"]', '@keyframes skeleton', '@keyframes enter']) assert.ok(shared.includes(marker), marker);
+  assert.ok(!css.includes('.switch__root'), 'Standalone web CSS excludes Native component rules');
+  for (const token of ['--field-hover', '--accent-hover', '--accent-soft-foreground']) assert.ok(shared.includes('var(' + token + ','), 'Shared utilities prefer React theme token: ' + token);
+  assert.match(shared, /\.toast--accent \.toast__indicator\s*\{\s*color: var\(--accent-soft-foreground/);
 });
 
-test('web scroll containers and browser controls follow the active theme', () => {
+test('accent toast icons use the same semantic color as their titles', () => {
+  for (const slot of ['title', 'indicator']) assert.match(css, new RegExp('\\.toast--accent \\.toast__' + slot + '\\s*\\{\\s*color: var\\(--accent-soft-foreground\\)'));
+});
+
+test('web checkbox retains background scaling and SVG drawing transitions', () => {
+  assert.ok(css.includes('.checkbox__control:before'));
+  assert.match(css, /transition: stroke-dashoffset (?:\.15s|150ms) linear (?:\.015s|15ms)/);
+  assert.ok(css.includes('[data-slot="checkbox-default-indicator--checkmark"]'));
+  assert.ok(!css.includes('.checkbox__indicator:not([data-selected])'));
+});
+
+test('web browser controls and package scrollbars follow the active theme', () => {
   assert.match(css, /:root\.dark\s*\{\s*color-scheme: dark/);
   assert.match(css, /:root\.light\s*\{\s*color-scheme: light/);
   assert.match(css, /\.heroui-scrollbar,\s*\.scroll-shadow\s*\{[^}]*scrollbar-width: thin;[^}]*scrollbar-color: var\(--color-muted\) transparent/);

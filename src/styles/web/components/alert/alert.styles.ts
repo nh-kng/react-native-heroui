@@ -11,7 +11,7 @@ export const alertVariants = tv({
     status: "default",
   },
   slots: {
-    base: "alert__root",
+    base: "alert",
     content: "alert__content",
     description: "alert__description",
     indicator: "alert__indicator",

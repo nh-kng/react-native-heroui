@@ -11,8 +11,8 @@ export const inputOTPVariants = tv({
     variant: "primary",
   },
   slots: {
-    base: "input-otp__root",
-    caret: "input-otp__slot-caret",
+    base: "input-otp",
+    caret: "input-otp__caret",
     group: "input-otp__group",
     input: "input-otp__input",
     separator: "input-otp__separator",

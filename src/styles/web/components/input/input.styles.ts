@@ -7,7 +7,7 @@ import type {VariantProps} from "tailwind-variants";
 import {tv} from "tailwind-variants";
 
 export const inputVariants = tv({
-  base: "input__input",
+  base: "input",
   defaultVariants: {
     fullWidth: false,
     variant: "primary",
@@ -15,11 +15,11 @@ export const inputVariants = tv({
   variants: {
     fullWidth: {
       false: "",
-      true: "w-full",
+      true: "input--full-width",
     },
     variant: {
-      primary: "input__input--variant-primary",
-      secondary: "input__input--variant-secondary",
+      primary: "input--primary",
+      secondary: "input--secondary",
     },
   },
 });

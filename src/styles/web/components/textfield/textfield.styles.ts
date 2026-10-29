@@ -7,14 +7,14 @@ import type {VariantProps} from "tailwind-variants";
 import {tv} from "tailwind-variants";
 
 export const textFieldVariants = tv({
-  base: "text-field__root flex flex-col",
+  base: "textfield",
   defaultVariants: {
     fullWidth: false,
   },
   variants: {
     fullWidth: {
       false: "",
-      true: "w-full",
+      true: "textfield--full-width",
     },
   },
 });

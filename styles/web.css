@@ -1,7 +1,11 @@
 @import "tailwindcss";
-@custom-variant light (&:where(:root:not(.dark), .light, .light *));
-@custom-variant dark (&:where(.dark, .dark *));
-@import "./shared/index.css";
+@import "tw-animate-css";
+@import "./react/themes/shared/theme.css";
+@import "./react/utilities/index.css";
+@import "./react/motion.css";
 @import "./web-only.css";
 
-@source "../build";
+@custom-variant light (&:where(:root:not(.dark), .light, .light *));
+@custom-variant dark (&:where(.dark, .dark *));
+
+@source "../build/web";

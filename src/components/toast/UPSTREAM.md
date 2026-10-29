@@ -6,4 +6,6 @@ Shared direct props and compound parts normalize the pinned public APIs; typed p
 
 Provider-scoped useToast normalizes show/dismiss operations and millisecond duration, including zero for persistent notifications. Custom Toast roots require the platform renderer lifecycle props.
 
-Native semantic CSS remains authoritative; web slot mappings and browser-only layout selectors adapt DOM structure. Rendering, interaction and accessibility remain unverified.
+Each platform retains its pinned upstream component CSS; web slot generators retain the original React classes. Rendering, interaction and accessibility remain unverified.
+
+Web adds an accent indicator color in `styles/web-only.css` to match the title's `accent-soft-foreground` token; the pinned React stylesheet colors only the accent title. The copied upstream CSS remains unchanged.

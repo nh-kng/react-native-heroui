@@ -2778,6 +2778,386 @@
     {
       "baseline": "baselines/heroui-react/packages/react/src/components/list-box/index.ts",
       "local": "src/primitives/web/components/list-box/index.ts"
+    },
+    {
+      "baseline": "baselines/heroui-react/packages/styles/base/base.css",
+      "local": "styles/react/base/base.css"
+    },
+    {
+      "baseline": "baselines/heroui-react/packages/styles/base/scrollbar.css",
+      "local": "styles/react/base/scrollbar.css"
+    },
+    {
+      "baseline": "baselines/heroui-react/packages/styles/components/accordion.css",
+      "local": "styles/react/components/accordion.css"
+    },
+    {
+      "baseline": "baselines/heroui-react/packages/styles/components/alert-dialog.css",
+      "local": "styles/react/components/alert-dialog.css"
+    },
+    {
+      "baseline": "baselines/heroui-react/packages/styles/components/alert.css",
+      "local": "styles/react/components/alert.css"
+    },
+    {
+      "baseline": "baselines/heroui-react/packages/styles/components/autocomplete.css",
+      "local": "styles/react/components/autocomplete.css"
+    },
+    {
+      "baseline": "baselines/heroui-react/packages/styles/components/avatar-group.css",
+      "local": "styles/react/components/avatar-group.css"
+    },
+    {
+      "baseline": "baselines/heroui-react/packages/styles/components/avatar.css",
+      "local": "styles/react/components/avatar.css"
+    },
+    {
+      "baseline": "baselines/heroui-react/packages/styles/components/badge.css",
+      "local": "styles/react/components/badge.css"
+    },
+    {
+      "baseline": "baselines/heroui-react/packages/styles/components/breadcrumbs.css",
+      "local": "styles/react/components/breadcrumbs.css"
+    },
+    {
+      "baseline": "baselines/heroui-react/packages/styles/components/button-group.css",
+      "local": "styles/react/components/button-group.css"
+    },
+    {
+      "baseline": "baselines/heroui-react/packages/styles/components/button.css",
+      "local": "styles/react/components/button.css"
+    },
+    {
+      "baseline": "baselines/heroui-react/packages/styles/components/calendar-year-picker.css",
+      "local": "styles/react/components/calendar-year-picker.css"
+    },
+    {
+      "baseline": "baselines/heroui-react/packages/styles/components/calendar.css",
+      "local": "styles/react/components/calendar.css"
+    },
+    {
+      "baseline": "baselines/heroui-react/packages/styles/components/card.css",
+      "local": "styles/react/components/card.css"
+    },
+    {
+      "baseline": "baselines/heroui-react/packages/styles/components/checkbox-group.css",
+      "local": "styles/react/components/checkbox-group.css"
+    },
+    {
+      "baseline": "baselines/heroui-react/packages/styles/components/checkbox.css",
+      "local": "styles/react/components/checkbox.css"
+    },
+    {
+      "baseline": "baselines/heroui-react/packages/styles/components/chip.css",
+      "local": "styles/react/components/chip.css"
+    },
+    {
+      "baseline": "baselines/heroui-react/packages/styles/components/close-button.css",
+      "local": "styles/react/components/close-button.css"
+    },
+    {
+      "baseline": "baselines/heroui-react/packages/styles/components/color-area.css",
+      "local": "styles/react/components/color-area.css"
+    },
+    {
+      "baseline": "baselines/heroui-react/packages/styles/components/color-field.css",
+      "local": "styles/react/components/color-field.css"
+    },
+    {
+      "baseline": "baselines/heroui-react/packages/styles/components/color-input-group.css",
+      "local": "styles/react/components/color-input-group.css"
+    },
+    {
+      "baseline": "baselines/heroui-react/packages/styles/components/color-picker.css",
+      "local": "styles/react/components/color-picker.css"
+    },
+    {
+      "baseline": "baselines/heroui-react/packages/styles/components/color-slider.css",
+      "local": "styles/react/components/color-slider.css"
+    },
+    {
+      "baseline": "baselines/heroui-react/packages/styles/components/color-swatch-picker.css",
+      "local": "styles/react/components/color-swatch-picker.css"
+    },
+    {
+      "baseline": "baselines/heroui-react/packages/styles/components/color-swatch.css",
+      "local": "styles/react/components/color-swatch.css"
+    },
+    {
+      "baseline": "baselines/heroui-react/packages/styles/components/combo-box.css",
+      "local": "styles/react/components/combo-box.css"
+    },
+    {
+      "baseline": "baselines/heroui-react/packages/styles/components/date-field.css",
+      "local": "styles/react/components/date-field.css"
+    },
+    {
+      "baseline": "baselines/heroui-react/packages/styles/components/date-input-group.css",
+      "local": "styles/react/components/date-input-group.css"
+    },
+    {
+      "baseline": "baselines/heroui-react/packages/styles/components/date-picker.css",
+      "local": "styles/react/components/date-picker.css"
+    },
+    {
+      "baseline": "baselines/heroui-react/packages/styles/components/date-range-picker.css",
+      "local": "styles/react/components/date-range-picker.css"
+    },
+    {
+      "baseline": "baselines/heroui-react/packages/styles/components/description.css",
+      "local": "styles/react/components/description.css"
+    },
+    {
+      "baseline": "baselines/heroui-react/packages/styles/components/disclosure-group.css",
+      "local": "styles/react/components/disclosure-group.css"
+    },
+    {
+      "baseline": "baselines/heroui-react/packages/styles/components/disclosure.css",
+      "local": "styles/react/components/disclosure.css"
+    },
+    {
+      "baseline": "baselines/heroui-react/packages/styles/components/drawer.css",
+      "local": "styles/react/components/drawer.css"
+    },
+    {
+      "baseline": "baselines/heroui-react/packages/styles/components/dropdown.css",
+      "local": "styles/react/components/dropdown.css"
+    },
+    {
+      "baseline": "baselines/heroui-react/packages/styles/components/empty-state.css",
+      "local": "styles/react/components/empty-state.css"
+    },
+    {
+      "baseline": "baselines/heroui-react/packages/styles/components/error-message.css",
+      "local": "styles/react/components/error-message.css"
+    },
+    {
+      "baseline": "baselines/heroui-react/packages/styles/components/field-error.css",
+      "local": "styles/react/components/field-error.css"
+    },
+    {
+      "baseline": "baselines/heroui-react/packages/styles/components/fieldset.css",
+      "local": "styles/react/components/fieldset.css"
+    },
+    {
+      "baseline": "baselines/heroui-react/packages/styles/components/header.css",
+      "local": "styles/react/components/header.css"
+    },
+    {
+      "baseline": "baselines/heroui-react/packages/styles/components/index.css",
+      "local": "styles/react/components/index.css"
+    },
+    {
+      "baseline": "baselines/heroui-react/packages/styles/components/input-group.css",
+      "local": "styles/react/components/input-group.css"
+    },
+    {
+      "baseline": "baselines/heroui-react/packages/styles/components/input-otp.css",
+      "local": "styles/react/components/input-otp.css"
+    },
+    {
+      "baseline": "baselines/heroui-react/packages/styles/components/input.css",
+      "local": "styles/react/components/input.css"
+    },
+    {
+      "baseline": "baselines/heroui-react/packages/styles/components/kbd.css",
+      "local": "styles/react/components/kbd.css"
+    },
+    {
+      "baseline": "baselines/heroui-react/packages/styles/components/label.css",
+      "local": "styles/react/components/label.css"
+    },
+    {
+      "baseline": "baselines/heroui-react/packages/styles/components/link.css",
+      "local": "styles/react/components/link.css"
+    },
+    {
+      "baseline": "baselines/heroui-react/packages/styles/components/list-box-item.css",
+      "local": "styles/react/components/list-box-item.css"
+    },
+    {
+      "baseline": "baselines/heroui-react/packages/styles/components/list-box-section.css",
+      "local": "styles/react/components/list-box-section.css"
+    },
+    {
+      "baseline": "baselines/heroui-react/packages/styles/components/list-box.css",
+      "local": "styles/react/components/list-box.css"
+    },
+    {
+      "baseline": "baselines/heroui-react/packages/styles/components/menu-item.css",
+      "local": "styles/react/components/menu-item.css"
+    },
+    {
+      "baseline": "baselines/heroui-react/packages/styles/components/menu-section.css",
+      "local": "styles/react/components/menu-section.css"
+    },
+    {
+      "baseline": "baselines/heroui-react/packages/styles/components/menu.css",
+      "local": "styles/react/components/menu.css"
+    },
+    {
+      "baseline": "baselines/heroui-react/packages/styles/components/meter.css",
+      "local": "styles/react/components/meter.css"
+    },
+    {
+      "baseline": "baselines/heroui-react/packages/styles/components/modal.css",
+      "local": "styles/react/components/modal.css"
+    },
+    {
+      "baseline": "baselines/heroui-react/packages/styles/components/number-field.css",
+      "local": "styles/react/components/number-field.css"
+    },
+    {
+      "baseline": "baselines/heroui-react/packages/styles/components/pagination.css",
+      "local": "styles/react/components/pagination.css"
+    },
+    {
+      "baseline": "baselines/heroui-react/packages/styles/components/popover.css",
+      "local": "styles/react/components/popover.css"
+    },
+    {
+      "baseline": "baselines/heroui-react/packages/styles/components/progress-bar.css",
+      "local": "styles/react/components/progress-bar.css"
+    },
+    {
+      "baseline": "baselines/heroui-react/packages/styles/components/progress-circle.css",
+      "local": "styles/react/components/progress-circle.css"
+    },
+    {
+      "baseline": "baselines/heroui-react/packages/styles/components/radio-group.css",
+      "local": "styles/react/components/radio-group.css"
+    },
+    {
+      "baseline": "baselines/heroui-react/packages/styles/components/radio.css",
+      "local": "styles/react/components/radio.css"
+    },
+    {
+      "baseline": "baselines/heroui-react/packages/styles/components/range-calendar.css",
+      "local": "styles/react/components/range-calendar.css"
+    },
+    {
+      "baseline": "baselines/heroui-react/packages/styles/components/scroll-shadow.css",
+      "local": "styles/react/components/scroll-shadow.css"
+    },
+    {
+      "baseline": "baselines/heroui-react/packages/styles/components/search-field.css",
+      "local": "styles/react/components/search-field.css"
+    },
+    {
+      "baseline": "baselines/heroui-react/packages/styles/components/select.css",
+      "local": "styles/react/components/select.css"
+    },
+    {
+      "baseline": "baselines/heroui-react/packages/styles/components/separator.css",
+      "local": "styles/react/components/separator.css"
+    },
+    {
+      "baseline": "baselines/heroui-react/packages/styles/components/skeleton.css",
+      "local": "styles/react/components/skeleton.css"
+    },
+    {
+      "baseline": "baselines/heroui-react/packages/styles/components/slider.css",
+      "local": "styles/react/components/slider.css"
+    },
+    {
+      "baseline": "baselines/heroui-react/packages/styles/components/spinner.css",
+      "local": "styles/react/components/spinner.css"
+    },
+    {
+      "baseline": "baselines/heroui-react/packages/styles/components/surface.css",
+      "local": "styles/react/components/surface.css"
+    },
+    {
+      "baseline": "baselines/heroui-react/packages/styles/components/switch-group.css",
+      "local": "styles/react/components/switch-group.css"
+    },
+    {
+      "baseline": "baselines/heroui-react/packages/styles/components/switch.css",
+      "local": "styles/react/components/switch.css"
+    },
+    {
+      "baseline": "baselines/heroui-react/packages/styles/components/table.css",
+      "local": "styles/react/components/table.css"
+    },
+    {
+      "baseline": "baselines/heroui-react/packages/styles/components/tabs.css",
+      "local": "styles/react/components/tabs.css"
+    },
+    {
+      "baseline": "baselines/heroui-react/packages/styles/components/tag-group.css",
+      "local": "styles/react/components/tag-group.css"
+    },
+    {
+      "baseline": "baselines/heroui-react/packages/styles/components/tag.css",
+      "local": "styles/react/components/tag.css"
+    },
+    {
+      "baseline": "baselines/heroui-react/packages/styles/components/textarea.css",
+      "local": "styles/react/components/textarea.css"
+    },
+    {
+      "baseline": "baselines/heroui-react/packages/styles/components/textfield.css",
+      "local": "styles/react/components/textfield.css"
+    },
+    {
+      "baseline": "baselines/heroui-react/packages/styles/components/time-field.css",
+      "local": "styles/react/components/time-field.css"
+    },
+    {
+      "baseline": "baselines/heroui-react/packages/styles/components/toast.css",
+      "local": "styles/react/components/toast.css"
+    },
+    {
+      "baseline": "baselines/heroui-react/packages/styles/components/toggle-button-group.css",
+      "local": "styles/react/components/toggle-button-group.css"
+    },
+    {
+      "baseline": "baselines/heroui-react/packages/styles/components/toggle-button.css",
+      "local": "styles/react/components/toggle-button.css"
+    },
+    {
+      "baseline": "baselines/heroui-react/packages/styles/components/toolbar.css",
+      "local": "styles/react/components/toolbar.css"
+    },
+    {
+      "baseline": "baselines/heroui-react/packages/styles/components/tooltip.css",
+      "local": "styles/react/components/tooltip.css"
+    },
+    {
+      "baseline": "baselines/heroui-react/packages/styles/components/typography.css",
+      "local": "styles/react/components/typography.css"
+    },
+    {
+      "baseline": "baselines/heroui-react/packages/styles/themes/default/components/index.css",
+      "local": "styles/react/themes/default/components/index.css"
+    },
+    {
+      "baseline": "baselines/heroui-react/packages/styles/themes/default/index.css",
+      "local": "styles/react/themes/default/index.css"
+    },
+    {
+      "baseline": "baselines/heroui-react/packages/styles/themes/default/variables.css",
+      "local": "styles/react/themes/default/variables.css"
+    },
+    {
+      "baseline": "baselines/heroui-react/packages/styles/themes/shared/theme.css",
+      "local": "styles/react/themes/shared/theme.css"
+    },
+    {
+      "baseline": "baselines/heroui-react/packages/styles/utilities/index.css",
+      "local": "styles/react/utilities/index.css"
+    },
+    {
+      "baseline": "baselines/heroui-react/packages/styles/variants/index.css",
+      "local": "styles/react/variants/index.css"
+    },
+    {
+      "baseline": "baselines/heroui-react/packages/styles/variants/index.css",
+      "local": "styles/react/motion.css"
+    },
+    {
+      "baseline": "baselines/heroui-react/packages/styles/index.css",
+      "local": "styles/react/index.css"
     }
   ],
   "components": [
@@ -2811,7 +3191,7 @@
         "Primary mousedown/mouseup are isolated at the web root when Pointer Events are supported; custom callbacks run and the legacy document mouse fallback is preserved."
       ],
       "stylingDeviations": [
-        "Native-origin CSS is the authoritative semantic theme and component style system; browser selectors live in web-only.css."
+        "Web retains the original React slot classes and complete pinned React CSS; native retains Native semantic component styles."
       ],
       "knownUnappliedChanges": []
     },
@@ -2840,7 +3220,7 @@
       ],
       "behaviorDeviations": [],
       "stylingDeviations": [
-        "Native-origin CSS is the authoritative semantic theme and component style system; browser selectors live in web-only.css."
+        "Web retains the original React slot classes and complete pinned React CSS; native retains Native semantic component styles."
       ],
       "knownUnappliedChanges": []
     },
@@ -2870,7 +3250,7 @@
       ],
       "behaviorDeviations": [],
       "stylingDeviations": [
-        "Native-origin CSS is the authoritative semantic theme and component style system; browser selectors live in web-only.css."
+        "Web retains the original React slot classes and complete pinned React CSS; native retains Native semantic component styles."
       ],
       "knownUnappliedChanges": []
     },
@@ -2899,7 +3279,7 @@
       ],
       "behaviorDeviations": [],
       "stylingDeviations": [
-        "Native-origin CSS is the authoritative semantic theme and component style system; browser selectors live in web-only.css."
+        "Web retains the original React slot classes and complete pinned React CSS; native retains Native semantic component styles."
       ],
       "knownUnappliedChanges": []
     },
@@ -2928,7 +3308,7 @@
       ],
       "behaviorDeviations": [],
       "stylingDeviations": [
-        "Native-origin CSS is the authoritative semantic theme and component style system; browser selectors live in web-only.css."
+        "Web retains the original React slot classes and complete pinned React CSS; native retains Native semantic component styles."
       ],
       "knownUnappliedChanges": []
     },
@@ -2955,7 +3335,7 @@
         "Existing theme effect retained; owned Native provider retains optional integrations."
       ],
       "stylingDeviations": [
-        "Native-origin CSS is the authoritative semantic theme and component style system; browser selectors live in web-only.css."
+        "Web retains the original React slot classes and complete pinned React CSS; native retains Native semantic component styles."
       ],
       "knownUnappliedChanges": []
     },
@@ -2985,7 +3365,7 @@
       ],
       "behaviorDeviations": [],
       "stylingDeviations": [
-        "Native-origin CSS is the authoritative semantic theme and component style system; browser selectors live in web-only.css."
+        "Web retains the original React slot classes and complete pinned React CSS; native retains Native semantic component styles."
       ],
       "knownUnappliedChanges": []
     },
@@ -3014,7 +3394,7 @@
       ],
       "behaviorDeviations": [],
       "stylingDeviations": [
-        "Native-origin CSS is the authoritative semantic theme and component style system; browser selectors live in web-only.css."
+        "Web retains the original React slot classes and complete pinned React CSS; native retains Native semantic component styles."
       ],
       "knownUnappliedChanges": []
     },
@@ -3043,7 +3423,7 @@
       ],
       "behaviorDeviations": [],
       "stylingDeviations": [
-        "Native-origin CSS is the authoritative semantic theme and component style system; browser selectors live in web-only.css."
+        "Web retains the original React slot classes and complete pinned React CSS; native retains Native semantic component styles."
       ],
       "knownUnappliedChanges": []
     },
@@ -3073,7 +3453,7 @@
       ],
       "behaviorDeviations": [],
       "stylingDeviations": [
-        "Native-origin CSS is the authoritative semantic theme and component style system; browser selectors live in web-only.css."
+        "Web retains the original React slot classes and complete pinned React CSS; native retains Native semantic component styles."
       ],
       "knownUnappliedChanges": []
     },
@@ -3131,7 +3511,7 @@
       ],
       "behaviorDeviations": [],
       "stylingDeviations": [
-        "Web slot classes and browser selectors map to native semantic CSS; platform animation geometry remains distinct."
+        "Web uses the complete pinned React component CSS and original slot classes; native uses the pinned Native semantic CSS. Platform animation geometry remains distinct."
       ],
       "knownUnappliedChanges": []
     },
@@ -3160,7 +3540,7 @@
       ],
       "behaviorDeviations": [],
       "stylingDeviations": [
-        "Web slot classes and browser selectors map to native semantic CSS; platform animation geometry remains distinct."
+        "Web uses the complete pinned React component CSS and original slot classes; native uses the pinned Native semantic CSS. Platform animation geometry remains distinct."
       ],
       "knownUnappliedChanges": []
     },
@@ -3189,7 +3569,7 @@
       ],
       "behaviorDeviations": [],
       "stylingDeviations": [
-        "Web slot classes and browser selectors map to native semantic CSS; platform animation geometry remains distinct."
+        "Web uses the complete pinned React component CSS and original slot classes; native uses the pinned Native semantic CSS. Platform animation geometry remains distinct."
       ],
       "knownUnappliedChanges": []
     },
@@ -3218,7 +3598,7 @@
       ],
       "behaviorDeviations": [],
       "stylingDeviations": [
-        "Web slot classes and browser selectors map to native semantic CSS; platform animation geometry remains distinct."
+        "Web uses the complete pinned React component CSS and original slot classes; native uses the pinned Native semantic CSS. Platform animation geometry remains distinct."
       ],
       "knownUnappliedChanges": []
     },
@@ -3247,7 +3627,7 @@
       ],
       "behaviorDeviations": [],
       "stylingDeviations": [
-        "Web slot classes and browser selectors map to native semantic CSS; platform animation geometry remains distinct."
+        "Web uses the complete pinned React component CSS and original slot classes; native uses the pinned Native semantic CSS. Platform animation geometry remains distinct."
       ],
       "knownUnappliedChanges": []
     },
@@ -3277,7 +3657,7 @@
       ],
       "behaviorDeviations": [],
       "stylingDeviations": [
-        "Web slot classes and browser selectors map to native semantic CSS; platform animation geometry remains distinct."
+        "Web uses the complete pinned React component CSS and original slot classes; native uses the pinned Native semantic CSS. Platform animation geometry remains distinct."
       ],
       "knownUnappliedChanges": []
     },
@@ -3307,7 +3687,7 @@
       ],
       "behaviorDeviations": [],
       "stylingDeviations": [
-        "Web slot classes and browser selectors map to native semantic CSS; platform animation geometry remains distinct."
+        "Web uses the complete pinned React component CSS and original slot classes; native uses the pinned Native semantic CSS. Platform animation geometry remains distinct."
       ],
       "knownUnappliedChanges": []
     },
@@ -3340,7 +3720,7 @@
         "Optional bottom-sheet component construction is guarded so default popover imports do not require the optional bottom-sheet runtime; bottom-sheet view props derive from its public component type."
       ],
       "stylingDeviations": [
-        "Web slot classes and browser selectors map to native semantic CSS; platform animation geometry remains distinct."
+        "Web uses the complete pinned React component CSS and original slot classes; native uses the pinned Native semantic CSS. Platform animation geometry remains distinct."
       ],
       "knownUnappliedChanges": []
     },
@@ -3369,7 +3749,7 @@
       ],
       "behaviorDeviations": [],
       "stylingDeviations": [
-        "Web slot classes and browser selectors map to native semantic CSS; platform animation geometry remains distinct."
+        "Web uses the complete pinned React component CSS and original slot classes; native uses the pinned Native semantic CSS. Platform animation geometry remains distinct."
       ],
       "knownUnappliedChanges": []
     },
@@ -3399,7 +3779,7 @@
       ],
       "behaviorDeviations": [],
       "stylingDeviations": [
-        "Web slot classes and browser selectors map to native semantic CSS; platform animation geometry remains distinct."
+        "Web uses the complete pinned React component CSS and original slot classes; native uses the pinned Native semantic CSS. Platform animation geometry remains distinct."
       ],
       "knownUnappliedChanges": []
     },
@@ -3428,7 +3808,7 @@
       ],
       "behaviorDeviations": [],
       "stylingDeviations": [
-        "Web slot classes and browser selectors map to native semantic CSS; platform animation geometry remains distinct."
+        "Web uses the complete pinned React component CSS and original slot classes; native uses the pinned Native semantic CSS. Platform animation geometry remains distinct."
       ],
       "knownUnappliedChanges": []
     },
@@ -3465,7 +3845,7 @@
         "Optional bottom-sheet component construction is guarded so default popover imports do not require the optional bottom-sheet runtime; bottom-sheet view props derive from its public component type."
       ],
       "stylingDeviations": [
-        "Web slot classes and browser selectors map to native semantic CSS; platform animation geometry remains distinct."
+        "Web uses the complete pinned React component CSS and original slot classes; native uses the pinned Native semantic CSS. Platform animation geometry remains distinct."
       ],
       "knownUnappliedChanges": []
     },
@@ -3494,7 +3874,7 @@
       ],
       "behaviorDeviations": [],
       "stylingDeviations": [
-        "Web slot classes and browser selectors map to native semantic CSS; platform animation geometry remains distinct."
+        "Web uses the complete pinned React component CSS and original slot classes; native uses the pinned Native semantic CSS. Platform animation geometry remains distinct."
       ],
       "knownUnappliedChanges": []
     },
@@ -3525,7 +3905,7 @@
         "Reanimated progress mutations use SharedValue.set instead of value assignment, preserving behavior while satisfying the React immutability check."
       ],
       "stylingDeviations": [
-        "Web slot classes and browser selectors map to native semantic CSS; platform animation geometry remains distinct."
+        "Web uses the complete pinned React component CSS and original slot classes; native uses the pinned Native semantic CSS. Platform animation geometry remains distinct."
       ],
       "knownUnappliedChanges": []
     },
@@ -3554,7 +3934,7 @@
       ],
       "behaviorDeviations": [],
       "stylingDeviations": [
-        "Web slot classes and browser selectors map to native semantic CSS; platform animation geometry remains distinct."
+        "Web uses the complete pinned React component CSS and original slot classes; native uses the pinned Native semantic CSS. Platform animation geometry remains distinct."
       ],
       "knownUnappliedChanges": []
     },
@@ -3585,7 +3965,7 @@
       ],
       "behaviorDeviations": [],
       "stylingDeviations": [
-        "Web slot classes and browser selectors map to native semantic CSS; platform animation geometry remains distinct."
+        "Web uses the complete pinned React component CSS and original slot classes; native uses the pinned Native semantic CSS. Platform animation geometry remains distinct."
       ],
       "knownUnappliedChanges": []
     },
@@ -3614,7 +3994,7 @@
       ],
       "behaviorDeviations": [],
       "stylingDeviations": [
-        "Web slot classes and browser selectors map to native semantic CSS; platform animation geometry remains distinct."
+        "Web uses the complete pinned React component CSS and original slot classes; native uses the pinned Native semantic CSS. Platform animation geometry remains distinct."
       ],
       "knownUnappliedChanges": []
     },
@@ -3643,7 +4023,7 @@
       ],
       "behaviorDeviations": [],
       "stylingDeviations": [
-        "Web slot classes and browser selectors map to native semantic CSS; platform animation geometry remains distinct."
+        "Web uses the complete pinned React component CSS and original slot classes; native uses the pinned Native semantic CSS. Platform animation geometry remains distinct."
       ],
       "knownUnappliedChanges": []
     },
@@ -3673,7 +4053,7 @@
       ],
       "behaviorDeviations": [],
       "stylingDeviations": [
-        "Web slot classes and browser selectors map to native semantic CSS; platform animation geometry remains distinct."
+        "Web uses the complete pinned React component CSS and original slot classes; native uses the pinned Native semantic CSS. Platform animation geometry remains distinct."
       ],
       "knownUnappliedChanges": []
     },
@@ -3702,7 +4082,7 @@
       ],
       "behaviorDeviations": [],
       "stylingDeviations": [
-        "Web slot classes and browser selectors map to native semantic CSS; platform animation geometry remains distinct."
+        "Web uses the complete pinned React component CSS and original slot classes; native uses the pinned Native semantic CSS. Platform animation geometry remains distinct."
       ],
       "knownUnappliedChanges": []
     },
@@ -3732,7 +4112,7 @@
       ],
       "behaviorDeviations": [],
       "stylingDeviations": [
-        "Web slot classes and browser selectors map to native semantic CSS; platform animation geometry remains distinct."
+        "Web uses the complete pinned React component CSS and original slot classes; native uses the pinned Native semantic CSS. Platform animation geometry remains distinct."
       ],
       "knownUnappliedChanges": []
     },
@@ -3767,7 +4147,8 @@
       ],
       "behaviorDeviations": [],
       "stylingDeviations": [
-        "Web slot classes and browser selectors map to native semantic CSS; platform animation geometry remains distinct."
+        "Web uses the complete pinned React component CSS and original slot classes; native uses the pinned Native semantic CSS. Platform animation geometry remains distinct.",
+        "Web accent toast indicators use accent-soft-foreground to match their titles, filling the pinned React stylesheet's missing accent indicator rule."
       ],
       "knownUnappliedChanges": []
     }

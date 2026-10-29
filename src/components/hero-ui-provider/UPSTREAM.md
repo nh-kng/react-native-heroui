@@ -8,7 +8,7 @@ Stage 2 public implementation; source baseline checkpoint: `31dfac3`.
 
 - Shared direct props live in a single types module; platform refs and extension props remain distinct.
 - Existing theme effect retained; owned Native provider retains optional integrations.
-- Native-origin CSS is the authoritative semantic theme and component style system; browser selectors live in web-only.css.
+- Web retains the original React slot classes and complete pinned React CSS; native retains Native semantic component styles.
 
 ## Upgrade notes
 

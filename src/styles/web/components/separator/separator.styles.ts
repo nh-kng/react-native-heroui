@@ -7,7 +7,7 @@ import type {VariantProps} from "tailwind-variants";
 import {tv} from "tailwind-variants";
 
 const separatorVariants = tv({
-  base: "separator__root",
+  base: "separator",
   defaultVariants: {
     orientation: "horizontal",
     variant: "default",
@@ -15,7 +15,7 @@ const separatorVariants = tv({
   variants: {
     orientation: {
       horizontal: "separator--horizontal",
-      vertical: "separator__root--orientation-vertical",
+      vertical: "separator--vertical",
     },
     variant: {
       default: "separator--default",

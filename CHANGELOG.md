@@ -2,6 +2,10 @@
 
 ## Unreleased
 
+- Fixed web accent toast icons retaining the default foreground by matching the title's accent color, filling an omission in the pinned React styles.
+- Restored the complete pinned HeroUI React CSS and original web slot classes across components, including default browser tokens, animation utilities/keyframes, state styles, accordion expansion, tabs, switches, overlays, toast stacking, and skeleton shimmer. Both web-capable stylesheet entries include these styles; Native component rules are gated out of the browser. `tw-animate-css` is now a shipped dependency.
+
+- Restored web Checkbox background scaling and checkmark drawing transitions, HeroUI React control sizing, secondary styling, and control focus rings, with disabled hover guards and reduced-motion support.
 - Expanded the Expo gallery with a complete HeroUI React preview inventory, adapted public-adapter examples, visible upstream API limitations, source links, platform notes, and static coverage checks. Added agent rules requiring future component examples to follow their HeroUI documentation pages.
 - Refined web TagGroup remove buttons with a compact circular shape, matching vertical and trailing spacing, and subtle hover feedback that follows the selected tag's foreground color.
 - Restored web CloseButton defaults, SearchField and InputGroup adornment layout, TextArea field styling, toast foreground colors, and theme-aware scrollbars. Fixed duplicate TagGroup remove buttons and ordinary typography inheriting field description slots.

@@ -7,16 +7,16 @@ import type {VariantProps} from "tailwind-variants";
 import {tv} from "tailwind-variants";
 
 export const surfaceVariants = tv({
-  base: "surface__root",
+  base: "surface",
   defaultVariants: {
     variant: "default",
   },
   variants: {
     variant: {
-      default: "surface__root--variant-default",
-      secondary: "surface__root--variant-secondary",
-      tertiary: "surface__root--variant-tertiary",
-      transparent: "surface__root--variant-transparent",
+      default: "surface--default",
+      secondary: "surface--secondary",
+      tertiary: "surface--tertiary",
+      transparent: "surface--transparent",
     },
   },
 });

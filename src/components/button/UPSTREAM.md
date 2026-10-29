@@ -8,7 +8,7 @@ Stage 2 public implementation; source baseline checkpoint: `31dfac3`.
 ## Local changes
 
 - Canonical isLoading with deprecated isPending alias; loading disables actions and exposes busy state.
-- Native-origin CSS is the authoritative semantic theme and component style system; browser selectors live in web-only.css.
+- Web retains the original React slot classes and complete pinned React CSS; native retains Native semantic component styles.
 
 - Native accessibility disabled and busy flags always reflect the shared computed state, including disabled without loading.
 
