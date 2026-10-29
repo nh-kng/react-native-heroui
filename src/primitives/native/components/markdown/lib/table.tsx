@@ -1,6 +1,6 @@
 import { useLayoutEffect, useRef, useState } from 'react';
 import type { ReactNode } from 'react';
-import { ScrollView, useWindowDimensions, View } from 'react-native';
+import { useWindowDimensions, View } from 'react-native';
 import { useCSSVariable, useUniwind } from 'uniwind';
 
 import {
@@ -8,6 +8,7 @@ import {
   markdownColumnWidths,
   markdownTableMeasurementKey,
 } from './table-layout.js';
+import { MarkdownTableScroll } from './table-scroll.js';
 import { markdownClass } from '../../../../../components/markdown/markdown-presentation.js';
 import type { MarkdownClassNames } from '../../../../../components/markdown/markdown.types.js';
 import { Typography } from '../../../../../components/typography/typography.native.js';
@@ -117,15 +118,9 @@ export function MarkdownTable(props: TableProps) {
   );
   return (
     <View className={markdownClass('table', props.classNames)}>
-      <ScrollView
-        horizontal
-        nestedScrollEnabled
-        onLayout={({ nativeEvent: { layout } }) => setViewport(layout.width)}
-        contentContainerStyle={{ minWidth: '100%' }}>
-        <View>
-          <MeasuredRows measurementKey={key} {...props} viewport={viewport} />
-        </View>
-      </ScrollView>
+      <MarkdownTableScroll onViewportChange={setViewport}>
+        <MeasuredRows measurementKey={key} {...props} viewport={viewport} />
+      </MarkdownTableScroll>
     </View>
   );
 }

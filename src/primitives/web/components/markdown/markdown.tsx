@@ -13,6 +13,7 @@ import type { ComponentProps, HTMLAttributes } from 'react';
 import { jsx, jsxs } from 'react/jsx-runtime';
 
 import { createMarkdownProcessor, parseMarkdownWeb } from './parser.js';
+import { MarkdownTableScroll } from './table-scroll.js';
 import { Button } from '../../../../components/button/button.web.js';
 import { MarkdownCallout } from '../../../../components/markdown/callout.web.js';
 import { copyMarkdownCode } from '../../../../components/markdown/markdown-copy.js';
@@ -308,9 +309,9 @@ export const markdownWebComponents = {
   li: MarkdownListItem,
   table: function MarkdownTable({ node: _node, className, ...props }: ElementProps) {
     return (
-      <div className="markdown__table-scroll" tabIndex={0} role="region" aria-label="Table">
+      <MarkdownTableScroll>
         <table {...props} className={useSlot('table', className)} />
-      </div>
+      </MarkdownTableScroll>
     );
   },
   tr: element('tr', 'tableRow'),

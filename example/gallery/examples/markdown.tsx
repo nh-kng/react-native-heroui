@@ -261,6 +261,24 @@ This paragraph includes a very long token to test overflow behavior:
 
 ---
 
+## 4.5 Horizontal Scrolling
+
+The wide table below has independent left/right arrows and a persistent draggable scrollbar when it overflows. Swipe on touch screens, scroll horizontally with a trackpad, or use Shift+wheel with a mouse. Cell text remains selectable on web.
+
+| Component | Web | iOS | Android | Keyboard | Screen reader | Theme | Streaming | Content | Notes |
+|---|---|---|---|---|---|---|---|---|---|
+| Markdown | Supported | Supported | Supported | Scroll controls | Adjustable position | Light and dark | Incremental updates | **Rich text** and [links](https://heroui.com) | Scroll to read every column |
+| Tables | Semantic table | Measured rows | Measured rows | Arrows and scrollbar | Labeled controls | Shared tokens | Preserved position | Selectable web text | Controls appear only on overflow |
+
+This small table fits without scroll controls when space permits:
+
+| Key | Value |
+|---|---|
+| A | 1 |
+| B | 2 |
+
+---
+
 # 5. Code Blocks
 
 ## 5.1 TypeScript

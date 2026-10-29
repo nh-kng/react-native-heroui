@@ -8,6 +8,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 
 ### Added
 
+- Added overflow-only Markdown table controls on web and native, with paging arrows, a persistent draggable scrollbar, touch scrolling, web Shift+wheel and keyboard support, RTL offset handling, and reduced-motion support.
 - Added GitHub-style Markdown callouts on web and native, with shared marker detection, custom titles, nested content, Lucide icons, theme-aware Alert presentation, and reusable Callout exports.
 - Added LoadingText with shared text, variant, and size props, directional glyph shimmer, pulse and static modes, reduced-motion support, root/subpath exports, typed platform props and refs, documentation, and package-authored gallery examples. Native requires the new `@react-native-masked-view/masked-view` peer (`^0.3.2`); the example pins `0.3.2`.
 - Added source-owned Markdown for web and native with typed renderers, math, streaming, safe links, optional sanitized web HTML, theming, code copying, improved native rendering, gallery examples, and migration guidance. Native footnotes and bare-URL autolinking remain unsupported.

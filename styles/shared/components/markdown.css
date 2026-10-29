@@ -169,6 +169,41 @@
   .markdown__table-header {
     background-color: var(--color-surface);
   }
+  .markdown__table-controls {
+    flex-direction: row;
+    align-items: center;
+    gap: calc(var(--spacing) * 2);
+    padding-inline: calc(var(--spacing) * 2);
+    background-color: var(--color-surface);
+  }
+  .markdown__table-scroll-button {
+    color: var(--color-muted);
+    min-width: 44px;
+    min-height: 44px;
+    border-radius: var(--radius-sm);
+  }
+  .markdown__table-scroll-track {
+    position: relative;
+    flex-grow: 1;
+    flex-basis: 0;
+    height: 44px;
+  }
+  .markdown__table-scroll-rail {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 19px;
+    height: 6px;
+    border-radius: 3px;
+    background-color: var(--color-default);
+  }
+  .markdown__table-scroll-thumb {
+    position: absolute;
+    top: 18px;
+    height: 8px;
+    border-radius: 4px;
+    background-color: var(--color-muted);
+  }
   .markdown__table-header,
   .markdown__table-cell {
     padding-inline: calc(var(--spacing) * 3);

@@ -106,7 +106,8 @@
       ],
       "transformations": [
         "Strict TypeScript conversion with local .js imports; narrowed synchronous API and package integration.",
-        "Phase 2 replaces basic presentation with package typography, explicit token-based slots, and rich-content composition; structural layout remains separate from semantic styling."
+        "Phase 2 replaces basic presentation with package typography, explicit token-based slots, and rich-content composition; structural layout remains separate from semantic styling.",
+        "Added overflow-only horizontal table controls with a persistent draggable scrollbar."
       ]
     },
     {
@@ -387,7 +388,8 @@
       "kind": "authored",
       "sources": [],
       "transformations": [
-        "Locally authored Phase 2 integration for typed presentation, safe parser extensions, clipboard services, or measured native layout; no application source is copied."
+        "Locally authored Phase 2 integration for typed presentation, safe parser extensions, clipboard services, or measured native layout; no application source is copied.",
+        "Added overflow-only horizontal table controls with a persistent draggable scrollbar."
       ]
     },
     {
@@ -411,7 +413,8 @@
       "kind": "authored",
       "sources": [],
       "transformations": [
-        "Locally authored Phase 2 integration for typed presentation, safe parser extensions, clipboard services, or measured native layout; no application source is copied."
+        "Locally authored Phase 2 integration for typed presentation, safe parser extensions, clipboard services, or measured native layout; no application source is copied.",
+        "Added overflow-only horizontal table controls with a persistent draggable scrollbar."
       ]
     },
     {
@@ -468,6 +471,30 @@
       "sources": [],
       "transformations": [
         "Locally authored GitHub-style callout AST transformation using shared marker detection."
+      ]
+    },
+    {
+      "local": "src/components/markdown/markdown-table-scroll.ts",
+      "kind": "authored",
+      "sources": [],
+      "transformations": [
+        "Package-owned horizontal table scrolling, overflow controls, accessible persistent scrollbar, and platform offset handling."
+      ]
+    },
+    {
+      "local": "src/primitives/web/components/markdown/table-scroll.tsx",
+      "kind": "authored",
+      "sources": [],
+      "transformations": [
+        "Package-owned horizontal table scrolling, overflow controls, accessible persistent scrollbar, and platform offset handling."
+      ]
+    },
+    {
+      "local": "src/primitives/native/components/markdown/lib/table-scroll.tsx",
+      "kind": "authored",
+      "sources": [],
+      "transformations": [
+        "Package-owned horizontal table scrolling, overflow controls, accessible persistent scrollbar, and platform offset handling."
       ]
     }
   ],

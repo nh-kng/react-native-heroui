@@ -182,6 +182,12 @@ test('Markdown defaults compile into the web stylesheet with scoped slots and se
   assert.match(css, /\.markdown__code-text\s*\{[^}]*overflow-x: auto/);
   assert.match(css, /\.markdown__quote\s*\{[^}]*border-inline-start-width: 3px/);
   assert.match(css, /\.markdown__table-scroll\s*\{[^}]*overflow-x: auto/);
+  assert.match(css, /\.markdown__table-scroll\s*\{[^}]*scrollbar-width: none/);
+  assert.match(css, /\.markdown__table\s*\{[^}]*width: max-content;[^}]*min-width: 100%/);
+  assert.match(css, /\.markdown__table-controls\[hidden\]\s*\{[^}]*display: none/);
+  assert.match(css, /\.markdown__table-scroll-track\s*\{[^}]*touch-action: none/);
+  assert.match(css, /\.markdown__table-scroll-thumb\s*\{[^}]*background-color: var\(--color-muted\)/);
+  assert.ok(css.includes('.markdown__table-scroll-track:focus-visible'));
   assert.match(css, /\.markdown__link\s*\{[^}]*color: var\(--color-link\)/);
   const shared = readFileSync(path.join(root, 'styles/shared/components/index.css'), 'utf8');
   assert.ok(shared.includes("@import './markdown.css'"));

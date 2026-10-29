@@ -167,8 +167,20 @@
   .markdown__task-check { display: none; border-style: solid; border-top-width: 0; border-left-width: 0; pointer-events: none; }
   .markdown__task-marker:checked + .markdown__task-check { display: block; }
   .markdown__list-item::marker { color: var(--color-muted); }
-  .markdown__table-scroll { max-width: 100%; overflow-x: auto; }
-  .markdown__table { width: 100%; border-collapse: collapse; }
+  .markdown__table-container { min-width: 0; max-width: 100%; margin-block: calc(var(--spacing) * 3); }
+  .markdown__table-scroll { min-width: 0; max-width: 100%; overflow-x: auto; scrollbar-width: none; }
+  .markdown__table-scroll::-webkit-scrollbar { display: none; }
+  .markdown__table { width: max-content; min-width: 100%; margin-block: 0; border-collapse: collapse; }
+  .markdown__table-controls { display: flex; direction: ltr; border-radius: var(--radius-sm); }
+  .markdown__table-controls[hidden] { display: none; }
+  .markdown__table-scroll-track { min-width: 0; touch-action: none; user-select: none; cursor: pointer; }
+  .markdown__table-scroll-thumb { pointer-events: none; }
+  .markdown__table-scroll-rail { pointer-events: none; }
+  .markdown__table-scroll-button { display: inline-flex; align-items: center; justify-content: center; border: 0; background: transparent; cursor: pointer; font-size: 24px; }
+  .markdown__table-scroll-button:disabled { opacity: .4; cursor: default; }
+  .markdown__table-scroll-track:focus-visible,
+  .markdown__table-scroll-button:focus-visible,
+  .markdown__table-scroll:focus-visible { outline: 2px solid var(--color-accent); outline-offset: -2px; }
   .markdown__table-header { font-weight: 600; }
   .markdown__table-header,
   .markdown__table-cell { text-align: start; vertical-align: top; }

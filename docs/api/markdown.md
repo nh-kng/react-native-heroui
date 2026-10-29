@@ -99,7 +99,15 @@ Single-dollar math remains disabled so currency stays literal. Escaped delimiter
 
 Unordered lists use enlarged foreground bullets at every nesting level. Read-only task markers use HeroUI field backgrounds, rounded corners, and field shadows, with an accent fill and contrasting checkmark for completed tasks. Their checked state comes from the Markdown source; they do not toggle on press.
 
-Native columns measure text-source previews without mounting duplicate custom engines or images, using a 64-unit minimum and 480-unit natural-width cap; spare container width is distributed across columns. Measurement state resets for content, width, font scale, relevant theme font metrics, and slot changes. Native image loading and measured layout are not established by static checks. Intentionally customized or engine-rendered table content requires runtime layout review.
+### Table scrolling
+
+Tables scroll horizontally within the available width on web and native. Overflowing tables show a bottom strip with left/right arrows and a persistent draggable scrollbar. Arrows move 80% of the viewport and disable at their corresponding boundary; pressing the track pages toward that position. The thumb represents the visible proportion of the table, with a 24-unit minimum where space permits. Tables that fit hide the strip.
+
+Use touch swipes, browser horizontal wheel/trackpad input, Shift+wheel, arrow buttons, or thumb dragging. Vertical wheel input continues scrolling the page, and web cell content retains normal text selection and link behavior. Web scrollbar keyboard controls support Left/Right, Page Up/Down, Home, and End; native exposes an adjustable accessibility control. Arrow and track paging respect reduced motion. Controls follow scrolling, resizing, and content changes, preserving the current position where possible and clamping when content shrinks. Each table has independent state.
+
+The native scroll viewport uses physical left-to-right coordinates while the inner table preserves the provider's reading direction; RTL tables initially show their right edge. Web normalizes RTL browser offsets. The custom scrollbar replaces the platform indicator so it remains visible during overflow regardless of operating-system scrollbar preferences. These controls are internal and add no public props or slots.
+
+Native columns measure text-source previews without mounting duplicate custom engines or images, using a 64-unit minimum and 480-unit natural-width cap; spare container width is distributed across columns. Measurement state resets for content, width, font scale, relevant theme font metrics, and slot changes. Native image loading and measured layout are not established by static checks. Intentionally customized or engine-rendered table content requires runtime layout review. Gesture fidelity, rendered accessibility, and RTL layout still require host runtime review; static checks do not establish them.
 
 ## URLs and HTML
 
