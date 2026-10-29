@@ -1,0 +1,55 @@
+@layer components {
+  .loading-text {
+    display: inline-block;
+    max-width: 100%;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    font-weight: 400;
+    color: var(--muted);
+    background-color: transparent;
+  }
+
+  .loading-text--sm { font-size: 14px; line-height: 20px; }
+  .loading-text--md { font-size: 16px; line-height: 24px; }
+  .loading-text--lg { font-size: 18px; line-height: 28px; }
+
+  @supports (background-clip: text) or (-webkit-background-clip: text) {
+    .loading-text[data-variant="shimmer"] {
+      background-image: linear-gradient(100deg, var(--muted) 0%, var(--muted) 40%, var(--foreground) 50%, var(--muted) 60%, var(--muted) 100%);
+      background-size: 300% 100%;
+      background-repeat: no-repeat;
+      background-position: 100% center;
+      background-clip: text;
+      -webkit-background-clip: text;
+      color: transparent;
+      animation: loading-text-shimmer 2s linear infinite;
+    }
+
+    .loading-text[data-variant="shimmer"]:dir(rtl) { animation-direction: reverse; }
+  }
+
+  .loading-text[data-variant="pulse"] {
+    color: var(--foreground);
+    animation: loading-text-pulse 2s ease-in-out infinite;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .loading-text[data-variant] {
+      animation: none;
+      background-image: none;
+      color: var(--muted);
+      opacity: 1;
+    }
+  }
+}
+
+@keyframes loading-text-shimmer {
+  from { background-position: 100% center; }
+  to { background-position: 0% center; }
+}
+
+@keyframes loading-text-pulse {
+  0%, 100% { opacity: 0.45; }
+  50% { opacity: 1; }
+}

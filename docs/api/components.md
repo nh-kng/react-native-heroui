@@ -96,12 +96,44 @@ All the families below are exported from the root and their kebab-case subpaths.
 | `Surface` | `variant`: default, secondary, tertiary, transparent | Root |
 | `Separator` | `orientation`: horizontal or vertical | Root |
 | `Spinner` | `size`: sm, md, lg; `color`: accent, success, warning, danger; `isLoading` | Root |
+| `LoadingText` | `text`; `variant`: shimmer, pulse, none; `size`: sm, md, lg | Root |
 | `Skeleton` | `isLoading`, default true; children appear when false | Root |
 | `Avatar` | `size`: sm, md, lg; `color`: default, accent, success, warning, danger | Root, Image, Fallback |
 | `Alert` | `status`: default, accent, success, warning, danger | Root, Indicator, Content, Title, Description |
 | `CloseButton` | `isDisabled`, `onPress` | Root |
 
 Avatar defaults to medium/accent; Image requires a `src` URI and `alt` text, mapped to native `source` and `accessibilityLabel`. Use Fallback for initials or an image failure. Spinner's accent maps to the native upstream default color. Spinner defaults to medium/accent and returns no content when `isLoading={false}`. Skeleton has no native ref because the pinned native implementation does not forward one. Platform animation and additional upstream visual options remain in the typed platform props.
+
+## `LoadingText`
+
+`LoadingText` is a package-authored loading status for short single-line labels, inspired by Skeleton's shimmer and pulse. It is exported from the root and `/loading-text`; `LoadingText.Root` aliases the component. The text stays visible over a transparent background, with no rectangular placeholder.
+
+| Prop | Values | Default |
+| --- | --- | --- |
+| `text` | String | `"Thinking"` |
+| `variant` | `shimmer`, `pulse`, `none` | `shimmer` |
+| `size` | `sm`, `md`, `lg` | `sm` |
+| `className` | Text typography classes | — |
+| `webProps` | Typed span attributes, excluding owned props and refs | — |
+| `nativeProps` | Typed View props, excluding owned props and refs | — |
+
+Sizes use regular-weight 14/20px, 16/24px, and 18/28px typography respectively. `className` customizes text typography, including font family and size; semantic animation colors are owned by the component. Use `nativeProps.style` for native root layout. `LoadingTextRef` is an `HTMLSpanElement` on web and a React Native `View` on native. No common imperative handle is introduced.
+
+Shimmer uses muted text with a broad foreground highlight, repeating every two seconds with linear timing in the reading direction. Web clips a CSS gradient to text, falling back to static muted text when text clipping is unavailable. Native uses normal text with a static glyph mask and a moving SVG highlight, preserving provider text configuration and font scaling. Pulse gently fades the whole foreground label over a two-second cycle. `none` renders static muted text. System reduced motion disables both effects; native also follows the existing provider and inherited animation-disable settings. Web reacts to preference changes through its media query. Native uses the initial system preference through the existing Reanimated provider, matching Skeleton; changing that preference requires restarting the app to update Reanimated's cached value. The provider's native configuration is ignored on web, as with other platform options.
+
+The native implementation requires the `@react-native-masked-view/masked-view` peer; the example pins `0.3.2`. Follow [installation](../getting-started/installation.md) and rebuild a native host when adding a native dependency. The text mask stays static while the gradient contents move, so Android uses the library's default hardware rendering mode. Expo documents MaskedView Android support as experimental; see the [Expo MaskedView reference](https://docs.expo.dev/versions/v57.0.0/sdk/masked-view/).
+
+Only string labels are supported. Line breaks become spaces and long labels truncate to one line. Empty text stays empty and does not animate. Rich children and multiline content are outside this API. Render or unmount the component with your application's loading state; `variant="none"` changes the effect without hiding the label.
+
+Web defaults to `role="status"` with polite, atomic live-region semantics. Native exposes one accessible text label on its root with a polite live region where supported; visual text and mask copies are hidden from accessibility. Platform options can customize the accessible name. Native live-region announcements depend on the platform and assistive technology. Animation rendering, native compilation, and screen-reader behavior have not been runtime-verified.
+
+```tsx
+import { LoadingText } from '@nh-kng/react-native-heroui';
+
+<LoadingText text="Thinking" variant="shimmer" size="sm" />;
+<LoadingText text="Generating response" variant="pulse" />;
+<LoadingText text="Waiting for input" variant="none" />;
+```
 
 ## Selection controls
 

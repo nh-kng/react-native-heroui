@@ -23,6 +23,28 @@ after(() => {
   if (directory) rmSync(directory, { recursive: true, force: true });
 });
 
+test('loading text compiles a glyph gradient, reading-direction reversal, and a static reduced-motion fallback', () => {
+  assert.match(css, /\.loading-text\s*\{[^}]*color: var\(--muted\)/);
+  assert.match(css, /\.loading-text--sm\s*\{[^}]*font-size: 14px;[^}]*line-height: 20px/);
+  assert.match(css, /\.loading-text--md\s*\{[^}]*font-size: 16px;[^}]*line-height: 24px/);
+  assert.match(css, /\.loading-text--lg\s*\{[^}]*font-size: 18px;[^}]*line-height: 28px/);
+  assert.match(css, /@supports[^{}]*background-clip: text/);
+  assert.match(css, /\.loading-text\[data-variant="shimmer"\]\s*\{[^}]*background-image: linear-gradient\([^;]+var\(--foreground\)[^;]+;[^}]*color: #0000;[^}]*animation: 2s linear infinite loading-text-shimmer/);
+  const shimmer = css.match(/\.loading-text\[data-variant="shimmer"\]\s*\{([^}]+)\}/)?.[1];
+  assert.ok(shimmer);
+  assert.ok(shimmer.includes('background-size: 300% 100%'));
+  assert.ok(shimmer.includes('background-repeat: no-repeat'));
+  assert.match(css, /@keyframes loading-text-shimmer\s*\{\s*(?:0%|from)\s*\{\s*background-position: 100%[^}]+\}\s*(?:100%|to)\s*\{\s*background-position: 0(?:%|px)?(?: (?:center|50%))?;/);
+  assert.match(css, /\.loading-text\[data-variant="shimmer"\]:dir\(rtl\)\s*\{\s*animation-direction: reverse/);
+  const reducedMotion = css.match(/@media \(prefers-reduced-motion: reduce\)\s*\{\s*\.loading-text\[data-variant\]\s*\{([^}]+)\}/)?.[1];
+  assert.ok(reducedMotion);
+  for (const declaration of ['animation: none', 'background-image: none', 'color: var(--muted)', 'opacity: 1']) {
+    assert.ok(reducedMotion.includes(declaration), declaration);
+  }
+  assert.ok(css.includes('@keyframes loading-text-shimmer'));
+  assert.ok(css.includes('@keyframes loading-text-pulse'));
+});
+
 test('the compiled stylesheet uses the default blue accent without purple brand overrides', () => {
   const accents = [...css.matchAll(/--accent:\s*([^;]+);/g)].map((match) => match[1]);
   assert.ok(accents.length >= 1);
