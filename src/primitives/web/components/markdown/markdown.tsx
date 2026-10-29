@@ -14,6 +14,7 @@ import { jsx, jsxs } from 'react/jsx-runtime';
 
 import { createMarkdownProcessor, parseMarkdownWeb } from './parser.js';
 import { Button } from '../../../../components/button/button.web.js';
+import { MarkdownCallout } from '../../../../components/markdown/callout.web.js';
 import { copyMarkdownCode } from '../../../../components/markdown/markdown-copy.js';
 import { shouldOpenMarkdownLink } from '../../../../components/markdown/markdown-policy.js';
 import { markdownClass } from '../../../../components/markdown/markdown-presentation.js';
@@ -284,6 +285,11 @@ function MarkdownCode({
 }
 
 export const markdownWebComponents = {
+  div: function MarkdownContainer({ node, ...props }: ElementProps) {
+    const context = useContext(renderingContext);
+    const callout = node && context?.document.callouts.get(node);
+    return callout ? <MarkdownCallout {...callout} classNames={context?.options.classNames}>{props.children}</MarkdownCallout> : <div {...props} />;
+  },
   h1: heading('h1'),
   h2: heading('h2'),
   h3: heading('h3'),

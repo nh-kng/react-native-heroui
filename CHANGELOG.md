@@ -2,6 +2,10 @@
 
 ## Unreleased
 
+- Added GitHub-style Markdown callouts on web and native, with shared marker detection, custom titles, nested content, Lucide icons, theme-aware Alert presentation, and reusable Callout exports.
+
+- Aligned Markdown blockquote and table corners with the large radius used by code blocks on web and native.
+
 - Enlarged Markdown list bullets and refined read-only task markers with HeroUI field surfaces, rounded corners, and accent checkmarks on web and native.
 
 - Added LoadingText with shared text, variant, and size props, directional glyph shimmer, pulse and static modes, reduced-motion support, root/subpath exports, typed platform props and refs, documentation, and package-authored gallery examples. Native requires the new `@react-native-masked-view/masked-view` peer (`^0.3.2`); the example pins `0.3.2`.

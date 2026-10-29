@@ -8,6 +8,8 @@ import { visit } from 'unist-util-visit';
 import { VFile } from 'vfile';
 
 import type { MarkdownMetadata } from './markdown.types.js';
+import { calloutHandler, transformWebCallouts } from './plugins/callouts.js';
+import type { CalloutMetadata } from '../../../../components/markdown/callout.types.js';
 import remarkDelimiters, { normalizeBracketMath } from './plugins/delimiters.js';
 import remarkGfm from './plugins/gfm.js';
 import remarkMath from './plugins/math.js';
@@ -21,7 +23,7 @@ export function createMarkdownProcessor(allowRawHtml = false) {
     .use(remarkGfm)
     .use(remarkMath, { singleDollarTextMath: false })
     .use(remarkDelimiters)
-    .use(remarkRehype, { allowDangerousHtml: true });
+    .use(remarkRehype, { allowDangerousHtml: true, handlers: { callout: calloutHandler } });
   if (allowRawHtml) processor.use(rehypeRaw).use(rehypeSanitize);
   return processor.freeze();
 }
@@ -32,10 +34,14 @@ export function parseMarkdownWeb(
   processor = createMarkdownProcessor()
 ) {
   const file = new VFile(source);
-  const mdast = processor.parse(file);
+  const mdast = transformWebCallouts(processor.parse(file), source, (masked) => processor.parse(masked));
   normalizeBracketMath(mdast, source);
+  const calloutMetadata = new Map<number, CalloutMetadata>();
   const metadata = new Map<number, MarkdownMetadata>();
   function annotate(parent: MdastRoot | RootContent, path: string) {
+    if (parent.type === 'callout' && parent.position?.start.offset !== undefined) {
+      calloutMetadata.set(parent.position.start.offset, parent.callout);
+    }
     if (parent.type === 'code' || parent.type === 'math' || parent.type === 'inlineMath') {
       const start = parent.position?.start.offset;
       const end = parent.position?.end.offset;
@@ -64,6 +70,7 @@ export function parseMarkdownWeb(
   annotate(mdast, 'markdown');
   const tree: Root = processor.runSync(mdast, file);
   const elements = new WeakMap<Element, MarkdownMetadata>();
+  const callouts = new WeakMap<Element, CalloutMetadata>();
   visit(tree, (node, index, parent) => {
     if (node.type === 'raw' && parent && typeof index === 'number') {
       parent.children[index] = { type: 'text', value: node.value };
@@ -71,6 +78,8 @@ export function parseMarkdownWeb(
     }
     if (node.type !== 'element') return undefined;
     const start = node.position?.start.offset;
+    const callout = start === undefined ? undefined : calloutMetadata.get(start);
+    if (callout && node.tagName === 'div') callouts.set(node, callout);
     const info = start === undefined ? undefined : metadata.get(start);
     if (info && ['pre', 'code', 'div'].includes(node.tagName)) elements.set(node, info);
     for (const key of Object.keys(urlAttributes)) {
@@ -81,5 +90,5 @@ export function parseMarkdownWeb(
     }
     return undefined;
   });
-  return { tree, elements, metadata };
+  return { tree, elements, metadata, callouts };
 }

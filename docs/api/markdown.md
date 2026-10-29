@@ -38,6 +38,8 @@ Platform props are ignored on the inactive platform. Children, root class names,
 
 Package slot classes precede explicit slot classes, merged with the package's Tailwind class convention. Root `className` follows `classNames.root`; platform root styles override root styling. Root overrides do not recursively restyle all child slots. Custom renderer output owns its internal presentation; use the supplied presentation class intentionally. Table header and cell slots style cell containers; native text weight is supplied by Typography. Inline slots must preserve text flow.
 
+Blockquotes and tables use the same large radius token (`--radius-lg`) as code blocks on web and native. Override `classNames.quote` or `classNames.table` to customize their corners.
+
 ```tsx
 <Markdown
   classNames={{ heading: 'text-accent', quote: 'bg-accent-soft border-accent' }}
@@ -125,3 +127,35 @@ Static builds, typing, parser/rule contracts, clipboard service boundaries, URL/
 8. Run host runtime accessibility, clipboard, table/image layout, RTL, and streaming checks separately before claiming application parity.
 
 For source pins and upgrade procedures, see [Markdown provenance](../upstream/markdown.md).
+
+## Callouts
+
+Markdown automatically recognizes `NOTE`, `TIP`, `IMPORTANT`, `WARNING`, and `CAUTION` on the first line of a blockquote. Markers are case-sensitive and must occupy the line, optionally followed by spaces or tabs and a custom title. Unknown markers, escaped markers, markers inside code, and markers after introductory quote content remain ordinary Markdown. Separate callouts follow CommonMark blockquote boundaries: use an unquoted blank line between them.
+
+```markdown
+> [!NOTE] Authentication
+> Access tokens expire after **30 minutes**.
+>
+> Refresh your token before making another request.
+>
+> - Store tokens securely.
+> - Never expose credentials.
+```
+
+Callouts retain nested paragraphs, lists, links, inline formatting, and fenced code, including existing code-rendering and copy callbacks. They have a static icon/title header and an expanded body. Titles are plain text; default labels are Note, Tip, Important, Warning, and Caution. Supply a custom title for localized content. Empty callouts display their header only.
+
+`Callout`, `CalloutType`, and `CalloutProps` are exported from the package root and `@nh-kng/react-native-heroui/markdown`. `Callout` accepts `type: 'note' | 'tip' | 'important' | 'warning' | 'caution'`, optional `title: string`, and required `children: React.ReactNode` for direct composition.
+
+```tsx
+import { Callout, Typography } from '@nh-kng/react-native-heroui';
+
+<Callout type="tip" title="Keep it secure">
+  <Typography.Paragraph>Store tokens securely.</Typography.Paragraph>
+</Callout>;
+```
+
+Callouts follow Alert typography, spacing, and radius tokens, with subtle backgrounds and semantic borders. Note and Important keep blue and purple identities independently of the app accent through `--callout-note` and `--callout-important`; both have light/dark defaults. Override these variables, or their optional `-soft` and `-foreground` variants, in your theme. Tip, Warning, and Caution use the existing success, warning, and danger tokens. Body text uses the regular Markdown foreground. The `callout`, `calloutHeader`, `calloutIcon`, `calloutTitle`, and `calloutBody` class-name slots customize Markdown callout presentation.
+
+Parser parity, component composition, public types, and theme-token wiring are checked statically. Browser/device appearance, assistive-technology behavior, and native compilation have not been runtime-verified.
+
+Callout recognition uses each parser’s blockquote AST and shared marker rules. For recognized markers, a second parse masks the title-line characters while preserving line breaks and source offsets, then removes the marker line. Paragraph placeholders retain CommonMark lazy continuations inside their original blockquote. This keeps custom titles separate from body formatting and preserves code-block metadata without replacing either platform’s parser.

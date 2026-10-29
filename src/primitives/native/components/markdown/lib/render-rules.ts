@@ -5,7 +5,7 @@ export const nativeMarkdownTextRules = new Set([
 
 export const nativeMarkdownBlockRules = new Set([
   'body', 'heading1', 'heading2', 'heading3', 'heading4', 'heading5', 'heading6',
-  'hr', 'blockquote', 'bullet_list', 'ordered_list', 'list_item', 'code_block',
+  'hr', 'blockquote', 'callout', 'bullet_list', 'ordered_list', 'list_item', 'code_block',
   'fence', 'table', 'thead', 'tbody', 'th', 'tr', 'td', 'blocklink', 'image',
   'paragraph', 'pre', 'math_block',
 ]);

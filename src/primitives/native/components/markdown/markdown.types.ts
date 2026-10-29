@@ -1,5 +1,7 @@
 import type MarkdownIt from 'markdown-it';
 
+import type { CalloutMetadata } from '../../../../components/markdown/callout.types.js';
+
 export type ParserToken = ReturnType<MarkdownIt['parse']>[number];
 
 export interface MarkdownToken {
@@ -17,6 +19,7 @@ export interface MarkdownToken {
 }
 
 export interface ASTNode {
+  callout?: CalloutMetadata;
   type: string;
   sourceType: string;
   sourceInfo: string;

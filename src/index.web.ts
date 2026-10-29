@@ -44,5 +44,6 @@ export * from './components/popover/index.web.js';
 export * from './components/select/index.web.js';
 export * from './components/toast/index.web.js';
 
-export { Markdown } from './components/markdown/index.web.js';
+export { Markdown, Callout } from './components/markdown/index.web.js';
+export type { CalloutType, CalloutProps } from './components/markdown/callout.types.js';
 export type * from './components/markdown/markdown.types.js';

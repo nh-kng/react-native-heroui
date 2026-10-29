@@ -40,3 +40,13 @@ export const invalidAsync: MarkdownProps = { children: '', renderMath: async () 
 export const invalidSlot: MarkdownProps = { children: '', classNames: { imaginary: 'x' } };
 // @ts-expect-error Copy services must complete without returning replacement content.
 export const invalidCopy: MarkdownProps = { children: '', onCopyCode: () => 'copied' };
+
+import { Callout, type CalloutProps, type CalloutType } from '@nh-kng/react-native-heroui';
+import { Callout as MarkdownCallout } from '@nh-kng/react-native-heroui/markdown';
+const calloutType: CalloutType = 'important';
+const calloutProps: CalloutProps = { type: calloutType, title: 'Notice', children: <Markdown>**body**</Markdown> };
+export const callouts = <><Callout {...calloutProps} /><MarkdownCallout type="note">Body</MarkdownCallout><Markdown classNames={{ callout: 'my-4', calloutHeader: 'gap-3', calloutIcon: 'p-1', calloutTitle: 'text-lg', calloutBody: 'mt-3' }}>{'> [!TIP]\n> Body'}</Markdown></>;
+// @ts-expect-error Callouts require a supported semantic type.
+export const invalidCallout = <Callout type="info">Body</Callout>;
+// @ts-expect-error Callouts require children, including null for an empty body.
+export const missingCalloutChildren = <Callout type="note" />;

@@ -4,7 +4,9 @@ import {
   Typography,
   type ColorScheme,
 } from '@nh-kng/react-native-heroui';
-import { ScrollView, View } from 'react-native';
+import { Platform, ScrollView, View } from 'react-native';
+
+const navigationItemHeight = Platform.OS === 'web' ? 'h-10 md:h-9' : 'h-12';
 
 export const components = [
   'Accordion',
@@ -74,8 +76,8 @@ export function Navigation({
             onPress={() => onSelect(name)}
             className={
               selected === name
-                ? 'w-full rounded-xl bg-surface px-3 py-3'
-                : 'w-full rounded-xl px-3 py-3'
+                ? `w-full ${navigationItemHeight} justify-center rounded-xl bg-surface px-3`
+                : `w-full ${navigationItemHeight} justify-center rounded-xl px-3`
             }>
             <PressableFeedback.Highlight />
             <Typography.Paragraph color={selected === name ? 'default' : 'muted'}>

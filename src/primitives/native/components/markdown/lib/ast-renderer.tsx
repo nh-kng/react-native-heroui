@@ -8,6 +8,7 @@ import { nativeMarkdownRule } from './render-rules.js';
 import { markdownMonospace, markdownStructure } from './styles.js';
 import { MarkdownTable } from './table.js';
 import { Button } from '../../../../../components/button/button.native.js';
+import { MarkdownCallout } from '../../../../../components/markdown/callout.native.js';
 import { copyMarkdownCode } from '../../../../../components/markdown/markdown-copy.js';
 import {
   isNativeMarkdownUrl,
@@ -118,6 +119,8 @@ export function renderMarkdownNative(
     };
     const children = (inside = false) =>
       node.children.map((child) => render(child, [node, ...parents], inside, textStyle));
+    if (node.type === 'callout' && node.callout)
+      return <MarkdownCallout key={node.key} {...node.callout} classNames={options.classNames}>{node.children.length ? children() : null}</MarkdownCallout>;
     if (node.type === 'image')
       return (
         <MarkdownImage

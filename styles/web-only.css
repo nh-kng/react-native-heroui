@@ -2,7 +2,24 @@
 @import "./loading-text.css";
 @import "./shared/components/markdown.css";
 
+@theme inline static {
+  --color-callout-note: var(--callout-note);
+  --color-callout-note-soft: var(--callout-note-soft, color-mix(in oklab, var(--callout-note) 12%, transparent));
+  --color-callout-note-foreground: var(--callout-note-foreground, color-mix(in oklab, var(--callout-note) 80%, var(--foreground) 20%));
+  --color-callout-important: var(--callout-important);
+  --color-callout-important-soft: var(--callout-important-soft, color-mix(in oklab, var(--callout-important) 12%, transparent));
+  --color-callout-important-foreground: var(--callout-important-foreground, color-mix(in oklab, var(--callout-important) 80%, var(--foreground) 20%));
+}
+
 @layer base {
+  :root, :host {
+    --callout-note: oklch(0.6204 0.195 253.83);
+    --callout-important: oklch(0.58 0.22 300);
+  }
+  .dark, [data-theme="dark"], :host(.dark), :host([data-theme="dark"]) {
+    --callout-note: oklch(0.74 0.14 253.83);
+    --callout-important: oklch(0.76 0.16 300);
+  }
   :root { color-scheme: light; }
   :root.light { color-scheme: light; }
   :root.dark { color-scheme: dark; }

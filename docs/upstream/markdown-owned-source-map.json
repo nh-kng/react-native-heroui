@@ -413,6 +413,62 @@
       "transformations": [
         "Locally authored Phase 2 integration for typed presentation, safe parser extensions, clipboard services, or measured native layout; no application source is copied."
       ]
+    },
+    {
+      "local": "src/components/markdown/callout-icons.ts",
+      "kind": "authored",
+      "sources": [],
+      "transformations": [
+        "Locally authored cross-platform callout presentation and public contract; Lucide SVG geometry retains its license notice."
+      ]
+    },
+    {
+      "local": "src/components/markdown/callout-presentation.ts",
+      "kind": "authored",
+      "sources": [],
+      "transformations": [
+        "Locally authored cross-platform callout presentation and public contract; Lucide SVG geometry retains its license notice."
+      ]
+    },
+    {
+      "local": "src/components/markdown/callout.native.tsx",
+      "kind": "authored",
+      "sources": [],
+      "transformations": [
+        "Locally authored cross-platform callout presentation and public contract; Lucide SVG geometry retains its license notice."
+      ]
+    },
+    {
+      "local": "src/components/markdown/callout.types.ts",
+      "kind": "authored",
+      "sources": [],
+      "transformations": [
+        "Locally authored cross-platform callout presentation and public contract; Lucide SVG geometry retains its license notice."
+      ]
+    },
+    {
+      "local": "src/components/markdown/callout.web.tsx",
+      "kind": "authored",
+      "sources": [],
+      "transformations": [
+        "Locally authored cross-platform callout presentation and public contract; Lucide SVG geometry retains its license notice."
+      ]
+    },
+    {
+      "local": "src/components/markdown/markdown-callouts.ts",
+      "kind": "authored",
+      "sources": [],
+      "transformations": [
+        "Locally authored GitHub-style callout AST transformation using shared marker detection."
+      ]
+    },
+    {
+      "local": "src/primitives/web/components/markdown/plugins/callouts.ts",
+      "kind": "authored",
+      "sources": [],
+      "transformations": [
+        "Locally authored GitHub-style callout AST transformation using shared marker detection."
+      ]
     }
   ],
   "exclusions": [

@@ -43,6 +43,13 @@
   --color-warning: var(--warning);
   --color-warning-foreground: var(--warning-foreground);
 
+  --color-callout-note: var(--callout-note);
+  --color-callout-note-soft: var(--callout-note-soft, color-mix(in oklab, var(--callout-note) 12%, transparent));
+  --color-callout-note-foreground: var(--callout-note-foreground, color-mix(in oklab, var(--callout-note) 80%, var(--foreground) 20%));
+  --color-callout-important: var(--callout-important);
+  --color-callout-important-soft: var(--callout-important-soft, color-mix(in oklab, var(--callout-important) 12%, transparent));
+  --color-callout-important-foreground: var(--callout-important-foreground, color-mix(in oklab, var(--callout-important) 80%, var(--foreground) 20%));
+
   --color-danger: var(--danger);
   --color-danger-foreground: var(--danger-foreground);
 

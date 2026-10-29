@@ -239,6 +239,7 @@ const boundaryModules = {
   'button.native.js': `export const Button = Object.assign(function Button(){}, { Label: 'Button.Label' });`,
   'typography.native.js': `export const Typography = { Heading: 'Typography.Heading', Paragraph: 'Typography.Paragraph' };`,
   'separator.native.js': `export const Separator = 'Separator';`,
+  'callout.native.js': `export const MarkdownCallout = 'MarkdownCallout';`,
   './image.js': `export const MarkdownImage = 'MarkdownImage';`,
   './table.js': `export const MarkdownTable = 'MarkdownTable';`,
 };

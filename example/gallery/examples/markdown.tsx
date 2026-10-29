@@ -951,6 +951,36 @@ The implementation should preserve the original Markdown semantics while adaptin
 
 **End of Markdown Showcase.**
 `;
+const callouts = `
+> [!NOTE] Authentication
+> Access tokens expire after **30 minutes**.
+>
+> Refresh your token before making [another request](https://heroui.com).
+>
+> - Store tokens securely.
+> - Never expose credentials.
+
+> [!TIP]
+> Cache reusable data to reduce unnecessary requests.
+
+> [!IMPORTANT]
+> Read the migration guide before upgrading.
+
+> [!WARNING] Be Careful
+> Review this command before running it:
+>
+> \`\`\`sh
+> npm install
+> \`\`\`
+
+> [!CAUTION]
+> Deleting a token immediately revokes its access.
+
+> This remains a regular blockquote.
+
+> [!UNKNOWN]
+> Unsupported markers remain ordinary blockquotes.
+`;
 const streamed = '```ts\nconst message = "Still arriving";\n```';
 
 export function MarkdownExamples() {
@@ -965,6 +995,12 @@ export function MarkdownExamples() {
           until an engine is configured.
         </Typography.Paragraph>
         <Markdown>{rich}</Markdown>
+      </PreviewSection>
+      <PreviewSection title="Markdown callouts">
+        <Typography.Paragraph type="body-sm" color="muted">
+          GitHub-style alerts use HeroUI surfaces and semantic colors. Use Appearance to compare light and dark modes.
+        </Typography.Paragraph>
+        <Markdown>{callouts}</Markdown>
       </PreviewSection>
       <PreviewSection title="Intentional slot customization">
         <Button variant="secondary" onPress={() => setCustom(!custom)}>
