@@ -8,6 +8,7 @@ Stage 2 public implementation; source baseline checkpoint: `31dfac3`.
 ## Local changes
 
 - Heading and paragraph types map to semantic web elements.
+- Ordinary web typography clears the inherited React Aria TextContext so field description/error contexts do not claim prefix, suffix, or other incidental text; an explicit slot retains the inherited context.
 - Native-origin CSS is the authoritative semantic theme and component style system; browser selectors live in web-only.css.
 
 ## Upgrade notes

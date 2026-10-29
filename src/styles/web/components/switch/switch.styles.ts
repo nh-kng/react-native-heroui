@@ -11,9 +11,9 @@ export const switchVariants = tv({
     size: "md",
   },
   slots: {
-    base: "switch",
+    base: "switch-field",
     content: "switch__content",
-    control: "switch__control",
+    control: "switch__root",
     icon: "switch__icon",
     thumb: "switch__thumb",
   },

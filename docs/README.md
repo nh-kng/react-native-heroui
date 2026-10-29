@@ -23,5 +23,6 @@ This index covers package setup, the owned public components, styling, platform 
 - [Upstream baselines](upstream/README.md) — owned source imports, pinned revisions, licenses, inventory, builds, and controlled synchronization.
 - [Development setup](development/setup.md) — workspace commands and repository layout.
 - [Testing](development/testing.md) — static checks and prohibited runtime checks.
+- [Component examples](development/component-examples.md) — HeroUI documentation previews, gallery coverage, and public API gaps.
 - [Compatibility](development/compatibility.md) — declared peers and the example's pinned versions.
 - [Release](development/release.md) — package-content review and release preparation.

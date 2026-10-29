@@ -14,8 +14,8 @@ export const selectVariants = tv({
   slots: {
     base: "select",
     clearButton: "select__clear-button",
-    indicator: "select__indicator",
-    popover: "select__popover",
+    indicator: "select__trigger-indicator",
+    popover: "select__content",
     trigger: "select__trigger",
     value: "select__value",
   },

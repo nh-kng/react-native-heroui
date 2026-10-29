@@ -10,7 +10,7 @@ export const radioVariants = tv({
   slots: {
     base: "radio",
     content: "radio__content",
-    control: "radio__control",
+    control: "radio__root",
     indicator: "radio__indicator",
   },
 });

@@ -8,11 +8,11 @@ import {tv} from "tailwind-variants";
 
 export const sliderVariants = tv({
   slots: {
-    base: "slider",
+    base: "slider__root",
     fill: "slider__fill",
     marks: "slider__marks",
-    output: "slider__output",
-    thumb: "slider__thumb",
+    output: "slider__output-text",
+    thumb: "slider__thumb-knob",
     track: "slider__track",
   },
 });

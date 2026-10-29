@@ -3,7 +3,9 @@
  * Modified locally for owned imports, contracts, or shared styling.
  * Upstream license notice: docs/upstream/licenses/heroui-native.txt.
  */
-import type { BottomSheetViewProps } from '@gorhom/bottom-sheet/lib/typescript/components/bottomSheetView/types';
+import type { BottomSheetView } from '@gorhom/bottom-sheet';
+import type { ComponentProps } from 'react';
+type BottomSheetViewProps = ComponentProps<typeof BottomSheetView>;
 import type { ReactNode } from 'react';
 import type { SharedValue } from 'react-native-reanimated';
 

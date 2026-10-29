@@ -7,7 +7,7 @@ import type {VariantProps} from "tailwind-variants";
 import {tv} from "tailwind-variants";
 
 export const radioGroupVariants = tv({
-  base: "radio-group",
+  base: "radio-group__root",
   defaultVariants: {
     variant: "primary",
   },

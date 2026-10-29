@@ -6,7 +6,7 @@
 "use client";
 
 import type {ComponentPropsWithRef, ReactNode} from "react";
-import {Text as TextPrimitive} from "react-aria-components/Text";
+import {Text as TextPrimitive, TextContext} from "react-aria-components/Text";
 
 import type {TypographyVariants} from '../../../../styles/web/components/typography/typography.styles.js';
 import {typographyVariants} from '../../../../styles/web/components/typography/typography.styles.js';
@@ -55,7 +55,7 @@ const TypographyRoot = ({
 }: TypographyRootProps) => {
   const slots = typographyVariants({align, color, truncate, type, weight});
 
-  return (
+  const content = (
     <TextPrimitive
       className={composeSlotClassName(slots.base, className)}
       data-slot="typography"
@@ -66,6 +66,8 @@ const TypographyRoot = ({
       {children}
     </TextPrimitive>
   );
+
+  return props.slot === undefined ? <TextContext value={null}>{content}</TextContext> : content;
 };
 
 interface HeadingProps extends Omit<TypographyRootProps, "type"> {

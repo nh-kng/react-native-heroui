@@ -103,7 +103,8 @@
     "uniwind": "^1.13.0",
     "@gorhom/bottom-sheet": "^5.2.9",
     "expo-blur": ">=14.0.0",
-    "react-native-screens": ">=4"
+    "react-native-screens": ">=4",
+    "@radix-ui/react-avatar": "^1.2.6"
   },
   "type": "module",
   "module": "./build/web/index.web.js",
@@ -291,6 +292,336 @@
       "types": "./build/web/components/pressable-feedback/index.web.d.ts",
       "import": "./build/web/components/pressable-feedback/index.web.js",
       "default": "./build/web/components/pressable-feedback/index.web.js"
+    },
+    "./accordion": {
+      "react-native": {
+        "types": "./build/native/components/accordion/index.native.d.ts",
+        "import": "./build/native/components/accordion/index.native.js",
+        "default": "./build/native/components/accordion/index.native.js"
+      },
+      "browser": {
+        "types": "./build/web/components/accordion/index.web.d.ts",
+        "import": "./build/web/components/accordion/index.web.js",
+        "default": "./build/web/components/accordion/index.web.js"
+      },
+      "types": "./build/web/components/accordion/index.web.d.ts",
+      "import": "./build/web/components/accordion/index.web.js",
+      "default": "./build/web/components/accordion/index.web.js"
+    },
+    "./alert": {
+      "react-native": {
+        "types": "./build/native/components/alert/index.native.d.ts",
+        "import": "./build/native/components/alert/index.native.js",
+        "default": "./build/native/components/alert/index.native.js"
+      },
+      "browser": {
+        "types": "./build/web/components/alert/index.web.d.ts",
+        "import": "./build/web/components/alert/index.web.js",
+        "default": "./build/web/components/alert/index.web.js"
+      },
+      "types": "./build/web/components/alert/index.web.d.ts",
+      "import": "./build/web/components/alert/index.web.js",
+      "default": "./build/web/components/alert/index.web.js"
+    },
+    "./avatar": {
+      "react-native": {
+        "types": "./build/native/components/avatar/index.native.d.ts",
+        "import": "./build/native/components/avatar/index.native.js",
+        "default": "./build/native/components/avatar/index.native.js"
+      },
+      "browser": {
+        "types": "./build/web/components/avatar/index.web.d.ts",
+        "import": "./build/web/components/avatar/index.web.js",
+        "default": "./build/web/components/avatar/index.web.js"
+      },
+      "types": "./build/web/components/avatar/index.web.d.ts",
+      "import": "./build/web/components/avatar/index.web.js",
+      "default": "./build/web/components/avatar/index.web.js"
+    },
+    "./checkbox": {
+      "react-native": {
+        "types": "./build/native/components/checkbox/index.native.d.ts",
+        "import": "./build/native/components/checkbox/index.native.js",
+        "default": "./build/native/components/checkbox/index.native.js"
+      },
+      "browser": {
+        "types": "./build/web/components/checkbox/index.web.d.ts",
+        "import": "./build/web/components/checkbox/index.web.js",
+        "default": "./build/web/components/checkbox/index.web.js"
+      },
+      "types": "./build/web/components/checkbox/index.web.d.ts",
+      "import": "./build/web/components/checkbox/index.web.js",
+      "default": "./build/web/components/checkbox/index.web.js"
+    },
+    "./close-button": {
+      "react-native": {
+        "types": "./build/native/components/close-button/index.native.d.ts",
+        "import": "./build/native/components/close-button/index.native.js",
+        "default": "./build/native/components/close-button/index.native.js"
+      },
+      "browser": {
+        "types": "./build/web/components/close-button/index.web.d.ts",
+        "import": "./build/web/components/close-button/index.web.js",
+        "default": "./build/web/components/close-button/index.web.js"
+      },
+      "types": "./build/web/components/close-button/index.web.d.ts",
+      "import": "./build/web/components/close-button/index.web.js",
+      "default": "./build/web/components/close-button/index.web.js"
+    },
+    "./input-group": {
+      "react-native": {
+        "types": "./build/native/components/input-group/index.native.d.ts",
+        "import": "./build/native/components/input-group/index.native.js",
+        "default": "./build/native/components/input-group/index.native.js"
+      },
+      "browser": {
+        "types": "./build/web/components/input-group/index.web.d.ts",
+        "import": "./build/web/components/input-group/index.web.js",
+        "default": "./build/web/components/input-group/index.web.js"
+      },
+      "types": "./build/web/components/input-group/index.web.d.ts",
+      "import": "./build/web/components/input-group/index.web.js",
+      "default": "./build/web/components/input-group/index.web.js"
+    },
+    "./input-otp": {
+      "react-native": {
+        "types": "./build/native/components/input-otp/index.native.d.ts",
+        "import": "./build/native/components/input-otp/index.native.js",
+        "default": "./build/native/components/input-otp/index.native.js"
+      },
+      "browser": {
+        "types": "./build/web/components/input-otp/index.web.d.ts",
+        "import": "./build/web/components/input-otp/index.web.js",
+        "default": "./build/web/components/input-otp/index.web.js"
+      },
+      "types": "./build/web/components/input-otp/index.web.d.ts",
+      "import": "./build/web/components/input-otp/index.web.js",
+      "default": "./build/web/components/input-otp/index.web.js"
+    },
+    "./popover": {
+      "react-native": {
+        "types": "./build/native/components/popover/index.native.d.ts",
+        "import": "./build/native/components/popover/index.native.js",
+        "default": "./build/native/components/popover/index.native.js"
+      },
+      "browser": {
+        "types": "./build/web/components/popover/index.web.d.ts",
+        "import": "./build/web/components/popover/index.web.js",
+        "default": "./build/web/components/popover/index.web.js"
+      },
+      "types": "./build/web/components/popover/index.web.d.ts",
+      "import": "./build/web/components/popover/index.web.js",
+      "default": "./build/web/components/popover/index.web.js"
+    },
+    "./radio-group": {
+      "react-native": {
+        "types": "./build/native/components/radio-group/index.native.d.ts",
+        "import": "./build/native/components/radio-group/index.native.js",
+        "default": "./build/native/components/radio-group/index.native.js"
+      },
+      "browser": {
+        "types": "./build/web/components/radio-group/index.web.d.ts",
+        "import": "./build/web/components/radio-group/index.web.js",
+        "default": "./build/web/components/radio-group/index.web.js"
+      },
+      "types": "./build/web/components/radio-group/index.web.d.ts",
+      "import": "./build/web/components/radio-group/index.web.js",
+      "default": "./build/web/components/radio-group/index.web.js"
+    },
+    "./scroll-shadow": {
+      "react-native": {
+        "types": "./build/native/components/scroll-shadow/index.native.d.ts",
+        "import": "./build/native/components/scroll-shadow/index.native.js",
+        "default": "./build/native/components/scroll-shadow/index.native.js"
+      },
+      "browser": {
+        "types": "./build/web/components/scroll-shadow/index.web.d.ts",
+        "import": "./build/web/components/scroll-shadow/index.web.js",
+        "default": "./build/web/components/scroll-shadow/index.web.js"
+      },
+      "types": "./build/web/components/scroll-shadow/index.web.d.ts",
+      "import": "./build/web/components/scroll-shadow/index.web.js",
+      "default": "./build/web/components/scroll-shadow/index.web.js"
+    },
+    "./search-field": {
+      "react-native": {
+        "types": "./build/native/components/search-field/index.native.d.ts",
+        "import": "./build/native/components/search-field/index.native.js",
+        "default": "./build/native/components/search-field/index.native.js"
+      },
+      "browser": {
+        "types": "./build/web/components/search-field/index.web.d.ts",
+        "import": "./build/web/components/search-field/index.web.js",
+        "default": "./build/web/components/search-field/index.web.js"
+      },
+      "types": "./build/web/components/search-field/index.web.d.ts",
+      "import": "./build/web/components/search-field/index.web.js",
+      "default": "./build/web/components/search-field/index.web.js"
+    },
+    "./select": {
+      "react-native": {
+        "types": "./build/native/components/select/index.native.d.ts",
+        "import": "./build/native/components/select/index.native.js",
+        "default": "./build/native/components/select/index.native.js"
+      },
+      "browser": {
+        "types": "./build/web/components/select/index.web.d.ts",
+        "import": "./build/web/components/select/index.web.js",
+        "default": "./build/web/components/select/index.web.js"
+      },
+      "types": "./build/web/components/select/index.web.d.ts",
+      "import": "./build/web/components/select/index.web.js",
+      "default": "./build/web/components/select/index.web.js"
+    },
+    "./separator": {
+      "react-native": {
+        "types": "./build/native/components/separator/index.native.d.ts",
+        "import": "./build/native/components/separator/index.native.js",
+        "default": "./build/native/components/separator/index.native.js"
+      },
+      "browser": {
+        "types": "./build/web/components/separator/index.web.d.ts",
+        "import": "./build/web/components/separator/index.web.js",
+        "default": "./build/web/components/separator/index.web.js"
+      },
+      "types": "./build/web/components/separator/index.web.d.ts",
+      "import": "./build/web/components/separator/index.web.js",
+      "default": "./build/web/components/separator/index.web.js"
+    },
+    "./skeleton": {
+      "react-native": {
+        "types": "./build/native/components/skeleton/index.native.d.ts",
+        "import": "./build/native/components/skeleton/index.native.js",
+        "default": "./build/native/components/skeleton/index.native.js"
+      },
+      "browser": {
+        "types": "./build/web/components/skeleton/index.web.d.ts",
+        "import": "./build/web/components/skeleton/index.web.js",
+        "default": "./build/web/components/skeleton/index.web.js"
+      },
+      "types": "./build/web/components/skeleton/index.web.d.ts",
+      "import": "./build/web/components/skeleton/index.web.js",
+      "default": "./build/web/components/skeleton/index.web.js"
+    },
+    "./slider": {
+      "react-native": {
+        "types": "./build/native/components/slider/index.native.d.ts",
+        "import": "./build/native/components/slider/index.native.js",
+        "default": "./build/native/components/slider/index.native.js"
+      },
+      "browser": {
+        "types": "./build/web/components/slider/index.web.d.ts",
+        "import": "./build/web/components/slider/index.web.js",
+        "default": "./build/web/components/slider/index.web.js"
+      },
+      "types": "./build/web/components/slider/index.web.d.ts",
+      "import": "./build/web/components/slider/index.web.js",
+      "default": "./build/web/components/slider/index.web.js"
+    },
+    "./spinner": {
+      "react-native": {
+        "types": "./build/native/components/spinner/index.native.d.ts",
+        "import": "./build/native/components/spinner/index.native.js",
+        "default": "./build/native/components/spinner/index.native.js"
+      },
+      "browser": {
+        "types": "./build/web/components/spinner/index.web.d.ts",
+        "import": "./build/web/components/spinner/index.web.js",
+        "default": "./build/web/components/spinner/index.web.js"
+      },
+      "types": "./build/web/components/spinner/index.web.d.ts",
+      "import": "./build/web/components/spinner/index.web.js",
+      "default": "./build/web/components/spinner/index.web.js"
+    },
+    "./surface": {
+      "react-native": {
+        "types": "./build/native/components/surface/index.native.d.ts",
+        "import": "./build/native/components/surface/index.native.js",
+        "default": "./build/native/components/surface/index.native.js"
+      },
+      "browser": {
+        "types": "./build/web/components/surface/index.web.d.ts",
+        "import": "./build/web/components/surface/index.web.js",
+        "default": "./build/web/components/surface/index.web.js"
+      },
+      "types": "./build/web/components/surface/index.web.d.ts",
+      "import": "./build/web/components/surface/index.web.js",
+      "default": "./build/web/components/surface/index.web.js"
+    },
+    "./switch": {
+      "react-native": {
+        "types": "./build/native/components/switch/index.native.d.ts",
+        "import": "./build/native/components/switch/index.native.js",
+        "default": "./build/native/components/switch/index.native.js"
+      },
+      "browser": {
+        "types": "./build/web/components/switch/index.web.d.ts",
+        "import": "./build/web/components/switch/index.web.js",
+        "default": "./build/web/components/switch/index.web.js"
+      },
+      "types": "./build/web/components/switch/index.web.d.ts",
+      "import": "./build/web/components/switch/index.web.js",
+      "default": "./build/web/components/switch/index.web.js"
+    },
+    "./tabs": {
+      "react-native": {
+        "types": "./build/native/components/tabs/index.native.d.ts",
+        "import": "./build/native/components/tabs/index.native.js",
+        "default": "./build/native/components/tabs/index.native.js"
+      },
+      "browser": {
+        "types": "./build/web/components/tabs/index.web.d.ts",
+        "import": "./build/web/components/tabs/index.web.js",
+        "default": "./build/web/components/tabs/index.web.js"
+      },
+      "types": "./build/web/components/tabs/index.web.d.ts",
+      "import": "./build/web/components/tabs/index.web.js",
+      "default": "./build/web/components/tabs/index.web.js"
+    },
+    "./tag-group": {
+      "react-native": {
+        "types": "./build/native/components/tag-group/index.native.d.ts",
+        "import": "./build/native/components/tag-group/index.native.js",
+        "default": "./build/native/components/tag-group/index.native.js"
+      },
+      "browser": {
+        "types": "./build/web/components/tag-group/index.web.d.ts",
+        "import": "./build/web/components/tag-group/index.web.js",
+        "default": "./build/web/components/tag-group/index.web.js"
+      },
+      "types": "./build/web/components/tag-group/index.web.d.ts",
+      "import": "./build/web/components/tag-group/index.web.js",
+      "default": "./build/web/components/tag-group/index.web.js"
+    },
+    "./text-area": {
+      "react-native": {
+        "types": "./build/native/components/text-area/index.native.d.ts",
+        "import": "./build/native/components/text-area/index.native.js",
+        "default": "./build/native/components/text-area/index.native.js"
+      },
+      "browser": {
+        "types": "./build/web/components/text-area/index.web.d.ts",
+        "import": "./build/web/components/text-area/index.web.js",
+        "default": "./build/web/components/text-area/index.web.js"
+      },
+      "types": "./build/web/components/text-area/index.web.d.ts",
+      "import": "./build/web/components/text-area/index.web.js",
+      "default": "./build/web/components/text-area/index.web.js"
+    },
+    "./toast": {
+      "react-native": {
+        "types": "./build/native/components/toast/index.native.d.ts",
+        "import": "./build/native/components/toast/index.native.js",
+        "default": "./build/native/components/toast/index.native.js"
+      },
+      "browser": {
+        "types": "./build/web/components/toast/index.web.d.ts",
+        "import": "./build/web/components/toast/index.web.js",
+        "default": "./build/web/components/toast/index.web.js"
+      },
+      "types": "./build/web/components/toast/index.web.d.ts",
+      "import": "./build/web/components/toast/index.web.js",
+      "default": "./build/web/components/toast/index.web.js"
     }
   },
   "sideEffects": [

@@ -11,7 +11,7 @@ export const skeletonVariants = tv({
     animationType: "shimmer",
   },
   slots: {
-    base: "skeleton",
+    base: "skeleton__root",
   },
   variants: {
     animationType: {

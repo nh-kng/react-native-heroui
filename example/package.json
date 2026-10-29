@@ -12,6 +12,7 @@
   "dependencies": {
     "@internationalized/date": "3.12.4",
     "@nh-kng/react-native-heroui": "workspace:*",
+    "@radix-ui/react-avatar": "1.2.6",
     "@react-aria/ssr": "3.10.1",
     "@react-aria/utils": "3.34.1",
     "expo": "57.0.31",
@@ -33,6 +34,6 @@
   },
   "devDependencies": {
     "@types/react": "~19.2.3",
-    "typescript": "^5.9.2"
+    "typescript": "~6.0.3"
   }
 }

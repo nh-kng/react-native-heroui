@@ -7,6 +7,7 @@ import type {
   PressableFeedbackRippleProps,
   PressableFeedbackScaleProps,
 } from './pressable-feedback.types.js';
+import { mouseBoundary } from '../shared/mouse-boundary.web.js';
 
 export type * from './pressable-feedback.types.js';
 export type PressableFeedbackRef = HTMLButtonElement;
@@ -32,6 +33,7 @@ const Root = forwardRef<PressableFeedbackRef, PressableFeedbackProps>(function P
   return (
     <Button
       {...webProps}
+      {...mouseBoundary(webProps)}
       ref={ref}
       type="button"
       className={['pressable-feedback__root', 'pressable-feedback__web-root', className]

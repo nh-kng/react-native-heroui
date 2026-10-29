@@ -45,7 +45,7 @@ export function Gallery(props: ThemeControlsProps) {
       )}
       <View style={styles.body}>
         {isWide && <View style={styles.sidebar}>{navigation}</View>}
-        <ScrollView key={selected} style={styles.fill} contentContainerStyle={styles.content}>
+        <ScrollView key={selected} className="heroui-scrollbar" style={styles.fill} contentContainerStyle={styles.content}>
           <View
             className="gap-8"
             style={[

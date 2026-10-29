@@ -18,8 +18,8 @@ export const toastVariants = tv({
     description: "toast__description",
     indicator: "toast__indicator",
     region: "toast-region",
-    title: "toast__title",
-    toast: "toast",
+    title: "toast__label",
+    toast: "toast__root",
   },
   variants: {
     placement: {

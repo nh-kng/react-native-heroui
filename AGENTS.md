@@ -36,3 +36,11 @@ These instructions apply across the repository; follow any more specific `AGENTS
 - Document public APIs, examples, platform differences, and compatibility only when verified; distinguish static configuration from runtime verification.
 - Use lowercase kebab-case filenames under `docs/` and preserve meaningful Markdown structure.
 - Update relevant documentation and `CHANGELOG.md` when public behavior changes. Keep prose paragraphs and list items on one source line.
+
+## Component examples
+
+- Use [HeroUI React components](https://heroui.com/en/docs/react/components) and each implemented component's linked documentation page as the authoritative example inventory and content reference. Read the page's Usage, Examples, and Customization previews before adding or changing gallery examples.
+- Follow the corresponding example's composition, content, states, and interactions. Adapt it through this package's public exports and typed platform props; preserve the example's purpose rather than substituting a generic showcase.
+- Keep `example/gallery/docs-examples/catalog.ts` aligned with the upstream preview IDs, titles, and order. Use the pinned MDX and demo sources under `upstream/heroui-react/apps/docs/` to inspect complete example code, and verify live pages when updating coverage.
+- Account for every upstream preview. Document a specific public API limitation when an example cannot be implemented, and label web-only behavior or local simulations accurately. Never silently omit examples or claim unsupported demos are implemented.
+- Keep adapter-only examples such as PressableFeedback separate from upstream React coverage. Follow the detailed gallery rules in `example/AGENTS.md` and run both platform TypeScript checks and the non-rendering gallery coverage test after changes.

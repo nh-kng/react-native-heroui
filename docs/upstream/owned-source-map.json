@@ -1770,6 +1770,1014 @@
     {
       "baseline": "baselines/heroui-native/src/styles/variables.css",
       "local": "styles/shared/variables.css"
+    },
+    {
+      "baseline": "baselines/heroui-native/src/helpers/internal/utils/ease-gradient/create-interpolation.ts",
+      "local": "src/primitives/native/helpers/internal/utils/ease-gradient/create-interpolation.ts"
+    },
+    {
+      "baseline": "baselines/heroui-native/src/helpers/internal/utils/ease-gradient/index.ts",
+      "local": "src/primitives/native/helpers/internal/utils/ease-gradient/index.ts"
+    },
+    {
+      "baseline": "baselines/heroui-native/src/helpers/internal/utils/get-element-by-display-name.ts",
+      "local": "src/primitives/native/helpers/internal/utils/get-element-by-display-name.ts"
+    },
+    {
+      "baseline": "baselines/heroui-native/src/helpers/internal/utils/get-element-with-default.ts",
+      "local": "src/primitives/native/helpers/internal/utils/get-element-with-default.ts"
+    },
+    {
+      "baseline": "baselines/heroui-native/src/helpers/internal/utils/has-prop.ts",
+      "local": "src/primitives/native/helpers/internal/utils/has-prop.ts"
+    },
+    {
+      "baseline": "baselines/heroui-native/src/helpers/internal/utils/index.ts",
+      "local": "src/primitives/native/helpers/internal/utils/index.ts"
+    },
+    {
+      "baseline": "baselines/heroui-native/src/primitives/accordion/accordion.types.ts",
+      "local": "src/primitives/native/primitives/accordion/accordion.types.ts"
+    },
+    {
+      "baseline": "baselines/heroui-native/src/primitives/accordion/accordion.utils.ts",
+      "local": "src/primitives/native/primitives/accordion/accordion.utils.ts"
+    },
+    {
+      "baseline": "baselines/heroui-native/src/primitives/accordion/accordion.tsx",
+      "local": "src/primitives/native/primitives/accordion/accordion.tsx"
+    },
+    {
+      "baseline": "baselines/heroui-native/src/primitives/accordion/index.ts",
+      "local": "src/primitives/native/primitives/accordion/index.ts"
+    },
+    {
+      "baseline": "baselines/heroui-native/src/components/accordion/accordion.constants.ts",
+      "local": "src/primitives/native/components/accordion/accordion.constants.ts"
+    },
+    {
+      "baseline": "baselines/heroui-native/src/components/accordion/accordion.styles.ts",
+      "local": "src/primitives/native/components/accordion/accordion.styles.ts"
+    },
+    {
+      "baseline": "baselines/heroui-native/src/components/accordion/accordion.types.ts",
+      "local": "src/primitives/native/components/accordion/accordion.types.ts"
+    },
+    {
+      "baseline": "baselines/heroui-native/src/components/accordion/accordion.animation.ts",
+      "local": "src/primitives/native/components/accordion/accordion.animation.ts"
+    },
+    {
+      "baseline": "baselines/heroui-native/src/components/accordion/accordion.tsx",
+      "local": "src/primitives/native/components/accordion/accordion.tsx"
+    },
+    {
+      "baseline": "baselines/heroui-native/src/components/accordion/index.ts",
+      "local": "src/primitives/native/components/accordion/index.ts"
+    },
+    {
+      "baseline": "baselines/heroui-react/packages/react/src/components/accordion/accordion.tsx",
+      "local": "src/primitives/web/components/accordion/accordion.tsx"
+    },
+    {
+      "baseline": "baselines/heroui-react/packages/react/src/components/accordion/index.ts",
+      "local": "src/primitives/web/components/accordion/index.ts"
+    },
+    {
+      "baseline": "baselines/heroui-native/src/primitives/alert/alert.types.ts",
+      "local": "src/primitives/native/primitives/alert/alert.types.ts"
+    },
+    {
+      "baseline": "baselines/heroui-native/src/primitives/alert/alert.tsx",
+      "local": "src/primitives/native/primitives/alert/alert.tsx"
+    },
+    {
+      "baseline": "baselines/heroui-native/src/primitives/alert/index.ts",
+      "local": "src/primitives/native/primitives/alert/index.ts"
+    },
+    {
+      "baseline": "baselines/heroui-native/src/components/alert/alert.constants.ts",
+      "local": "src/primitives/native/components/alert/alert.constants.ts"
+    },
+    {
+      "baseline": "baselines/heroui-native/src/components/alert/alert.hooks.ts",
+      "local": "src/primitives/native/components/alert/alert.hooks.ts"
+    },
+    {
+      "baseline": "baselines/heroui-native/src/components/alert/alert.styles.ts",
+      "local": "src/primitives/native/components/alert/alert.styles.ts"
+    },
+    {
+      "baseline": "baselines/heroui-native/src/components/alert/alert.types.ts",
+      "local": "src/primitives/native/components/alert/alert.types.ts"
+    },
+    {
+      "baseline": "baselines/heroui-native/src/components/alert/default-icon.tsx",
+      "local": "src/primitives/native/components/alert/default-icon.tsx"
+    },
+    {
+      "baseline": "baselines/heroui-native/src/components/alert/success-icon.tsx",
+      "local": "src/primitives/native/components/alert/success-icon.tsx"
+    },
+    {
+      "baseline": "baselines/heroui-native/src/components/alert/warning-icon.tsx",
+      "local": "src/primitives/native/components/alert/warning-icon.tsx"
+    },
+    {
+      "baseline": "baselines/heroui-native/src/components/alert/alert.utils.tsx",
+      "local": "src/primitives/native/components/alert/alert.utils.tsx"
+    },
+    {
+      "baseline": "baselines/heroui-native/src/components/alert/alert.tsx",
+      "local": "src/primitives/native/components/alert/alert.tsx"
+    },
+    {
+      "baseline": "baselines/heroui-native/src/components/alert/index.ts",
+      "local": "src/primitives/native/components/alert/index.ts"
+    },
+    {
+      "baseline": "baselines/heroui-react/packages/react/src/components/alert/alert.tsx",
+      "local": "src/primitives/web/components/alert/alert.tsx"
+    },
+    {
+      "baseline": "baselines/heroui-react/packages/react/src/components/alert/index.ts",
+      "local": "src/primitives/web/components/alert/index.ts"
+    },
+    {
+      "baseline": "baselines/heroui-native/src/primitives/avatar/avatar.types.ts",
+      "local": "src/primitives/native/primitives/avatar/avatar.types.ts"
+    },
+    {
+      "baseline": "baselines/heroui-native/src/primitives/avatar/avatar.utils.ts",
+      "local": "src/primitives/native/primitives/avatar/avatar.utils.ts"
+    },
+    {
+      "baseline": "baselines/heroui-native/src/primitives/avatar/avatar.tsx",
+      "local": "src/primitives/native/primitives/avatar/avatar.tsx"
+    },
+    {
+      "baseline": "baselines/heroui-native/src/primitives/avatar/index.ts",
+      "local": "src/primitives/native/primitives/avatar/index.ts"
+    },
+    {
+      "baseline": "baselines/heroui-native/src/components/avatar/avatar.styles.ts",
+      "local": "src/primitives/native/components/avatar/avatar.styles.ts"
+    },
+    {
+      "baseline": "baselines/heroui-native/src/components/avatar/person-icon.tsx",
+      "local": "src/primitives/native/components/avatar/person-icon.tsx"
+    },
+    {
+      "baseline": "baselines/heroui-native/src/components/avatar/avatar.types.ts",
+      "local": "src/primitives/native/components/avatar/avatar.types.ts"
+    },
+    {
+      "baseline": "baselines/heroui-native/src/components/avatar/avatar.animation.ts",
+      "local": "src/primitives/native/components/avatar/avatar.animation.ts"
+    },
+    {
+      "baseline": "baselines/heroui-native/src/components/avatar/avatar.constants.ts",
+      "local": "src/primitives/native/components/avatar/avatar.constants.ts"
+    },
+    {
+      "baseline": "baselines/heroui-native/src/components/avatar/avatar.context.ts",
+      "local": "src/primitives/native/components/avatar/avatar.context.ts"
+    },
+    {
+      "baseline": "baselines/heroui-native/src/components/avatar/avatar.tsx",
+      "local": "src/primitives/native/components/avatar/avatar.tsx"
+    },
+    {
+      "baseline": "baselines/heroui-native/src/components/avatar/index.ts",
+      "local": "src/primitives/native/components/avatar/index.ts"
+    },
+    {
+      "baseline": "baselines/heroui-react/packages/react/src/components/avatar-group/avatar-group-context.ts",
+      "local": "src/primitives/web/components/avatar-group/avatar-group-context.ts"
+    },
+    {
+      "baseline": "baselines/heroui-react/packages/react/src/components/avatar/avatar.tsx",
+      "local": "src/primitives/web/components/avatar/avatar.tsx"
+    },
+    {
+      "baseline": "baselines/heroui-react/packages/react/src/components/avatar/index.ts",
+      "local": "src/primitives/web/components/avatar/index.ts"
+    },
+    {
+      "baseline": "baselines/heroui-native/src/primitives/checkbox/checkbox.types.ts",
+      "local": "src/primitives/native/primitives/checkbox/checkbox.types.ts"
+    },
+    {
+      "baseline": "baselines/heroui-native/src/primitives/checkbox/checkbox.tsx",
+      "local": "src/primitives/native/primitives/checkbox/checkbox.tsx"
+    },
+    {
+      "baseline": "baselines/heroui-native/src/primitives/checkbox/index.ts",
+      "local": "src/primitives/native/primitives/checkbox/index.ts"
+    },
+    {
+      "baseline": "baselines/heroui-native/src/components/checkbox/checkbox.types.ts",
+      "local": "src/primitives/native/components/checkbox/checkbox.types.ts"
+    },
+    {
+      "baseline": "baselines/heroui-native/src/components/checkbox/checkbox.animation.ts",
+      "local": "src/primitives/native/components/checkbox/checkbox.animation.ts"
+    },
+    {
+      "baseline": "baselines/heroui-native/src/components/checkbox/checkbox.constants.ts",
+      "local": "src/primitives/native/components/checkbox/checkbox.constants.ts"
+    },
+    {
+      "baseline": "baselines/heroui-native/src/components/checkbox/checkbox.styles.ts",
+      "local": "src/primitives/native/components/checkbox/checkbox.styles.ts"
+    },
+    {
+      "baseline": "baselines/heroui-native/src/components/checkbox/checkbox.tsx",
+      "local": "src/primitives/native/components/checkbox/checkbox.tsx"
+    },
+    {
+      "baseline": "baselines/heroui-native/src/components/checkbox/index.ts",
+      "local": "src/primitives/native/components/checkbox/index.ts"
+    },
+    {
+      "baseline": "baselines/heroui-react/packages/react/src/components/checkbox-group/checkbox-group.tsx",
+      "local": "src/primitives/web/components/checkbox-group/checkbox-group.tsx"
+    },
+    {
+      "baseline": "baselines/heroui-react/packages/react/src/components/checkbox/checkbox.tsx",
+      "local": "src/primitives/web/components/checkbox/checkbox.tsx"
+    },
+    {
+      "baseline": "baselines/heroui-react/packages/react/src/components/checkbox/index.ts",
+      "local": "src/primitives/web/components/checkbox/index.ts"
+    },
+    {
+      "baseline": "baselines/heroui-native/src/components/close-button/close-button.constants.ts",
+      "local": "src/primitives/native/components/close-button/close-button.constants.ts"
+    },
+    {
+      "baseline": "baselines/heroui-native/src/components/close-button/close-button.styles.ts",
+      "local": "src/primitives/native/components/close-button/close-button.styles.ts"
+    },
+    {
+      "baseline": "baselines/heroui-native/src/components/close-button/close-button.tsx",
+      "local": "src/primitives/native/components/close-button/close-button.tsx"
+    },
+    {
+      "baseline": "baselines/heroui-native/src/components/close-button/index.ts",
+      "local": "src/primitives/native/components/close-button/index.ts"
+    },
+    {
+      "baseline": "baselines/heroui-react/packages/react/src/utils/calendar.ts",
+      "local": "src/primitives/web/utils/calendar.ts"
+    },
+    {
+      "baseline": "baselines/heroui-react/packages/react/src/utils/css.ts",
+      "local": "src/primitives/web/utils/css.ts"
+    },
+    {
+      "baseline": "baselines/heroui-react/packages/react/src/utils/variants.ts",
+      "local": "src/primitives/web/utils/variants.ts"
+    },
+    {
+      "baseline": "baselines/heroui-react/packages/react/src/utils/tv.ts",
+      "local": "src/primitives/web/utils/tv.ts"
+    },
+    {
+      "baseline": "baselines/heroui-react/packages/react/src/utils/index.ts",
+      "local": "src/primitives/web/utils/index.ts"
+    },
+    {
+      "baseline": "baselines/heroui-react/packages/react/src/components/close-button/close-button.tsx",
+      "local": "src/primitives/web/components/close-button/close-button.tsx"
+    },
+    {
+      "baseline": "baselines/heroui-react/packages/react/src/components/close-button/index.ts",
+      "local": "src/primitives/web/components/close-button/index.ts"
+    },
+    {
+      "baseline": "baselines/heroui-native/src/components/input-group/input-group.animation.ts",
+      "local": "src/primitives/native/components/input-group/input-group.animation.ts"
+    },
+    {
+      "baseline": "baselines/heroui-native/src/components/input-group/input-group.constants.ts",
+      "local": "src/primitives/native/components/input-group/input-group.constants.ts"
+    },
+    {
+      "baseline": "baselines/heroui-native/src/components/input-group/input-group.styles.ts",
+      "local": "src/primitives/native/components/input-group/input-group.styles.ts"
+    },
+    {
+      "baseline": "baselines/heroui-native/src/components/input-group/input-group.types.ts",
+      "local": "src/primitives/native/components/input-group/input-group.types.ts"
+    },
+    {
+      "baseline": "baselines/heroui-native/src/components/input-group/input-group.tsx",
+      "local": "src/primitives/native/components/input-group/input-group.tsx"
+    },
+    {
+      "baseline": "baselines/heroui-native/src/components/input-group/index.ts",
+      "local": "src/primitives/native/components/input-group/index.ts"
+    },
+    {
+      "baseline": "baselines/heroui-react/packages/react/src/components/input-group/input-group.tsx",
+      "local": "src/primitives/web/components/input-group/input-group.tsx"
+    },
+    {
+      "baseline": "baselines/heroui-react/packages/react/src/components/input-group/index.ts",
+      "local": "src/primitives/web/components/input-group/index.ts"
+    },
+    {
+      "baseline": "baselines/heroui-native/src/primitives/input-otp/input-otp.types.ts",
+      "local": "src/primitives/native/primitives/input-otp/input-otp.types.ts"
+    },
+    {
+      "baseline": "baselines/heroui-native/src/primitives/input-otp/input-otp.utils.ts",
+      "local": "src/primitives/native/primitives/input-otp/input-otp.utils.ts"
+    },
+    {
+      "baseline": "baselines/heroui-native/src/primitives/input-otp/input-otp.tsx",
+      "local": "src/primitives/native/primitives/input-otp/input-otp.tsx"
+    },
+    {
+      "baseline": "baselines/heroui-native/src/primitives/input-otp/index.ts",
+      "local": "src/primitives/native/primitives/input-otp/index.ts"
+    },
+    {
+      "baseline": "baselines/heroui-native/src/components/input-otp/input-otp.types.ts",
+      "local": "src/primitives/native/components/input-otp/input-otp.types.ts"
+    },
+    {
+      "baseline": "baselines/heroui-native/src/components/input-otp/input-otp.animation.ts",
+      "local": "src/primitives/native/components/input-otp/input-otp.animation.ts"
+    },
+    {
+      "baseline": "baselines/heroui-native/src/components/input-otp/input-otp.constants.ts",
+      "local": "src/primitives/native/components/input-otp/input-otp.constants.ts"
+    },
+    {
+      "baseline": "baselines/heroui-native/src/components/input-otp/input-otp.styles.ts",
+      "local": "src/primitives/native/components/input-otp/input-otp.styles.ts"
+    },
+    {
+      "baseline": "baselines/heroui-native/src/components/input-otp/input-otp.tsx",
+      "local": "src/primitives/native/components/input-otp/input-otp.tsx"
+    },
+    {
+      "baseline": "baselines/heroui-native/src/components/input-otp/index.ts",
+      "local": "src/primitives/native/components/input-otp/index.ts"
+    },
+    {
+      "baseline": "baselines/heroui-react/packages/react/src/components/input-otp/input-otp.tsx",
+      "local": "src/primitives/web/components/input-otp/input-otp.tsx"
+    },
+    {
+      "baseline": "baselines/heroui-react/packages/react/src/components/input-otp/index.ts",
+      "local": "src/primitives/web/components/input-otp/index.ts"
+    },
+    {
+      "baseline": "baselines/heroui-native/src/primitives/popover/popover.types.ts",
+      "local": "src/primitives/native/primitives/popover/popover.types.ts"
+    },
+    {
+      "baseline": "baselines/heroui-native/src/primitives/popover/popover.tsx",
+      "local": "src/primitives/native/primitives/popover/popover.tsx"
+    },
+    {
+      "baseline": "baselines/heroui-native/src/primitives/popover/index.ts",
+      "local": "src/primitives/native/primitives/popover/index.ts"
+    },
+    {
+      "baseline": "baselines/heroui-native/src/components/popover/arrow-svg.tsx",
+      "local": "src/primitives/native/components/popover/arrow-svg.tsx"
+    },
+    {
+      "baseline": "baselines/heroui-native/src/components/popover/popover.types.ts",
+      "local": "src/primitives/native/components/popover/popover.types.ts"
+    },
+    {
+      "baseline": "baselines/heroui-native/src/components/popover/popover.animation.ts",
+      "local": "src/primitives/native/components/popover/popover.animation.ts"
+    },
+    {
+      "baseline": "baselines/heroui-native/src/components/popover/popover.constants.ts",
+      "local": "src/primitives/native/components/popover/popover.constants.ts"
+    },
+    {
+      "baseline": "baselines/heroui-native/src/components/popover/popover.styles.ts",
+      "local": "src/primitives/native/components/popover/popover.styles.ts"
+    },
+    {
+      "baseline": "baselines/heroui-native/src/components/popover/popover.tsx",
+      "local": "src/primitives/native/components/popover/popover.tsx"
+    },
+    {
+      "baseline": "baselines/heroui-native/src/components/popover/index.ts",
+      "local": "src/primitives/native/components/popover/index.ts"
+    },
+    {
+      "baseline": "baselines/heroui-react/packages/react/src/components/popover/popover.tsx",
+      "local": "src/primitives/web/components/popover/popover.tsx"
+    },
+    {
+      "baseline": "baselines/heroui-react/packages/react/src/components/popover/index.ts",
+      "local": "src/primitives/web/components/popover/index.ts"
+    },
+    {
+      "baseline": "baselines/heroui-native/src/primitives/radio/radio.types.ts",
+      "local": "src/primitives/native/primitives/radio/radio.types.ts"
+    },
+    {
+      "baseline": "baselines/heroui-native/src/primitives/radio/radio.tsx",
+      "local": "src/primitives/native/primitives/radio/radio.tsx"
+    },
+    {
+      "baseline": "baselines/heroui-native/src/primitives/radio/index.ts",
+      "local": "src/primitives/native/primitives/radio/index.ts"
+    },
+    {
+      "baseline": "baselines/heroui-native/src/components/radio/radio.types.ts",
+      "local": "src/primitives/native/components/radio/radio.types.ts"
+    },
+    {
+      "baseline": "baselines/heroui-native/src/components/radio/radio.animation.ts",
+      "local": "src/primitives/native/components/radio/radio.animation.ts"
+    },
+    {
+      "baseline": "baselines/heroui-native/src/components/radio/radio.constants.ts",
+      "local": "src/primitives/native/components/radio/radio.constants.ts"
+    },
+    {
+      "baseline": "baselines/heroui-native/src/components/radio/radio.styles.ts",
+      "local": "src/primitives/native/components/radio/radio.styles.ts"
+    },
+    {
+      "baseline": "baselines/heroui-native/src/components/radio/radio.tsx",
+      "local": "src/primitives/native/components/radio/radio.tsx"
+    },
+    {
+      "baseline": "baselines/heroui-native/src/components/radio-group/radio-group.animation.ts",
+      "local": "src/primitives/native/components/radio-group/radio-group.animation.ts"
+    },
+    {
+      "baseline": "baselines/heroui-native/src/components/radio-group/radio-group.constants.ts",
+      "local": "src/primitives/native/components/radio-group/radio-group.constants.ts"
+    },
+    {
+      "baseline": "baselines/heroui-native/src/components/radio-group/radio-group.styles.ts",
+      "local": "src/primitives/native/components/radio-group/radio-group.styles.ts"
+    },
+    {
+      "baseline": "baselines/heroui-native/src/components/radio-group/radio-group.tsx",
+      "local": "src/primitives/native/components/radio-group/radio-group.tsx"
+    },
+    {
+      "baseline": "baselines/heroui-native/src/components/radio-group/index.ts",
+      "local": "src/primitives/native/components/radio-group/index.ts"
+    },
+    {
+      "baseline": "baselines/heroui-react/packages/react/src/components/radio-group/radio-group.tsx",
+      "local": "src/primitives/web/components/radio-group/radio-group.tsx"
+    },
+    {
+      "baseline": "baselines/heroui-react/packages/react/src/components/radio-group/index.ts",
+      "local": "src/primitives/web/components/radio-group/index.ts"
+    },
+    {
+      "baseline": "baselines/heroui-native/src/components/scroll-shadow/scroll-shadow.constants.ts",
+      "local": "src/primitives/native/components/scroll-shadow/scroll-shadow.constants.ts"
+    },
+    {
+      "baseline": "baselines/heroui-native/src/components/scroll-shadow/scroll-shadow.types.ts",
+      "local": "src/primitives/native/components/scroll-shadow/scroll-shadow.types.ts"
+    },
+    {
+      "baseline": "baselines/heroui-native/src/components/scroll-shadow/scroll-shadow.animation.ts",
+      "local": "src/primitives/native/components/scroll-shadow/scroll-shadow.animation.ts"
+    },
+    {
+      "baseline": "baselines/heroui-native/src/components/scroll-shadow/scroll-shadow.styles.ts",
+      "local": "src/primitives/native/components/scroll-shadow/scroll-shadow.styles.ts"
+    },
+    {
+      "baseline": "baselines/heroui-native/src/components/scroll-shadow/scroll-shadow.tsx",
+      "local": "src/primitives/native/components/scroll-shadow/scroll-shadow.tsx"
+    },
+    {
+      "baseline": "baselines/heroui-native/src/components/scroll-shadow/index.ts",
+      "local": "src/primitives/native/components/scroll-shadow/index.ts"
+    },
+    {
+      "baseline": "baselines/heroui-react/packages/react/src/hooks/use-safe-layout-effect.ts",
+      "local": "src/primitives/web/hooks/use-safe-layout-effect.ts"
+    },
+    {
+      "baseline": "baselines/heroui-react/packages/react/src/components/scroll-shadow/use-scroll-shadow.ts",
+      "local": "src/primitives/web/components/scroll-shadow/use-scroll-shadow.ts"
+    },
+    {
+      "baseline": "baselines/heroui-react/packages/react/src/components/scroll-shadow/scroll-shadow.tsx",
+      "local": "src/primitives/web/components/scroll-shadow/scroll-shadow.tsx"
+    },
+    {
+      "baseline": "baselines/heroui-react/packages/react/src/components/scroll-shadow/index.ts",
+      "local": "src/primitives/web/components/scroll-shadow/index.ts"
+    },
+    {
+      "baseline": "baselines/heroui-native/src/components/search-field/search-field.animation.ts",
+      "local": "src/primitives/native/components/search-field/search-field.animation.ts"
+    },
+    {
+      "baseline": "baselines/heroui-native/src/components/search-field/search-field.constants.ts",
+      "local": "src/primitives/native/components/search-field/search-field.constants.ts"
+    },
+    {
+      "baseline": "baselines/heroui-native/src/components/search-field/search-field.styles.ts",
+      "local": "src/primitives/native/components/search-field/search-field.styles.ts"
+    },
+    {
+      "baseline": "baselines/heroui-native/src/components/search-field/search-field.types.ts",
+      "local": "src/primitives/native/components/search-field/search-field.types.ts"
+    },
+    {
+      "baseline": "baselines/heroui-native/src/components/search-field/search-icon.tsx",
+      "local": "src/primitives/native/components/search-field/search-icon.tsx"
+    },
+    {
+      "baseline": "baselines/heroui-native/src/components/search-field/search-field.tsx",
+      "local": "src/primitives/native/components/search-field/search-field.tsx"
+    },
+    {
+      "baseline": "baselines/heroui-native/src/components/search-field/index.ts",
+      "local": "src/primitives/native/components/search-field/index.ts"
+    },
+    {
+      "baseline": "baselines/heroui-react/packages/react/src/components/search-field/search-field.tsx",
+      "local": "src/primitives/web/components/search-field/search-field.tsx"
+    },
+    {
+      "baseline": "baselines/heroui-react/packages/react/src/components/search-field/index.ts",
+      "local": "src/primitives/web/components/search-field/index.ts"
+    },
+    {
+      "baseline": "baselines/heroui-native/src/primitives/select/select.types.ts",
+      "local": "src/primitives/native/primitives/select/select.types.ts"
+    },
+    {
+      "baseline": "baselines/heroui-native/src/primitives/select/select.utils.ts",
+      "local": "src/primitives/native/primitives/select/select.utils.ts"
+    },
+    {
+      "baseline": "baselines/heroui-native/src/primitives/select/select.tsx",
+      "local": "src/primitives/native/primitives/select/select.tsx"
+    },
+    {
+      "baseline": "baselines/heroui-native/src/primitives/select/index.ts",
+      "local": "src/primitives/native/primitives/select/index.ts"
+    },
+    {
+      "baseline": "baselines/heroui-native/src/components/select/select.constants.ts",
+      "local": "src/primitives/native/components/select/select.constants.ts"
+    },
+    {
+      "baseline": "baselines/heroui-native/src/components/select/select.styles.ts",
+      "local": "src/primitives/native/components/select/select.styles.ts"
+    },
+    {
+      "baseline": "baselines/heroui-native/src/components/select/select.types.ts",
+      "local": "src/primitives/native/components/select/select.types.ts"
+    },
+    {
+      "baseline": "baselines/heroui-native/src/components/select/select.animation.ts",
+      "local": "src/primitives/native/components/select/select.animation.ts"
+    },
+    {
+      "baseline": "baselines/heroui-native/src/components/select/select.tsx",
+      "local": "src/primitives/native/components/select/select.tsx"
+    },
+    {
+      "baseline": "baselines/heroui-native/src/components/select/index.ts",
+      "local": "src/primitives/native/components/select/index.ts"
+    },
+    {
+      "baseline": "baselines/heroui-react/packages/react/src/components/select/select.tsx",
+      "local": "src/primitives/web/components/select/select.tsx"
+    },
+    {
+      "baseline": "baselines/heroui-react/packages/react/src/components/select/index.ts",
+      "local": "src/primitives/web/components/select/index.ts"
+    },
+    {
+      "baseline": "baselines/heroui-native/src/components/separator/separator.constants.ts",
+      "local": "src/primitives/native/components/separator/separator.constants.ts"
+    },
+    {
+      "baseline": "baselines/heroui-native/src/components/separator/separator.styles.ts",
+      "local": "src/primitives/native/components/separator/separator.styles.ts"
+    },
+    {
+      "baseline": "baselines/heroui-native/src/components/separator/separator.types.ts",
+      "local": "src/primitives/native/components/separator/separator.types.ts"
+    },
+    {
+      "baseline": "baselines/heroui-native/src/components/separator/separator.tsx",
+      "local": "src/primitives/native/components/separator/separator.tsx"
+    },
+    {
+      "baseline": "baselines/heroui-native/src/components/separator/index.ts",
+      "local": "src/primitives/native/components/separator/index.ts"
+    },
+    {
+      "baseline": "baselines/heroui-react/packages/react/src/components/separator/separator.tsx",
+      "local": "src/primitives/web/components/separator/separator.tsx"
+    },
+    {
+      "baseline": "baselines/heroui-react/packages/react/src/components/separator/index.ts",
+      "local": "src/primitives/web/components/separator/index.ts"
+    },
+    {
+      "baseline": "baselines/heroui-native/src/components/skeleton/skeleton.constants.ts",
+      "local": "src/primitives/native/components/skeleton/skeleton.constants.ts"
+    },
+    {
+      "baseline": "baselines/heroui-native/src/components/skeleton/linear-gradient.tsx",
+      "local": "src/primitives/native/components/skeleton/linear-gradient.tsx"
+    },
+    {
+      "baseline": "baselines/heroui-native/src/components/skeleton/skeleton.types.ts",
+      "local": "src/primitives/native/components/skeleton/skeleton.types.ts"
+    },
+    {
+      "baseline": "baselines/heroui-native/src/components/skeleton/skeleton.animation.ts",
+      "local": "src/primitives/native/components/skeleton/skeleton.animation.ts"
+    },
+    {
+      "baseline": "baselines/heroui-native/src/components/skeleton/skeleton.styles.ts",
+      "local": "src/primitives/native/components/skeleton/skeleton.styles.ts"
+    },
+    {
+      "baseline": "baselines/heroui-native/src/components/skeleton/skeleton.tsx",
+      "local": "src/primitives/native/components/skeleton/skeleton.tsx"
+    },
+    {
+      "baseline": "baselines/heroui-native/src/components/skeleton/index.ts",
+      "local": "src/primitives/native/components/skeleton/index.ts"
+    },
+    {
+      "baseline": "baselines/heroui-react/packages/react/src/hooks/use-css-variable.ts",
+      "local": "src/primitives/web/hooks/use-css-variable.ts"
+    },
+    {
+      "baseline": "baselines/heroui-react/packages/react/src/components/skeleton/skeleton.tsx",
+      "local": "src/primitives/web/components/skeleton/skeleton.tsx"
+    },
+    {
+      "baseline": "baselines/heroui-react/packages/react/src/components/skeleton/index.ts",
+      "local": "src/primitives/web/components/skeleton/index.ts"
+    },
+    {
+      "baseline": "baselines/heroui-native/src/primitives/slider/slider.types.ts",
+      "local": "src/primitives/native/primitives/slider/slider.types.ts"
+    },
+    {
+      "baseline": "baselines/heroui-native/src/primitives/slider/slider.utils.ts",
+      "local": "src/primitives/native/primitives/slider/slider.utils.ts"
+    },
+    {
+      "baseline": "baselines/heroui-native/src/primitives/slider/slider.tsx",
+      "local": "src/primitives/native/primitives/slider/slider.tsx"
+    },
+    {
+      "baseline": "baselines/heroui-native/src/primitives/slider/index.ts",
+      "local": "src/primitives/native/primitives/slider/index.ts"
+    },
+    {
+      "baseline": "baselines/heroui-native/src/components/slider/slider.constants.ts",
+      "local": "src/primitives/native/components/slider/slider.constants.ts"
+    },
+    {
+      "baseline": "baselines/heroui-native/src/components/slider/slider.styles.ts",
+      "local": "src/primitives/native/components/slider/slider.styles.ts"
+    },
+    {
+      "baseline": "baselines/heroui-native/src/components/slider/slider.types.ts",
+      "local": "src/primitives/native/components/slider/slider.types.ts"
+    },
+    {
+      "baseline": "baselines/heroui-native/src/components/slider/slider.animation.ts",
+      "local": "src/primitives/native/components/slider/slider.animation.ts"
+    },
+    {
+      "baseline": "baselines/heroui-native/src/components/slider/slider.tsx",
+      "local": "src/primitives/native/components/slider/slider.tsx"
+    },
+    {
+      "baseline": "baselines/heroui-native/src/components/slider/index.ts",
+      "local": "src/primitives/native/components/slider/index.ts"
+    },
+    {
+      "baseline": "baselines/heroui-react/packages/react/src/components/slider/slider.tsx",
+      "local": "src/primitives/web/components/slider/slider.tsx"
+    },
+    {
+      "baseline": "baselines/heroui-react/packages/react/src/components/slider/index.ts",
+      "local": "src/primitives/web/components/slider/index.ts"
+    },
+    {
+      "baseline": "baselines/heroui-native/src/primitives/activity-indicator/activity-indicator.types.ts",
+      "local": "src/primitives/native/primitives/activity-indicator/activity-indicator.types.ts"
+    },
+    {
+      "baseline": "baselines/heroui-native/src/primitives/activity-indicator/activity-indicator.tsx",
+      "local": "src/primitives/native/primitives/activity-indicator/activity-indicator.tsx"
+    },
+    {
+      "baseline": "baselines/heroui-native/src/primitives/activity-indicator/index.ts",
+      "local": "src/primitives/native/primitives/activity-indicator/index.ts"
+    },
+    {
+      "baseline": "baselines/heroui-native/src/components/spinner/spinner.constants.ts",
+      "local": "src/primitives/native/components/spinner/spinner.constants.ts"
+    },
+    {
+      "baseline": "baselines/heroui-native/src/components/spinner/spinner.types.ts",
+      "local": "src/primitives/native/components/spinner/spinner.types.ts"
+    },
+    {
+      "baseline": "baselines/heroui-native/src/components/spinner/spinner-icon.tsx",
+      "local": "src/primitives/native/components/spinner/spinner-icon.tsx"
+    },
+    {
+      "baseline": "baselines/heroui-native/src/components/spinner/spinner.animation.ts",
+      "local": "src/primitives/native/components/spinner/spinner.animation.ts"
+    },
+    {
+      "baseline": "baselines/heroui-native/src/components/spinner/spinner.styles.ts",
+      "local": "src/primitives/native/components/spinner/spinner.styles.ts"
+    },
+    {
+      "baseline": "baselines/heroui-native/src/components/spinner/spinner.tsx",
+      "local": "src/primitives/native/components/spinner/spinner.tsx"
+    },
+    {
+      "baseline": "baselines/heroui-native/src/components/spinner/index.ts",
+      "local": "src/primitives/native/components/spinner/index.ts"
+    },
+    {
+      "baseline": "baselines/heroui-react/packages/react/src/components/spinner/spinner.tsx",
+      "local": "src/primitives/web/components/spinner/spinner.tsx"
+    },
+    {
+      "baseline": "baselines/heroui-react/packages/react/src/components/spinner/index.ts",
+      "local": "src/primitives/web/components/spinner/index.ts"
+    },
+    {
+      "baseline": "baselines/heroui-native/src/primitives/switch/switch.types.ts",
+      "local": "src/primitives/native/primitives/switch/switch.types.ts"
+    },
+    {
+      "baseline": "baselines/heroui-native/src/primitives/switch/switch.tsx",
+      "local": "src/primitives/native/primitives/switch/switch.tsx"
+    },
+    {
+      "baseline": "baselines/heroui-native/src/primitives/switch/index.ts",
+      "local": "src/primitives/native/primitives/switch/index.ts"
+    },
+    {
+      "baseline": "baselines/heroui-native/src/components/switch/switch.constants.ts",
+      "local": "src/primitives/native/components/switch/switch.constants.ts"
+    },
+    {
+      "baseline": "baselines/heroui-native/src/components/switch/switch.types.ts",
+      "local": "src/primitives/native/components/switch/switch.types.ts"
+    },
+    {
+      "baseline": "baselines/heroui-native/src/components/switch/switch.animation.ts",
+      "local": "src/primitives/native/components/switch/switch.animation.ts"
+    },
+    {
+      "baseline": "baselines/heroui-native/src/components/switch/switch.styles.ts",
+      "local": "src/primitives/native/components/switch/switch.styles.ts"
+    },
+    {
+      "baseline": "baselines/heroui-native/src/components/switch/switch.tsx",
+      "local": "src/primitives/native/components/switch/switch.tsx"
+    },
+    {
+      "baseline": "baselines/heroui-native/src/components/switch/index.ts",
+      "local": "src/primitives/native/components/switch/index.ts"
+    },
+    {
+      "baseline": "baselines/heroui-react/packages/react/src/components/switch/switch.tsx",
+      "local": "src/primitives/web/components/switch/switch.tsx"
+    },
+    {
+      "baseline": "baselines/heroui-react/packages/react/src/components/switch/index.ts",
+      "local": "src/primitives/web/components/switch/index.ts"
+    },
+    {
+      "baseline": "baselines/heroui-native/src/primitives/tabs/tabs.types.ts",
+      "local": "src/primitives/native/primitives/tabs/tabs.types.ts"
+    },
+    {
+      "baseline": "baselines/heroui-native/src/primitives/tabs/tabs.tsx",
+      "local": "src/primitives/native/primitives/tabs/tabs.tsx"
+    },
+    {
+      "baseline": "baselines/heroui-native/src/primitives/tabs/index.ts",
+      "local": "src/primitives/native/primitives/tabs/index.ts"
+    },
+    {
+      "baseline": "baselines/heroui-native/src/components/tabs/tabs.constants.ts",
+      "local": "src/primitives/native/components/tabs/tabs.constants.ts"
+    },
+    {
+      "baseline": "baselines/heroui-native/src/components/tabs/tabs.types.ts",
+      "local": "src/primitives/native/components/tabs/tabs.types.ts"
+    },
+    {
+      "baseline": "baselines/heroui-native/src/components/tabs/tabs.context.ts",
+      "local": "src/primitives/native/components/tabs/tabs.context.ts"
+    },
+    {
+      "baseline": "baselines/heroui-native/src/components/tabs/tabs.animation.ts",
+      "local": "src/primitives/native/components/tabs/tabs.animation.ts"
+    },
+    {
+      "baseline": "baselines/heroui-native/src/components/tabs/tabs.styles.ts",
+      "local": "src/primitives/native/components/tabs/tabs.styles.ts"
+    },
+    {
+      "baseline": "baselines/heroui-native/src/components/tabs/tabs.tsx",
+      "local": "src/primitives/native/components/tabs/tabs.tsx"
+    },
+    {
+      "baseline": "baselines/heroui-native/src/components/tabs/index.ts",
+      "local": "src/primitives/native/components/tabs/index.ts"
+    },
+    {
+      "baseline": "baselines/heroui-react/packages/react/src/components/tabs/tabs.tsx",
+      "local": "src/primitives/web/components/tabs/tabs.tsx"
+    },
+    {
+      "baseline": "baselines/heroui-react/packages/react/src/components/tabs/index.ts",
+      "local": "src/primitives/web/components/tabs/index.ts"
+    },
+    {
+      "baseline": "baselines/heroui-native/src/primitives/tag-group/tag-group.types.ts",
+      "local": "src/primitives/native/primitives/tag-group/tag-group.types.ts"
+    },
+    {
+      "baseline": "baselines/heroui-native/src/primitives/tag-group/tag-group.tsx",
+      "local": "src/primitives/native/primitives/tag-group/tag-group.tsx"
+    },
+    {
+      "baseline": "baselines/heroui-native/src/primitives/tag-group/index.ts",
+      "local": "src/primitives/native/primitives/tag-group/index.ts"
+    },
+    {
+      "baseline": "baselines/heroui-native/src/components/tag-group/tag-group.animation.ts",
+      "local": "src/primitives/native/components/tag-group/tag-group.animation.ts"
+    },
+    {
+      "baseline": "baselines/heroui-native/src/components/tag-group/tag-group.constants.ts",
+      "local": "src/primitives/native/components/tag-group/tag-group.constants.ts"
+    },
+    {
+      "baseline": "baselines/heroui-native/src/components/tag-group/tag-group.styles.ts",
+      "local": "src/primitives/native/components/tag-group/tag-group.styles.ts"
+    },
+    {
+      "baseline": "baselines/heroui-native/src/components/tag-group/tag-group.types.ts",
+      "local": "src/primitives/native/components/tag-group/tag-group.types.ts"
+    },
+    {
+      "baseline": "baselines/heroui-native/src/components/tag-group/tag-group.tsx",
+      "local": "src/primitives/native/components/tag-group/tag-group.tsx"
+    },
+    {
+      "baseline": "baselines/heroui-native/src/components/tag-group/index.ts",
+      "local": "src/primitives/native/components/tag-group/index.ts"
+    },
+    {
+      "baseline": "baselines/heroui-react/packages/react/src/utils/children.ts",
+      "local": "src/primitives/web/utils/children.ts"
+    },
+    {
+      "baseline": "baselines/heroui-react/packages/react/src/components/tag/tag.tsx",
+      "local": "src/primitives/web/components/tag/tag.tsx"
+    },
+    {
+      "baseline": "baselines/heroui-react/packages/react/src/components/tag/index.ts",
+      "local": "src/primitives/web/components/tag/index.ts"
+    },
+    {
+      "baseline": "baselines/heroui-react/packages/react/src/components/tag-group/tag-group.tsx",
+      "local": "src/primitives/web/components/tag-group/tag-group.tsx"
+    },
+    {
+      "baseline": "baselines/heroui-react/packages/react/src/components/tag-group/index.ts",
+      "local": "src/primitives/web/components/tag-group/index.ts"
+    },
+    {
+      "baseline": "baselines/heroui-native/src/components/text-area/text-area.constants.ts",
+      "local": "src/primitives/native/components/text-area/text-area.constants.ts"
+    },
+    {
+      "baseline": "baselines/heroui-native/src/components/text-area/text-area.styles.ts",
+      "local": "src/primitives/native/components/text-area/text-area.styles.ts"
+    },
+    {
+      "baseline": "baselines/heroui-native/src/components/text-area/text-area.types.ts",
+      "local": "src/primitives/native/components/text-area/text-area.types.ts"
+    },
+    {
+      "baseline": "baselines/heroui-native/src/components/text-area/text-area.tsx",
+      "local": "src/primitives/native/components/text-area/text-area.tsx"
+    },
+    {
+      "baseline": "baselines/heroui-native/src/components/text-area/index.ts",
+      "local": "src/primitives/native/components/text-area/index.ts"
+    },
+    {
+      "baseline": "baselines/heroui-react/packages/react/src/components/textarea/textarea.tsx",
+      "local": "src/primitives/web/components/textarea/textarea.tsx"
+    },
+    {
+      "baseline": "baselines/heroui-react/packages/react/src/components/textarea/index.ts",
+      "local": "src/primitives/web/components/textarea/index.ts"
+    },
+    {
+      "baseline": "baselines/heroui-native/src/providers/toast/index.ts",
+      "local": "src/primitives/native/providers/toast/index.ts"
+    },
+    {
+      "baseline": "baselines/heroui-native/src/components/toast/index.ts",
+      "local": "src/primitives/native/components/toast/index.ts"
+    },
+    {
+      "baseline": "baselines/heroui-react/packages/react/src/components/toast/constants.ts",
+      "local": "src/primitives/web/components/toast/constants.ts"
+    },
+    {
+      "baseline": "baselines/heroui-react/packages/react/src/components/toast/toast-queue.ts",
+      "local": "src/primitives/web/components/toast/toast-queue.ts"
+    },
+    {
+      "baseline": "baselines/heroui-react/packages/react/src/hooks/use-measured-height.ts",
+      "local": "src/primitives/web/hooks/use-measured-height.ts"
+    },
+    {
+      "baseline": "baselines/heroui-react/packages/react/src/hooks/use-isomorphic-layout-effect.ts",
+      "local": "src/primitives/web/hooks/use-isomorphic-layout-effect.ts"
+    },
+    {
+      "baseline": "baselines/heroui-react/packages/react/src/hooks/use-media-query.ts",
+      "local": "src/primitives/web/hooks/use-media-query.ts"
+    },
+    {
+      "baseline": "baselines/heroui-react/packages/react/src/components/toast/toast.tsx",
+      "local": "src/primitives/web/components/toast/toast.tsx"
+    },
+    {
+      "baseline": "baselines/heroui-react/packages/react/src/components/toast/index.ts",
+      "local": "src/primitives/web/components/toast/index.ts"
+    },
+    {
+      "baseline": "baselines/heroui-native/src/components/radio/index.ts",
+      "local": "src/primitives/native/components/radio/index.ts"
+    },
+    {
+      "baseline": "baselines/heroui-react/packages/react/src/components/radio/radio.tsx",
+      "local": "src/primitives/web/components/radio/radio.tsx"
+    },
+    {
+      "baseline": "baselines/heroui-react/packages/react/src/components/radio/index.ts",
+      "local": "src/primitives/web/components/radio/index.ts"
+    },
+    {
+      "baseline": "baselines/heroui-react/packages/react/src/components/list-box-item/list-box-item.tsx",
+      "local": "src/primitives/web/components/list-box-item/list-box-item.tsx"
+    },
+    {
+      "baseline": "baselines/heroui-react/packages/react/src/components/list-box-item/index.ts",
+      "local": "src/primitives/web/components/list-box-item/index.ts"
+    },
+    {
+      "baseline": "baselines/heroui-react/packages/react/src/components/list-box-section/list-box-section.tsx",
+      "local": "src/primitives/web/components/list-box-section/list-box-section.tsx"
+    },
+    {
+      "baseline": "baselines/heroui-react/packages/react/src/components/list-box-section/index.ts",
+      "local": "src/primitives/web/components/list-box-section/index.ts"
+    },
+    {
+      "baseline": "baselines/heroui-react/packages/react/src/components/list-box/list-box.tsx",
+      "local": "src/primitives/web/components/list-box/list-box.tsx"
+    },
+    {
+      "baseline": "baselines/heroui-react/packages/react/src/components/list-box/index.ts",
+      "local": "src/primitives/web/components/list-box/index.ts"
     }
   ],
   "components": [
@@ -1799,7 +2807,8 @@
         "Canonical isLoading with deprecated isPending alias; loading disables actions and exposes busy state."
       ],
       "behaviorDeviations": [
-        "Native accessibility disabled and busy flags always reflect the shared computed state, including disabled without loading."
+        "Native accessibility disabled and busy flags always reflect the shared computed state, including disabled without loading.",
+        "Primary mousedown/mouseup are isolated at the web root when Pointer Events are supported; custom callbacks run and the legacy document mouse fallback is preserved."
       ],
       "stylingDeviations": [
         "Native-origin CSS is the authoritative semantic theme and component style system; browser selectors live in web-only.css."
@@ -2088,10 +3097,677 @@
         "Shared root and Scale, Highlight, and Ripple parts; boolean and disabled animation controls; typed platform extensions and platform-specific refs."
       ],
       "behaviorDeviations": [
-        "Web uses React Aria Button with a centered CSS ripple; native retains the touch-origin ripple. Native asChild and granular animation configuration are not shared."
+        "Web uses React Aria Button with a centered CSS ripple; native retains the touch-origin ripple. Native asChild and granular animation configuration are not shared.",
+        "Primary mousedown/mouseup are isolated at the web root when Pointer Events are supported; custom callbacks run and the legacy document mouse fallback is preserved."
       ],
       "stylingDeviations": [
         "Browser interaction selectors live in styles/web-only.css; native retains the owned animation implementation."
+      ],
+      "knownUnappliedChanges": []
+    },
+    {
+      "name": "accordion",
+      "status": "unified",
+      "publicPaths": [
+        "src/components/accordion/accordion-mapping.ts",
+        "src/components/accordion/accordion.native.tsx",
+        "src/components/accordion/accordion.types.ts",
+        "src/components/accordion/accordion.web.tsx",
+        "src/components/accordion/index.native.ts",
+        "src/components/accordion/index.web.ts"
+      ],
+      "sources": [
+        {
+          "repository": "heroui-react",
+          "origin": "packages/react/src/components/accordion"
+        },
+        {
+          "repository": "heroui-native",
+          "origin": "src/components/accordion"
+        }
+      ],
+      "apiTransformations": [
+        "Shared direct props and compound parts normalize the pinned public APIs; typed platform extensions exclude adapter-owned props and refs."
+      ],
+      "behaviorDeviations": [],
+      "stylingDeviations": [
+        "Web slot classes and browser selectors map to native semantic CSS; platform animation geometry remains distinct."
+      ],
+      "knownUnappliedChanges": []
+    },
+    {
+      "name": "alert",
+      "status": "unified",
+      "publicPaths": [
+        "src/components/alert/alert.native.tsx",
+        "src/components/alert/alert.types.ts",
+        "src/components/alert/alert.web.tsx",
+        "src/components/alert/index.native.ts",
+        "src/components/alert/index.web.ts"
+      ],
+      "sources": [
+        {
+          "repository": "heroui-react",
+          "origin": "packages/react/src/components/alert"
+        },
+        {
+          "repository": "heroui-native",
+          "origin": "src/components/alert"
+        }
+      ],
+      "apiTransformations": [
+        "Shared direct props and compound parts normalize the pinned public APIs; typed platform extensions exclude adapter-owned props and refs."
+      ],
+      "behaviorDeviations": [],
+      "stylingDeviations": [
+        "Web slot classes and browser selectors map to native semantic CSS; platform animation geometry remains distinct."
+      ],
+      "knownUnappliedChanges": []
+    },
+    {
+      "name": "avatar",
+      "status": "unified",
+      "publicPaths": [
+        "src/components/avatar/avatar.native.tsx",
+        "src/components/avatar/avatar.types.ts",
+        "src/components/avatar/avatar.web.tsx",
+        "src/components/avatar/index.native.ts",
+        "src/components/avatar/index.web.ts"
+      ],
+      "sources": [
+        {
+          "repository": "heroui-react",
+          "origin": "packages/react/src/components/avatar"
+        },
+        {
+          "repository": "heroui-native",
+          "origin": "src/components/avatar"
+        }
+      ],
+      "apiTransformations": [
+        "Shared direct props and compound parts normalize the pinned public APIs; typed platform extensions exclude adapter-owned props and refs."
+      ],
+      "behaviorDeviations": [],
+      "stylingDeviations": [
+        "Web slot classes and browser selectors map to native semantic CSS; platform animation geometry remains distinct."
+      ],
+      "knownUnappliedChanges": []
+    },
+    {
+      "name": "checkbox",
+      "status": "unified",
+      "publicPaths": [
+        "src/components/checkbox/checkbox.native.tsx",
+        "src/components/checkbox/checkbox.types.ts",
+        "src/components/checkbox/checkbox.web.tsx",
+        "src/components/checkbox/index.native.ts",
+        "src/components/checkbox/index.web.ts"
+      ],
+      "sources": [
+        {
+          "repository": "heroui-react",
+          "origin": "packages/react/src/components/checkbox"
+        },
+        {
+          "repository": "heroui-native",
+          "origin": "src/components/checkbox"
+        }
+      ],
+      "apiTransformations": [
+        "Shared direct props and compound parts normalize the pinned public APIs; typed platform extensions exclude adapter-owned props and refs."
+      ],
+      "behaviorDeviations": [],
+      "stylingDeviations": [
+        "Web slot classes and browser selectors map to native semantic CSS; platform animation geometry remains distinct."
+      ],
+      "knownUnappliedChanges": []
+    },
+    {
+      "name": "close-button",
+      "status": "unified",
+      "publicPaths": [
+        "src/components/close-button/close-button.native.tsx",
+        "src/components/close-button/close-button.types.ts",
+        "src/components/close-button/close-button.web.tsx",
+        "src/components/close-button/index.native.ts",
+        "src/components/close-button/index.web.ts"
+      ],
+      "sources": [
+        {
+          "repository": "heroui-react",
+          "origin": "packages/react/src/components/close-button"
+        },
+        {
+          "repository": "heroui-native",
+          "origin": "src/components/close-button"
+        }
+      ],
+      "apiTransformations": [
+        "Shared direct props and compound parts normalize the pinned public APIs; typed platform extensions exclude adapter-owned props and refs."
+      ],
+      "behaviorDeviations": [],
+      "stylingDeviations": [
+        "Web slot classes and browser selectors map to native semantic CSS; platform animation geometry remains distinct."
+      ],
+      "knownUnappliedChanges": []
+    },
+    {
+      "name": "input-group",
+      "status": "unified",
+      "publicPaths": [
+        "src/components/input-group/index.native.ts",
+        "src/components/input-group/index.web.ts",
+        "src/components/input-group/input-group.native.tsx",
+        "src/components/input-group/input-group.types.ts",
+        "src/components/input-group/input-group.web.tsx"
+      ],
+      "sources": [
+        {
+          "repository": "heroui-react",
+          "origin": "packages/react/src/components/input-group"
+        },
+        {
+          "repository": "heroui-native",
+          "origin": "src/components/input-group"
+        }
+      ],
+      "apiTransformations": [
+        "Shared direct props and compound parts normalize the pinned public APIs; typed platform extensions exclude adapter-owned props and refs.",
+        "Web consumes leaf defaults in adapter state and never forwards conflicting DOM value/defaultValue; bare text leaves retain their TextField value context."
+      ],
+      "behaviorDeviations": [],
+      "stylingDeviations": [
+        "Web slot classes and browser selectors map to native semantic CSS; platform animation geometry remains distinct."
+      ],
+      "knownUnappliedChanges": []
+    },
+    {
+      "name": "input-otp",
+      "status": "unified",
+      "publicPaths": [
+        "src/components/input-otp/index.native.ts",
+        "src/components/input-otp/index.web.ts",
+        "src/components/input-otp/input-otp.native.tsx",
+        "src/components/input-otp/input-otp.types.ts",
+        "src/components/input-otp/input-otp.web.tsx"
+      ],
+      "sources": [
+        {
+          "repository": "heroui-react",
+          "origin": "packages/react/src/components/input-otp"
+        },
+        {
+          "repository": "heroui-native",
+          "origin": "src/components/input-otp"
+        }
+      ],
+      "apiTransformations": [
+        "Shared direct props and compound parts normalize the pinned public APIs; typed platform extensions exclude adapter-owned props and refs.",
+        "Web consumes leaf defaults in adapter state and never forwards conflicting DOM value/defaultValue; bare text leaves retain their TextField value context."
+      ],
+      "behaviorDeviations": [],
+      "stylingDeviations": [
+        "Web slot classes and browser selectors map to native semantic CSS; platform animation geometry remains distinct."
+      ],
+      "knownUnappliedChanges": []
+    },
+    {
+      "name": "popover",
+      "status": "unified",
+      "publicPaths": [
+        "src/components/popover/index.native.ts",
+        "src/components/popover/index.web.ts",
+        "src/components/popover/popover.native.tsx",
+        "src/components/popover/popover.types.ts",
+        "src/components/popover/popover.web.tsx"
+      ],
+      "sources": [
+        {
+          "repository": "heroui-react",
+          "origin": "packages/react/src/components/popover"
+        },
+        {
+          "repository": "heroui-native",
+          "origin": "src/components/popover"
+        }
+      ],
+      "apiTransformations": [
+        "Shared direct props and compound parts normalize the pinned public APIs; typed platform extensions exclude adapter-owned props and refs.",
+        "Trigger requires a single pressable React element; Root className applies to the web layout wrapper."
+      ],
+      "behaviorDeviations": [
+        "Native Trigger slots its one pressable child; web wraps that child with the upstream Pressable trigger. Web context root has no forwarded ref.",
+        "Optional bottom-sheet component construction is guarded so default popover imports do not require the optional bottom-sheet runtime; bottom-sheet view props derive from its public component type."
+      ],
+      "stylingDeviations": [
+        "Web slot classes and browser selectors map to native semantic CSS; platform animation geometry remains distinct."
+      ],
+      "knownUnappliedChanges": []
+    },
+    {
+      "name": "radio-group",
+      "status": "unified",
+      "publicPaths": [
+        "src/components/radio-group/index.native.ts",
+        "src/components/radio-group/index.web.ts",
+        "src/components/radio-group/radio-group.native.tsx",
+        "src/components/radio-group/radio-group.types.ts",
+        "src/components/radio-group/radio-group.web.tsx"
+      ],
+      "sources": [
+        {
+          "repository": "heroui-react",
+          "origin": "packages/react/src/components/radio-group"
+        },
+        {
+          "repository": "heroui-native",
+          "origin": "src/components/radio-group"
+        }
+      ],
+      "apiTransformations": [
+        "Shared direct props and compound parts normalize the pinned public APIs; typed platform extensions exclude adapter-owned props and refs."
+      ],
+      "behaviorDeviations": [],
+      "stylingDeviations": [
+        "Web slot classes and browser selectors map to native semantic CSS; platform animation geometry remains distinct."
+      ],
+      "knownUnappliedChanges": []
+    },
+    {
+      "name": "scroll-shadow",
+      "status": "unified",
+      "publicPaths": [
+        "src/components/scroll-shadow/gradient.native.tsx",
+        "src/components/scroll-shadow/index.native.ts",
+        "src/components/scroll-shadow/index.web.ts",
+        "src/components/scroll-shadow/scroll-shadow.native.tsx",
+        "src/components/scroll-shadow/scroll-shadow.types.ts",
+        "src/components/scroll-shadow/scroll-shadow.web.tsx"
+      ],
+      "sources": [
+        {
+          "repository": "heroui-react",
+          "origin": "packages/react/src/components/scroll-shadow"
+        },
+        {
+          "repository": "heroui-native",
+          "origin": "src/components/scroll-shadow"
+        }
+      ],
+      "apiTransformations": [
+        "Shared direct props and compound parts normalize the pinned public APIs; typed platform extensions exclude adapter-owned props and refs."
+      ],
+      "behaviorDeviations": [],
+      "stylingDeviations": [
+        "Web slot classes and browser selectors map to native semantic CSS; platform animation geometry remains distinct."
+      ],
+      "knownUnappliedChanges": []
+    },
+    {
+      "name": "search-field",
+      "status": "unified",
+      "publicPaths": [
+        "src/components/search-field/index.native.ts",
+        "src/components/search-field/index.web.ts",
+        "src/components/search-field/search-field.native.tsx",
+        "src/components/search-field/search-field.types.ts",
+        "src/components/search-field/search-field.web.tsx"
+      ],
+      "sources": [
+        {
+          "repository": "heroui-react",
+          "origin": "packages/react/src/components/search-field"
+        },
+        {
+          "repository": "heroui-native",
+          "origin": "src/components/search-field"
+        }
+      ],
+      "apiTransformations": [
+        "Shared direct props and compound parts normalize the pinned public APIs; typed platform extensions exclude adapter-owned props and refs."
+      ],
+      "behaviorDeviations": [],
+      "stylingDeviations": [
+        "Web slot classes and browser selectors map to native semantic CSS; platform animation geometry remains distinct."
+      ],
+      "knownUnappliedChanges": []
+    },
+    {
+      "name": "select",
+      "status": "unified",
+      "publicPaths": [
+        "src/components/select/index.native.ts",
+        "src/components/select/index.web.ts",
+        "src/components/select/select-context.ts",
+        "src/components/select/select-mapping.ts",
+        "src/components/select/select.native.tsx",
+        "src/components/select/select.types.ts",
+        "src/components/select/select.web.tsx"
+      ],
+      "sources": [
+        {
+          "repository": "heroui-react",
+          "origin": "packages/react/src/components/select"
+        },
+        {
+          "repository": "heroui-native",
+          "origin": "src/components/select"
+        }
+      ],
+      "apiTransformations": [
+        "Shared direct props and compound parts normalize the pinned public APIs; typed platform extensions exclude adapter-owned props and refs.",
+        "Controlled empty selections use an internal owned Select controlled-state flag; omitted values retain uncontrolled defaults.",
+        "Root item disabled metadata is respected by both platforms."
+      ],
+      "behaviorDeviations": [
+        "Owned controllable-state hook accepts an explicit controlled flag so undefined can represent a controlled empty selection.",
+        "Single-selection shared contract; pinned Native Select has no invalid root state, so validation remains web-only.",
+        "Optional bottom-sheet component construction is guarded so default popover imports do not require the optional bottom-sheet runtime; bottom-sheet view props derive from its public component type."
+      ],
+      "stylingDeviations": [
+        "Web slot classes and browser selectors map to native semantic CSS; platform animation geometry remains distinct."
+      ],
+      "knownUnappliedChanges": []
+    },
+    {
+      "name": "separator",
+      "status": "unified",
+      "publicPaths": [
+        "src/components/separator/index.native.ts",
+        "src/components/separator/index.web.ts",
+        "src/components/separator/separator.native.tsx",
+        "src/components/separator/separator.types.ts",
+        "src/components/separator/separator.web.tsx"
+      ],
+      "sources": [
+        {
+          "repository": "heroui-react",
+          "origin": "packages/react/src/components/separator"
+        },
+        {
+          "repository": "heroui-native",
+          "origin": "src/components/separator"
+        }
+      ],
+      "apiTransformations": [
+        "Shared direct props and compound parts normalize the pinned public APIs; typed platform extensions exclude adapter-owned props and refs."
+      ],
+      "behaviorDeviations": [],
+      "stylingDeviations": [
+        "Web slot classes and browser selectors map to native semantic CSS; platform animation geometry remains distinct."
+      ],
+      "knownUnappliedChanges": []
+    },
+    {
+      "name": "skeleton",
+      "status": "unified",
+      "publicPaths": [
+        "src/components/skeleton/index.native.ts",
+        "src/components/skeleton/index.web.ts",
+        "src/components/skeleton/skeleton.native.tsx",
+        "src/components/skeleton/skeleton.types.ts",
+        "src/components/skeleton/skeleton.web.tsx"
+      ],
+      "sources": [
+        {
+          "repository": "heroui-react",
+          "origin": "packages/react/src/components/skeleton"
+        },
+        {
+          "repository": "heroui-native",
+          "origin": "src/components/skeleton"
+        }
+      ],
+      "apiTransformations": [
+        "Shared direct props and compound parts normalize the pinned public APIs; typed platform extensions exclude adapter-owned props and refs."
+      ],
+      "behaviorDeviations": [
+        "Reanimated progress mutations use SharedValue.set instead of value assignment, preserving behavior while satisfying the React immutability check."
+      ],
+      "stylingDeviations": [
+        "Web slot classes and browser selectors map to native semantic CSS; platform animation geometry remains distinct."
+      ],
+      "knownUnappliedChanges": []
+    },
+    {
+      "name": "slider",
+      "status": "unified",
+      "publicPaths": [
+        "src/components/slider/index.native.ts",
+        "src/components/slider/index.web.ts",
+        "src/components/slider/slider.native.tsx",
+        "src/components/slider/slider.types.ts",
+        "src/components/slider/slider.web.tsx"
+      ],
+      "sources": [
+        {
+          "repository": "heroui-react",
+          "origin": "packages/react/src/components/slider"
+        },
+        {
+          "repository": "heroui-native",
+          "origin": "src/components/slider"
+        }
+      ],
+      "apiTransformations": [
+        "Shared direct props and compound parts normalize the pinned public APIs; typed platform extensions exclude adapter-owned props and refs."
+      ],
+      "behaviorDeviations": [],
+      "stylingDeviations": [
+        "Web slot classes and browser selectors map to native semantic CSS; platform animation geometry remains distinct."
+      ],
+      "knownUnappliedChanges": []
+    },
+    {
+      "name": "spinner",
+      "status": "unified",
+      "publicPaths": [
+        "src/components/spinner/index.native.ts",
+        "src/components/spinner/index.web.ts",
+        "src/components/spinner/spinner-mapping.ts",
+        "src/components/spinner/spinner.native.tsx",
+        "src/components/spinner/spinner.types.ts",
+        "src/components/spinner/spinner.web.tsx"
+      ],
+      "sources": [
+        {
+          "repository": "heroui-react",
+          "origin": "packages/react/src/components/spinner"
+        },
+        {
+          "repository": "heroui-native",
+          "origin": "src/components/spinner"
+        }
+      ],
+      "apiTransformations": [
+        "Shared direct props and compound parts normalize the pinned public APIs; typed platform extensions exclude adapter-owned props and refs.",
+        "Shared semantic accent maps to the native default color; web-only currentColor is outside the shared enum."
+      ],
+      "behaviorDeviations": [],
+      "stylingDeviations": [
+        "Web slot classes and browser selectors map to native semantic CSS; platform animation geometry remains distinct."
+      ],
+      "knownUnappliedChanges": []
+    },
+    {
+      "name": "surface",
+      "status": "unified",
+      "publicPaths": [
+        "src/components/surface/index.native.ts",
+        "src/components/surface/index.web.ts",
+        "src/components/surface/surface.native.tsx",
+        "src/components/surface/surface.types.ts",
+        "src/components/surface/surface.web.tsx"
+      ],
+      "sources": [
+        {
+          "repository": "heroui-react",
+          "origin": "packages/react/src/components/surface"
+        },
+        {
+          "repository": "heroui-native",
+          "origin": "src/components/surface"
+        }
+      ],
+      "apiTransformations": [
+        "Shared direct props and compound parts normalize the pinned public APIs; typed platform extensions exclude adapter-owned props and refs."
+      ],
+      "behaviorDeviations": [],
+      "stylingDeviations": [
+        "Web slot classes and browser selectors map to native semantic CSS; platform animation geometry remains distinct."
+      ],
+      "knownUnappliedChanges": []
+    },
+    {
+      "name": "switch",
+      "status": "unified",
+      "publicPaths": [
+        "src/components/switch/index.native.ts",
+        "src/components/switch/index.web.ts",
+        "src/components/switch/switch.native.tsx",
+        "src/components/switch/switch.types.ts",
+        "src/components/switch/switch.web.tsx"
+      ],
+      "sources": [
+        {
+          "repository": "heroui-react",
+          "origin": "packages/react/src/components/switch"
+        },
+        {
+          "repository": "heroui-native",
+          "origin": "src/components/switch"
+        }
+      ],
+      "apiTransformations": [
+        "Shared direct props and compound parts normalize the pinned public APIs; typed platform extensions exclude adapter-owned props and refs."
+      ],
+      "behaviorDeviations": [],
+      "stylingDeviations": [
+        "Web slot classes and browser selectors map to native semantic CSS; platform animation geometry remains distinct."
+      ],
+      "knownUnappliedChanges": []
+    },
+    {
+      "name": "tabs",
+      "status": "unified",
+      "publicPaths": [
+        "src/components/tabs/index.native.ts",
+        "src/components/tabs/index.web.ts",
+        "src/components/tabs/tabs.native.tsx",
+        "src/components/tabs/tabs.types.ts",
+        "src/components/tabs/tabs.web.tsx"
+      ],
+      "sources": [
+        {
+          "repository": "heroui-react",
+          "origin": "packages/react/src/components/tabs"
+        },
+        {
+          "repository": "heroui-native",
+          "origin": "src/components/tabs"
+        }
+      ],
+      "apiTransformations": [
+        "Shared direct props and compound parts normalize the pinned public APIs; typed platform extensions exclude adapter-owned props and refs.",
+        "Shared List marker configures per-tab web selection indicators and a single native list indicator."
+      ],
+      "behaviorDeviations": [],
+      "stylingDeviations": [
+        "Web slot classes and browser selectors map to native semantic CSS; platform animation geometry remains distinct."
+      ],
+      "knownUnappliedChanges": []
+    },
+    {
+      "name": "tag-group",
+      "status": "unified",
+      "publicPaths": [
+        "src/components/tag-group/index.native.ts",
+        "src/components/tag-group/index.web.ts",
+        "src/components/tag-group/tag-group.native.tsx",
+        "src/components/tag-group/tag-group.types.ts",
+        "src/components/tag-group/tag-group.web.tsx"
+      ],
+      "sources": [
+        {
+          "repository": "heroui-react",
+          "origin": "packages/react/src/components/tag-group"
+        },
+        {
+          "repository": "heroui-native",
+          "origin": "src/components/tag-group"
+        }
+      ],
+      "apiTransformations": [
+        "Shared direct props and compound parts normalize the pinned public APIs; typed platform extensions exclude adapter-owned props and refs."
+      ],
+      "behaviorDeviations": [],
+      "stylingDeviations": [
+        "Web slot classes and browser selectors map to native semantic CSS; platform animation geometry remains distinct."
+      ],
+      "knownUnappliedChanges": []
+    },
+    {
+      "name": "text-area",
+      "status": "unified",
+      "publicPaths": [
+        "src/components/text-area/index.native.ts",
+        "src/components/text-area/index.web.ts",
+        "src/components/text-area/text-area.native.tsx",
+        "src/components/text-area/text-area.types.ts",
+        "src/components/text-area/text-area.web.tsx"
+      ],
+      "sources": [
+        {
+          "repository": "heroui-react",
+          "origin": "packages/react/src/components/textarea"
+        },
+        {
+          "repository": "heroui-native",
+          "origin": "src/components/text-area"
+        }
+      ],
+      "apiTransformations": [
+        "Shared direct props and compound parts normalize the pinned public APIs; typed platform extensions exclude adapter-owned props and refs.",
+        "Web consumes leaf defaults in adapter state and never forwards conflicting DOM value/defaultValue; bare text leaves retain their TextField value context."
+      ],
+      "behaviorDeviations": [],
+      "stylingDeviations": [
+        "Web slot classes and browser selectors map to native semantic CSS; platform animation geometry remains distinct."
+      ],
+      "knownUnappliedChanges": []
+    },
+    {
+      "name": "toast",
+      "status": "unified",
+      "publicPaths": [
+        "src/components/toast/index.native.ts",
+        "src/components/toast/index.web.ts",
+        "src/components/toast/toast-context.ts",
+        "src/components/toast/toast-host.native.tsx",
+        "src/components/toast/toast-host.web.tsx",
+        "src/components/toast/toast-manager.web.ts",
+        "src/components/toast/toast-mapping.ts",
+        "src/components/toast/toast.native.tsx",
+        "src/components/toast/toast.types.ts",
+        "src/components/toast/toast.web.tsx"
+      ],
+      "sources": [
+        {
+          "repository": "heroui-react",
+          "origin": "packages/react/src/components/toast"
+        },
+        {
+          "repository": "heroui-native",
+          "origin": "src/components/toast"
+        }
+      ],
+      "apiTransformations": [
+        "Shared direct props and compound parts normalize the pinned public APIs; typed platform extensions exclude adapter-owned props and refs.",
+        "Provider-scoped useToast normalizes show/dismiss operations and millisecond duration, including zero for persistent notifications. Custom Toast roots require the platform renderer lifecycle props."
+      ],
+      "behaviorDeviations": [],
+      "stylingDeviations": [
+        "Web slot classes and browser selectors map to native semantic CSS; platform animation geometry remains distinct."
       ],
       "knownUnappliedChanges": []
     }

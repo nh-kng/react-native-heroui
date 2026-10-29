@@ -1,3 +1,26 @@
+import { DocsExamples } from './docs-examples';
+import { SurfaceExamples } from './examples/surface';
+import { SeparatorExamples } from './examples/separator';
+import { SpinnerExamples } from './examples/spinner';
+import { SkeletonExamples } from './examples/skeleton';
+import { AvatarExamples } from './examples/avatar';
+import { AlertExamples } from './examples/alert';
+import { CloseButtonExamples } from './examples/close-button';
+import { CheckboxExamples } from './examples/checkbox';
+import { SwitchExamples } from './examples/switch';
+import { RadioGroupExamples } from './examples/radio-group';
+import { TextAreaExamples } from './examples/text-area';
+import { InputGroupExamples } from './examples/input-group';
+import { SearchFieldExamples } from './examples/search-field';
+import { InputOTPExamples } from './examples/input-otp';
+import { AccordionExamples } from './examples/accordion';
+import { TabsExamples } from './examples/tabs';
+import { SliderExamples } from './examples/slider';
+import { TagGroupExamples } from './examples/tag-group';
+import { PopoverExamples } from './examples/popover';
+import { SelectExamples } from './examples/select';
+import { ScrollShadowExamples } from './examples/scroll-shadow';
+import { ToastExamples } from './examples/toast';
 import {
   Button,
   Card,
@@ -364,6 +387,29 @@ function TypographyExamples() {
 }
 
 const examples: Record<ComponentName, ComponentType> = {
+  Surface: SurfaceExamples,
+  Separator: SeparatorExamples,
+  Spinner: SpinnerExamples,
+  Skeleton: SkeletonExamples,
+  Avatar: AvatarExamples,
+  Alert: AlertExamples,
+  CloseButton: CloseButtonExamples,
+  Checkbox: CheckboxExamples,
+  Switch: SwitchExamples,
+  RadioGroup: RadioGroupExamples,
+  TextArea: TextAreaExamples,
+  InputGroup: InputGroupExamples,
+  SearchField: SearchFieldExamples,
+  InputOTP: InputOTPExamples,
+  Accordion: AccordionExamples,
+  Tabs: TabsExamples,
+  Slider: SliderExamples,
+  TagGroup: TagGroupExamples,
+  Popover: PopoverExamples,
+  Select: SelectExamples,
+  ScrollShadow: ScrollShadowExamples,
+  Toast: ToastExamples,
+
   Button: ButtonExamples,
   Card: CardExamples,
   Chip: ChipExamples,
@@ -378,5 +424,5 @@ const examples: Record<ComponentName, ComponentType> = {
 
 export function ComponentExamples({ name }: { name: ComponentName }) {
   const Examples = examples[name];
-  return <Examples />;
+  return name === 'PressableFeedback' ? <Examples /> : <DocsExamples name={name} />;
 }

@@ -21,7 +21,8 @@ The fixtures use separate `react-native` and `browser` export conditions. They c
 ## Example and package checks
 
 ```sh
-pnpm --filter heroui-example exec tsc --noEmit
+pnpm --filter heroui-example exec tsc --noEmit --customConditions browser
+pnpm --filter heroui-example exec tsc --noEmit --customConditions react-native
 pnpm --filter heroui-example exec expo config --json
 pnpm pack --dry-run
 ```

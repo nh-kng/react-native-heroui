@@ -2,6 +2,7 @@ import { useEffect } from 'react';
 import { Uniwind } from 'uniwind';
 
 import type { HeroUIProviderProps } from './hero-ui-provider.types.js';
+import { ToastHost } from '../toast/toast-host.web.js';
 export type { ColorScheme, HeroUIProviderProps } from './hero-ui-provider.types.js';
 
 export function HeroUIProvider({ children, colorScheme = 'system' }: HeroUIProviderProps) {
@@ -32,5 +33,5 @@ export function HeroUIProvider({ children, colorScheme = 'system' }: HeroUIProvi
     };
   }, [colorScheme]);
 
-  return children;
+  return <ToastHost>{children}</ToastHost>;
 }

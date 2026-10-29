@@ -8,6 +8,8 @@ The package peers are declared in the root `package.json`. They cover the owned 
 | React DOM | `>=19.0.0` | `19.2.3` |
 | React Native | `>=0.81.0` | `0.86.3` |
 | Tailwind CSS | `^4.0.0` | `4.3.3` |
+| TypeScript (example development) | `~6.0.3` | `6.0.3` |
+| Radix Avatar (web) | `^1.2.6` | `1.2.6` |
 | Uniwind | `^1.13.0` | `1.13.0` |
 
 HeroUI React 3.2.6 and Native 1.0.11 remain development-only source baselines; consumer rendering does not import either installed component package.

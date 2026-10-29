@@ -5,6 +5,7 @@ import { resolveButtonState } from './button-state.js';
 import { buttonClassNames } from './button.styles.js';
 import type { ButtonBackgroundProps, ButtonLabelProps, ButtonProps } from './button.types.js';
 import { Button as WebButton } from '../../primitives/web/components/button/index.js';
+import { mouseBoundary } from '../shared/mouse-boundary.web.js';
 export type {
   ButtonBackgroundProps,
   ButtonLabelProps,
@@ -45,6 +46,7 @@ const ButtonRoot = forwardRef<ButtonRef, ButtonProps>(function ButtonRoot(
     <ButtonSizeContext value={size ?? 'md'}>
       <WebButton.Root
         {...webProps}
+        {...mouseBoundary(webProps)}
         ref={ref}
         aria-busy={loading || undefined}
         className={[className, 'relative'].filter(Boolean).join(' ')}

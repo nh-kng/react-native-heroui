@@ -1,6 +1,6 @@
 # @nh-kng/react-native-heroui
 
-Source-owned React components based on pinned HeroUI React and Native implementations. The package includes Button, Card, Chip, PressableFeedback, Typography, field components, a theme provider, shared contracts, and one semantic styling system for web, iOS, and Android.
+Source-owned React components based on pinned HeroUI React and Native implementations. The package includes all 31 shared HeroUI component families, PressableFeedback, a theme and toast provider, shared contracts, and one semantic styling system for web, iOS, and Android. See the [component API](docs/api/components.md) for the complete surface.
 
 ## Install
 

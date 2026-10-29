@@ -12,8 +12,8 @@ export const tagVariants = tv({
     variant: "default",
   },
   slots: {
-    base: "tag",
-    removeButton: "tag__remove-button",
+    base: "tag-group__tag tag-group__tag--variant-default tag-group__tag--size-md",
+    removeButton: "tag-group__remove-button",
   },
   variants: {
     size: {

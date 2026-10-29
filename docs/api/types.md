@@ -2,7 +2,7 @@
 
 The package exports conventional component prop interfaces such as `PressableFeedbackProps`, `ButtonProps`, `CardProps`, `InputProps`, `TextFieldProps`, `TypographyProps`, and the compound-part interfaces such as `CardBodyProps` and `TypographyHeadingProps`. Each platform declaration exports the same shared direct props and the matching component ref type.
 
-Each component has one shared `*.types.ts` module used by both platform builds; only implementation refs differ. The fixtures assert equality of all public root prop contracts across emitted declarations.
+The complete shared family list is in the [component API](components.md). Each component has one shared `*.types.ts` module used by both platform builds; only implementation refs differ. The fixtures assert equality of all public root prop contracts across emitted declarations.
 
 ## Shared props
 
@@ -14,7 +14,7 @@ Shared props describe the behavior users can rely on across platforms. Examples 
 
 Use `nativeProps` for native-only upstream props and `webProps` for web-only upstream props. Each option uses locally owned public component types and omits props owned or mapped by the adapter, including refs. This keeps platform escape hatches from replacing shared behavior.
 
-Component refs use the actual upstream target for that platform. For example, native `InputComponentRef` is the upstream text-input ref and the web ref targets the upstream HTML input. There is no fabricated common imperative handle.
+Component refs use the actual upstream target for that platform. For example, native `InputComponentRef` is the upstream text-input ref and the web ref targets the upstream HTML input. There is no fabricated common imperative handle. Skeleton has no native ref because its pinned implementation does not accept one; the web root accepts a div ref. Popover has no web root ref because its web root is a context provider; use its Trigger or Content ref. Other new roots and parts export their actual platform `*Ref` types.
 
 ## Related documentation
 

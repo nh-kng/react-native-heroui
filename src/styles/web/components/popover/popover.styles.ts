@@ -8,9 +8,9 @@ import {tv} from "tailwind-variants";
 
 export const popoverVariants = tv({
   slots: {
-    base: "popover",
+    base: "popover__content",
     dialog: "popover__dialog",
-    heading: "popover__heading",
+    heading: "popover__label",
     trigger: "popover__trigger",
   },
 });

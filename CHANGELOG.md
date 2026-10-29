@@ -2,6 +2,17 @@
 
 ## Unreleased
 
+- Expanded the Expo gallery with a complete HeroUI React preview inventory, adapted public-adapter examples, visible upstream API limitations, source links, platform notes, and static coverage checks. Added agent rules requiring future component examples to follow their HeroUI documentation pages.
+- Refined web TagGroup remove buttons with a compact circular shape, matching vertical and trailing spacing, and subtle hover feedback that follows the selected tag's foreground color.
+- Restored web CloseButton defaults, SearchField and InputGroup adornment layout, TextArea field styling, toast foreground colors, and theme-aware scrollbars. Fixed duplicate TagGroup remove buttons and ordinary typography inheriting field description slots.
+- Fixed conflicting value/defaultValue DOM props in web TextArea, InputGroup.Input, and InputOTP, retaining leaf defaults and inherited TextField state.
+- Paired primary mouse event isolation on web Button and PressableFeedback in Pointer Events browsers to prevent unmatched mouseup events reaching React Native Web; consumer callbacks and the legacy mouse fallback remain available.
+- Updated the example's TypeScript development dependency to Expo SDK 57's recommended `~6.0.3`.
+
+- Added the remaining 22 shared component families on web and native: Accordion, Alert, Avatar, Checkbox, CloseButton, InputGroup, InputOTP, Popover, RadioGroup, ScrollShadow, SearchField, Select, Separator, Skeleton, Slider, Spinner, Surface, Switch, Tabs, TagGroup, TextArea, and Toast. Each has conditional root/subpath exports, shared contracts, typed platform options, and a gallery showcase.
+- Added provider-scoped `useToast()` with string IDs, show/dismiss/dismissAll operations, and millisecond durations including zero for persistent notifications. Web owns an isolated queue per provider; native reuses its existing host.
+- Normalized compound parts, controlled/default selection, string collection identities, field changes, and browser slot styles while retaining pinned source ownership. Added the existing Radix Avatar version as a declared peer for the web implementation. No dependency versions were upgraded.
+
 - Fixed `PressableFeedback.Highlight` flashing on web hover exit by matching ghost Button's transparent-to-default background transition for hover and press.
 
 - Added web hover feedback to `PressableFeedback.Highlight` using the ghost Button hover color, with hover-capable pointer and disabled guards; Scale and Ripple remain press-only.

@@ -12,37 +12,37 @@ export const avatarVariants = tv({
     size: "md",
   },
   slots: {
-    base: "avatar",
-    fallback: "avatar__fallback",
+    base: "avatar__root",
+    fallback: "avatar__fallback-container avatar__fallback-text",
     image: "avatar__image",
   },
   variants: {
     color: {
       accent: {
-        fallback: "avatar__fallback--accent",
+        fallback: "avatar__fallback-text--color-accent",
       },
       danger: {
-        fallback: "avatar__fallback--danger",
+        fallback: "avatar__fallback-text--color-danger",
       },
       default: {
-        fallback: "avatar__fallback--default",
+        fallback: "avatar__fallback-text--color-default",
       },
       success: {
-        fallback: "avatar__fallback--success",
+        fallback: "avatar__fallback-text--color-success",
       },
       warning: {
-        fallback: "avatar__fallback--warning",
+        fallback: "avatar__fallback-text--color-warning",
       },
     },
     size: {
       lg: {
-        base: "avatar--lg",
+        base: "avatar__root--size-lg",
       },
       md: {
-        base: "avatar--md",
+        base: "avatar__root--size-md",
       },
       sm: {
-        base: "avatar--sm",
+        base: "avatar__root--size-sm",
       },
     },
     variant: {

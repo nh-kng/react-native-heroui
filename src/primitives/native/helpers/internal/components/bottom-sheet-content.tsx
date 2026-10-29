@@ -36,7 +36,8 @@ import { usePopupBottomSheetContentAnimation } from '../hooks/use-popup-bottom-s
 import type { BaseBottomSheetContentProps } from '../types/bottom-sheet.js';
 import type { ViewRef } from '../types/index.js';
 
-const StyledBottomSheet = withUniwind(GorhomBottomSheetPackage?.default);
+function MissingBottomSheet(): never { throw new Error('Bottom-sheet presentation requires @gorhom/bottom-sheet.'); }
+const StyledBottomSheet = GorhomBottomSheetPackage ? withUniwind(GorhomBottomSheetPackage.default) : MissingBottomSheet;
 
 /**
  * Generic absolute-fill background container rendered inside the sheet

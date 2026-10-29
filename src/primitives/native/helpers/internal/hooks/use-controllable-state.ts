@@ -20,6 +20,7 @@ import {
  * Parameters for the useControllableState hook
  */
 type UseControllableStateParams<T> = {
+  controlled?: boolean;
   /** The controlled value prop */
   prop?: T | undefined;
   /** The default value for uncontrolled mode */
@@ -43,6 +44,7 @@ type SetStateFn<T> = (prevState?: T) => T;
  */
 function useControllableState<T>({
   prop,
+  controlled,
   defaultProp,
   onChange = () => {},
 }: UseControllableStateParams<T>) {
@@ -50,7 +52,7 @@ function useControllableState<T>({
     defaultProp,
     onChange,
   });
-  const isControlled = prop !== undefined;
+  const isControlled = controlled ?? prop !== undefined;
   const value = isControlled ? prop : uncontrolledProp;
   const handleChange = useCallbackRef(onChange);
 
@@ -63,11 +65,11 @@ function useControllableState<T>({
   const prevPropRef = useRef(prop);
   useLayoutEffect(() => {
     const wasControlled = prevPropRef.current !== undefined;
-    if (wasControlled && prop === undefined) {
+    if (!isControlled && wasControlled && prop === undefined) {
       setUncontrolledProp(undefined);
     }
     prevPropRef.current = prop;
-  }, [prop, setUncontrolledProp]);
+  }, [prop, isControlled, setUncontrolledProp]);
 
   const setValue: React.Dispatch<React.SetStateAction<T | undefined>> =
     useCallback(

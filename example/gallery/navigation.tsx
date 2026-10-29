@@ -7,15 +7,37 @@ import {
 import { ScrollView, View } from 'react-native';
 
 export const components = [
+  'Accordion',
+  'Alert',
+  'Avatar',
   'Button',
   'Card',
+  'Checkbox',
   'Chip',
+  'CloseButton',
   'Description',
   'FieldError',
   'Input',
+  'InputGroup',
+  'InputOTP',
   'Label',
+  'Popover',
   'PressableFeedback',
+  'RadioGroup',
+  'ScrollShadow',
+  'SearchField',
+  'Select',
+  'Separator',
+  'Skeleton',
+  'Slider',
+  'Spinner',
+  'Surface',
+  'Switch',
+  'Tabs',
+  'TagGroup',
+  'TextArea',
   'TextField',
+  'Toast',
   'Typography',
 ] as const;
 export type ComponentName = (typeof components)[number];
@@ -37,7 +59,7 @@ export function Navigation({
   onColorSchemeChange,
 }: NavigationProps) {
   return (
-    <ScrollView contentContainerStyle={{ padding: 16, gap: 24 }}>
+    <ScrollView className="heroui-scrollbar" contentContainerStyle={{ padding: 16, gap: 24 }}>
       <View className="gap-2">
         <Typography.Paragraph type="body-sm" weight="medium">
           Components

@@ -90,3 +90,32 @@ test('highlight enters and exits through the ghost Button background transition 
   assert.ok(!rule[1].includes('var(--foreground)'), 'Hover exit cannot switch to foreground color');
   assert.ok(!rule[1].includes('transition: opacity'), 'Hover exit does not fade an opaque foreground layer');
 });
+
+test('shared component web slots retain semantic classes and control state selectors', () => {
+  for (const selector of ['.surface__root--variant-secondary', '.avatar__root--size-sm', '.alert__root', '.input-otp__slot', '.slider__thumb-knob']) assert.ok(css.includes(selector), selector);
+  for (const selector of ['.checkbox-field[data-selected] .checkbox__indicator', '.switch-field[data-selected] .switch__thumb', '.tabs__trigger .tabs__indicator', '.select__content .list-box-item[data-disabled]']) assert.ok(css.includes(selector), selector);
+  assert.match(css, /\.toast-region\s*\{[^}]*position: fixed/);
+  assert.match(css, /\.toast__root\[data-expanded\]\[data-placement="bottom"\]/);
+});
+
+test('web fields style emitted textarea classes and keep adornments in normal flow', () => {
+  assert.match(css, /\.textarea\s*\{[^}]*background: var\(--color-field\);[^}]*color: var\(--color-field-foreground\)/);
+  assert.match(css, /\.input-group__prefix,\s*\.input-group__suffix\s*\{(?=[^}]*position: static)(?=[^}]*display: flex)/);
+  assert.match(css, /\.search-field__search-icon\s*\{[^}]*position: static/);
+  assert.ok(css.includes('.search-field__root[data-empty="true"] .search-field__clear-button'));
+  assert.ok(css.includes('.textarea[aria-invalid="true"]'));
+  assert.ok(css.includes('.textarea:disabled'));
+});
+
+test('web close buttons and default toast text have explicit theme colors', () => {
+  assert.match(css, /\.close-button--default\s*\{[^}]*background: var\(--color-default\);[^}]*color: var\(--color-muted\)/);
+  assert.match(css, /\.close-button__root\s*\{[^}]*width: 24px;[^}]*height: 24px/);
+  assert.match(css, /\.toast__label\s*\{\s*color: var\(--color-overlay-foreground\)/);
+  assert.match(css, /\.toast__root\s*\{[^}]*color: var\(--color-overlay-foreground\)/);
+});
+
+test('web scroll containers and browser controls follow the active theme', () => {
+  assert.match(css, /:root\.dark\s*\{\s*color-scheme: dark/);
+  assert.match(css, /:root\.light\s*\{\s*color-scheme: light/);
+  assert.match(css, /\.heroui-scrollbar,\s*\.scroll-shadow\s*\{[^}]*scrollbar-width: thin;[^}]*scrollbar-color: var\(--color-muted\) transparent/);
+});

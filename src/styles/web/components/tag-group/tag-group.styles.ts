@@ -8,7 +8,7 @@ import {tv} from "tailwind-variants";
 
 export const tagGroupVariants = tv({
   slots: {
-    base: "tag-group",
+    base: "tag-group__root",
     list: "tag-group__list",
   },
 });
