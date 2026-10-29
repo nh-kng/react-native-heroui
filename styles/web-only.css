@@ -25,6 +25,7 @@
   .button:has(.button__background) { isolation: isolate; }
   .pressable-feedback__web-root {
     position: relative;
+    overflow: hidden;
     isolation: isolate;
     display: inline-flex;
     flex-direction: column;
@@ -60,41 +61,58 @@
   }
   .pressable-feedback__web-highlight,
   .pressable-feedback__web-ripple {
+    position: absolute;
+    inset: 0;
     pointer-events: none;
     z-index: -1;
     border-radius: inherit;
   }
   .pressable-feedback__web-highlight {
-    background-color: transparent;
-    opacity: 1;
-    transition: background-color 100ms ease-out;
-    &[data-active="true"] { background-color: var(--color-default); }
+    background-color: var(--pressable-feedback-highlight-color, currentColor);
+    opacity: 0;
+    transition: opacity 100ms ease-out;
   }
   .pressable-feedback__web-ripple {
-    opacity: 0;
-    transition: opacity 200ms ease-out;
-    &[data-active="true"] { opacity: 0.1; }
+    overflow: hidden;
+    &::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background-color: var(--pressable-feedback-ripple-color, currentColor);
+      opacity: 0;
+      transition: opacity 100ms ease-out;
+    }
+    &[data-feedback-disabled="true"] { visibility: hidden; }
+  }
+  .pressable-feedback__web-ripple-surface {
+    position: absolute;
+    border-radius: 50%;
+    background-color: var(--pressable-feedback-ripple-color, currentColor);
+    opacity: var(--pressable-feedback-ripple-pressed-opacity, 0.12);
   }
   @media (hover: hover) {
-    .pressable-feedback__web-root:not(:disabled):not([aria-disabled="true"]):not([data-disabled]) .pressable-feedback__web-highlight[data-hovered="true"] {
-      background-color: var(--color-default);
+    .pressable-feedback__web-root:not(:disabled):not([aria-disabled="true"]):not([data-disabled]) .pressable-feedback__web-highlight[data-hovered="true"]:not([data-active="true"]) {
+      opacity: var(--pressable-feedback-highlight-opacity, 0.08);
+    }
+    .pressable-feedback__web-root:not(:disabled):not([aria-disabled="true"]):not([data-disabled]) .pressable-feedback__web-ripple[data-hovered="true"]::before {
+      opacity: var(--pressable-feedback-ripple-hover-opacity, 0.08);
     }
   }
-  .pressable-feedback__web-ripple {
-    background: radial-gradient(circle at center, var(--foreground) 30%, transparent 70%);
-    @media (prefers-reduced-motion: no-preference) {
-      &[data-active="true"] { animation: pressable-feedback-ripple 500ms ease-out; }
-    }
+  .pressable-feedback__web-highlight[data-active="true"] {
+    opacity: var(--pressable-feedback-highlight-pressed-opacity, 0.12);
+  }
+  .pressable-feedback__web-root[data-disabled] .pressable-feedback__web-highlight,
+  .pressable-feedback__web-root[data-disabled] .pressable-feedback__web-ripple,
+  .pressable-feedback__web-highlight[data-feedback-disabled="true"] {
+    opacity: 0;
+    transition: none;
   }
   @media (prefers-reduced-motion: reduce) {
     .pressable-feedback__web-root,
     .pressable-feedback__web-scale,
     .pressable-feedback__web-highlight,
-    .pressable-feedback__web-ripple { transition: none; }
-  }
-  @keyframes pressable-feedback-ripple {
-    from { transform: scale(0); }
-    to { transform: scale(1); }
+    .pressable-feedback__web-ripple::before,
+    .pressable-feedback__web-ripple-surface { transition: none; }
   }
   [data-slot="chip"] { display: inline-flex; vertical-align: middle; }
 }

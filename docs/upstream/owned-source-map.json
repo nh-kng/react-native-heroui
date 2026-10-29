@@ -3477,7 +3477,7 @@
         "Shared root and Scale, Highlight, and Ripple parts; boolean and disabled animation controls; typed platform extensions and platform-specific refs."
       ],
       "behaviorDeviations": [
-        "Web uses React Aria Button with a centered CSS ripple; native retains the touch-origin ripple. Native asChild and granular animation configuration are not shared.",
+        "Web uses React Aria Button with pointer-origin, size-aware Web Animations API ripples, centered for keyboard and virtual presses, with independent expansion and opacity tracks and overlapping surfaces; native retains the owned touch-origin Reanimated ripple. Native asChild and granular animation configuration are not shared.",
         "Primary mousedown/mouseup are isolated at the web root when Pointer Events are supported; custom callbacks run and the legacy document mouse fallback is preserved."
       ],
       "stylingDeviations": [

@@ -28,7 +28,27 @@ Use `Button.Label` for native text content; on web it renders an inline span in 
 
 Leave `animation` undefined or `true` for the built-in scale, set it to `false` or `"disabled"` to disable only the root scale, or use `"disable-all"` to disable root and compound feedback together. `Scale`, `Highlight`, and `Ripple` accept `animation={false}` or `animation="disabled"` to disable their own effect. Use `animation={false}` on the root when scaling only a child with `Scale`. Highlight and Ripple are decorative overlays without children; place them before the visible content. The root clips overlays to its shape. No padding, surface, or border radius is supplied by the adapter; apply these through `className`.
 
-Native delegates to the owned HeroUI implementation, including its width-adjusted scale and touch-origin ripple. Web uses a fixed `0.985` scale, a ghost Button color highlight, and a centered radial ripple; the geometry and timing are not identical to native. Enabled roots with a `Highlight` part transition its background between transparent and `--color-default` on press and, for hover-capable pointers, hover. The 100ms ease-out background transition matches ghost Button for both entry and exit, with constant overlay opacity so leaving hover cannot expose a foreground-colored flash. The root's underlying custom background is preserved. Hover activates only Highlight; Scale and Ripple remain press-only. Disabling Highlight or using root `animation="disable-all"` suppresses its hover and press feedback. Browser reduced-motion preferences suppress scaling, ripple expansion, and transitions while retaining immediate highlight feedback. Native animation preferences come from the existing provider and Reanimated implementation; the adapter adds no native hover behavior. These behaviors have static type and stylesheet coverage; runtime interaction, rendering, and accessibility have not been verified.
+Native delegates to the owned HeroUI implementation, including its width-adjusted scale and touch-origin ripple. Web uses a fixed `0.985` scale and feedback inspired by [HeroUI Pro Pressable Feedback](https://heroui.pro/docs/react/components/pressable-feedback). Mount `Highlight` for a full-surface `currentColor` overlay: hover-capable pointers use 0.08 opacity and press uses 0.12, taking precedence over hover. Mount `Ripple` for its own hover overlay and a circular press surface expanding from the pointer position to the farthest corner; keyboard and virtual activation start at the center. Web Animations API independently expands each ripple over a size-aware 250–550ms duration and fades it in over 90ms. Expansion continues through release without restarting; a fully expanded ripple stays visible while held. Quick taps wait only until 120ms from press start before a 220ms exit fade; longer presses fade immediately on release. Rapid taps overlap with independent lifecycles, and pointer exit or cancellation uses a shorter 100ms fade. Completion removes the surface; disablement, unmounting, or a reduced-motion preference change clears animations and pending interaction timers. Browsers without the Web Animations API retain full-size opacity feedback with a timed exit. Feedback stays above the root background and behind content, so opaque child backgrounds can cover it. Use contrasting foreground and surface colors. Scale remains press-only. Disabling a part suppresses its hover and press effects; root `animation="disable-all"` suppresses all feedback. Browser reduced-motion preferences suppress scaling, ripple expansion, and fades while retaining immediate hover/press feedback; reduced-motion ripples are removed immediately on release or cancellation. Native animation preferences come from the existing provider and Reanimated implementation; the adapter adds no native hover behavior. These behaviors have non-rendering logic, type, and stylesheet coverage; runtime interaction, rendering, and accessibility have not been verified.
+
+Web feedback exposes the following CSS variables on the root or respective part through styles applied with `className`. Timing overrides must use nonnegative literal `ms` or `s` values; unsupported JavaScript timing values fall back to their defaults. No additional React props are required.
+
+| CSS variable | Default | Purpose |
+| --- | --- | --- |
+| `--pressable-feedback-highlight-color` | `currentColor` | Highlight overlay color |
+| `--pressable-feedback-highlight-opacity` | `0.08` | Highlight hover opacity |
+| `--pressable-feedback-highlight-pressed-opacity` | `0.12` | Highlight pressed opacity |
+| `--pressable-feedback-ripple-color` | `currentColor` | Ripple hover and press color |
+| `--pressable-feedback-ripple-hover-opacity` | `0.08` | Ripple hover opacity |
+| `--pressable-feedback-ripple-pressed-opacity` | `0.12` | Ripple press opacity |
+| `--pressable-feedback-ripple-duration` | Size-aware | Explicit expansion duration override; takes precedence over calculated timing |
+| `--pressable-feedback-ripple-base-duration` | `350ms` | Expansion duration at a 100px radius, scaled by the square root of radius / 100 |
+| `--pressable-feedback-ripple-min-duration` | `250ms` | Lower bound for calculated expansion duration |
+| `--pressable-feedback-ripple-max-duration` | `550ms` | Upper bound for calculated expansion duration |
+| `--pressable-feedback-ripple-easing` | `cubic-bezier(0.2, 0, 0, 1)` | Expansion easing |
+| `--pressable-feedback-ripple-enter-duration` | `90ms` | Opacity fade-in duration |
+| `--pressable-feedback-ripple-minimum-press-duration` | `120ms` | Minimum time from press start before release fade starts |
+| `--pressable-feedback-ripple-release-duration` | `220ms` | Release fade duration |
+| `--pressable-feedback-ripple-cancel-duration` | `100ms` | Cancellation fade duration |
 
 Roots and parts forward their platform refs: the web root is an `HTMLButtonElement`, web parts are `HTMLSpanElement`s, and native refs come from the owned native components. `onPress` receives `PressableFeedbackPressEvent`, the platform event union. Typed `nativeProps` and `webProps` hold platform-specific options such as accessibility labels, long-press handlers, and DOM attributes. Adapter-owned props and refs are excluded. Native `asChild` and granular animation configuration objects are outside this shared API; animation controls use the shared boolean and disabled values.
 
@@ -38,7 +58,7 @@ import { PressableFeedback, Typography } from '@nh-kng/react-native-heroui';
 <PressableFeedback className="rounded-xl bg-surface px-4 py-3" onPress={openProject}>
   <PressableFeedback.Highlight />
   <Typography.Paragraph>Open project</Typography.Paragraph>
-</PressableFeedback>
+</PressableFeedback>;
 ```
 
 ## `Card`
@@ -111,7 +131,9 @@ InputOTP requires `maxLength` and supports string `value`, `defaultValue`, `onCh
 ```tsx
 <InputOTP maxLength={4} value={code} onChangeText={setCode}>
   <InputOTP.Group>
-    {[0, 1, 2, 3].map(index => <InputOTP.Slot key={index} index={index} />)}
+    {[0, 1, 2, 3].map((index) => (
+      <InputOTP.Slot key={index} index={index} />
+    ))}
   </InputOTP.Group>
 </InputOTP>
 ```
@@ -147,7 +169,12 @@ HeroUIProvider owns one toast host per platform. Use the shared hook for notific
 
 ```tsx
 const toast = useToast();
-const id = toast.show({ title: 'Saved', description: 'Your draft is ready.', variant: 'success', duration: 4000 });
+const id = toast.show({
+  title: 'Saved',
+  description: 'Your draft is ready.',
+  variant: 'success',
+  duration: 4000,
+});
 toast.dismiss(id);
 toast.dismissAll();
 ```
@@ -157,7 +184,6 @@ toast.dismissAll();
 Toast also exposes Root, Title, Description, Action, and Close for platform custom renderers. These parts retain upstream lifecycle contexts and actual refs. Root requires the lifecycle object supplied through `nativeProps` or `webProps` by the respective platform toast renderer; it is not an independently mounted notification. Use `useToast().show` for shared application code. Web maps Action/Close to ActionButton/CloseButton. Queue mechanics, stack geometry, swipe behavior, and animation timing remain platform-specific.
 
 The [Expo gallery](../../example/gallery/navigation.tsx) includes each public UI family. Static checks cover types, exports, mappings, provenance, and stylesheet selectors; the new components have not undergone runtime interaction or accessibility verification.
-
 
 ## Related documentation
 

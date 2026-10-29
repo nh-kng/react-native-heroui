@@ -2,6 +2,8 @@
 
 ## Unreleased
 
+- Fixed web PressableFeedback overlay positioning and clipping previously gated behind native stylesheet imports. Added distinct configurable hover and pressed overlays, independent Ripple hover feedback, and a pointer-origin ripple with size-aware expansion, independent opacity animations, overlapping rapid taps, minimum press visibility, graceful release and cancellation fades, and reduced-motion support. Native behavior and the compound React API are unchanged.
+
 - Fixed web accent toast icons retaining the default foreground by matching the title's accent color, filling an omission in the pinned React styles.
 - Restored the complete pinned HeroUI React CSS and original web slot classes across components, including default browser tokens, animation utilities/keyframes, state styles, accordion expansion, tabs, switches, overlays, toast stacking, and skeleton shimmer. Both web-capable stylesheet entries include these styles; Native component rules are gated out of the browser. `tw-animate-css` is now a shipped dependency.
 
