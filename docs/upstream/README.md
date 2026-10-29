@@ -28,3 +28,7 @@ The initial import is reproducible with `node scripts/import-upstream.mjs` after
 - [Upgrade guide](upgrade-guide.md) — controlled review and synchronization procedure.
 - [Validation](validation.md) — recorded static checks and verification boundaries.
 - [ADR 0003](../architecture/decisions/0003-owned-source-baselines.md) — the ownership transition and deferred public cutover.
+
+## Markdown integration
+
+See [Markdown source ownership](markdown.md) for the additive baseline/owned manifests, release pins, dependency modernization, license notices, source boundaries, and upgrade procedure. Existing HeroUI history remains unchanged.

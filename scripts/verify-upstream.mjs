@@ -1,3 +1,4 @@
+import { verifyMarkdown } from './markdown-upstream.mjs';
 import assert from 'node:assert/strict';
 import { readFileSync } from 'node:fs';
 import path from 'node:path';
@@ -84,9 +85,11 @@ export function verifyUpstream(map = readMap()) {
       assert.ok(exclusion.reason);
     }
   }
+  const markdownFiles = verifyMarkdown();
+  expectedLocalFiles.push(...markdownFiles);
   assert.deepEqual(walk('baselines'), expectedLocalFiles.sort(), 'Unmapped baseline files');
   const imports = verifyResolution();
-  return { files: map.repositories.reduce((sum, repo) => sum + repo.files.length, 0), components: map.repositories.reduce((sum, repo) => sum + repo.components.length, 0), imports };
+  return { files: map.repositories.reduce((sum, repo) => sum + repo.files.length, 0) + markdownFiles.length, components: map.repositories.reduce((sum, repo) => sum + repo.components.length, 0), imports };
 }
 
 if (process.argv[1] && import.meta.url === pathToFileURL(process.argv[1]).href) {

@@ -1,0 +1,455 @@
+{
+  "schemaVersion": 1,
+  "stage": 2,
+  "repositories": [
+    {
+      "id": "react-markdown",
+      "baselineCommit": "44d2e4a44b37461ab7778d6870c1a9eb36393ad2",
+      "lastReviewedCommit": "44d2e4a44b37461ab7778d6870c1a9eb36393ad2",
+      "lastIncorporatedCommit": "44d2e4a44b37461ab7778d6870c1a9eb36393ad2"
+    },
+    {
+      "id": "react-native-markdown-display",
+      "baselineCommit": "192b0ebf8e2538dfe9da0bc8b47e411116ed60e5",
+      "lastReviewedCommit": "192b0ebf8e2538dfe9da0bc8b47e411116ed60e5",
+      "lastIncorporatedCommit": "192b0ebf8e2538dfe9da0bc8b47e411116ed60e5"
+    },
+    {
+      "id": "remark-gfm",
+      "baselineCommit": "109972e8a773bf5dac1d6d2da0776557f36971aa",
+      "lastReviewedCommit": "109972e8a773bf5dac1d6d2da0776557f36971aa",
+      "lastIncorporatedCommit": "109972e8a773bf5dac1d6d2da0776557f36971aa"
+    },
+    {
+      "id": "remark-math",
+      "baselineCommit": "d5d0660b150810a535bbb07eac6cc96a4510aa24",
+      "lastReviewedCommit": "d5d0660b150810a535bbb07eac6cc96a4510aa24",
+      "lastIncorporatedCommit": "d5d0660b150810a535bbb07eac6cc96a4510aa24"
+    },
+    {
+      "id": "rehype-raw",
+      "baselineCommit": "b34629920abbb5484409778412cdad3f94ff9b1f",
+      "lastReviewedCommit": "b34629920abbb5484409778412cdad3f94ff9b1f",
+      "lastIncorporatedCommit": "b34629920abbb5484409778412cdad3f94ff9b1f"
+    },
+    {
+      "id": "rehype-sanitize",
+      "baselineCommit": "566a856d8b626c3d016f610048bdaf327464e467",
+      "lastReviewedCommit": "566a856d8b626c3d016f610048bdaf327464e467",
+      "lastIncorporatedCommit": "566a856d8b626c3d016f610048bdaf327464e467"
+    }
+  ],
+  "files": [
+    {
+      "local": "src/components/markdown/index.native.ts",
+      "kind": "authored",
+      "sources": [],
+      "transformations": [
+        "Locally authored shared contract, facade, export, math parser extension or React Native Image helper."
+      ]
+    },
+    {
+      "local": "src/components/markdown/index.web.ts",
+      "kind": "authored",
+      "sources": [],
+      "transformations": [
+        "Locally authored shared contract, facade, export, math parser extension or React Native Image helper."
+      ]
+    },
+    {
+      "local": "src/components/markdown/markdown-policy.ts",
+      "kind": "derived",
+      "sources": [
+        "baselines/react-markdown/lib/index.js"
+      ],
+      "transformations": [
+        "Strict TypeScript conversion with local .js imports; narrowed synchronous API and package integration."
+      ]
+    },
+    {
+      "local": "src/components/markdown/markdown.native.tsx",
+      "kind": "authored",
+      "sources": [],
+      "transformations": [
+        "Locally authored shared contract, facade, export, math parser extension or React Native Image helper."
+      ]
+    },
+    {
+      "local": "src/components/markdown/markdown.types.ts",
+      "kind": "authored",
+      "sources": [],
+      "transformations": [
+        "Locally authored shared contract, facade, export, math parser extension or React Native Image helper."
+      ]
+    },
+    {
+      "local": "src/components/markdown/markdown.web.tsx",
+      "kind": "authored",
+      "sources": [],
+      "transformations": [
+        "Locally authored shared contract, facade, export, math parser extension or React Native Image helper."
+      ]
+    },
+    {
+      "local": "src/primitives/web/components/markdown/index.ts",
+      "kind": "authored",
+      "sources": [],
+      "transformations": [
+        "Locally authored shared contract, facade, export, math parser extension or React Native Image helper."
+      ]
+    },
+    {
+      "local": "src/primitives/web/components/markdown/markdown.tsx",
+      "kind": "derived",
+      "sources": [
+        "baselines/react-markdown/lib/index.js"
+      ],
+      "transformations": [
+        "Strict TypeScript conversion with local .js imports; narrowed synchronous API and package integration."
+      ]
+    },
+    {
+      "local": "src/primitives/web/components/markdown/markdown.types.ts",
+      "kind": "derived",
+      "sources": [
+        "baselines/react-markdown/lib/index.js"
+      ],
+      "transformations": [
+        "Strict TypeScript conversion with local .js imports; narrowed synchronous API and package integration."
+      ]
+    },
+    {
+      "local": "src/primitives/web/components/markdown/parser.ts",
+      "kind": "derived",
+      "sources": [
+        "baselines/react-markdown/lib/index.js"
+      ],
+      "transformations": [
+        "Strict TypeScript conversion with local .js imports; narrowed synchronous API and package integration. Structural keys and content revisions replace counters; shared URL policy and completion metadata; errors propagate."
+      ]
+    },
+    {
+      "local": "src/primitives/web/components/markdown/plugins/gfm.ts",
+      "kind": "converted",
+      "sources": [
+        "baselines/remark-gfm/lib/index.js"
+      ],
+      "transformations": [
+        "Strict TypeScript conversion with local .js imports; narrowed synchronous API and package integration."
+      ]
+    },
+    {
+      "local": "src/primitives/web/components/markdown/plugins/math.ts",
+      "kind": "converted",
+      "sources": [
+        "baselines/remark-math/packages/remark-math/lib/index.js"
+      ],
+      "transformations": [
+        "Strict TypeScript conversion with local .js imports; narrowed synchronous API and package integration."
+      ]
+    },
+    {
+      "local": "src/primitives/web/components/markdown/plugins/raw.ts",
+      "kind": "converted",
+      "sources": [
+        "baselines/rehype-raw/lib/index.js"
+      ],
+      "transformations": [
+        "Strict TypeScript conversion with local .js imports; narrowed synchronous API and package integration."
+      ]
+    },
+    {
+      "local": "src/primitives/web/components/markdown/plugins/sanitize.ts",
+      "kind": "converted",
+      "sources": [
+        "baselines/rehype-sanitize/lib/index.js"
+      ],
+      "transformations": [
+        "Typed sanitizer plugin with fixed schema, restricted math/GFM classes and safe IDs; restores fragment/footnote href and aria-described-by associations after sanitization."
+      ]
+    },
+    {
+      "local": "src/primitives/native/components/markdown/index.ts",
+      "kind": "authored",
+      "sources": [],
+      "transformations": [
+        "Locally authored shared contract, facade, export, math parser extension or React Native Image helper."
+      ]
+    },
+    {
+      "local": "src/primitives/native/components/markdown/lib/ast-renderer.tsx",
+      "kind": "derived",
+      "sources": [
+        "baselines/react-native-markdown-display/src/lib/AstRenderer.js",
+        "baselines/react-native-markdown-display/src/lib/renderRules.js",
+        "baselines/react-native-markdown-display/src/lib/util/removeTextStyleProps.js",
+        "baselines/react-native-markdown-display/src/lib/util/openUrl.js"
+      ],
+      "transformations": [
+        "Strict TypeScript conversion with local .js imports; narrowed synchronous API and package integration. Rewritten typed traversal preserves text/block constraints, inherited text styles, ordered starts, safe links and source whitespace; replaces legacy image service and rule escape hatches."
+      ]
+    },
+    {
+      "local": "src/primitives/native/components/markdown/lib/image.tsx",
+      "kind": "authored",
+      "sources": [],
+      "transformations": [
+        "Locally authored shared contract, facade, export, math parser extension or React Native Image helper."
+      ]
+    },
+    {
+      "local": "src/primitives/native/components/markdown/lib/math.ts",
+      "kind": "authored",
+      "sources": [],
+      "transformations": [
+        "Locally authored shared contract, facade, export, math parser extension or React Native Image helper."
+      ]
+    },
+    {
+      "local": "src/primitives/native/components/markdown/lib/parser.ts",
+      "kind": "derived",
+      "sources": [
+        "baselines/react-native-markdown-display/src/lib/parser.js",
+        "baselines/react-native-markdown-display/src/lib/util/tokensToAST.js",
+        "baselines/react-native-markdown-display/src/lib/util/stringToTokens.js"
+      ],
+      "transformations": [
+        "Strict TypeScript conversion with local .js imports; narrowed synchronous API and package integration. Structural keys and content revisions replace counters; shared URL policy and completion metadata; errors propagate."
+      ]
+    },
+    {
+      "local": "src/primitives/native/components/markdown/lib/render-rules.ts",
+      "kind": "derived",
+      "sources": [
+        "baselines/react-native-markdown-display/src/lib/renderRules.js"
+      ],
+      "transformations": [
+        "Strict TypeScript conversion with local .js imports; narrowed synchronous API and package integration."
+      ]
+    },
+    {
+      "local": "src/primitives/native/components/markdown/lib/styles.ts",
+      "kind": "converted",
+      "sources": [
+        "baselines/react-native-markdown-display/src/lib/styles.js"
+      ],
+      "transformations": [
+        "Converted upstream default styles to a typed record; HeroUI theme styling is deferred to Phase 2."
+      ]
+    },
+    {
+      "local": "src/primitives/native/components/markdown/lib/text-style-props.ts",
+      "kind": "copied",
+      "sources": [
+        "baselines/react-native-markdown-display/src/lib/data/textStyleProps.js"
+      ],
+      "transformations": [
+        "Byte-identical text-property inventory used to separate inherited text styles from view styles."
+      ]
+    },
+    {
+      "local": "src/primitives/native/components/markdown/lib/util/Token.ts",
+      "kind": "converted",
+      "sources": [
+        "baselines/react-native-markdown-display/src/lib/util/Token.js"
+      ],
+      "transformations": [
+        "Strict TypeScript conversion with local .js imports; narrowed synchronous API and package integration."
+      ]
+    },
+    {
+      "local": "src/primitives/native/components/markdown/lib/util/cleanupTokens.ts",
+      "kind": "converted",
+      "sources": [
+        "baselines/react-native-markdown-display/src/lib/util/cleanupTokens.js"
+      ],
+      "transformations": [
+        "Strict TypeScript conversion with local .js imports; narrowed synchronous API and package integration."
+      ]
+    },
+    {
+      "local": "src/primitives/native/components/markdown/lib/util/flattenInlineTokens.ts",
+      "kind": "converted",
+      "sources": [
+        "baselines/react-native-markdown-display/src/lib/util/flattenInlineTokens.js"
+      ],
+      "transformations": [
+        "Strict TypeScript conversion with local .js imports; narrowed synchronous API and package integration."
+      ]
+    },
+    {
+      "local": "src/primitives/native/components/markdown/lib/util/getTokenTypeByToken.ts",
+      "kind": "converted",
+      "sources": [
+        "baselines/react-native-markdown-display/src/lib/util/getTokenTypeByToken.js"
+      ],
+      "transformations": [
+        "Strict TypeScript conversion with local .js imports; narrowed synchronous API and package integration."
+      ]
+    },
+    {
+      "local": "src/primitives/native/components/markdown/lib/util/groupTextTokens.ts",
+      "kind": "converted",
+      "sources": [
+        "baselines/react-native-markdown-display/src/lib/util/groupTextTokens.js"
+      ],
+      "transformations": [
+        "Typed conversion; balances final text group and preserves inline nesting around block images before AST block promotion."
+      ]
+    },
+    {
+      "local": "src/primitives/native/components/markdown/lib/util/hasParents.ts",
+      "kind": "converted",
+      "sources": [
+        "baselines/react-native-markdown-display/src/lib/util/hasParents.js"
+      ],
+      "transformations": [
+        "Strict TypeScript conversion with local .js imports; narrowed synchronous API and package integration."
+      ]
+    },
+    {
+      "local": "src/primitives/native/components/markdown/lib/util/omitListItemParagraph.ts",
+      "kind": "converted",
+      "sources": [
+        "baselines/react-native-markdown-display/src/lib/util/omitListItemParagraph.js"
+      ],
+      "transformations": [
+        "Strict TypeScript conversion with local .js imports; narrowed synchronous API and package integration."
+      ]
+    },
+    {
+      "local": "src/primitives/native/components/markdown/lib/util/renderInlineAsText.ts",
+      "kind": "converted",
+      "sources": [
+        "baselines/react-native-markdown-display/src/lib/util/renderInlineAsText.js"
+      ],
+      "transformations": [
+        "Strict TypeScript conversion with local .js imports; narrowed synchronous API and package integration."
+      ]
+    },
+    {
+      "local": "src/primitives/native/components/markdown/markdown.tsx",
+      "kind": "derived",
+      "sources": [
+        "baselines/react-native-markdown-display/src/index.js"
+      ],
+      "transformations": [
+        "Strict TypeScript conversion with local .js imports; narrowed synchronous API and package integration."
+      ]
+    },
+    {
+      "local": "src/primitives/native/components/markdown/markdown.types.ts",
+      "kind": "derived",
+      "sources": [
+        "baselines/react-native-markdown-display/src/index.d.ts"
+      ],
+      "transformations": [
+        "Strict TypeScript conversion with local .js imports; narrowed synchronous API and package integration."
+      ]
+    },
+    {
+      "local": "src/components/markdown/markdown-renderers.ts",
+      "kind": "authored",
+      "sources": [],
+      "transformations": [
+        "Locally authored synchronous renderer selection, incomplete-block deferral, explicit undefined fallback and intentional null output."
+      ]
+    }
+  ],
+  "exclusions": [
+    {
+      "source": "baselines/react-markdown/index.js",
+      "reason": "Immutable reference only: license/manifest, upstream entry/declaration, or legacy support module replaced by the documented owned integration."
+    },
+    {
+      "source": "baselines/react-markdown/license",
+      "reason": "Immutable reference only: license/manifest, upstream entry/declaration, or legacy support module replaced by the documented owned integration."
+    },
+    {
+      "source": "baselines/react-markdown/package.json",
+      "reason": "Immutable reference only: license/manifest, upstream entry/declaration, or legacy support module replaced by the documented owned integration."
+    },
+    {
+      "source": "baselines/react-native-markdown-display/LICENSE",
+      "reason": "Immutable reference only: license/manifest, upstream entry/declaration, or legacy support module replaced by the documented owned integration."
+    },
+    {
+      "source": "baselines/react-native-markdown-display/package.json",
+      "reason": "Immutable reference only: license/manifest, upstream entry/declaration, or legacy support module replaced by the documented owned integration."
+    },
+    {
+      "source": "baselines/react-native-markdown-display/src/lib/util/convertAdditionalStyles.js",
+      "reason": "Immutable reference only: license/manifest, upstream entry/declaration, or legacy support module replaced by the documented owned integration."
+    },
+    {
+      "source": "baselines/react-native-markdown-display/src/lib/util/getUniqueID.js",
+      "reason": "Immutable reference only: license/manifest, upstream entry/declaration, or legacy support module replaced by the documented owned integration."
+    },
+    {
+      "source": "baselines/react-native-markdown-display/src/lib/util/splitTextNonTextNodes.js",
+      "reason": "Immutable reference only: license/manifest, upstream entry/declaration, or legacy support module replaced by the documented owned integration."
+    },
+    {
+      "source": "baselines/remark-gfm/index.js",
+      "reason": "Immutable reference only: license/manifest, upstream entry/declaration, or legacy support module replaced by the documented owned integration."
+    },
+    {
+      "source": "baselines/remark-gfm/license",
+      "reason": "Immutable reference only: license/manifest, upstream entry/declaration, or legacy support module replaced by the documented owned integration."
+    },
+    {
+      "source": "baselines/remark-gfm/package.json",
+      "reason": "Immutable reference only: license/manifest, upstream entry/declaration, or legacy support module replaced by the documented owned integration."
+    },
+    {
+      "source": "baselines/remark-math/license",
+      "reason": "Immutable reference only: license/manifest, upstream entry/declaration, or legacy support module replaced by the documented owned integration."
+    },
+    {
+      "source": "baselines/remark-math/package.json",
+      "reason": "Immutable reference only: license/manifest, upstream entry/declaration, or legacy support module replaced by the documented owned integration."
+    },
+    {
+      "source": "baselines/remark-math/packages/remark-math/index.js",
+      "reason": "Immutable reference only: license/manifest, upstream entry/declaration, or legacy support module replaced by the documented owned integration."
+    },
+    {
+      "source": "baselines/remark-math/packages/remark-math/package.json",
+      "reason": "Immutable reference only: license/manifest, upstream entry/declaration, or legacy support module replaced by the documented owned integration."
+    },
+    {
+      "source": "baselines/rehype-raw/index.js",
+      "reason": "Immutable reference only: license/manifest, upstream entry/declaration, or legacy support module replaced by the documented owned integration."
+    },
+    {
+      "source": "baselines/rehype-raw/license",
+      "reason": "Immutable reference only: license/manifest, upstream entry/declaration, or legacy support module replaced by the documented owned integration."
+    },
+    {
+      "source": "baselines/rehype-raw/package.json",
+      "reason": "Immutable reference only: license/manifest, upstream entry/declaration, or legacy support module replaced by the documented owned integration."
+    },
+    {
+      "source": "baselines/rehype-sanitize/index.js",
+      "reason": "Immutable reference only: license/manifest, upstream entry/declaration, or legacy support module replaced by the documented owned integration."
+    },
+    {
+      "source": "baselines/rehype-sanitize/license",
+      "reason": "Immutable reference only: license/manifest, upstream entry/declaration, or legacy support module replaced by the documented owned integration."
+    },
+    {
+      "source": "baselines/rehype-sanitize/package.json",
+      "reason": "Immutable reference only: license/manifest, upstream entry/declaration, or legacy support module replaced by the documented owned integration."
+    }
+  ],
+  "components": [
+    {
+      "name": "markdown",
+      "publicPaths": [
+        "src/components/markdown/index.web.ts",
+        "src/components/markdown/index.native.ts",
+        "src/components/markdown/markdown.types.ts"
+      ]
+    }
+  ]
+}

@@ -2,6 +2,8 @@
 
 ## Unreleased
 
+- Added Phase 1 of the source-owned Markdown component with web/native root and subpath exports, typed synchronous renderer hooks, double-dollar math parsing, safe link cancellation, sanitized web HTML opt-in, streaming metadata, modernized native parser/image support, and independently pinned source provenance. HeroUI presentation remains Phase 2; native task lists and footnotes remain documented gaps.
+
 - Fixed web PressableFeedback overlay positioning and clipping previously gated behind native stylesheet imports. Added distinct configurable hover and pressed overlays, independent Ripple hover feedback, and a pointer-origin ripple with size-aware expansion, independent opacity animations, overlapping rapid taps, minimum press visibility, graceful release and cancellation fades, and reduced-motion support. Native behavior and the compound React API are unchanged.
 
 - Fixed web accent toast icons retaining the default foreground by matching the title's accent color, filling an omission in the pinned React styles.

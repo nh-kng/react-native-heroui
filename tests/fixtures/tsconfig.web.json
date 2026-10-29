@@ -15,6 +15,7 @@
   "include": [
     "./web.tsx",
     "./shared-contracts.ts",
-    "./added.web.tsx"
+    "./added.web.tsx",
+    "./markdown.web.tsx"
   ]
 }

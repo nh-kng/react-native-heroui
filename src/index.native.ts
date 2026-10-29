@@ -42,3 +42,6 @@ export * from './components/tag-group/index.native.js';
 export * from './components/popover/index.native.js';
 export * from './components/select/index.native.js';
 export * from './components/toast/index.native.js';
+
+export { Markdown } from './components/markdown/index.native.js';
+export type * from './components/markdown/markdown.types.js';

@@ -1,0 +1,1183 @@
+{
+  "schemaVersion": 1,
+  "stage": 1,
+  "repositories": [
+    {
+      "id": "react-markdown",
+      "repository": "https://github.com/remarkjs/react-markdown.git",
+      "version": "10.1.0",
+      "commit": "44d2e4a44b37461ab7778d6870c1a9eb36393ad2",
+      "roots": [
+        "lib/"
+      ],
+      "files": [
+        {
+          "origin": "index.js",
+          "local": "baselines/react-markdown/index.js",
+          "upstreamBlob": "d0fc80e04772fe9bcb0e1a8a428155d93931b7bb",
+          "sha256": "1420b7245c57274cbaa448e57282bba0f9a60a93ba43bdfe30ac83deba53c1e2"
+        },
+        {
+          "origin": "lib/index.js",
+          "local": "baselines/react-markdown/lib/index.js",
+          "upstreamBlob": "b6f5ed00a2ca9b653f0c85734d9aa31e0e76e859",
+          "sha256": "1c8d95723a74051c354dd4470fb669ae5269baf0ac62aa9b52c4516960ace5ee"
+        },
+        {
+          "origin": "license",
+          "local": "baselines/react-markdown/license",
+          "upstreamBlob": "f552fc95706b283bba87db2d89ef8d42996ed36f",
+          "sha256": "f6196c64e144f9a6fa9154c3a80bc8b89615a9567934b83a8951879f06ba2aef"
+        },
+        {
+          "origin": "package.json",
+          "local": "baselines/react-markdown/package.json",
+          "upstreamBlob": "35fe1fa93ff7c77457323752e40665b8f01afed3",
+          "sha256": "c6b7d280b5e5a6b620ad252abfd318560f2223562e67414fcc3dcd1f784e89c5"
+        }
+      ],
+      "license": "MIT",
+      "notice": "docs/upstream/licenses/react-markdown.txt",
+      "manifestVersion": "10.1.0",
+      "dependencies": {
+        "@types/hast": "^3.0.0",
+        "@types/mdast": "^4.0.0",
+        "devlop": "^1.0.0",
+        "hast-util-to-jsx-runtime": "^2.0.0",
+        "html-url-attributes": "^3.0.0",
+        "mdast-util-to-hast": "^13.0.0",
+        "remark-parse": "^11.0.0",
+        "remark-rehype": "^11.0.0",
+        "unified": "^11.0.0",
+        "unist-util-visit": "^5.0.0",
+        "vfile": "^6.0.0"
+      },
+      "peerDependencies": {
+        "@types/react": ">=18",
+        "react": ">=18"
+      },
+      "lastReviewedCommit": "44d2e4a44b37461ab7778d6870c1a9eb36393ad2",
+      "lastIncorporatedCommit": "44d2e4a44b37461ab7778d6870c1a9eb36393ad2",
+      "exclusions": [
+        {
+          "origin": ".editorconfig",
+          "upstreamBlob": "0f1786729b408ab2c4473567fcb202acfeb10bd5",
+          "reason": "Outside selected runtime, declaration, manifest and license boundaries."
+        },
+        {
+          "origin": ".github/workflows/bb.yml",
+          "upstreamBlob": "3dbfce5b3ae6fe1d9e6c88e961c6561091fdbf34",
+          "reason": "Outside selected runtime, declaration, manifest and license boundaries."
+        },
+        {
+          "origin": ".github/workflows/main.yml",
+          "upstreamBlob": "ade392135e54b82ad830164f624d5d2855f36cd4",
+          "reason": "Outside selected runtime, declaration, manifest and license boundaries."
+        },
+        {
+          "origin": ".gitignore",
+          "upstreamBlob": "fceff11a5c23a2c9091d908f0bef0f640541ac4f",
+          "reason": "Outside selected runtime, declaration, manifest and license boundaries."
+        },
+        {
+          "origin": ".npmrc",
+          "upstreamBlob": "3757b3046ec873a8b4a8e40e6a8682d1027fdd4e",
+          "reason": "Outside selected runtime, declaration, manifest and license boundaries."
+        },
+        {
+          "origin": ".prettierignore",
+          "upstreamBlob": "cebe81f895b54f44a9ad8b326fc7ecef9c728b06",
+          "reason": "Outside selected runtime, declaration, manifest and license boundaries."
+        },
+        {
+          "origin": "changelog.md",
+          "upstreamBlob": "54cd5698b73202f7128c4c0601ade2561892f921",
+          "reason": "Outside selected runtime, declaration, manifest and license boundaries."
+        },
+        {
+          "origin": "readme.md",
+          "upstreamBlob": "ecdd661bfba0d1308931efc17c4c0ee8286684c6",
+          "reason": "Outside selected runtime, declaration, manifest and license boundaries."
+        },
+        {
+          "origin": "script/load-jsx.js",
+          "upstreamBlob": "d78a33c75c830d428f0e78d1d125f6451b01d68d",
+          "reason": "Outside selected runtime, declaration, manifest and license boundaries."
+        },
+        {
+          "origin": "test.jsx",
+          "upstreamBlob": "d9644a185db7bd2e0413d62757b5eb8756ca0a07",
+          "reason": "Outside selected runtime, declaration, manifest and license boundaries."
+        },
+        {
+          "origin": "tsconfig.json",
+          "upstreamBlob": "95ae95ae8b326b7981a719c051ea3466127a0d2b",
+          "reason": "Outside selected runtime, declaration, manifest and license boundaries."
+        }
+      ]
+    },
+    {
+      "id": "react-native-markdown-display",
+      "repository": "https://github.com/iamacup/react-native-markdown-display.git",
+      "version": "7.0.2",
+      "commit": "192b0ebf8e2538dfe9da0bc8b47e411116ed60e5",
+      "roots": [
+        "src/"
+      ],
+      "files": [
+        {
+          "origin": "LICENSE",
+          "local": "baselines/react-native-markdown-display/LICENSE",
+          "upstreamBlob": "dcbbaa640a19f51a7ebb11c90ff5babd72004376",
+          "sha256": "34c10ee9d3253968d8bec304cf910c4c6cc29f3be4ad602bec41eca674021268"
+        },
+        {
+          "origin": "package.json",
+          "local": "baselines/react-native-markdown-display/package.json",
+          "upstreamBlob": "815902166d6b18e15f68a2d9a92cc6ca934c7538",
+          "sha256": "267fd02a17c3fca7cd39ad18fbeb33d9d47855fac07d24c0da2cb6c17eb70279"
+        },
+        {
+          "origin": "src/index.d.ts",
+          "local": "baselines/react-native-markdown-display/src/index.d.ts",
+          "upstreamBlob": "e03f08ed3ef2a633d0c4ab6907801a2e95a9ec8f",
+          "sha256": "70495dc6ae8ae5c2e5650b860f057a6118b393421831c344aa4b8debad288b32"
+        },
+        {
+          "origin": "src/index.js",
+          "local": "baselines/react-native-markdown-display/src/index.js",
+          "upstreamBlob": "59afec7c23e40c0a78341697251d0861bdd79af8",
+          "sha256": "53dcff4966379a035f6eac0d5ce56785b263cb967704c3773315067ee48241ae"
+        },
+        {
+          "origin": "src/lib/AstRenderer.js",
+          "local": "baselines/react-native-markdown-display/src/lib/AstRenderer.js",
+          "upstreamBlob": "608e94555e64aca0858d947cc0546acdb054ae74",
+          "sha256": "acf47550734e346d38a4dced4c39e5517234d2d393a9fced5e8546190fccb076"
+        },
+        {
+          "origin": "src/lib/data/textStyleProps.js",
+          "local": "baselines/react-native-markdown-display/src/lib/data/textStyleProps.js",
+          "upstreamBlob": "c48139d0b47d7297fa9b1f090f10d6a38a1f222d",
+          "sha256": "3a72663f675bb47f1c4a42ddf03d0b94442f767d270231af2c3e65a81a195d94"
+        },
+        {
+          "origin": "src/lib/parser.js",
+          "local": "baselines/react-native-markdown-display/src/lib/parser.js",
+          "upstreamBlob": "4e89793355eae6b73ad22771cf0c07bad9b19c67",
+          "sha256": "9df3fbfda4521d4986943c29c7131c203458817b9ba8f37415debb9fdab4ba0c"
+        },
+        {
+          "origin": "src/lib/renderRules.js",
+          "local": "baselines/react-native-markdown-display/src/lib/renderRules.js",
+          "upstreamBlob": "6f2ed8d41f316f3bf4116ccd40ea3c0513748edf",
+          "sha256": "9457093bb176f2917014c8c85564f47093e2d4b6aeea7376b5fcb18d754acc04"
+        },
+        {
+          "origin": "src/lib/styles.js",
+          "local": "baselines/react-native-markdown-display/src/lib/styles.js",
+          "upstreamBlob": "e1b5e39e5b56ab92268b989683186edde58c1b8f",
+          "sha256": "fabeb2404bc5ee310dd52d7ed4322914f57e1a7e3ec6fc59da04728b80d4f07e"
+        },
+        {
+          "origin": "src/lib/util/Token.js",
+          "local": "baselines/react-native-markdown-display/src/lib/util/Token.js",
+          "upstreamBlob": "9a7c18c5c000d37321421cf09ad7f7fe4063850c",
+          "sha256": "88dd9515a0ed76e37f0dc27ca325e22e3b83486ba5ae1cf3ece8714ea268f46b"
+        },
+        {
+          "origin": "src/lib/util/cleanupTokens.js",
+          "local": "baselines/react-native-markdown-display/src/lib/util/cleanupTokens.js",
+          "upstreamBlob": "621b761d636522d2d87c68bb83b93a3ec6e451ef",
+          "sha256": "aea80fe2efc4a6a96497fe760d6b3750c2bd00876c4e19a1b7153e804233bc1c"
+        },
+        {
+          "origin": "src/lib/util/convertAdditionalStyles.js",
+          "local": "baselines/react-native-markdown-display/src/lib/util/convertAdditionalStyles.js",
+          "upstreamBlob": "3cf4e40eac551d4066bd33a57e44ca2160e05cbf",
+          "sha256": "fc654a6b9bd3f65993b1e6ec8799c56737b29af82a28c38c8f75aa277703414f"
+        },
+        {
+          "origin": "src/lib/util/flattenInlineTokens.js",
+          "local": "baselines/react-native-markdown-display/src/lib/util/flattenInlineTokens.js",
+          "upstreamBlob": "4fe3b605bac5b3c4320b4b348413353124e06357",
+          "sha256": "2942f2a624ddfd7318bbf3c4a250be05bce3d3c3c9f2d06876d2bee7e5f7d5bb"
+        },
+        {
+          "origin": "src/lib/util/getTokenTypeByToken.js",
+          "local": "baselines/react-native-markdown-display/src/lib/util/getTokenTypeByToken.js",
+          "upstreamBlob": "c49551058e8bccacc9f1e8355d5e2d6a8e22d248",
+          "sha256": "122951f7e1dba8f3afc52f35356076bd7e0788d2fb6a158bfc5454adc5709e06"
+        },
+        {
+          "origin": "src/lib/util/getUniqueID.js",
+          "local": "baselines/react-native-markdown-display/src/lib/util/getUniqueID.js",
+          "upstreamBlob": "cad71455a78548994a7bde8b2d380e8dc4eb2f72",
+          "sha256": "bb5cfe79e5f80bd06b0cb8d75274f7710ccb0ba269d35ab06c45dad7bf50a450"
+        },
+        {
+          "origin": "src/lib/util/groupTextTokens.js",
+          "local": "baselines/react-native-markdown-display/src/lib/util/groupTextTokens.js",
+          "upstreamBlob": "fb38e3d1b8a0ad5164153d3c631f6c38d823e634",
+          "sha256": "516ecff9d3f68cf8238815e5fd7efb31a65f67493b70ddd5461c9b0ff9e899ed"
+        },
+        {
+          "origin": "src/lib/util/hasParents.js",
+          "local": "baselines/react-native-markdown-display/src/lib/util/hasParents.js",
+          "upstreamBlob": "57287540f1e1af09a2ed4e06172d81169c451a9d",
+          "sha256": "43dd02b9b0c4cac4f8dc87802e0748ba2d1b71955d2ee07795eeca54fa5486f2"
+        },
+        {
+          "origin": "src/lib/util/omitListItemParagraph.js",
+          "local": "baselines/react-native-markdown-display/src/lib/util/omitListItemParagraph.js",
+          "upstreamBlob": "8efc08ae5a7dee8344fe7431a0a71422e101b971",
+          "sha256": "671aaa4c9ef7209f903877111b3865b1ade1f92a2be39ace671cf20db29c146f"
+        },
+        {
+          "origin": "src/lib/util/openUrl.js",
+          "local": "baselines/react-native-markdown-display/src/lib/util/openUrl.js",
+          "upstreamBlob": "1c1bf19881bf7dc80403ac058b74cf9d0d2665c8",
+          "sha256": "e20ac89e711beac7c6ca07ba7b7d3f4734e7e7425d0212e01cbb9c52df68811b"
+        },
+        {
+          "origin": "src/lib/util/removeTextStyleProps.js",
+          "local": "baselines/react-native-markdown-display/src/lib/util/removeTextStyleProps.js",
+          "upstreamBlob": "773fec86e8306093c8d6aa38d89884e6e872600d",
+          "sha256": "f61974e92a849f684ba1664cb12b172ac2d11071406becd68b8f23a15163ab6f"
+        },
+        {
+          "origin": "src/lib/util/renderInlineAsText.js",
+          "local": "baselines/react-native-markdown-display/src/lib/util/renderInlineAsText.js",
+          "upstreamBlob": "274efae93508004e7aa82447a0db8f0c3131076d",
+          "sha256": "c0b088b44cb146f1719788f31ac27f9cb8468f4d58ddd4e49e794ddf3171cb38"
+        },
+        {
+          "origin": "src/lib/util/splitTextNonTextNodes.js",
+          "local": "baselines/react-native-markdown-display/src/lib/util/splitTextNonTextNodes.js",
+          "upstreamBlob": "e81116955eea1d649b11f5626791f8330cd570a0",
+          "sha256": "3b5120fac4b19f65702cc7ab0ab0d626e8e61e1dc5971b60270821826455800e"
+        },
+        {
+          "origin": "src/lib/util/stringToTokens.js",
+          "local": "baselines/react-native-markdown-display/src/lib/util/stringToTokens.js",
+          "upstreamBlob": "6ac77f37271d15f74b75447a3fa4f590e54917d0",
+          "sha256": "b52f84a0ffb9d73562d00a5b70895d93b0cd3192df62e200c60a849a77792909"
+        },
+        {
+          "origin": "src/lib/util/tokensToAST.js",
+          "local": "baselines/react-native-markdown-display/src/lib/util/tokensToAST.js",
+          "upstreamBlob": "b0ed265c91170c4c464b40a7cdab69f685b6745d",
+          "sha256": "8d4735af0ccfa3d7b8f79212479b0455b14ac430176f89cd7e92f0bc9633ca73"
+        }
+      ],
+      "license": "MIT",
+      "notice": "docs/upstream/licenses/react-native-markdown-display.txt",
+      "manifestVersion": "7.0.1",
+      "dependencies": {
+        "css-to-react-native": "^3.0.0",
+        "markdown-it": "^10.0.0",
+        "prop-types": "^15.7.2",
+        "react-native-fit-image": "^1.5.5"
+      },
+      "peerDependencies": {
+        "react": ">=16.2.0",
+        "react-native": ">=0.50.4"
+      },
+      "lastReviewedCommit": "192b0ebf8e2538dfe9da0bc8b47e411116ed60e5",
+      "lastIncorporatedCommit": "192b0ebf8e2538dfe9da0bc8b47e411116ed60e5",
+      "exclusions": [
+        {
+          "origin": ".eslintrc.js",
+          "upstreamBlob": "d46623ba5158b6ae25e47a86646ea3497a00d253",
+          "reason": "Outside selected runtime, declaration, manifest and license boundaries."
+        },
+        {
+          "origin": ".gitignore",
+          "upstreamBlob": "e3e176f198cd50b3765d392f365e469ff91fcb2e",
+          "reason": "Outside selected runtime, declaration, manifest and license boundaries."
+        },
+        {
+          "origin": ".npmignore",
+          "upstreamBlob": "5a3dd21800d89fdb7a77cf2c1133235990057b46",
+          "reason": "Outside selected runtime, declaration, manifest and license boundaries."
+        },
+        {
+          "origin": ".prettierrc.js",
+          "upstreamBlob": "5c4de1a4f6592df28e158eb0e6e9b8cca74377e1",
+          "reason": "Outside selected runtime, declaration, manifest and license boundaries."
+        },
+        {
+          "origin": "README.md",
+          "upstreamBlob": "a53cc8f072dc6ee30acb9e7abd6f90bf29584551",
+          "reason": "Outside selected runtime, declaration, manifest and license boundaries."
+        },
+        {
+          "origin": "doc/images/android-1.png",
+          "upstreamBlob": "c7e44e1f24302c33871ce4d71737cff73b52e3db",
+          "reason": "Outside selected runtime, declaration, manifest and license boundaries."
+        },
+        {
+          "origin": "doc/images/android-10.png",
+          "upstreamBlob": "f81c990a73953e2b5c0efd9ff8a569b98d91a25b",
+          "reason": "Outside selected runtime, declaration, manifest and license boundaries."
+        },
+        {
+          "origin": "doc/images/android-2.png",
+          "upstreamBlob": "f20cfc6605306d8004b1146f9659c976b6abb837",
+          "reason": "Outside selected runtime, declaration, manifest and license boundaries."
+        },
+        {
+          "origin": "doc/images/android-3.png",
+          "upstreamBlob": "f9490be64815caa7cc5c66119cf5825a267b9dae",
+          "reason": "Outside selected runtime, declaration, manifest and license boundaries."
+        },
+        {
+          "origin": "doc/images/android-4.png",
+          "upstreamBlob": "bd5ebee4e1f5ea4df860e76723a5dffae0bf3662",
+          "reason": "Outside selected runtime, declaration, manifest and license boundaries."
+        },
+        {
+          "origin": "doc/images/android-5.png",
+          "upstreamBlob": "79b735c3b32cb5759a8f84d4ec359896bf3ceae8",
+          "reason": "Outside selected runtime, declaration, manifest and license boundaries."
+        },
+        {
+          "origin": "doc/images/android-6.png",
+          "upstreamBlob": "68db1d350e8ec7c181f7d3c2848cb2b81bf21354",
+          "reason": "Outside selected runtime, declaration, manifest and license boundaries."
+        },
+        {
+          "origin": "doc/images/android-7.png",
+          "upstreamBlob": "eecfe9238f6abf28b1d6528f317de14ee85a8df7",
+          "reason": "Outside selected runtime, declaration, manifest and license boundaries."
+        },
+        {
+          "origin": "doc/images/android-8.png",
+          "upstreamBlob": "1fbf6adeb03259cd41b230b97d26769354c244b7",
+          "reason": "Outside selected runtime, declaration, manifest and license boundaries."
+        },
+        {
+          "origin": "doc/images/android-9.png",
+          "upstreamBlob": "6e81a0db9491ea6d35214e26d891b6bd53f91b7f",
+          "reason": "Outside selected runtime, declaration, manifest and license boundaries."
+        },
+        {
+          "origin": "doc/images/ios-1.png",
+          "upstreamBlob": "3e56d3c49eaa2c774d2ea5f5e83900467ce6f099",
+          "reason": "Outside selected runtime, declaration, manifest and license boundaries."
+        },
+        {
+          "origin": "doc/images/ios-10.png",
+          "upstreamBlob": "a19f8798b63492c3aebed8e81b2a6209c58bcd22",
+          "reason": "Outside selected runtime, declaration, manifest and license boundaries."
+        },
+        {
+          "origin": "doc/images/ios-2.png",
+          "upstreamBlob": "ebf2f0d566c9c9dc3a44c1a3a8e40d33484bfe61",
+          "reason": "Outside selected runtime, declaration, manifest and license boundaries."
+        },
+        {
+          "origin": "doc/images/ios-3.png",
+          "upstreamBlob": "7d0076298c3a86e843ff3002830301634b5f4d8b",
+          "reason": "Outside selected runtime, declaration, manifest and license boundaries."
+        },
+        {
+          "origin": "doc/images/ios-4.png",
+          "upstreamBlob": "5e7e98bfafe7ab55141b45b327aa3c982c631e26",
+          "reason": "Outside selected runtime, declaration, manifest and license boundaries."
+        },
+        {
+          "origin": "doc/images/ios-5.png",
+          "upstreamBlob": "7bda39d42108fef2c2c4a041c99abf445417adec",
+          "reason": "Outside selected runtime, declaration, manifest and license boundaries."
+        },
+        {
+          "origin": "doc/images/ios-6.png",
+          "upstreamBlob": "96e5ba5e82797412d8b4e72b29f5921d7bb53d8d",
+          "reason": "Outside selected runtime, declaration, manifest and license boundaries."
+        },
+        {
+          "origin": "doc/images/ios-7.png",
+          "upstreamBlob": "fb1cc0191f787cfd6903225fe04aca3518e8fe75",
+          "reason": "Outside selected runtime, declaration, manifest and license boundaries."
+        },
+        {
+          "origin": "doc/images/ios-8.png",
+          "upstreamBlob": "6c2751a706a25dbb0e71deedb2aa88e6328c9c37",
+          "reason": "Outside selected runtime, declaration, manifest and license boundaries."
+        },
+        {
+          "origin": "doc/images/ios-9.png",
+          "upstreamBlob": "db86d280b5783965e4dde482d0b27a0fd3a7412c",
+          "reason": "Outside selected runtime, declaration, manifest and license boundaries."
+        },
+        {
+          "origin": "doc/images/style-example.png",
+          "upstreamBlob": "3c36017d6436e75ab742a36a6a3f8e9b49e8f974",
+          "reason": "Outside selected runtime, declaration, manifest and license boundaries."
+        }
+      ]
+    },
+    {
+      "id": "remark-gfm",
+      "repository": "https://github.com/remarkjs/remark-gfm.git",
+      "version": "4.0.1",
+      "commit": "109972e8a773bf5dac1d6d2da0776557f36971aa",
+      "roots": [
+        "lib/"
+      ],
+      "files": [
+        {
+          "origin": "index.js",
+          "local": "baselines/remark-gfm/index.js",
+          "upstreamBlob": "6a4c25d60f746eac9b80f56076fa90be149881a2",
+          "sha256": "0cf2ebbaae90578f4a838505ebc3d7fd1d8339484c7f13be1a3d4d09427c2dc9"
+        },
+        {
+          "origin": "lib/index.js",
+          "local": "baselines/remark-gfm/lib/index.js",
+          "upstreamBlob": "ee1cca2459792a0ae24518470163f6244f23a06a",
+          "sha256": "9317003279e791d39b7e3482cecfb3409843378164a238a535984f644e53c7ef"
+        },
+        {
+          "origin": "license",
+          "local": "baselines/remark-gfm/license",
+          "upstreamBlob": "bc8f165a62768a19de38901d81ac662c51ff29db",
+          "sha256": "dd1081884a92952802f4803110a6bb543acea9a814c786d58605b4c1219b5ebb"
+        },
+        {
+          "origin": "package.json",
+          "local": "baselines/remark-gfm/package.json",
+          "upstreamBlob": "bb536e513cabd67ecfda24294b91f098df07ed81",
+          "sha256": "c199482a69355b610bd1ff225b097776d4a990445b11e5f4c618930dacc8c79d"
+        }
+      ],
+      "license": "MIT",
+      "notice": "docs/upstream/licenses/remark-gfm.txt",
+      "manifestVersion": "4.0.1",
+      "dependencies": {
+        "@types/mdast": "^4.0.0",
+        "mdast-util-gfm": "^3.0.0",
+        "micromark-extension-gfm": "^3.0.0",
+        "remark-parse": "^11.0.0",
+        "remark-stringify": "^11.0.0",
+        "unified": "^11.0.0"
+      },
+      "peerDependencies": {},
+      "lastReviewedCommit": "109972e8a773bf5dac1d6d2da0776557f36971aa",
+      "lastIncorporatedCommit": "109972e8a773bf5dac1d6d2da0776557f36971aa",
+      "exclusions": [
+        {
+          "origin": ".editorconfig",
+          "upstreamBlob": "b368786472ccdf521e030436bc7a90082c2e0358",
+          "reason": "Outside selected runtime, declaration, manifest and license boundaries."
+        },
+        {
+          "origin": ".github/workflows/bb.yml",
+          "upstreamBlob": "3dbfce5b3ae6fe1d9e6c88e961c6561091fdbf34",
+          "reason": "Outside selected runtime, declaration, manifest and license boundaries."
+        },
+        {
+          "origin": ".github/workflows/main.yml",
+          "upstreamBlob": "ade392135e54b82ad830164f624d5d2855f36cd4",
+          "reason": "Outside selected runtime, declaration, manifest and license boundaries."
+        },
+        {
+          "origin": ".gitignore",
+          "upstreamBlob": "8123c9e9e5d8e955d0e8b6ef23c93f84a1971a61",
+          "reason": "Outside selected runtime, declaration, manifest and license boundaries."
+        },
+        {
+          "origin": ".npmrc",
+          "upstreamBlob": "3757b3046ec873a8b4a8e40e6a8682d1027fdd4e",
+          "reason": "Outside selected runtime, declaration, manifest and license boundaries."
+        },
+        {
+          "origin": ".prettierignore",
+          "upstreamBlob": "8d01c599c2e0b7d0fc27173f2becc68539ed8de7",
+          "reason": "Outside selected runtime, declaration, manifest and license boundaries."
+        },
+        {
+          "origin": ".remarkignore",
+          "upstreamBlob": "65e3ba2edadd2c591f7f522c571cc89fb72473f0",
+          "reason": "Outside selected runtime, declaration, manifest and license boundaries."
+        },
+        {
+          "origin": "index.d.ts",
+          "upstreamBlob": "094e9ae9379f52d82d0e80436eae6ad1b2bfdd9a",
+          "reason": "Outside selected runtime, declaration, manifest and license boundaries."
+        },
+        {
+          "origin": "readme.md",
+          "upstreamBlob": "98ca7de7fad0c58dc071136a22c3b2272616b825",
+          "reason": "Outside selected runtime, declaration, manifest and license boundaries."
+        },
+        {
+          "origin": "test/fixtures/autolink-literal/input.md",
+          "upstreamBlob": "76efeb7fd3c2efa22ceb2246940659da26739a95",
+          "reason": "Outside selected runtime, declaration, manifest and license boundaries."
+        },
+        {
+          "origin": "test/fixtures/autolink-literal/output.md",
+          "upstreamBlob": "4e8a3614c03d31ae3cb6b204a1a98519fae4ad9c",
+          "reason": "Outside selected runtime, declaration, manifest and license boundaries."
+        },
+        {
+          "origin": "test/fixtures/autolink-literal/tree.json",
+          "upstreamBlob": "271803c3c2f562b383d5dae60637ee4082bf271b",
+          "reason": "Outside selected runtime, declaration, manifest and license boundaries."
+        },
+        {
+          "origin": "test/fixtures/strikethrough-default/input.md",
+          "upstreamBlob": "a1310d80fa39d07484476ba540d2da4c876a969c",
+          "reason": "Outside selected runtime, declaration, manifest and license boundaries."
+        },
+        {
+          "origin": "test/fixtures/strikethrough-default/output.md",
+          "upstreamBlob": "6751453a1db5a255fdb3ac516efec61ad77587c8",
+          "reason": "Outside selected runtime, declaration, manifest and license boundaries."
+        },
+        {
+          "origin": "test/fixtures/strikethrough-default/tree.json",
+          "upstreamBlob": "9be89c6664847e517e5115395d244195c50f87ca",
+          "reason": "Outside selected runtime, declaration, manifest and license boundaries."
+        },
+        {
+          "origin": "test/fixtures/strikethrough-not-one/config.json",
+          "upstreamBlob": "9ebe776b38edeb491465a895aecd6a46c82ae1ed",
+          "reason": "Outside selected runtime, declaration, manifest and license boundaries."
+        },
+        {
+          "origin": "test/fixtures/strikethrough-not-one/input.md",
+          "upstreamBlob": "a1310d80fa39d07484476ba540d2da4c876a969c",
+          "reason": "Outside selected runtime, declaration, manifest and license boundaries."
+        },
+        {
+          "origin": "test/fixtures/strikethrough-not-one/output.md",
+          "upstreamBlob": "ef438d42d7a35283f48cbea04775e3dbe297962f",
+          "reason": "Outside selected runtime, declaration, manifest and license boundaries."
+        },
+        {
+          "origin": "test/fixtures/strikethrough-not-one/tree.json",
+          "upstreamBlob": "8abe79de2e63e130c6c377f69d4838434ecd2406",
+          "reason": "Outside selected runtime, declaration, manifest and license boundaries."
+        },
+        {
+          "origin": "test/fixtures/table-no-align/config.json",
+          "upstreamBlob": "eeaeb82e3ecd89b92205e15be27049798490d805",
+          "reason": "Outside selected runtime, declaration, manifest and license boundaries."
+        },
+        {
+          "origin": "test/fixtures/table-no-align/input.md",
+          "upstreamBlob": "6c4962d3d230b97a0efda69c4ab873d5154fdb77",
+          "reason": "Outside selected runtime, declaration, manifest and license boundaries."
+        },
+        {
+          "origin": "test/fixtures/table-no-align/tree.json",
+          "upstreamBlob": "eebf69810ce58ae02b8b6450d40f2d638fae126a",
+          "reason": "Outside selected runtime, declaration, manifest and license boundaries."
+        },
+        {
+          "origin": "test/fixtures/table-no-padding/config.json",
+          "upstreamBlob": "08e3189fa3154e833b169cb0b9300d1760c8d598",
+          "reason": "Outside selected runtime, declaration, manifest and license boundaries."
+        },
+        {
+          "origin": "test/fixtures/table-no-padding/input.md",
+          "upstreamBlob": "6c4962d3d230b97a0efda69c4ab873d5154fdb77",
+          "reason": "Outside selected runtime, declaration, manifest and license boundaries."
+        },
+        {
+          "origin": "test/fixtures/table-no-padding/output.md",
+          "upstreamBlob": "0172705ac8bbca33abb6683657f9e5b3bbb68939",
+          "reason": "Outside selected runtime, declaration, manifest and license boundaries."
+        },
+        {
+          "origin": "test/fixtures/table-no-padding/tree.json",
+          "upstreamBlob": "eebf69810ce58ae02b8b6450d40f2d638fae126a",
+          "reason": "Outside selected runtime, declaration, manifest and license boundaries."
+        },
+        {
+          "origin": "test/fixtures/table-string-length/config.json",
+          "upstreamBlob": "49fffba78e714269bba81e83f8b7673fb4e3712d",
+          "reason": "Outside selected runtime, declaration, manifest and license boundaries."
+        },
+        {
+          "origin": "test/fixtures/table-string-length/input.md",
+          "upstreamBlob": "a0aff23f6f9defdc259dba99545102c761a79f9e",
+          "reason": "Outside selected runtime, declaration, manifest and license boundaries."
+        },
+        {
+          "origin": "test/fixtures/table-string-length/output.md",
+          "upstreamBlob": "7d0b67ad4b2a25d0e172748e25476943124b5eaa",
+          "reason": "Outside selected runtime, declaration, manifest and license boundaries."
+        },
+        {
+          "origin": "test/fixtures/table-string-length/tree.json",
+          "upstreamBlob": "c00e2a54203752d0b24cd4bf6ab6ff2a3d0a56a7",
+          "reason": "Outside selected runtime, declaration, manifest and license boundaries."
+        },
+        {
+          "origin": "test/fixtures/table/input.md",
+          "upstreamBlob": "1c1afa0af491d53adfed04e3553b04d7a60ede74",
+          "reason": "Outside selected runtime, declaration, manifest and license boundaries."
+        },
+        {
+          "origin": "test/fixtures/table/output.md",
+          "upstreamBlob": "f0f15d4a1d83606365434db7ce74298fa5137d99",
+          "reason": "Outside selected runtime, declaration, manifest and license boundaries."
+        },
+        {
+          "origin": "test/fixtures/table/tree.json",
+          "upstreamBlob": "088dc634f8e87fcd6ef9532618dba1df38f6ec44",
+          "reason": "Outside selected runtime, declaration, manifest and license boundaries."
+        },
+        {
+          "origin": "test/fixtures/tasklist/input.md",
+          "upstreamBlob": "9af7d939c20886f9b8532aeb48cdaf0f47184de8",
+          "reason": "Outside selected runtime, declaration, manifest and license boundaries."
+        },
+        {
+          "origin": "test/fixtures/tasklist/output.md",
+          "upstreamBlob": "b146fab938eee93bd2fa0b002828bcea0d424f4a",
+          "reason": "Outside selected runtime, declaration, manifest and license boundaries."
+        },
+        {
+          "origin": "test/fixtures/tasklist/tree.json",
+          "upstreamBlob": "d03855481d6b6814fd2c8f5b3eee23bfb9d25a3b",
+          "reason": "Outside selected runtime, declaration, manifest and license boundaries."
+        },
+        {
+          "origin": "test/index.js",
+          "upstreamBlob": "5accbf6db14bba6cba8d76ea5424750807b3930d",
+          "reason": "Outside selected runtime, declaration, manifest and license boundaries."
+        },
+        {
+          "origin": "tsconfig.json",
+          "upstreamBlob": "c3e0c82a2a8c32d412633aff50ed404bf6576dc8",
+          "reason": "Outside selected runtime, declaration, manifest and license boundaries."
+        }
+      ]
+    },
+    {
+      "id": "remark-math",
+      "repository": "https://github.com/remarkjs/remark-math.git",
+      "version": "6.0.0",
+      "commit": "d5d0660b150810a535bbb07eac6cc96a4510aa24",
+      "roots": [
+        "packages/remark-math/lib/"
+      ],
+      "files": [
+        {
+          "origin": "license",
+          "local": "baselines/remark-math/license",
+          "upstreamBlob": "ea3803784aa58da6fa7cd6e196948608def87bf9",
+          "sha256": "cb992262f361a5359e6771c28740d33c7041e15332ae8537fae40538992591a9"
+        },
+        {
+          "origin": "package.json",
+          "local": "baselines/remark-math/package.json",
+          "upstreamBlob": "040910019a5b7a3104612df8efcb3b79f9de75a4",
+          "sha256": "418cf17f678ca97e41995ab6436951293a0779b01996abd444a47d62457ad5eb"
+        },
+        {
+          "origin": "packages/remark-math/index.js",
+          "local": "baselines/remark-math/packages/remark-math/index.js",
+          "upstreamBlob": "a49a278876feae34fbbafdc4ba522fd38143e99b",
+          "sha256": "ff503a9bd25827d5d77b2bc2ef6a5cfc830c24b217ebcc0613484fe513001de7"
+        },
+        {
+          "origin": "packages/remark-math/lib/index.js",
+          "local": "baselines/remark-math/packages/remark-math/lib/index.js",
+          "upstreamBlob": "48ae82d8cd531fa07d738e557701e81bc966566a",
+          "sha256": "d89e4f61bb3e92fd317064a2419edc99e863b1a63783fcddeb428c7eccb03de9"
+        },
+        {
+          "origin": "packages/remark-math/package.json",
+          "local": "baselines/remark-math/packages/remark-math/package.json",
+          "upstreamBlob": "3fad47b0003dd54bbae2716811796adc6e4bf923",
+          "sha256": "936d400d2c2a3f121c4d2b6b84b8a891af02852032b0dcb31f0407d2d6a4364f"
+        }
+      ],
+      "license": "MIT",
+      "notice": "docs/upstream/licenses/remark-math.txt",
+      "manifestVersion": "6.0.0",
+      "dependencies": {
+        "@types/mdast": "^4.0.0",
+        "mdast-util-math": "^3.0.0",
+        "micromark-extension-math": "^3.0.0",
+        "unified": "^11.0.0"
+      },
+      "peerDependencies": {},
+      "lastReviewedCommit": "d5d0660b150810a535bbb07eac6cc96a4510aa24",
+      "lastIncorporatedCommit": "d5d0660b150810a535bbb07eac6cc96a4510aa24",
+      "exclusions": [
+        {
+          "origin": ".editorconfig",
+          "upstreamBlob": "c6c8b3621938a4691225a870a59bf382af1883dd",
+          "reason": "Outside selected runtime, declaration, manifest and license boundaries."
+        },
+        {
+          "origin": ".gitattributes",
+          "upstreamBlob": "85a6b2d468fd31aef6c8d969c85ccb8b7e60644b",
+          "reason": "Outside selected runtime, declaration, manifest and license boundaries."
+        },
+        {
+          "origin": ".github/workflows/bb.yml",
+          "upstreamBlob": "0198fc3f545adcdcc369bad87f776835e40350aa",
+          "reason": "Outside selected runtime, declaration, manifest and license boundaries."
+        },
+        {
+          "origin": ".github/workflows/main.yml",
+          "upstreamBlob": "fb633871131119ab60dd467c86a25eb7f9afb704",
+          "reason": "Outside selected runtime, declaration, manifest and license boundaries."
+        },
+        {
+          "origin": ".gitignore",
+          "upstreamBlob": "53a29e3811d7738ec2533c39c1233ba6d50031f9",
+          "reason": "Outside selected runtime, declaration, manifest and license boundaries."
+        },
+        {
+          "origin": ".npmrc",
+          "upstreamBlob": "3757b3046ec873a8b4a8e40e6a8682d1027fdd4e",
+          "reason": "Outside selected runtime, declaration, manifest and license boundaries."
+        },
+        {
+          "origin": ".prettierignore",
+          "upstreamBlob": "2ac20d2b53ae33341ac517e41685e53df4163606",
+          "reason": "Outside selected runtime, declaration, manifest and license boundaries."
+        },
+        {
+          "origin": ".remarkignore",
+          "upstreamBlob": "65e3ba2edadd2c591f7f522c571cc89fb72473f0",
+          "reason": "Outside selected runtime, declaration, manifest and license boundaries."
+        },
+        {
+          "origin": "packages/rehype-katex/.npmrc",
+          "upstreamBlob": "3757b3046ec873a8b4a8e40e6a8682d1027fdd4e",
+          "reason": "Outside selected runtime, declaration, manifest and license boundaries."
+        },
+        {
+          "origin": "packages/rehype-katex/index.js",
+          "upstreamBlob": "a49a278876feae34fbbafdc4ba522fd38143e99b",
+          "reason": "Outside selected runtime, declaration, manifest and license boundaries."
+        },
+        {
+          "origin": "packages/rehype-katex/lib/index.js",
+          "upstreamBlob": "1031db0a0060cb22d0a4099428aaaf671e99119a",
+          "reason": "Outside selected runtime, declaration, manifest and license boundaries."
+        },
+        {
+          "origin": "packages/rehype-katex/package.json",
+          "upstreamBlob": "55b6c3e6e32434c97cc6f300e4e9091cd8fc10ed",
+          "reason": "Outside selected runtime, declaration, manifest and license boundaries."
+        },
+        {
+          "origin": "packages/rehype-katex/readme.md",
+          "upstreamBlob": "b045a234a22d22f69b2e3084e718bac2d6820a84",
+          "reason": "Outside selected runtime, declaration, manifest and license boundaries."
+        },
+        {
+          "origin": "packages/rehype-katex/test.js",
+          "upstreamBlob": "77b8406e55fc3c89237c2074a5e5cb34c6227b5d",
+          "reason": "Outside selected runtime, declaration, manifest and license boundaries."
+        },
+        {
+          "origin": "packages/rehype-katex/tsconfig.json",
+          "upstreamBlob": "4082f16a5d91ce6f21a9092b14170eeecc8f1d75",
+          "reason": "Outside selected runtime, declaration, manifest and license boundaries."
+        },
+        {
+          "origin": "packages/rehype-mathjax/.npmrc",
+          "upstreamBlob": "3757b3046ec873a8b4a8e40e6a8682d1027fdd4e",
+          "reason": "Outside selected runtime, declaration, manifest and license boundaries."
+        },
+        {
+          "origin": "packages/rehype-mathjax/browser.js",
+          "upstreamBlob": "8937594d5539a63144773ccc643d6cd5dd68c9cd",
+          "reason": "Outside selected runtime, declaration, manifest and license boundaries."
+        },
+        {
+          "origin": "packages/rehype-mathjax/chtml.js",
+          "upstreamBlob": "88456004ca7ea39aada7f08d17374234bc8fc327",
+          "reason": "Outside selected runtime, declaration, manifest and license boundaries."
+        },
+        {
+          "origin": "packages/rehype-mathjax/lib/browser.js",
+          "upstreamBlob": "2d1a52c2234dd3703ed3c430bfd2885ca275e4ea",
+          "reason": "Outside selected runtime, declaration, manifest and license boundaries."
+        },
+        {
+          "origin": "packages/rehype-mathjax/lib/chtml.js",
+          "upstreamBlob": "0201905bd68c46b36ab0917b4e4b8decf5d9b554",
+          "reason": "Outside selected runtime, declaration, manifest and license boundaries."
+        },
+        {
+          "origin": "packages/rehype-mathjax/lib/create-adapter.browser.js",
+          "upstreamBlob": "c6729aba132baaa48d55cfa9b02ee3f46cd61738",
+          "reason": "Outside selected runtime, declaration, manifest and license boundaries."
+        },
+        {
+          "origin": "packages/rehype-mathjax/lib/create-adapter.default.js",
+          "upstreamBlob": "0cf770508015826e77a6da379e4ac2d94f05924b",
+          "reason": "Outside selected runtime, declaration, manifest and license boundaries."
+        },
+        {
+          "origin": "packages/rehype-mathjax/lib/create-plugin.js",
+          "upstreamBlob": "fb72d27393190c94a9faafa32b779c3679d41d4f",
+          "reason": "Outside selected runtime, declaration, manifest and license boundaries."
+        },
+        {
+          "origin": "packages/rehype-mathjax/lib/create-renderer.js",
+          "upstreamBlob": "ff1c493b6c47d9c5307f55010c9499352f3d1f81",
+          "reason": "Outside selected runtime, declaration, manifest and license boundaries."
+        },
+        {
+          "origin": "packages/rehype-mathjax/lib/svg.js",
+          "upstreamBlob": "583ba4a94e51777306d3417dd160a1108a813683",
+          "reason": "Outside selected runtime, declaration, manifest and license boundaries."
+        },
+        {
+          "origin": "packages/rehype-mathjax/package.json",
+          "upstreamBlob": "6cce96c6a736d8b68cfb22b424d5ae8087efc681",
+          "reason": "Outside selected runtime, declaration, manifest and license boundaries."
+        },
+        {
+          "origin": "packages/rehype-mathjax/readme.md",
+          "upstreamBlob": "2ae13bc77ea3b998000118afbcb6fcea92f4dcc1",
+          "reason": "Outside selected runtime, declaration, manifest and license boundaries."
+        },
+        {
+          "origin": "packages/rehype-mathjax/svg.js",
+          "upstreamBlob": "9c3f749c5dc88dbeaba83cc12b308bc68d7da462",
+          "reason": "Outside selected runtime, declaration, manifest and license boundaries."
+        },
+        {
+          "origin": "packages/rehype-mathjax/test/fixture/document-svg.html",
+          "upstreamBlob": "765aa2f07ae45f439b7ffb33e7282fa63d126f66",
+          "reason": "Outside selected runtime, declaration, manifest and license boundaries."
+        },
+        {
+          "origin": "packages/rehype-mathjax/test/fixture/document.html",
+          "upstreamBlob": "fcde1441b47a9702c64caf7d0570779e0a0332d9",
+          "reason": "Outside selected runtime, declaration, manifest and license boundaries."
+        },
+        {
+          "origin": "packages/rehype-mathjax/test/fixture/double-svg.html",
+          "upstreamBlob": "50174f5e0208ebfbfc29f84431c251a1ae185018",
+          "reason": "Outside selected runtime, declaration, manifest and license boundaries."
+        },
+        {
+          "origin": "packages/rehype-mathjax/test/fixture/double.html",
+          "upstreamBlob": "5f32fba17818bebcd2461001c64941325f269c1d",
+          "reason": "Outside selected runtime, declaration, manifest and license boundaries."
+        },
+        {
+          "origin": "packages/rehype-mathjax/test/fixture/equation-numbering-1-chtml.html",
+          "upstreamBlob": "ea2afca43147a7d9f6398d7d85e10915a9d8bee1",
+          "reason": "Outside selected runtime, declaration, manifest and license boundaries."
+        },
+        {
+          "origin": "packages/rehype-mathjax/test/fixture/equation-numbering-1-svg.html",
+          "upstreamBlob": "4ff3036af99604580d3d426e4ad0f3352a1e2793",
+          "reason": "Outside selected runtime, declaration, manifest and license boundaries."
+        },
+        {
+          "origin": "packages/rehype-mathjax/test/fixture/equation-numbering-1.html",
+          "upstreamBlob": "1a8bbc112e9f45e07ad80f709ce90062324f06af",
+          "reason": "Outside selected runtime, declaration, manifest and license boundaries."
+        },
+        {
+          "origin": "packages/rehype-mathjax/test/fixture/equation-numbering-2-svg.html",
+          "upstreamBlob": "766e0359246dea4fb815b801a3142a49a570a368",
+          "reason": "Outside selected runtime, declaration, manifest and license boundaries."
+        },
+        {
+          "origin": "packages/rehype-mathjax/test/fixture/equation-numbering-2.html",
+          "upstreamBlob": "6c6c37da958a7217d54674a9591e265fce3d0f91",
+          "reason": "Outside selected runtime, declaration, manifest and license boundaries."
+        },
+        {
+          "origin": "packages/rehype-mathjax/test/fixture/markdown-code-fenced-svg.html",
+          "upstreamBlob": "84db67acd049759948ba07e61ff256674d0e8681",
+          "reason": "Outside selected runtime, declaration, manifest and license boundaries."
+        },
+        {
+          "origin": "packages/rehype-mathjax/test/fixture/markdown-svg.html",
+          "upstreamBlob": "d45a34b04949946e5135de6f54767db6e0078f49",
+          "reason": "Outside selected runtime, declaration, manifest and license boundaries."
+        },
+        {
+          "origin": "packages/rehype-mathjax/test/fixture/markdown.md",
+          "upstreamBlob": "e04b671f605aa74335a407097cd6c650d91721cf",
+          "reason": "Outside selected runtime, declaration, manifest and license boundaries."
+        },
+        {
+          "origin": "packages/rehype-mathjax/test/fixture/none-svg.html",
+          "upstreamBlob": "0a0d0a4a2bcee3c8d354031208e6feda252c1e0f",
+          "reason": "Outside selected runtime, declaration, manifest and license boundaries."
+        },
+        {
+          "origin": "packages/rehype-mathjax/test/fixture/none.html",
+          "upstreamBlob": "0a0d0a4a2bcee3c8d354031208e6feda252c1e0f",
+          "reason": "Outside selected runtime, declaration, manifest and license boundaries."
+        },
+        {
+          "origin": "packages/rehype-mathjax/test/fixture/small-browser-delimiters.html",
+          "upstreamBlob": "d6cc6e9d9d38f7c3fe0da3657c2cc0b0f0aa61da",
+          "reason": "Outside selected runtime, declaration, manifest and license boundaries."
+        },
+        {
+          "origin": "packages/rehype-mathjax/test/fixture/small-browser.html",
+          "upstreamBlob": "917a871436ec175f6a13fd1bac19330e61b4937e",
+          "reason": "Outside selected runtime, declaration, manifest and license boundaries."
+        },
+        {
+          "origin": "packages/rehype-mathjax/test/fixture/small-chtml.html",
+          "upstreamBlob": "dd2e05c4ed5d53e622d41a59098cc8df623be728",
+          "reason": "Outside selected runtime, declaration, manifest and license boundaries."
+        },
+        {
+          "origin": "packages/rehype-mathjax/test/fixture/small-svg.html",
+          "upstreamBlob": "1c10fdf97379338a5296e55caf4cae31fe5d2396",
+          "reason": "Outside selected runtime, declaration, manifest and license boundaries."
+        },
+        {
+          "origin": "packages/rehype-mathjax/test/fixture/small.html",
+          "upstreamBlob": "2bc883bd7307b642c41ca03ac42c1e4930247d53",
+          "reason": "Outside selected runtime, declaration, manifest and license boundaries."
+        },
+        {
+          "origin": "packages/rehype-mathjax/test/index.js",
+          "upstreamBlob": "2905fc35b668458d89a4e36a7393579d14b16870",
+          "reason": "Outside selected runtime, declaration, manifest and license boundaries."
+        },
+        {
+          "origin": "packages/rehype-mathjax/tsconfig.json",
+          "upstreamBlob": "4082f16a5d91ce6f21a9092b14170eeecc8f1d75",
+          "reason": "Outside selected runtime, declaration, manifest and license boundaries."
+        },
+        {
+          "origin": "packages/remark-html-katex/readme.md",
+          "upstreamBlob": "15682a6f0a9e656c05f3d0511eb7cafb850153c7",
+          "reason": "Outside selected runtime, declaration, manifest and license boundaries."
+        },
+        {
+          "origin": "packages/remark-math/.npmrc",
+          "upstreamBlob": "3757b3046ec873a8b4a8e40e6a8682d1027fdd4e",
+          "reason": "Outside selected runtime, declaration, manifest and license boundaries."
+        },
+        {
+          "origin": "packages/remark-math/readme.md",
+          "upstreamBlob": "07504dece6692ad19f528701e2a176bb4b245731",
+          "reason": "Outside selected runtime, declaration, manifest and license boundaries."
+        },
+        {
+          "origin": "packages/remark-math/test.js",
+          "upstreamBlob": "3db31a1807fa9aba40d77c0afb6911a5e693b3d2",
+          "reason": "Outside selected runtime, declaration, manifest and license boundaries."
+        },
+        {
+          "origin": "packages/remark-math/tsconfig.json",
+          "upstreamBlob": "4082f16a5d91ce6f21a9092b14170eeecc8f1d75",
+          "reason": "Outside selected runtime, declaration, manifest and license boundaries."
+        },
+        {
+          "origin": "readme.md",
+          "upstreamBlob": "d188a7067e866da3f9b97163cc691967e6d9975e",
+          "reason": "Outside selected runtime, declaration, manifest and license boundaries."
+        },
+        {
+          "origin": "tsconfig.json",
+          "upstreamBlob": "6d8e683d4c3ce08ea45f4873cb8aaa1eaff1f225",
+          "reason": "Outside selected runtime, declaration, manifest and license boundaries."
+        }
+      ]
+    },
+    {
+      "id": "rehype-raw",
+      "repository": "https://github.com/rehypejs/rehype-raw.git",
+      "version": "7.0.0",
+      "commit": "b34629920abbb5484409778412cdad3f94ff9b1f",
+      "roots": [
+        "lib/"
+      ],
+      "files": [
+        {
+          "origin": "index.js",
+          "local": "baselines/rehype-raw/index.js",
+          "upstreamBlob": "a49a278876feae34fbbafdc4ba522fd38143e99b",
+          "sha256": "ff503a9bd25827d5d77b2bc2ef6a5cfc830c24b217ebcc0613484fe513001de7"
+        },
+        {
+          "origin": "lib/index.js",
+          "local": "baselines/rehype-raw/lib/index.js",
+          "upstreamBlob": "80b24349e847023e500ebc7fe970e1b6753c78a8",
+          "sha256": "65cd9ff08b722b9a89a6e89d09c5e2038bcd577ec446c11d17e445509002dc97"
+        },
+        {
+          "origin": "license",
+          "local": "baselines/rehype-raw/license",
+          "upstreamBlob": "8d8660d36ef2eced1f9cce91e17ae0290261734c",
+          "sha256": "ca4662cb5d1b738fbe5350c0d5485ba11773b4b7208974082ae6e129a52d631d"
+        },
+        {
+          "origin": "package.json",
+          "local": "baselines/rehype-raw/package.json",
+          "upstreamBlob": "ae372662ceaa04d5f8928654fe826bca4fe599f8",
+          "sha256": "b3313f6329e5b99fd26107f15d4a06bbd2644d1ee93f10fea5ee898be3248c05"
+        }
+      ],
+      "license": "MIT",
+      "notice": "docs/upstream/licenses/rehype-raw.txt",
+      "manifestVersion": "7.0.0",
+      "dependencies": {
+        "@types/hast": "^3.0.0",
+        "hast-util-raw": "^9.0.0",
+        "vfile": "^6.0.0"
+      },
+      "peerDependencies": {},
+      "lastReviewedCommit": "b34629920abbb5484409778412cdad3f94ff9b1f",
+      "lastIncorporatedCommit": "b34629920abbb5484409778412cdad3f94ff9b1f",
+      "exclusions": [
+        {
+          "origin": ".editorconfig",
+          "upstreamBlob": "c6c8b3621938a4691225a870a59bf382af1883dd",
+          "reason": "Outside selected runtime, declaration, manifest and license boundaries."
+        },
+        {
+          "origin": ".github/workflows/bb.yml",
+          "upstreamBlob": "0198fc3f545adcdcc369bad87f776835e40350aa",
+          "reason": "Outside selected runtime, declaration, manifest and license boundaries."
+        },
+        {
+          "origin": ".github/workflows/main.yml",
+          "upstreamBlob": "fb633871131119ab60dd467c86a25eb7f9afb704",
+          "reason": "Outside selected runtime, declaration, manifest and license boundaries."
+        },
+        {
+          "origin": ".gitignore",
+          "upstreamBlob": "53a29e3811d7738ec2533c39c1233ba6d50031f9",
+          "reason": "Outside selected runtime, declaration, manifest and license boundaries."
+        },
+        {
+          "origin": ".npmrc",
+          "upstreamBlob": "43c97e719a5a824700932f72e6e7e6748ce45d01",
+          "reason": "Outside selected runtime, declaration, manifest and license boundaries."
+        },
+        {
+          "origin": ".prettierignore",
+          "upstreamBlob": "cebe81f895b54f44a9ad8b326fc7ecef9c728b06",
+          "reason": "Outside selected runtime, declaration, manifest and license boundaries."
+        },
+        {
+          "origin": "readme.md",
+          "upstreamBlob": "c0ea72134b09b2dd4f06c3a43fbbd3b8034bfc9e",
+          "reason": "Outside selected runtime, declaration, manifest and license boundaries."
+        },
+        {
+          "origin": "test.js",
+          "upstreamBlob": "fd0eedc19e918e531ee5e0d441ff40f90da82e9b",
+          "reason": "Outside selected runtime, declaration, manifest and license boundaries."
+        },
+        {
+          "origin": "tsconfig.json",
+          "upstreamBlob": "82cc749adf8956eb385f69c628e2221e4fa4d0b0",
+          "reason": "Outside selected runtime, declaration, manifest and license boundaries."
+        }
+      ]
+    },
+    {
+      "id": "rehype-sanitize",
+      "repository": "https://github.com/rehypejs/rehype-sanitize.git",
+      "version": "6.0.0",
+      "commit": "566a856d8b626c3d016f610048bdaf327464e467",
+      "roots": [
+        "lib/"
+      ],
+      "files": [
+        {
+          "origin": "index.js",
+          "local": "baselines/rehype-sanitize/index.js",
+          "upstreamBlob": "9705f00cd280315cce365663cd47e2ef2de459be",
+          "sha256": "059cc5e14a4627cccff0a64b0dac4fd105fad3ed7123f176d0211b802095a16b"
+        },
+        {
+          "origin": "lib/index.js",
+          "local": "baselines/rehype-sanitize/lib/index.js",
+          "upstreamBlob": "eec472be5df9a8335ccfbbfe8d3f53adfa11fc9e",
+          "sha256": "d49253b1f2d8be32483f6527ef7d3362a976b019a173e186baf616351c3fefee"
+        },
+        {
+          "origin": "license",
+          "local": "baselines/rehype-sanitize/license",
+          "upstreamBlob": "8d8660d36ef2eced1f9cce91e17ae0290261734c",
+          "sha256": "ca4662cb5d1b738fbe5350c0d5485ba11773b4b7208974082ae6e129a52d631d"
+        },
+        {
+          "origin": "package.json",
+          "local": "baselines/rehype-sanitize/package.json",
+          "upstreamBlob": "2b0b7c7f06420a6325dc3eb7f8fc6c381490c95f",
+          "sha256": "b8c794050d76ff903a42c31e8f7a18e85e966cf231b67d9363a81c0dd5157465"
+        }
+      ],
+      "license": "MIT",
+      "notice": "docs/upstream/licenses/rehype-sanitize.txt",
+      "manifestVersion": "6.0.0",
+      "dependencies": {
+        "@types/hast": "^3.0.0",
+        "hast-util-sanitize": "^5.0.0"
+      },
+      "peerDependencies": {},
+      "lastReviewedCommit": "566a856d8b626c3d016f610048bdaf327464e467",
+      "lastIncorporatedCommit": "566a856d8b626c3d016f610048bdaf327464e467",
+      "exclusions": [
+        {
+          "origin": ".editorconfig",
+          "upstreamBlob": "c6c8b3621938a4691225a870a59bf382af1883dd",
+          "reason": "Outside selected runtime, declaration, manifest and license boundaries."
+        },
+        {
+          "origin": ".github/workflows/bb.yml",
+          "upstreamBlob": "0198fc3f545adcdcc369bad87f776835e40350aa",
+          "reason": "Outside selected runtime, declaration, manifest and license boundaries."
+        },
+        {
+          "origin": ".github/workflows/main.yml",
+          "upstreamBlob": "fb633871131119ab60dd467c86a25eb7f9afb704",
+          "reason": "Outside selected runtime, declaration, manifest and license boundaries."
+        },
+        {
+          "origin": ".gitignore",
+          "upstreamBlob": "53a29e3811d7738ec2533c39c1233ba6d50031f9",
+          "reason": "Outside selected runtime, declaration, manifest and license boundaries."
+        },
+        {
+          "origin": ".npmrc",
+          "upstreamBlob": "3757b3046ec873a8b4a8e40e6a8682d1027fdd4e",
+          "reason": "Outside selected runtime, declaration, manifest and license boundaries."
+        },
+        {
+          "origin": ".prettierignore",
+          "upstreamBlob": "cebe81f895b54f44a9ad8b326fc7ecef9c728b06",
+          "reason": "Outside selected runtime, declaration, manifest and license boundaries."
+        },
+        {
+          "origin": "readme.md",
+          "upstreamBlob": "0878b6c062b298b1b5a44b878768b230200eb932",
+          "reason": "Outside selected runtime, declaration, manifest and license boundaries."
+        },
+        {
+          "origin": "test.js",
+          "upstreamBlob": "7b25b0f0572511a0897d6461d27e103beb104f82",
+          "reason": "Outside selected runtime, declaration, manifest and license boundaries."
+        },
+        {
+          "origin": "tsconfig.json",
+          "upstreamBlob": "82cc749adf8956eb385f69c628e2221e4fa4d0b0",
+          "reason": "Outside selected runtime, declaration, manifest and license boundaries."
+        }
+      ]
+    }
+  ]
+}

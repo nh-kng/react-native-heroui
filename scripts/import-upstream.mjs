@@ -1,3 +1,4 @@
+import { importMarkdown } from './markdown-upstream.mjs';
 import { existsSync, mkdirSync, readFileSync, writeFileSync } from 'node:fs';
 import path from 'node:path';
 import { git, hashes, mapPath, provenance, repositories, root, selected, upstreamTree } from './upstream-baselines.mjs';
@@ -41,3 +42,6 @@ for (const repo of repositories) {
 }
 writeNew(mapPath, `${JSON.stringify(map, null, 2)}\n`);
 console.log(`Imported ${map.repositories.reduce((sum, repo) => sum + repo.files.length, 0)} unchanged files; ${map.repositories.reduce((sum, repo) => sum + repo.components.length, 0)} component records.`);
+
+const markdown = importMarkdown();
+console.log(`Imported ${markdown.repositories.reduce((sum, repo) => sum + repo.files.length, 0)} unchanged Markdown files from ${markdown.repositories.length} repositories.`);

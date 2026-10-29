@@ -15,6 +15,7 @@
   "include": [
     "./native.tsx",
     "./shared-contracts.ts",
-    "./added.native.tsx"
+    "./added.native.tsx",
+    "./markdown.native.tsx"
   ]
 }

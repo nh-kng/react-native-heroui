@@ -1,3 +1,4 @@
+import { verifyMarkdownOwned } from './verify-markdown-owned.mjs';
 import assert from 'node:assert/strict';
 import { existsSync, readFileSync } from 'node:fs';
 import { pathToFileURL } from 'node:url';
@@ -17,7 +18,8 @@ export function verifyOwned() {
     assert.equal(repo.lastIncorporatedCommit, original.commit);
     assert.equal(repo.lastReviewedCommit, original.commit);
   }
-  const mapped = new Set();
+  const markdown = verifyMarkdownOwned();
+  const mapped = new Set(markdown.mapped);
   for (const file of map.files) {
     assert.ok(!mapped.has(file.local), `Duplicate owned mapping: ${file.local}`);
     mapped.add(file.local);
@@ -33,8 +35,8 @@ export function verifyOwned() {
     const source = readFileSync(path.join(root, file), 'utf8');
     const ast = ts.createSourceFile(file, source, ts.ScriptTarget.Latest, true);
     function visit(node) {
-      if (ts.isStringLiteralLike(node) && /^(?:@heroui\/|heroui-native(?:\/|$))/.test(node.text)) {
-        assert.fail(`External HeroUI reference in owned source: ${file}: ${node.text}`);
+      if (ts.isStringLiteralLike(node) && /^(?:@heroui\/|heroui-native(?:\/|$)|react-markdown(?:\/|$)|react-native-markdown-display(?:\/|$)|remark-gfm(?:\/|$)|remark-math(?:\/|$)|rehype-raw(?:\/|$)|rehype-sanitize(?:\/|$))/.test(node.text)) {
+        assert.fail(`External upstream reference in owned source: ${file}: ${node.text}`);
       }
       ts.forEachChild(node, visit);
     }
@@ -49,13 +51,13 @@ export function verifyOwned() {
     }
   }
   const pkg = JSON.parse(readFileSync(path.join(root, 'package.json'), 'utf8'));
-  for (const name of ['@heroui/react', 'heroui-native', '@heroui/styles']) {
+  for (const name of ['@heroui/react', 'heroui-native', '@heroui/styles', 'react-markdown', 'react-native-markdown-display', 'remark-gfm', 'remark-math', 'rehype-raw', 'rehype-sanitize']) {
     assert.ok(
       !pkg.dependencies?.[name] && !pkg.peerDependencies?.[name],
       `Upstream runtime dependency: ${name}`
     );
   }
-  for (const component of map.components) {
+  for (const component of [...map.components, ...markdown.components]) {
     assert.ok(existsSync(path.join(root, 'src/components', component.name, 'UPSTREAM.md')));
     assert.ok(
       existsSync(path.join(root, 'src/components', component.name, `${component.name}.types.ts`))
@@ -74,7 +76,7 @@ export function verifyOwned() {
       `External HeroUI stylesheet: ${file}`
     );
   }
-  return { files: mapped.size, components: map.components.length };
+  return { files: mapped.size, components: map.components.length + markdown.components.length };
 }
 
 if (process.argv[1] && import.meta.url === pathToFileURL(process.argv[1]).href)

@@ -8,6 +8,7 @@ The package supports both a root import and component-specific subpaths. Each pa
 | `PressableFeedback` | `@nh-kng/react-native-heroui` | `@nh-kng/react-native-heroui/pressable-feedback` |
 | `Chip` | `@nh-kng/react-native-heroui` | `@nh-kng/react-native-heroui/chip` |
 | `Card` | `@nh-kng/react-native-heroui` | `@nh-kng/react-native-heroui/card` |
+| `Markdown` | `@nh-kng/react-native-heroui` | `@nh-kng/react-native-heroui/markdown` |
 | `Typography` | `@nh-kng/react-native-heroui` | `@nh-kng/react-native-heroui/typography` |
 | `Input` | `@nh-kng/react-native-heroui` | `@nh-kng/react-native-heroui/input` |
 | `TextField` | `@nh-kng/react-native-heroui` | `@nh-kng/react-native-heroui/text-field` |
@@ -45,5 +46,6 @@ The shared Uniwind style entry is `@nh-kng/react-native-heroui/styles/index.css`
 Every rendered component root and compound part exposes platform-specific `nativeProps` and `webProps` options typed from the corresponding locally owned component. These options are ignored on the inactive platform. Adapter-owned values such as `isLoading`, `isPending`, `isInvalid`, mapped input props, children, class names, and refs cannot be overridden through an escape hatch.
 
 - [Component API](components.md)
+- [Markdown](markdown.md) — Phase 1 source integration and extension hooks.
 - [Type conventions](types.md)
 - [Platform support](../guides/platform-support.md)

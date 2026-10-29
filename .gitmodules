@@ -4,3 +4,21 @@
 [submodule "upstream/heroui-react"]
 	path = upstream/heroui-react
 	url = https://github.com/heroui-inc/heroui.git
+[submodule "upstream/react-markdown"]
+	path = upstream/react-markdown
+	url = https://github.com/remarkjs/react-markdown.git
+[submodule "upstream/react-native-markdown-display"]
+	path = upstream/react-native-markdown-display
+	url = https://github.com/iamacup/react-native-markdown-display.git
+[submodule "upstream/remark-gfm"]
+	path = upstream/remark-gfm
+	url = https://github.com/remarkjs/remark-gfm.git
+[submodule "upstream/remark-math"]
+	path = upstream/remark-math
+	url = https://github.com/remarkjs/remark-math.git
+[submodule "upstream/rehype-raw"]
+	path = upstream/rehype-raw
+	url = https://github.com/rehypejs/rehype-raw.git
+[submodule "upstream/rehype-sanitize"]
+	path = upstream/rehype-sanitize
+	url = https://github.com/rehypejs/rehype-sanitize.git
