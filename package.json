@@ -653,6 +653,21 @@
       "types": "./build/web/components/loading-text/index.web.d.ts",
       "import": "./build/web/components/loading-text/index.web.js",
       "default": "./build/web/components/loading-text/index.web.js"
+    },
+    "./segmented-control": {
+      "react-native": {
+        "types": "./build/native/components/segmented-control/index.native.d.ts",
+        "import": "./build/native/components/segmented-control/index.native.js",
+        "default": "./build/native/components/segmented-control/index.native.js"
+      },
+      "browser": {
+        "types": "./build/web/components/segmented-control/index.web.d.ts",
+        "import": "./build/web/components/segmented-control/index.web.js",
+        "default": "./build/web/components/segmented-control/index.web.js"
+      },
+      "types": "./build/web/components/segmented-control/index.web.d.ts",
+      "import": "./build/web/components/segmented-control/index.web.js",
+      "default": "./build/web/components/segmented-control/index.web.js"
     }
   },
   "sideEffects": [

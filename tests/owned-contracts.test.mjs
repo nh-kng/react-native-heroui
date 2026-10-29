@@ -14,7 +14,7 @@ test('feedback package subpath exposes the compound API without rendering', () =
 });
 
 test('owned implementation has complete provenance and no upstream runtime imports', () => {
-  assert.equal(verifyOwned().components, 35);
+  assert.equal(verifyOwned().components, 36);
 });
 
 test('loading always blocks actions and the compatibility alias has the same semantics', () => {

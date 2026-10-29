@@ -1,0 +1,33 @@
+@layer components {
+  .segmented-control {
+    @apply relative inline-flex self-start rounded-3xl bg-default;
+    isolation: isolate;
+    min-width: 0;
+  }
+  .segmented-control[data-disabled] { @apply opacity-50; }
+  .segmented-control__group { @apply min-w-0 w-full; }
+  .segmented-control__list { @apply relative z-1 flex flex-row flex-nowrap items-center gap-1 p-1; }
+  .segmented-control__item {
+    @apply relative flex h-8 items-center justify-center gap-1.5 rounded-3xl bg-transparent px-4 text-sm font-medium text-muted outline-none;
+    cursor: var(--cursor-interactive);
+    white-space: nowrap;
+    -webkit-tap-highlight-color: transparent;
+  }
+  .segmented-control__item[data-selected] { @apply text-segment-foreground; }
+  .segmented-control__item[data-disabled] { cursor: default; opacity: 0.5; }
+  .segmented-control__item[data-focus-visible] { @apply status-focused; }
+  .segmented-control__label { color: inherit; font: inherit; }
+  .segmented-control__indicator {
+    @apply pointer-events-none absolute left-0 top-0 rounded-3xl bg-segment shadow-surface;
+    z-index: 0;
+  }
+  .segmented-control__indicator[data-animate] {
+    transition: transform 250ms var(--ease-out-fluid), width 250ms var(--ease-out-fluid), height 250ms var(--ease-out-fluid);
+  }
+  @media (hover: hover) {
+    .segmented-control__item[data-hovered]:not([data-selected]):not([data-disabled]) { opacity: 0.7; }
+  }
+  @media (prefers-reduced-motion: reduce) {
+    .segmented-control__indicator[data-animate] { transition: none; }
+  }
+}

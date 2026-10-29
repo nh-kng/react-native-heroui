@@ -1,6 +1,6 @@
 import {
-  Button,
   PressableFeedback,
+  SegmentedControl,
   Typography,
   type ColorScheme,
 } from '@nh-kng/react-native-heroui';
@@ -30,6 +30,7 @@ export const components = [
   'RadioGroup',
   'ScrollShadow',
   'SearchField',
+  'SegmentedControl',
   'Select',
   'Separator',
   'Skeleton',
@@ -63,45 +64,52 @@ export function Navigation({
   onColorSchemeChange,
 }: NavigationProps) {
   return (
-    <ScrollView className="heroui-scrollbar" contentContainerStyle={{ padding: 16, gap: 24 }}>
-      <View className="gap-2">
-        <Typography.Paragraph type="body-sm" weight="medium">
-          Components
-        </Typography.Paragraph>
-        {components.map((name) => (
-          <PressableFeedback
-            key={name}
-            nativeProps={{ 'aria-selected': selected === name }}
-            webProps={{ 'aria-current': selected === name ? 'page' : undefined }}
-            onPress={() => onSelect(name)}
-            className={
-              selected === name
-                ? `w-full ${navigationItemHeight} justify-center rounded-xl bg-surface px-3`
-                : `w-full ${navigationItemHeight} justify-center rounded-xl px-3`
-            }>
-            <PressableFeedback.Highlight />
-            <Typography.Paragraph color={selected === name ? 'default' : 'muted'}>
-              {name}
-            </Typography.Paragraph>
-          </PressableFeedback>
-        ))}
-      </View>
-      <View className="gap-3 border-t border-border pt-4">
+    <View style={{ flex: 1, minHeight: 0 }}>
+      <ScrollView className="heroui-scrollbar" style={{ flex: 1, minHeight: 0 }} contentContainerStyle={{ padding: 16 }}>
+        <View className="gap-2">
+          <Typography.Paragraph type="body-sm" weight="medium">
+            Components
+          </Typography.Paragraph>
+          {components.map((name) => (
+            <PressableFeedback
+              key={name}
+              nativeProps={{ 'aria-selected': selected === name }}
+              webProps={{ 'aria-current': selected === name ? 'page' : undefined }}
+              onPress={() => onSelect(name)}
+              className={
+                selected === name
+                  ? `w-full ${navigationItemHeight} justify-center rounded-xl bg-surface px-3`
+                  : `w-full ${navigationItemHeight} justify-center rounded-xl px-3`
+              }>
+              <PressableFeedback.Highlight />
+              <Typography.Paragraph color={selected === name ? 'default' : 'muted'}>
+                {name}
+              </Typography.Paragraph>
+            </PressableFeedback>
+          ))}
+        </View>
+      </ScrollView>
+      <View className="gap-3 border-t border-border p-4">
         <Typography.Paragraph type="body-sm" color="muted">
           Appearance
         </Typography.Paragraph>
-        <View className="flex-row flex-wrap gap-2">
-          {(['system', 'light', 'dark'] as const).map((scheme) => (
-            <Button
-              key={scheme}
-              size="sm"
-              variant={colorScheme === scheme ? 'primary' : 'secondary'}
-              onPress={() => onColorSchemeChange(scheme)}>
-              <Button.Label>{scheme}</Button.Label>
-            </Button>
-          ))}
-        </View>
+        <SegmentedControl
+          className="w-full"
+          value={colorScheme}
+          onValueChange={(scheme) => {
+            if (scheme === 'system' || scheme === 'light' || scheme === 'dark') onColorSchemeChange(scheme);
+          }}
+          webProps={{ 'aria-label': 'Appearance' }}
+          nativeProps={{ accessibilityLabel: 'Appearance' }}>
+          <SegmentedControl.List>
+            {(['system', 'light', 'dark'] as const).map((scheme) => (
+              <SegmentedControl.Item key={scheme} value={scheme} textValue={scheme} className="flex-1 px-2">
+                <SegmentedControl.Label>{scheme}</SegmentedControl.Label>
+              </SegmentedControl.Item>
+            ))}
+          </SegmentedControl.List>
+        </SegmentedControl>
       </View>
-    </ScrollView>
+    </View>
   );
 }

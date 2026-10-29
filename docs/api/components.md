@@ -104,6 +104,10 @@ All the families below are exported from the root and their kebab-case subpaths.
 
 Avatar defaults to medium/accent; Image requires a `src` URI and `alt` text, mapped to native `source` and `accessibilityLabel`. Use Fallback for initials or an image failure. Spinner's accent maps to the native upstream default color. Spinner defaults to medium/accent and returns no content when `isLoading={false}`. Skeleton has no native ref because the pinned native implementation does not forward one. Platform animation and additional upstream visual options remain in the typed platform props.
 
+## `SegmentedControl`
+
+[SegmentedControl](segmented-control.md) provides primary Tabs styling, single TagGroup selection, and an automatic sliding indicator. It includes `Root`, `List`, `Item`, and item-text `Label` parts; use it for settings and filters such as the gallery Appearance footer.
+
 ## `LoadingText`
 
 `LoadingText` is a package-authored loading status for short single-line labels, inspired by Skeleton's shimmer and pulse. It is exported from the root and `/loading-text`; `LoadingText.Root` aliases the component. The text stays visible over a transparent background, with no rectangular placeholder.

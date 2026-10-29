@@ -24,7 +24,7 @@ test('every implemented React component accounts for all official previews in pa
   const names = [...navigation.matchAll(/^  '([^']+)',$/gm)].map((match) => match[1]);
   assert.deepEqual(
     Object.keys(docsExamples).sort(),
-    names.filter((name) => !['PressableFeedback', 'Markdown', 'LoadingText'].includes(name)).sort()
+    names.filter((name) => !['PressableFeedback', 'Markdown', 'LoadingText', 'SegmentedControl'].includes(name)).sort()
   );
   const ids = new Set();
   for (const [name, page] of Object.entries(docsExamples)) {

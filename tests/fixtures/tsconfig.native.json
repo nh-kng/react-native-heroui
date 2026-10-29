@@ -17,6 +17,7 @@
     "./shared-contracts.ts",
     "./added.native.tsx",
     "./markdown.native.tsx",
-    "./loading-text.native.tsx"
+    "./loading-text.native.tsx",
+    "./segmented-control.native.tsx"
   ]
 }

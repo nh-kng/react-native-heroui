@@ -47,3 +47,5 @@ export * from './components/toast/index.native.js';
 export { Markdown, Callout } from './components/markdown/index.native.js';
 export type { CalloutType, CalloutProps } from './components/markdown/callout.types.js';
 export type * from './components/markdown/markdown.types.js';
+
+export * from './components/segmented-control/index.native.js';

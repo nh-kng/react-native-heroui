@@ -193,3 +193,12 @@ test('Markdown defaults compile into the web stylesheet with scoped slots and se
   assert.ok(shared.includes("@import './markdown.css'"));
   assert.ok(!css.includes('.md-content'), 'No application stylesheet injection is retained');
 });
+
+test('segmented controls compile a shared track, decorative sliding pill, focus, and reduced-motion styles', () => {
+  assert.match(css, /\.segmented-control\s*\{[^}]*position: relative/);
+  assert.match(css, /\.segmented-control__list\s*\{[^}]*(?:flex-wrap: nowrap|flex-flow: row(?: nowrap)?;)/);
+  assert.match(css, /\.segmented-control__indicator\s*\{[^}]*pointer-events: none/);
+  assert.match(css, /\.segmented-control__indicator\[data-animate\]\s*\{[^}]*transition: transform/);
+  assert.match(css, /\.segmented-control__item\[data-focus-visible\]/);
+  assert.match(css, /@media \(prefers-reduced-motion: reduce\)\s*\{\s*\.segmented-control__indicator\[data-animate\]\s*\{\s*transition: none/);
+});

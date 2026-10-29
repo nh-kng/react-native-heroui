@@ -1,5 +1,6 @@
 @import "./react/index.css";
 @import "./loading-text.css";
+@import "./segmented-control.web.css";
 @import "./shared/components/markdown.css";
 
 @theme inline static {

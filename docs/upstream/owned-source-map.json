@@ -4175,6 +4175,32 @@
         "Native uses a static React Native text mask and moving SVG highlight; web uses a clipped CSS text gradient."
       ],
       "knownUnappliedChanges": []
+    },
+    {
+      "name": "segmented-control",
+      "status": "authored",
+      "publicPaths": [
+        "src/components/segmented-control/index.native.ts",
+        "src/components/segmented-control/index.web.ts",
+        "src/components/segmented-control/segmented-control.native.tsx",
+        "src/components/segmented-control/segmented-control.web.tsx",
+        "src/components/segmented-control/segmented-control.types.ts",
+        "src/components/segmented-control/segmented-control-state.ts",
+        "src/components/segmented-control/use-segmented-control.ts",
+        "styles/segmented-control.native.css",
+        "styles/segmented-control.web.css"
+      ],
+      "sources": [],
+      "apiTransformations": [
+        "Original string value/defaultValue contract and Root/List/Item/Label compound API with typed platform props and host refs."
+      ],
+      "behaviorDeviations": [
+        "Composes single TagGroup selection, rejects empty and repeated selections, and owns indicator geometry independently of Tabs contexts."
+      ],
+      "stylingDeviations": [
+        "Uses primary Tabs semantic tokens with a CSS sliding pill on web and a measured Reanimated indicator on native."
+      ],
+      "knownUnappliedChanges": []
     }
   ]
 }

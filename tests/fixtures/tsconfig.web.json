@@ -17,6 +17,7 @@
     "./shared-contracts.ts",
     "./added.web.tsx",
     "./markdown.web.tsx",
-    "./loading-text.web.tsx"
+    "./loading-text.web.tsx",
+    "./segmented-control.web.tsx"
   ]
 }

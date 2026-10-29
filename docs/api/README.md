@@ -35,6 +35,7 @@ The package supports both a root import and component-specific subpaths. Each pa
 | `Spinner` | `@nh-kng/react-native-heroui` | `@nh-kng/react-native-heroui/spinner` |
 | `Surface` | `@nh-kng/react-native-heroui` | `@nh-kng/react-native-heroui/surface` |
 | `Switch` | `@nh-kng/react-native-heroui` | `@nh-kng/react-native-heroui/switch` |
+| `SegmentedControl` | `@nh-kng/react-native-heroui` | `@nh-kng/react-native-heroui/segmented-control` |
 | `Tabs` | `@nh-kng/react-native-heroui` | `@nh-kng/react-native-heroui/tabs` |
 | `TagGroup` | `@nh-kng/react-native-heroui` | `@nh-kng/react-native-heroui/tag-group` |
 | `TextArea` | `@nh-kng/react-native-heroui` | `@nh-kng/react-native-heroui/text-area` |
@@ -50,3 +51,5 @@ Every rendered component root and compound part exposes platform-specific `nativ
 - [Markdown](markdown.md) — themed typography, rich content, slots, copying, and extension hooks.
 - [Type conventions](types.md)
 - [Platform support](../guides/platform-support.md)
+
+See [SegmentedControl](segmented-control.md) for its single-selection API, compound parts, and automatic indicator.

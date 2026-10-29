@@ -1,3 +1,4 @@
+import { SegmentedControlExamples } from './examples/segmented-control';
 import { LoadingTextExamples } from './examples/loading-text';
 import { MarkdownExamples } from './examples/markdown';
 import { DocsExamples } from './docs-examples';
@@ -389,6 +390,7 @@ function TypographyExamples() {
 }
 
 const examples: Record<ComponentName, ComponentType> = {
+  SegmentedControl: SegmentedControlExamples,
   LoadingText: LoadingTextExamples,
   Markdown: MarkdownExamples,
   Surface: SurfaceExamples,
@@ -428,5 +430,5 @@ const examples: Record<ComponentName, ComponentType> = {
 
 export function ComponentExamples({ name }: { name: ComponentName }) {
   const Examples = examples[name];
-  return name === 'PressableFeedback' || name === 'Markdown' || name === 'LoadingText' ? <Examples /> : <DocsExamples name={name} />;
+  return name === 'SegmentedControl' || name === 'PressableFeedback' || name === 'Markdown' || name === 'LoadingText' ? <Examples /> : <DocsExamples name={name} />;
 }
